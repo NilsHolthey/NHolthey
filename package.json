@@ -9,12 +9,12 @@
     "lint:css": "stylelint './src/**/*.js'",
     "eslint": "npx eslint \"**/*.js\"",
     "htmlhint": "npx htmlhint '**/*.html'",
-  
     "prettier:check": "npx prettier --check .",
     "prettier:write": "npx prettier --write .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "jest-environment-jsdom": "^28.1.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "styled-components": "^5.3.5"
