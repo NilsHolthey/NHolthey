@@ -1,4 +1,5 @@
 import MainBg from './components/mainBG';
+
 import PageTwo from './components/PageTwo';
 import GlobalStyle from './UI/GlobalStyles';
 

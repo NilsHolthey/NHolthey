@@ -1,6 +1,7 @@
 import SvgIcon from '../UI/icons';
 import { InfoLeft } from '../UI/InfoLeft';
 import { InfoRight } from '../UI/InfoRight';
+import { LineLeft } from '../UI/LineLeft';
 import { LinkList } from '../UI/LinkList';
 import { Mail } from '../UI/Mail';
 import { LineRight } from '../UI/PaigeTwo/LineRight';
@@ -8,10 +9,12 @@ import { ProfileContainer } from '../UI/ProfileContainer';
 import { ProfileImage } from '../UI/ProfileImage';
 import { SocialLink } from '../UI/SocialLinks';
 import DevSvg from './DevSvg';
+import Navbar from './Navbar';
 
 export default function MainBg() {
   return (
     <section>
+      <Navbar />
       <ProfileContainer>
         <InfoRight>
           <Mail href="mailto:nils.holthey@gmx.de">nils.holthey@gmx.de</Mail>
@@ -75,11 +78,11 @@ export default function MainBg() {
             </SocialLink>
             <SocialLink>
               <a hreff="#">
-                <SvgIcon variant="github" size="28px" color="none" />
+                <SvgIcon variant="twitter" size="28px" color="none" />
               </a>
             </SocialLink>
           </LinkList>
-          <LineRight></LineRight>
+          <LineLeft></LineLeft>
         </InfoLeft>
 
         <div></div>
