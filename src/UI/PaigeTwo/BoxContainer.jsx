@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const Container = styled.section`
+export const BoxContainer = styled.section`
+  width: 80vw;
+  height: 80vh;
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
-
-  height: 100vh;
-  width: 100vw;
-  background-color: #1c2028;
+  flex-wrap: wrap;
+  gap: 4rem;
 `;
