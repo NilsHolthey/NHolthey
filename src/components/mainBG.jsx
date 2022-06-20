@@ -87,7 +87,7 @@ export default function MainBg() {
 
         <div></div>
         <DevSvg />
-        <ProfileImage src="Profilegreyish.png" alt="profile" />
+        <ProfileImage src="Profile1078.png" alt="profile" />
       </ProfileContainer>
     </section>
   );

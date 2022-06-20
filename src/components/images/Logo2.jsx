@@ -1,19 +1,48 @@
+import { useEffect } from 'react';
 import { LogoContainer } from '../../UI/LogoContainer';
 import { StyledSvg } from '../../UI/StyledSvg';
 
 export default function Logo2() {
+  const rotateSvg = () => {
+    if (window.scrollY > 50) {
+      scrollRotate();
+    } else {
+      scrollRotateBack();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', rotateSvg);
+    return () => {
+      window.removeEventListener('scroll', rotateSvg);
+    };
+  }, []);
+
+  function scrollRotate() {
+    let image = document.getElementById('rotate');
+    image.style.transform = 'rotate(120deg)';
+  }
+  function scrollRotateBack() {
+    let image = document.getElementById('rotate');
+    image.style.transform = 'rotate(-360deg)';
+  }
+  //   function scrollRotateBack() {
+  //     let image = document.getElementById('rotate');
+  //     image.style.transform = 'rotate(270)';
+  //   }
   return (
     <LogoContainer>
       <StyledSvg
-        width="330"
-        height="366"
+        id="rotate"
+        width="5rem"
+        height="4rem"
         viewBox="0 0 330 366"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        stroke="#272C39"
       >
         <path
           d="M169.344 11.3079L318.344 99.8926C320.921 101.425 322.5 104.201 322.5 107.199V259.453C322.5 262.461 320.911 265.244 318.321 266.773L169.321 354.739C166.655 356.313 163.345 356.313 160.679 354.739L11.6787 266.773C9.08904 265.244 7.5 262.461 7.5 259.453V107.199C7.5 104.201 9.07928 101.425 11.6562 99.8926L160.656 11.3079C163.333 9.71624 166.667 9.71624 169.344 11.3079Z"
-          stroke="#272C39"
           strokeWidth="15"
           strokeLinejoin="round"
         />
