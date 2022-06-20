@@ -87,10 +87,7 @@ export default function MainBg() {
 
         <div></div>
         <DevSvg />
-        <ProfileImage
-          src="../src/components/images/Profilegreyish.png"
-          alt="profile"
-        />
+        <ProfileImage src="Profilegreyish.png" alt="profile" />
       </ProfileContainer>
     </section>
   );
