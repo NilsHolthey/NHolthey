@@ -4,7 +4,7 @@ import { Container } from '../UI/PaigeTwo/Container';
 
 export default function PageTwo() {
   return (
-    <Container>
+    <Container id="skillset">
       <BoxContainer>
         <Box>
           <p>

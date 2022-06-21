@@ -6,6 +6,6 @@ export const NavList = styled.ul`
   width: 40vw;
   list-style: none;
   font-weight: 900;
-  color: #272c39;
+
   font-size: 1.1rem;
 `;
