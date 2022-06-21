@@ -9,7 +9,9 @@ export const TextBox = styled.section`
   font-weight: 700;
   font-size: 3rem;
   width: 40vw;
-  position: relative;
+  position: absolute;
+  left: 15%;
+  bottom: 10%;
 
   blockquote::before {
     position: absolute;
@@ -23,7 +25,7 @@ export const TextBox = styled.section`
   blockquote::after {
     position: absolute;
     font-family: 'Utopia-italic';
-    top: 30%;
+    top: 15%;
     right: 18%;
 
     content: '"';
