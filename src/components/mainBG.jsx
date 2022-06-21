@@ -8,6 +8,7 @@ import MailSvg from '../UI/MailSvg';
 import { LineRight } from '../UI/PaigeTwo/LineRight';
 import { ProfileContainer } from '../UI/ProfileContainer';
 import { ProfileImage } from '../UI/ProfileImage';
+import { Qspan } from '../UI/quotations';
 import { SocialLink } from '../UI/SocialLinks';
 import { TextBox } from '../UI/TextBox';
 import DevSvg from './DevSvg';
@@ -105,12 +106,12 @@ export default function MainBg() {
       </InfoLeft>
 
       <div></div>
+      <DevSvg />
       <ProfileContainer>
-        <DevSvg />
         <TextBox>
-          <blockquote>
-            <p>Hi,lets create something new!</p>
-          </blockquote>
+          <p>
+            <Qspan>&ldquo;</Qspan>Hi,lets create something new!<Qspan>„</Qspan>
+          </p>
         </TextBox>
         <ProfileImage src="Profile1078.png" alt="profile" />
       </ProfileContainer>

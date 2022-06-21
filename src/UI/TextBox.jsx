@@ -1,36 +1,16 @@
 import styled from 'styled-components';
 
 export const TextBox = styled.section`
-  margin-top: 15rem;
+  height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   color: #272c39;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2rem;
   width: 40vw;
   position: absolute;
   left: 15%;
   bottom: 10%;
-
-  blockquote::before {
-    position: absolute;
-    font-family: 'Utopia-italic';
-    top: 50%;
-    transform: translate(-65%, -50%);
-    content: '"';
-    font-size: 200px;
-    color: rgba(37, 37, 37, 0.1);
-  }
-  blockquote::after {
-    position: absolute;
-    font-family: 'Utopia-italic';
-    top: 15%;
-    right: 18%;
-
-    content: '"';
-    font-size: 200px;
-    color: rgba(37, 37, 37, 0.1);
-    transform: rotate(180deg);
-  }
+  z-index: 10;
 `;
