@@ -6,8 +6,7 @@ export const Box = styled.div`
   text-align: center;
   justify-content: center;
   align-items: center;
-  width: 25%;
-  min-height: 30vh;
+
   color: #f8f8f8;
   background-color: #272c39;
 `;

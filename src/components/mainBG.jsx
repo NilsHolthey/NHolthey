@@ -4,6 +4,7 @@ import { InfoRight } from '../UI/InfoRight';
 import { LineLeft } from '../UI/LineLeft';
 import { LinkList } from '../UI/LinkList';
 import { Mail } from '../UI/Mail';
+import MailSvg from '../UI/MailSvg';
 import { LineRight } from '../UI/PaigeTwo/LineRight';
 import { ProfileContainer } from '../UI/ProfileContainer';
 import { ProfileImage } from '../UI/ProfileImage';
@@ -25,12 +26,18 @@ export default function MainBg() {
         <LinkList>
           <SocialLink>
             <a hreff="#">
-              <SvgIcon variant="github" size="28px" color="none" />
+              <SvgIcon
+                strokeWidth="2"
+                variant="github"
+                size="28px"
+                color="none"
+              />
             </a>
           </SocialLink>
           <SocialLink>
             <a hreff="#">
               <SvgIcon
+                strokeWidth="2"
                 variant="instagram"
                 size="28px"
                 color="none"
@@ -52,6 +59,7 @@ export default function MainBg() {
           <SocialLink>
             <a hreff="#">
               <SvgIcon
+                strokeWidth="2"
                 size="28px"
                 color="none"
                 polygon={
@@ -79,7 +87,17 @@ export default function MainBg() {
           </SocialLink>
           <SocialLink>
             <a hreff="#">
-              <SvgIcon variant="twitter" size="28px" color="none" />
+              <SvgIcon
+                variant="twitter"
+                size="28px"
+                color="none"
+                strokeWidth="2"
+              />
+            </a>
+          </SocialLink>
+          <SocialLink>
+            <a hreff="#">
+              <MailSvg />
             </a>
           </SocialLink>
         </LinkList>

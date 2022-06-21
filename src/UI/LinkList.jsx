@@ -18,6 +18,12 @@ export const LinkList = styled.ul`
   li:nth-child(4) {
     animation: pulse 2.5s ease-in-out 2.3s;
   }
+  li:nth-child(5) {
+    animation: pulse 2.5s ease-in-out 1.9s;
+    @media (min-width: 770px) {
+      display: none;
+    }
+  }
 
   @-webkit-keyframes pulse {
     0% {
@@ -44,5 +50,14 @@ export const LinkList = styled.ul`
       -moz-box-shadow: 0 0 0 0 rgba(102, 103, 171, 0);
       box-shadow: 0 0 0 0 rgba(102, 103, 171, 0);
     }
+  }
+  @media (max-width: 768px) {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    list-style: none;
+    padding: 0;
+    gap: 1.5rem;
   }
 `;
