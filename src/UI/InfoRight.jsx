@@ -10,4 +10,7 @@ export const InfoRight = styled.div`
   bottom: 0;
   display: flex;
   flex-direction: column;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;

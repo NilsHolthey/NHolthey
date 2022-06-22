@@ -29,4 +29,7 @@ export const LineLeft = styled.div`
       transform: scaleY(1);
     }
   }
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
