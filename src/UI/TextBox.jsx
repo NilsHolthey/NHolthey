@@ -14,7 +14,7 @@ export const TextBox = styled.section`
   @media (max-width: 550px) {
     font-size: 1.4rem;
     width: 80vw;
-    bottom: 10%;
+    bottom: 15%;
     left: 10%;
   }
 `;
