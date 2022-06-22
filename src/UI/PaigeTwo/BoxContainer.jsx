@@ -9,10 +9,11 @@ export const BoxContainer = styled.section`
   grid-template-rows: 1fr 1fr;
   gap: 1rem;
 
-  @media (max-width: 550px) {
+  @media (max-width: 665px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 1rem;
+    height: 150vh;
   }
 
   /* @media (max-width: 768px) {
