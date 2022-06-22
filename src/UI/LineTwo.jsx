@@ -5,4 +5,5 @@ export const LineTwo = styled.p`
   opacity: 0.8;
   font-weight: 600;
   display: flex;
+  z-index: 15;
 `;

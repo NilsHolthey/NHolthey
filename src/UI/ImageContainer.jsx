@@ -3,5 +3,8 @@ import styled from 'styled-components';
 export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
-  height: 100vh;
+  width: 50vw;
+  @media (max-width: 550px) {
+    width: 100vw;
+  }
 `;
