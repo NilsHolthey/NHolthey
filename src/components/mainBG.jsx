@@ -1,16 +1,22 @@
+import { Blockquote } from '../UI/Blockqoute';
 import SvgIcon from '../UI/icons';
+import { ImageContainer } from '../UI/ImageContainer';
 import { InfoLeft } from '../UI/InfoLeft';
 import { InfoRight } from '../UI/InfoRight';
 import { LineLeft } from '../UI/LineLeft';
+import { LineOne } from '../UI/LineOne';
+import { LineTwo } from '../UI/LineTwo';
 import { LinkList } from '../UI/LinkList';
 import { Mail } from '../UI/Mail';
 import MailSvg from '../UI/MailSvg';
 import { LineRight } from '../UI/PaigeTwo/LineRight';
 import { ProfileContainer } from '../UI/ProfileContainer';
 import { ProfileImage } from '../UI/ProfileImage';
-import { Qspan } from '../UI/quotations';
+import { QuoteL } from '../UI/QuoteL';
+
 import { SocialLink } from '../UI/SocialLinks';
 import { TextBox } from '../UI/TextBox';
+import { TextContainer } from '../UI/TextContainer';
 import DevSvg from './DevSvg';
 import Navbar from './Navbar';
 
@@ -40,6 +46,7 @@ export default function MainBg() {
               <SvgIcon
                 strokeWidth="2"
                 variant="instagram"
+                strokeLinecap="round"
                 size="28px"
                 color="none"
                 line={<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>}
@@ -105,15 +112,33 @@ export default function MainBg() {
         <LineLeft></LineLeft>
       </InfoLeft>
 
-      <div></div>
       <DevSvg />
       <ProfileContainer>
-        <TextBox>
-          <p>
-            <Qspan>&ldquo;</Qspan>Hi,lets create something new!<Qspan>„</Qspan>
-          </p>
-        </TextBox>
-        <ProfileImage src="Profile1078.png" alt="profile" />
+        <TextContainer>
+          <Blockquote>
+            <TextBox>
+              <QuoteL>
+                <SvgIcon
+                  variant="quoteOpen"
+                  size="5rem"
+                  color="lightgrey"
+                  strokeWidth="0"
+                />
+              </QuoteL>
+              <LineOne>Hi there,</LineOne>
+              <LineTwo>lets create something new!</LineTwo>
+              <SvgIcon
+                variant="quoteClose"
+                size="5rem"
+                color="lightgrey"
+                strokeWidth="0"
+              />
+            </TextBox>
+          </Blockquote>
+        </TextContainer>
+        <ImageContainer>
+          <ProfileImage src="Profile1078.png" alt="profile" />
+        </ImageContainer>
       </ProfileContainer>
     </section>
   );
