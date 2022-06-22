@@ -4,6 +4,8 @@ export const ProfileContainer = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: start;
+  justify-content: flex-end;
   background-color: #dcdcdc;
+
+  overflow: hidden;
 `;

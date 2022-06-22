@@ -6,5 +6,6 @@ export const ImageContainer = styled.div`
   width: 50vw;
   @media (max-width: 550px) {
     width: 100vw;
+    overflow: hidden;
   }
 `;

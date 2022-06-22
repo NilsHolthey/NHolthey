@@ -8,4 +8,6 @@ export const NavList = styled.ul`
   font-weight: 900;
   gap: 1rem;
   font-size: 1.1rem;
+  position: fixed;
+  right: 30%;
 `;

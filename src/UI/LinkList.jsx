@@ -59,5 +59,6 @@ export const LinkList = styled.ul`
     list-style: none;
     padding: 0;
     gap: 1.5rem;
+    z-index: 100;
   }
 `;

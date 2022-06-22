@@ -6,6 +6,6 @@ export const QuoteR = styled.div`
   right: 110px;
 
   @media (max-width: 550px) {
-    right: 45px;
+    left: 245px;
   }
 `;

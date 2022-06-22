@@ -11,6 +11,7 @@ import MailSvg from '../UI/MailSvg';
 import { LineRight } from '../UI/PaigeTwo/LineRight';
 import { ProfileContainer } from '../UI/ProfileContainer';
 import { ProfileImage } from '../UI/ProfileImage';
+import { ProfileWrapper } from '../UI/Profilewrapper';
 import { QuoteL } from '../UI/QuoteL';
 import { QuoteR } from '../UI/QuoteR';
 
@@ -22,9 +23,8 @@ import Navbar from './Navbar';
 
 export default function MainBg() {
   return (
-    <section>
+    <ProfileWrapper>
       <Navbar />
-
       <InfoRight>
         <Mail href="mailto:nils.holthey@gmx.de">nils.holthey@gmx.de</Mail>
         <LineRight></LineRight>
@@ -137,9 +137,9 @@ export default function MainBg() {
           </TextBox>
         </TextContainer>
         <ImageContainer>
-          <ProfileImage src="Profile1078.png" alt="profile" />
+          <ProfileImage src="Profilegrey1.png" alt="profile" />
         </ImageContainer>
       </ProfileContainer>
-    </section>
+    </ProfileWrapper>
   );
 }

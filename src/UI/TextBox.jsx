@@ -4,14 +4,17 @@ export const TextBox = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
+  position: absolute;
   color: #272c39;
   font-size: 2rem;
   width: 40vw;
-  z-index: 10;
-
+  z-index: 1000;
+  bottom: 30%;
+  left: 15%;
   @media (max-width: 550px) {
-    font-size: 1.5rem;
-    width: 100vw;
+    font-size: 1.4rem;
+    width: 80vw;
+    bottom: 10%;
+    left: 10%;
   }
 `;
