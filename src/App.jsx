@@ -1,4 +1,4 @@
-import About from './components/about';
+import About from './components/About';
 import MainBg from './components/mainBG';
 
 import PageTwo from './components/PageTwo';
