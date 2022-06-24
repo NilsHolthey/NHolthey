@@ -1,3 +1,4 @@
+import { Frame } from '../UI/About/Frame';
 import { Box } from '../UI/PaigeTwo/Box';
 import { BoxContainer } from '../UI/PaigeTwo/BoxContainer';
 import { Container } from '../UI/PaigeTwo/Container';
@@ -7,6 +8,7 @@ export default function PageTwo() {
     <Container id="skillset">
       <BoxContainer>
         <Box>
+          <Frame />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
             excepturi?
