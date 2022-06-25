@@ -5,14 +5,20 @@ export const AboutBox = styled.article`
   width: 70%;
   height: 70%;
   flex-wrap: wrap;
-  border: solid 2px #f8f8f8;
+  border-bottom: solid 3px #dcdcdc;
+  border-right: solid 3px #dcdcdc;
   padding: 1rem;
   justify-content: center;
   align-items: center;
   position: absolute;
   bottom: 1rem;
   right: 1rem;
-  color: #f8f8f8;
+  color: #dcdcdc;
   background-color: #1c2028;
-  z-index: 100;
+  @media (max-width: 665px) {
+    position: relative;
+    width: 100%;
+    bottom: unset;
+    right: unset;
+  }
 `;

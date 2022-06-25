@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Frame = styled.span`
-  width: 100%;
-  height: 100%;
+  width: 66.6%;
+  height: 66.6%;
   border-top: solid 5px #6667ab;
   border-left: solid 5px #6667ab;
   position: absolute;

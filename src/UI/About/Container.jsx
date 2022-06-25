@@ -6,7 +6,13 @@ export const Container = styled.section`
 
   color: #f8f8f8;
   background-color: #1c2028;
-  z-index: 100;
+
   padding: 1rem;
   position: relative;
+  @media (max-width: 665px) {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 `;
