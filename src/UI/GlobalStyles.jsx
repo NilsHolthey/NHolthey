@@ -12,7 +12,6 @@ const GlobalStyle = createGlobalStyle`
 	}
 	body  {
 		
-        scroll-behavior:smooth;
 		margin: 0;
 		padding:0;
 		font-family: 'Inter', sans-serif;

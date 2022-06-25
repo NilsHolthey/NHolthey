@@ -17,5 +17,6 @@ export const InfoLeft = styled.div`
     background-color: #1c2028;
     opacity: 0.7;
     height: 3rem;
+    bottom: 0;
   }
 `;

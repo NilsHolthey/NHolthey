@@ -9,4 +9,7 @@ export const Container = styled.section`
   height: 100vh;
   width: 100vw;
   background-color: #1c2028;
+  @media (max-width: 665px) {
+    height: 180vh;
+  }
 `;
