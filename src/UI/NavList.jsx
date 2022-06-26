@@ -11,4 +11,5 @@ export const NavList = styled.ul`
   position: fixed;
   right: 30%;
   transition: all 0.9s linear;
+  z-index: 5;
 `;

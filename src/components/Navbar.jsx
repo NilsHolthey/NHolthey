@@ -25,10 +25,12 @@ export default function Navbar() {
     let myNav = document.getElementById('navList');
 
     myNav.style.transform = 'translateX(-200%)';
+    myNav.style.opacity = '0';
   }
   function resetDisply() {
     let myNav = document.getElementById('navList');
     myNav.style.transform = 'translateX(0)';
+    myNav.style.opacity = '1';
   }
 
   return (

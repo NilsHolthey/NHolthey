@@ -4,6 +4,7 @@ const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
+
   li {
     padding: 18px 10px;
   }
@@ -20,6 +21,9 @@ const Ul = styled.ul`
   transition: transform 0.3s ease-in-out;
   li {
     color: #fff;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
 

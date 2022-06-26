@@ -8,7 +8,7 @@ export const TextBox = styled.section`
   color: #272c39;
   font-size: 2rem;
   width: 40vw;
-  z-index: 1000;
+  z-index: 100;
   bottom: 30%;
   left: 15%;
   @media (max-width: 550px) {

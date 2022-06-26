@@ -5,4 +5,5 @@ export const StyledSvg = styled.svg`
   position: absolute;
   left: 0.5rem;
   top: calc(50% - 40%);
+  z-index: 20;
 `;
