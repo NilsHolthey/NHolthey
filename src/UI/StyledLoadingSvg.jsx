@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledLoadingSvg = styled.svg`
-  animation: rotation infinite 3.5s;
+  animation: rotation 3.5s;
 
   @keyframes rotation {
     to {
