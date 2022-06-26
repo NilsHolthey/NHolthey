@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
 		--secondary-color: navy;
 	}
 	body  {
+		scroll-behavior: smooth;
 		
 		margin: 0;
 		padding:0;

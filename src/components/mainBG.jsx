@@ -23,7 +23,7 @@ import Navbar from './Navbar';
 
 export default function MainBg() {
   return (
-    <ProfileWrapper>
+    <ProfileWrapper id="home">
       <Navbar />
       <InfoRight>
         <Mail href="mailto:nils.holthey@gmx.de">nils.holthey@gmx.de</Mail>
