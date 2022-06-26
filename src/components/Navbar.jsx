@@ -1,15 +1,16 @@
 import { useEffect } from 'react';
 import { Nav } from '../UI/Nav';
+import Burger from '../UI/Navigation/Burger';
 import { NavLink } from '../UI/NavLink';
 import { NavList } from '../UI/NavList';
 import Logo2 from './images/Logo2';
 
 export default function Navbar() {
   const changeColor = () => {
-    if (window.scrollY > window.innerHeight - 30) {
-      changeToLight();
+    if (window.scrollY > 50) {
+      changeToHidden();
     } else {
-      resetColor();
+      resetDisply();
     }
   };
 
@@ -20,18 +21,20 @@ export default function Navbar() {
     };
   }, []);
 
-  function changeToLight() {
+  function changeToHidden() {
     let myNav = document.getElementById('navList');
-    myNav.style.color = '#dcdcdc';
+
+    myNav.style.transform = 'translateX(-200%)';
   }
-  function resetColor() {
+  function resetDisply() {
     let myNav = document.getElementById('navList');
-    myNav.style.color = '#272c39';
+    myNav.style.transform = 'translateX(0)';
   }
 
   return (
     <Nav>
       <Logo2 />
+      <Burger />
       <NavList id="navList">
         <li>
           <NavLink href="#">About</NavLink>

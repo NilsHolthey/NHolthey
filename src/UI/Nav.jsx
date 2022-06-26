@@ -11,5 +11,5 @@ export const Nav = styled.nav`
   height: 5rem;
   opacity: 0.8;
   background-color: transparent;
-  z-index: 100;
+  z-index: 10;
 `;

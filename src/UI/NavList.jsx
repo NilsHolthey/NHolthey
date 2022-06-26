@@ -10,4 +10,5 @@ export const NavList = styled.ul`
   font-size: 1.1rem;
   position: fixed;
   right: 30%;
+  transition: all 0.9s linear;
 `;
