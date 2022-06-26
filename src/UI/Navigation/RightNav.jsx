@@ -3,11 +3,6 @@ import styled from 'styled-components';
 const Ul = styled.ul`
   list-style: none;
   display: flex;
-  flex-flow: row nowrap;
-
-  li {
-    padding: 18px 10px;
-  }
 
   flex-flow: column nowrap;
   background-color: #272c39;
@@ -20,10 +15,12 @@ const Ul = styled.ul`
   padding-top: 3.5rem;
   transition: transform 0.3s ease-in-out;
   li {
+    padding: 18px 10px;
     color: #f8f8f8;
   }
   @media (max-width: 768px) {
     width: 100%;
+    align-items: center;
   }
 `;
 
