@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
 		--primary-color: crimson;
 		--secondary-color: navy;
 	}
+	html{scroll-behavior: smooth;}
 	body  {
 		
 		
