@@ -20,7 +20,7 @@ const Ul = styled.ul`
   padding-top: 3.5rem;
   transition: transform 0.3s ease-in-out;
   li {
-    color: #fff;
+    color: #f8f8f8;
   }
   @media (max-width: 768px) {
     width: 100%;
