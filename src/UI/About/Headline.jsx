@@ -7,7 +7,8 @@ export const Headline = styled.h3`
   position: absolute;
   top: -6rem;
   z-index: 1;
-  @media (orientation: landscape) {
+
+  @media (min-width: 660px) {
     top: 0;
   }
 `;

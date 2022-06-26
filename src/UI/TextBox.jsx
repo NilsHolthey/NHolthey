@@ -7,7 +7,7 @@ export const TextBox = styled.section`
   position: absolute;
   color: #272c39;
   font-size: 2rem;
-  width: 40vw;
+  width: auto;
   z-index: 100;
   bottom: 30%;
   left: 15%;
@@ -16,5 +16,8 @@ export const TextBox = styled.section`
     width: 80vw;
     bottom: 15%;
     left: 10%;
+  }
+  @media (max-width: 750px) {
+    font-size: 1.4rem;
   }
 `;
