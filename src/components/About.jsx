@@ -7,7 +7,7 @@ import { Wrapper } from '../UI/About/Wrapper';
 
 export default function About() {
   return (
-    <Wrapper>
+    <Wrapper id="about">
       <Container>
         <DotGRid />
         <Frame />
