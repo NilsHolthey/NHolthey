@@ -20,7 +20,27 @@ import { TextBox } from '../UI/TextBox';
 import { TextContainer } from '../UI/TextContainer';
 import DevSvg from './DevSvg';
 import Navbar from './Navbar';
+import { motion } from 'framer-motion';
 
+const item = {
+  hidden: { opacity: 0, y: 200 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1.6,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -200,
+    transition: {
+      ease: 'easeInOut',
+      duration: 0.8,
+    },
+  },
+};
 export default function MainBg() {
   return (
     <ProfileWrapper id="home">
@@ -124,8 +144,32 @@ export default function MainBg() {
                 strokeWidth="0"
               />
             </QuoteL>
-            <LineOne>Hi there,</LineOne>
-            <LineTwo>lets create something new!</LineTwo>
+            <LineOne
+              as={motion.p}
+              initial={{ opacity: 0, x: -200 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                ease: [0.6, 0.01, -0.05, 0.95],
+                duration: 1,
+              }}
+              animate={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              Hi there,
+            </LineOne>
+            <LineTwo
+              as={motion.p}
+              initial={{ opacity: 0, x: -200 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                ease: [0.6, 0.01, -0.05, 0.95],
+                duration: 2,
+              }}
+              animate={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              lets create something new!
+            </LineTwo>
             <QuoteR>
               <SvgIcon
                 variant="quoteClose"
@@ -137,7 +181,15 @@ export default function MainBg() {
           </TextBox>
         </TextContainer>
         <ImageContainer>
-          <ProfileImage src="Profilegrey1.png" alt="profile" />
+          <ProfileImage
+            as={motion.img}
+            src="Profilegrey1.png"
+            alt="profile"
+            variants={item}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+          />
         </ImageContainer>
       </ProfileContainer>
     </ProfileWrapper>

@@ -15,6 +15,8 @@ const Ul = styled.ul`
   padding-top: 3.5rem;
   transition: transform 0.3s ease-in-out;
   li {
+    padding: 18px 10px;
+    color: #f8f8f8;
     a {
       text-decoration: none;
       &:visited {

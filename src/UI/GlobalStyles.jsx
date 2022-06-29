@@ -12,6 +12,11 @@ const GlobalStyle = createGlobalStyle`
 	}
 	html{scroll-behavior: smooth;}
 	body  {
+		a {
+      text-decoration: none;
+      &:visited {
+        color: inherit;
+      }}
 		
 		
 		margin: 0;
