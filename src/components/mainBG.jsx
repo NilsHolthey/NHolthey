@@ -22,25 +22,6 @@ import DevSvg from './DevSvg';
 import Navbar from './Navbar';
 import { motion } from 'framer-motion';
 
-const item = {
-  hidden: { opacity: 0, y: 200 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      ease: [0.6, 0.01, -0.05, 0.95],
-      duration: 1.6,
-    },
-  },
-  exit: {
-    opacity: 0,
-    y: -200,
-    transition: {
-      ease: 'easeInOut',
-      duration: 0.8,
-    },
-  },
-};
 export default function MainBg() {
   return (
     <ProfileWrapper id="home">
@@ -147,10 +128,11 @@ export default function MainBg() {
             <LineOne
               as={motion.p}
               initial={{ opacity: 0, x: -200 }}
-              whileInView={{ opacity: 1 }}
               transition={{
-                ease: [0.6, 0.01, -0.05, 0.95],
-                duration: 1,
+                type: 'spring',
+                duration: 2.8,
+                delay: 1.8,
+                bounce: 0.1,
               }}
               animate={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -159,13 +141,15 @@ export default function MainBg() {
             </LineOne>
             <LineTwo
               as={motion.p}
-              initial={{ opacity: 0, x: -200 }}
+              initial={{ opacity: 0, y: 300 }}
               whileInView={{ opacity: 1 }}
               transition={{
-                ease: [0.6, 0.01, -0.05, 0.95],
+                type: 'spring',
+                bounce: 0.2,
                 duration: 2,
+                delay: 2.3,
               }}
-              animate={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
               lets create something new!
@@ -185,10 +169,13 @@ export default function MainBg() {
             as={motion.img}
             src="Profilegrey1.png"
             alt="profile"
-            variants={item}
-            initial="hidden"
-            animate="show"
-            exit="exit"
+            initial={{ opacity: 0, x: 400 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              type: 'spring',
+              bounce: 0.2,
+              duration: 2,
+            }}
           />
         </ImageContainer>
       </ProfileContainer>
