@@ -131,7 +131,7 @@ export default function MainBg() {
               transition={{
                 type: 'spring',
                 duration: 2.8,
-                delay: 1.8,
+                delay: 0.8,
                 bounce: 0.1,
               }}
               animate={{ opacity: 1, x: 0 }}
@@ -147,7 +147,7 @@ export default function MainBg() {
                 type: 'spring',
                 bounce: 0.2,
                 duration: 2,
-                delay: 2.3,
+                delay: 1.3,
               }}
               animate={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

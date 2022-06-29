@@ -3,31 +3,16 @@ import { FrameBottom } from '../UI/About/FrameBottom';
 import { Box } from '../UI/PaigeTwo/Box';
 import { BoxContainer } from '../UI/PaigeTwo/BoxContainer';
 import { Container } from '../UI/PaigeTwo/Container';
-
-const container = {
-  show: {
-    transition: {
-      staggerChildren: 0.35,
-    },
-  },
-};
+import { motion } from 'framer-motion';
 
 const item = {
-  hidden: { opacity: 0, x: 200 },
+  hidden: { opacity: 0, y: 200 },
   show: {
     opacity: 1,
     y: 0,
     transition: {
-      ease: [0.6, 0.01, -0.05, 0.95],
+      type: 'spring',
       duration: 1.6,
-    },
-  },
-  exit: {
-    opacity: 0,
-    y: -200,
-    transition: {
-      ease: 'easeInOut',
-      duration: 0.8,
     },
   },
 };
@@ -35,32 +20,55 @@ const item = {
 export default function PageTwo() {
   return (
     <Container id="skillset">
-      <BoxContainer
-        variants={container}
-        initial="hidden"
-        animate="show"
-        exit="exit"
-      >
-        <Box variants={item} initial="hidden" animate="show">
+      <BoxContainer>
+        <Box
+          viewport={{ once: true }}
+          as={motion.div}
+          variants={item}
+          initial="hidden"
+          whileInView="show"
+        >
           <Frame />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
             excepturi?
           </p>
         </Box>
-        <Box variants={item}>
+        <Box
+          viewport={{ once: true }}
+          as={motion.div}
+          variants={item}
+          initial="hidden"
+          whileInView="show"
+          transition={{
+            type: 'spring',
+            duration: 1.6,
+          }}
+        >
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
             excepturi?
           </p>
         </Box>
-        <Box variants={item}>
+        <Box
+          viewport={{ once: true }}
+          as={motion.div}
+          variants={item}
+          initial="hidden"
+          whileInView="show"
+        >
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
             excepturi?
           </p>
         </Box>
-        <Box variants={item}>
+        <Box
+          viewport={{ once: true }}
+          as={motion.div}
+          variants={item}
+          initial="hidden"
+          whileInView="show"
+        >
           <FrameBottom />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
