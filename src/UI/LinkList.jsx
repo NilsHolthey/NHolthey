@@ -19,7 +19,7 @@ export const LinkList = styled.ul`
     animation: pulse 2.5s ease-in-out 2.3s;
   }
   li:nth-child(5) {
-    animation: pulse infinite ease-in-out 1.9s;
+    animation: pulse 2.5 ease-in-out 1.9s;
     @media (min-width: 770px) {
       display: none;
     }
