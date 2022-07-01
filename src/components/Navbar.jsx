@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { Nav } from '../UI/Nav';
 import Burger from '../UI/Navigation/Burger';
@@ -39,14 +40,27 @@ export default function Navbar() {
         <Logo2 />
       </a>
       <Burger />
-      <NavList id="navList">
+      <NavList
+        id="navList"
+        as={motion.ul}
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          type: 'spring',
+          duration: 0.8,
+        }}
+        animate={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
         <li>
           <NavLink href="#about">About</NavLink>
         </li>
         <li>
           <NavLink href="#skillset">Skillset</NavLink>
         </li>
-        <NavLink href="#">Contacts</NavLink>
+        <li>
+          <NavLink href="#">Contacts</NavLink>
+        </li>
       </NavList>
     </Nav>
   );
