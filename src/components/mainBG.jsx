@@ -127,21 +127,21 @@ export default function MainBg() {
             </QuoteL>
             <LineOne
               as={motion.p}
-              initial={{ opacity: 0, x: -200 }}
+              initial={{ opacity: 0, y: 50 }}
               transition={{
                 type: 'spring',
                 duration: 2.8,
                 delay: 0.8,
                 bounce: 0.1,
               }}
-              animate={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
               Hi there,
             </LineOne>
             <LineTwo
               as={motion.p}
-              initial={{ opacity: 0, y: 300 }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1 }}
               transition={{
                 type: 'spring',
@@ -169,7 +169,7 @@ export default function MainBg() {
             as={motion.img}
             src="Profilegrey1.png"
             alt="profile"
-            initial={{ opacity: 0, x: 400 }}
+            initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{
               type: 'spring',

@@ -41,7 +41,7 @@ export default function Navbar() {
       <Burger />
       <NavList id="navList">
         <li>
-          <NavLink href="#">About</NavLink>
+          <NavLink href="#about">About</NavLink>
         </li>
         <li>
           <NavLink href="#skillset">Skillset</NavLink>
