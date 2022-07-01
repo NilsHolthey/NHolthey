@@ -142,7 +142,7 @@ export default function MainBg() {
             <LineTwo
               as={motion.p}
               initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1 }}
+              whileInView={{ opacity: 0.8 }}
               transition={{
                 type: 'spring',
                 bounce: 0.2,

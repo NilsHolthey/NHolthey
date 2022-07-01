@@ -19,12 +19,11 @@ const Ul = styled.ul`
     color: #f8f8f8;
     a {
       text-decoration: none;
+      color: #f8f8f8;
       &:visited {
         color: inherit;
       }
     }
-    padding: 18px 10px;
-    color: #f8f8f8;
   }
   @media (max-width: 768px) {
     width: 100%;
