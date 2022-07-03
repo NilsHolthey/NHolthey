@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { AboutBox } from '../UI/About/AboutBox';
+import { AboutImage } from '../UI/About/AboutImage';
 import { Container } from '../UI/About/Container';
 import DotGRid from '../UI/About/DotGrid';
 import { Frame } from '../UI/About/Frame';
@@ -71,6 +72,19 @@ export default function About() {
           initial="hidden"
           whileInView="show"
         >
+          <AboutImage
+            id="profileImage"
+            as={motion.img}
+            src="AboutImage.png"
+            alt="profile"
+            initial={{ opacity: 0, x: 80 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              type: 'spring',
+              bounce: 0.3,
+              duration: 2,
+            }}
+          />
           <motion.p
             viewport={{ once: true }}
             variants={text}

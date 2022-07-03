@@ -13,8 +13,10 @@ export const AboutBox = styled.article`
   position: absolute;
   bottom: -2rem;
   right: -2rem;
+  z-index: 5;
   color: #dcdcdc;
-  background-color: #272c39;
+  background-color: #1c2028;
+  box-shadow: -5px -5px 0px 0px #272c39;
   @media (max-width: 665px) {
     position: relative;
     width: 100%;

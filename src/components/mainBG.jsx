@@ -61,7 +61,11 @@ export default function MainBg() {
       <InfoLeft>
         <LinkList>
           <SocialLink>
-            <a hreff="#">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/NilsHolthey"
+            >
               <SvgIcon
                 strokeWidth="2"
                 variant="github"
@@ -71,7 +75,11 @@ export default function MainBg() {
             </a>
           </SocialLink>
           <SocialLink>
-            <a hreff="#">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/nholthey"
+            >
               <SvgIcon
                 strokeWidth="2"
                 variant="instagram"
@@ -94,7 +102,11 @@ export default function MainBg() {
             </a>
           </SocialLink>
           <SocialLink>
-            <a hreff="#">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://codepen.io/NHolthey"
+            >
               <SvgIcon
                 strokeWidth="2"
                 size="28px"
@@ -123,7 +135,11 @@ export default function MainBg() {
             </a>
           </SocialLink>
           <SocialLink>
-            <a hreff="#">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://twitter.com/nholthey"
+            >
               <SvgIcon
                 variant="twitter"
                 size="28px"

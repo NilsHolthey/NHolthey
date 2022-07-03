@@ -4,6 +4,7 @@ import { Box } from '../UI/PaigeTwo/Box';
 import { BoxContainer } from '../UI/PaigeTwo/BoxContainer';
 import { Container } from '../UI/PaigeTwo/Container';
 import { motion } from 'framer-motion';
+import { Headline } from '../UI/PaigeTwo/Headline';
 
 const item = {
   hidden: { opacity: 0, y: 70 },
@@ -17,6 +18,18 @@ const item = {
   },
 };
 
+const subItem = {
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      duration: 1.3,
+      delay: 0.5,
+    },
+  },
+};
 const text = {
   hidden: { opacity: 0, y: 10 },
   show: {
@@ -24,8 +37,8 @@ const text = {
     y: 0,
     transition: {
       type: 'spring',
-      duration: 1.3,
-      delay: 0.7,
+      duration: 1,
+      delay: 0.5,
     },
   },
 };
@@ -34,6 +47,15 @@ export default function PageTwo() {
   return (
     <Container id="skillset">
       <BoxContainer>
+        <Headline
+          viewport={{ once: true }}
+          as={motion.h3}
+          variants={subItem}
+          initial="hidden"
+          whileInView="show"
+        >
+          2. Skillset
+        </Headline>
         <Box
           viewport={{ once: true }}
           as={motion.div}

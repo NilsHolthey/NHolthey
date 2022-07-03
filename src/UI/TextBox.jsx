@@ -11,6 +11,7 @@ export const TextBox = styled.section`
   z-index: 100;
   bottom: 30%;
   left: 15%;
+  font-family: 'Fjalla One', sans-serif;
   @media (max-width: 550px) {
     font-size: 1.4rem;
     width: 80vw;
