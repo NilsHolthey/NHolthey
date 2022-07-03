@@ -17,6 +17,19 @@ const item = {
   },
 };
 
+const text = {
+  hidden: { opacity: 0, y: 10 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      duration: 1.3,
+      delay: 0.7,
+    },
+  },
+};
+
 export default function PageTwo() {
   return (
     <Container id="skillset">
@@ -29,10 +42,15 @@ export default function PageTwo() {
           whileInView="show"
         >
           <Frame />
-          <p>
+          <motion.p
+            viewport={{ once: true }}
+            variants={text}
+            initial="hidden"
+            whileInView="show"
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
             excepturi?
-          </p>
+          </motion.p>
         </Box>
         <Box
           viewport={{ once: true }}
@@ -45,10 +63,15 @@ export default function PageTwo() {
             duration: 1.6,
           }}
         >
-          <p>
+          <motion.p
+            viewport={{ once: true }}
+            variants={text}
+            initial="hidden"
+            whileInView="show"
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
             excepturi?
-          </p>
+          </motion.p>
         </Box>
         <Box
           viewport={{ once: true }}
@@ -57,10 +80,15 @@ export default function PageTwo() {
           initial="hidden"
           whileInView="show"
         >
-          <p>
+          <motion.p
+            viewport={{ once: true }}
+            variants={text}
+            initial="hidden"
+            whileInView="show"
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
             excepturi?
-          </p>
+          </motion.p>
         </Box>
         <Box
           viewport={{ once: true }}
@@ -70,10 +98,15 @@ export default function PageTwo() {
           whileInView="show"
         >
           <FrameBottom />
-          <p>
+          <motion.p
+            viewport={{ once: true }}
+            variants={text}
+            initial="hidden"
+            whileInView="show"
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
             excepturi?
-          </p>
+          </motion.p>
         </Box>
       </BoxContainer>
     </Container>

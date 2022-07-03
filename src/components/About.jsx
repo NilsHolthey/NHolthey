@@ -25,7 +25,19 @@ const subItem = {
     transition: {
       type: 'spring',
       duration: 1.3,
-      delay: 0.3,
+      delay: 0.5,
+    },
+  },
+};
+const text = {
+  hidden: { opacity: 0, y: 10 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      duration: 1.3,
+      delay: 0.7,
     },
   },
 };
@@ -59,10 +71,17 @@ export default function About() {
           initial="hidden"
           whileInView="show"
         >
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga quia
-          totam veritatis itaque debitis dolores qui, accusantium quibusdam amet
-          officia explicabo et expedita sit velit veniam rem necessitatibus
-          temporibus eos!
+          <motion.p
+            viewport={{ once: true }}
+            variants={text}
+            initial="hidden"
+            whileInView="show"
+          >
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga quia
+            totam veritatis itaque debitis dolores qui, accusantium quibusdam
+            amet officia explicabo et expedita sit velit veniam rem
+            necessitatibus temporibus eos!
+          </motion.p>
         </AboutBox>
       </Container>
     </Wrapper>
