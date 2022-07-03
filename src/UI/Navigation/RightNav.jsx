@@ -17,8 +17,10 @@ const Ul = styled.ul`
   li {
     padding: 18px 10px;
     color: #f8f8f8;
+    font-weight: 700;
     a {
       text-decoration: none;
+
       color: #f8f8f8;
       &:visited {
         color: inherit;

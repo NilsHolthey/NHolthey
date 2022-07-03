@@ -21,8 +21,36 @@ import { TextContainer } from '../UI/TextContainer';
 import DevSvg from './DevSvg';
 import Navbar from './Navbar';
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 
 export default function MainBg() {
+  const changeColor = () => {
+    if (window.scrollY > 200) {
+      changeToHidden();
+    } else {
+      resetDisply();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeColor);
+    return () => {
+      window.removeEventListener('scroll', changeColor);
+    };
+  }, []);
+
+  function changeToHidden() {
+    let myNav = document.getElementById('profileImage');
+
+    myNav.style.opacity = '0.1';
+    myNav.style.transition = 'opacity 1.5s ease';
+  }
+  function resetDisply() {
+    let myNav = document.getElementById('profileImage');
+
+    myNav.style.opacity = '1';
+  }
+
   return (
     <ProfileWrapper id="home">
       <Navbar />
@@ -166,6 +194,7 @@ export default function MainBg() {
         </TextContainer>
         <ImageContainer>
           <ProfileImage
+            id="profileImage"
             as={motion.img}
             src="Profilegrey1.png"
             alt="profile"
