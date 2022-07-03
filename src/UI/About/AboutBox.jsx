@@ -2,19 +2,19 @@ import styled from 'styled-components';
 
 export const AboutBox = styled.article`
   display: flex;
-  width: 70%;
-  height: 70%;
+  width: 80%;
+  height: 80%;
   flex-wrap: wrap;
-  border-bottom: solid 3px #dcdcdc;
-  border-right: solid 3px #dcdcdc;
+  border-bottom: solid 5px #dcdcdc;
+  border-right: solid 5px #dcdcdc;
   padding: 1rem;
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: -2rem;
+  right: -2rem;
   color: #dcdcdc;
-  background-color: #1c2028;
+  background-color: #272c39;
   @media (max-width: 665px) {
     position: relative;
     width: 100%;
