@@ -5,6 +5,7 @@ import { BoxContainer } from '../UI/PaigeTwo/BoxContainer';
 import { Container } from '../UI/PaigeTwo/Container';
 import { motion } from 'framer-motion';
 import { Headline } from '../UI/PaigeTwo/Headline';
+import { HeadlineBox } from '../UI/PaigeTwo/HeadlineBox';
 
 const item = {
   hidden: { opacity: 0, y: 70 },
@@ -46,7 +47,7 @@ const text = {
 export default function PageTwo() {
   return (
     <Container id="skillset">
-      <BoxContainer>
+      <HeadlineBox>
         <Headline
           viewport={{ once: true }}
           as={motion.h3}
@@ -56,6 +57,8 @@ export default function PageTwo() {
         >
           2. Skillset
         </Headline>
+      </HeadlineBox>
+      <BoxContainer>
         <Box
           viewport={{ once: true }}
           as={motion.div}

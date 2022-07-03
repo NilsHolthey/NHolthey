@@ -55,7 +55,11 @@ const RightNav = ({ open, setOpen }) => {
           Skillset
         </a>
       </li>
-      <li>Contacts</li>
+      <li>
+        <a href="#contacts" onClick={() => setOpen(!open)}>
+          Contacts
+        </a>
+      </li>
     </Ul>
   );
 };

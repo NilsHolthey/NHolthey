@@ -6,6 +6,7 @@ export const Headline = styled.h3`
   font-weight: 900;
   position: absolute;
   top: -6rem;
+  left: 0;
   z-index: 1;
   font-family: 'Fjalla One', sans-serif;
 
