@@ -20,10 +20,39 @@ import { TextBox } from '../UI/TextBox';
 import { TextContainer } from '../UI/TextContainer';
 import DevSvg from './DevSvg';
 import Navbar from './Navbar';
+import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 
 export default function MainBg() {
+  const changeColor = () => {
+    if (window.scrollY > 200) {
+      changeToHidden();
+    } else {
+      resetDisply();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeColor);
+    return () => {
+      window.removeEventListener('scroll', changeColor);
+    };
+  }, []);
+
+  function changeToHidden() {
+    let myNav = document.getElementById('profileImage');
+
+    myNav.style.opacity = '0.1';
+    myNav.style.transition = 'opacity 1.5s ease';
+  }
+  function resetDisply() {
+    let myNav = document.getElementById('profileImage');
+
+    myNav.style.opacity = '1';
+  }
+
   return (
-    <ProfileWrapper>
+    <ProfileWrapper id="home">
       <Navbar />
       <InfoRight>
         <Mail href="mailto:nils.holthey@gmx.de">nils.holthey@gmx.de</Mail>
@@ -32,7 +61,11 @@ export default function MainBg() {
       <InfoLeft>
         <LinkList>
           <SocialLink>
-            <a hreff="#">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/NilsHolthey"
+            >
               <SvgIcon
                 strokeWidth="2"
                 variant="github"
@@ -42,7 +75,11 @@ export default function MainBg() {
             </a>
           </SocialLink>
           <SocialLink>
-            <a hreff="#">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/nholthey"
+            >
               <SvgIcon
                 strokeWidth="2"
                 variant="instagram"
@@ -65,7 +102,11 @@ export default function MainBg() {
             </a>
           </SocialLink>
           <SocialLink>
-            <a hreff="#">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://codepen.io/NHolthey"
+            >
               <SvgIcon
                 strokeWidth="2"
                 size="28px"
@@ -94,7 +135,11 @@ export default function MainBg() {
             </a>
           </SocialLink>
           <SocialLink>
-            <a hreff="#">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://twitter.com/nholthey"
+            >
               <SvgIcon
                 variant="twitter"
                 size="28px"
@@ -124,8 +169,35 @@ export default function MainBg() {
                 strokeWidth="0"
               />
             </QuoteL>
-            <LineOne>Hi there,</LineOne>
-            <LineTwo>lets create something new!</LineTwo>
+            <LineOne
+              as={motion.p}
+              initial={{ opacity: 0, y: 50 }}
+              transition={{
+                type: 'spring',
+                duration: 2.8,
+                delay: 0.8,
+                bounce: 0.1,
+              }}
+              animate={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              Hi there,
+            </LineOne>
+            <LineTwo
+              as={motion.p}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 0.8 }}
+              transition={{
+                type: 'spring',
+                bounce: 0.2,
+                duration: 2,
+                delay: 1.3,
+              }}
+              animate={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              lets create something new!
+            </LineTwo>
             <QuoteR>
               <SvgIcon
                 variant="quoteClose"
@@ -137,7 +209,19 @@ export default function MainBg() {
           </TextBox>
         </TextContainer>
         <ImageContainer>
-          <ProfileImage src="Profilegrey1.png" alt="profile" />
+          <ProfileImage
+            id="profileImage"
+            as={motion.img}
+            src="Profilegrey1.png"
+            alt="profile"
+            initial={{ opacity: 0, x: 80 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              type: 'spring',
+              bounce: 0.2,
+              duration: 2,
+            }}
+          />
         </ImageContainer>
       </ProfileContainer>
     </ProfileWrapper>

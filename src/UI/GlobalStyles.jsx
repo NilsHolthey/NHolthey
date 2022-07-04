@@ -10,7 +10,14 @@ const GlobalStyle = createGlobalStyle`
 		--primary-color: crimson;
 		--secondary-color: navy;
 	}
+	html{scroll-behavior: smooth;}
 	body  {
+		a {
+      text-decoration: none;
+      &:visited {
+        color: inherit;
+      }}
+		
 		
 		margin: 0;
 		padding:0;

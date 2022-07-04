@@ -46,6 +46,7 @@ export default function Logo2() {
           strokeWidth="15"
           strokeLinejoin="round"
         />
+
         <path
           fillRule="evenodd"
           clipRule="evenodd"

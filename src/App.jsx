@@ -1,18 +1,17 @@
-import About from './components/About';
-import MainBg from './components/mainBG';
+import { useEffect, useState } from 'react';
 
-import PageTwo from './components/PageTwo';
-import GlobalStyle from './UI/GlobalStyles';
+import LoadingPage from './components/LoadingPage';
+
+import MainPage from './components/MainPage';
 
 function App() {
-  return (
-    <>
-      <GlobalStyle />
-      <MainBg />
-      <About />
-      <PageTwo />
-    </>
-  );
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3500);
+  });
+  return <>{isLoading == true ? <LoadingPage /> : <MainPage />}</>;
 }
 
 export default App;
