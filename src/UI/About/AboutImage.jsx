@@ -8,8 +8,8 @@ export const AboutImage = styled.img`
   right: 0;
   border-bottom: solid 2px #d9d9d9;
   @media (max-width: 768px) {
-    right: unset;
-    bottom: unset;
-    top: -2.5rem;
+    max-height: 20%;
+    bottom: -1.5rem;
+    right: -1rem;
   }
 `;

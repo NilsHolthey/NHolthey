@@ -10,4 +10,8 @@ export const Form = styled.form`
   gap: 2rem;
   background-color: rgb(39, 44, 57, 0.2);
   position: relative;
+
+  @media (max-width: 665px) {
+    width: 80vw;
+  }
 `;

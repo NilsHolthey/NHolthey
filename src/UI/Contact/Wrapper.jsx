@@ -8,4 +8,6 @@ export const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   background-color: #dcdcdc;
+  overflow: hidden;
+  flex-direction: column;
 `;

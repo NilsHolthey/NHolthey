@@ -14,7 +14,7 @@ export const BoxContainer = styled.section`
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 1rem;
     height: 150vh;
-    width: 70vw;
+    width: 80vw;
   }
 
   /* @media (max-width: 768px) {

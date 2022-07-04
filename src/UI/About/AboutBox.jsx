@@ -20,7 +20,9 @@ export const AboutBox = styled.article`
   @media (max-width: 665px) {
     position: relative;
     width: 100%;
+    height: 100%;
     bottom: unset;
     right: unset;
+    box-shadow: unset;
   }
 `;
