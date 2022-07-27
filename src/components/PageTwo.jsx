@@ -6,6 +6,8 @@ import { Container } from '../UI/PaigeTwo/Container';
 import { motion } from 'framer-motion';
 import { Headline } from '../UI/PaigeTwo/Headline';
 import { HeadlineBox } from '../UI/PaigeTwo/HeadlineBox';
+import HtmlSvg from '../UI/PaigeTwo/SVGs/HtmlSvg';
+import CssSvg from '../UI/PaigeTwo/SVGs/CssSvg';
 
 const item = {
   hidden: { opacity: 0, y: 70 },
@@ -67,15 +69,15 @@ export default function PageTwo() {
           whileInView="show"
         >
           <Frame />
-          <motion.p
+          <motion.section
             viewport={{ once: true }}
             variants={text}
             initial="hidden"
             whileInView="show"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
-            excepturi?
-          </motion.p>
+            <HtmlSvg />
+            <CssSvg />
+          </motion.section>
         </Box>
         <Box
           viewport={{ once: true }}

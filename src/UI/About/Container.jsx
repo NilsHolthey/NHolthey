@@ -10,9 +10,12 @@ export const Container = styled.section`
   padding: 1rem;
   position: relative;
   @media (max-width: 665px) {
-    width: 70vw;
+    width: 80vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding: 0;
+    background-color: rgb(102, 103, 171, 0.3);
+    opacity: 0.3;
   }
 `;

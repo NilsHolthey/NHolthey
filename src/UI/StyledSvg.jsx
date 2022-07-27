@@ -9,5 +9,6 @@ export const StyledSvg = styled.svg`
   @media (max-width: 768px) {
     height: 3rem;
     top: calc(50% - 35%);
+    left: -0.5rem;
   }
 `;
