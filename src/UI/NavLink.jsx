@@ -7,4 +7,7 @@ export const NavLink = styled.a`
   &:visited {
     color: #272c39;
   }
+  &:hover {
+    color: #6667ab;
+  }
 `;

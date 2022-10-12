@@ -65,7 +65,7 @@ export default function Contact() {
         </Form>
       </Container>
       <Footer>
-        <p>copyright by me</p>
+        <p>copyright by me©</p>
       </Footer>
     </Wrapper>
   );

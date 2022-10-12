@@ -6,7 +6,7 @@ export const LinkList = styled.ul`
   list-style: none;
   padding: 0;
   gap: 0.5rem;
-  li:nth-child(1) {
+  /* li:nth-child(1) {
     animation: pulse 2.5s ease-in-out 3.5s;
   }
   li:nth-child(2) {
@@ -50,7 +50,7 @@ export const LinkList = styled.ul`
       -moz-box-shadow: 0 0 0 0 rgba(102, 103, 171, 0);
       box-shadow: 0 0 0 0 rgba(102, 103, 171, 0);
     }
-  }
+  } */
   @media (max-width: 768px) {
     flex-direction: row;
     display: flex;
