@@ -15,7 +15,7 @@ export const Box = styled.div`
     filter: grayscale(70%);
     cursor: pointer;
     scale:1.1;
-    box-shadow: 0 0 2px 0 darkgrey ;
+    box-shadow: 0 0 1.5px 0 darkgrey ;
     z-index:100;
     
   }
