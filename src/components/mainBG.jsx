@@ -160,7 +160,7 @@ export default function MainBg() {
       <DevImg
         src="DEVELOPER.png"
         as={motion.img}
-        initial={{ opacity: 1 }}
+        initial={{ opacity: 0.25 }}
         animate={{ opacity: 0.05 }}
         transition={{
           type: 'spring',
