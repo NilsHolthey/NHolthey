@@ -157,7 +157,17 @@ export default function MainBg() {
         </LinkList>
         <LineLeft></LineLeft>
       </InfoLeft>
-      <DevImg src="DEVELOPER.png"/>
+      <DevImg
+        src="DEVELOPER.png"
+        as={motion.img}
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 0.05 }}
+        transition={{
+          type: 'spring',
+          bounce: 0.2,
+          duration: 2,
+        }}
+      />
       {/* <DevSvg /> */}
       <ProfileContainer>
         <TextContainer>
@@ -212,16 +222,16 @@ export default function MainBg() {
         <ImageContainer>
           <ProfileImage
             id="profileImage"
-            // as={motion.img}
+            as={motion.img}
             src="ProfilegreyResize.png"
             alt="profile"
-            // initial={{ opacity: 0, x: 80 }}
-            // animate={{ opacity: 1, x: 0 }}
-            // transition={{
-            //   type: 'spring',
-            //   bounce: 0.2,
-            //   duration: 2,
-            // }}
+            initial={{ opacity: 0, x: 80 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              type: 'spring',
+              bounce: 0.2,
+              duration: 2,
+            }}
           />
         </ImageContainer>
       </ProfileContainer>
