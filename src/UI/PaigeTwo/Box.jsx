@@ -11,12 +11,15 @@ export const Box = styled.div`
   background-color: #272c39;
   transition: all 300ms;
   
+  
   &:hover{
-    filter: grayscale(70%);
+    filter: grayscale(75%);
     cursor: pointer;
     scale:1.1;
     box-shadow: 0 0 1.5px 0 darkgrey ;
     z-index:100;
     
+    
   }
 `;
+2

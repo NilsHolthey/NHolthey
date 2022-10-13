@@ -14,11 +14,12 @@ import { ProfileImage } from '../UI/ProfileImage';
 import { ProfileWrapper } from '../UI/Profilewrapper';
 import { QuoteL } from '../UI/QuoteL';
 import { QuoteR } from '../UI/QuoteR';
+import { DevImg } from '../UI/DevImg';
 
 import { SocialLink } from '../UI/SocialLinks';
 import { TextBox } from '../UI/TextBox';
 import { TextContainer } from '../UI/TextContainer';
-import DevSvg from './DevSvg';
+// import DevSvg from './DevSvg';
 import Navbar from './Navbar';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
@@ -156,8 +157,8 @@ export default function MainBg() {
         </LinkList>
         <LineLeft></LineLeft>
       </InfoLeft>
-
-      <DevSvg />
+      <DevImg src="DEVELOPER.png"/>
+      {/* <DevSvg /> */}
       <ProfileContainer>
         <TextContainer>
           <TextBox>
@@ -211,16 +212,16 @@ export default function MainBg() {
         <ImageContainer>
           <ProfileImage
             id="profileImage"
-            as={motion.img}
-            src="Profilegrey1.png"
+            // as={motion.img}
+            src="ProfilegreyResize.png"
             alt="profile"
-            initial={{ opacity: 0, x: 80 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{
-              type: 'spring',
-              bounce: 0.2,
-              duration: 2,
-            }}
+            // initial={{ opacity: 0, x: 80 }}
+            // animate={{ opacity: 1, x: 0 }}
+            // transition={{
+            //   type: 'spring',
+            //   bounce: 0.2,
+            //   duration: 2,
+            // }}
           />
         </ImageContainer>
       </ProfileContainer>

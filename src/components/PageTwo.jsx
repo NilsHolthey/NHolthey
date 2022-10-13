@@ -78,6 +78,7 @@ export default function PageTwo() {
             <HtmlSvg />
             <CssSvg />
           </motion.section>
+          <div><p> lorem10</p></div>
         </Box>
         <Box
           viewport={{ once: true }}
