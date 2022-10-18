@@ -12,8 +12,10 @@ export const NavList = styled.ul`
   right: 30%;
   transition: all 0.9s linear;
   z-index: 5;
-  &:hover {
-    -webkit-box-reflect: below 0
-      linear-gradient(to bottom, transparent, #8888889d);
+  li {
+    &:hover {
+      -webkit-box-reflect: below 0
+        linear-gradient(to bottom, transparent, #88888854);
+    }
   }
 `;
