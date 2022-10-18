@@ -7,13 +7,13 @@ import PrevWork from './PrevWork';
 
 export default function MainPage() {
   return (
-    <div>
+    <>
       <GlobalStyle />
       <MainBg />
       <About />
       <PageTwo />
       <PrevWork />
       <Contact />
-    </div>
+    </>
   );
 }

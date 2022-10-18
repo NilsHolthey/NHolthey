@@ -225,8 +225,8 @@ export default function MainBg() {
             as={motion.img}
             src="ProfilegreyResize.png"
             alt="profile"
-            initial={{ opacity: 0, x: 80 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.75 }}
             transition={{
               type: 'spring',
               bounce: 0.2,
