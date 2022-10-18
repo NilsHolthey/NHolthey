@@ -8,6 +8,7 @@ import { Headline } from '../UI/PaigeTwo/Headline';
 import { HeadlineBox } from '../UI/PaigeTwo/HeadlineBox';
 import HtmlSvg from '../UI/PaigeTwo/SVGs/HtmlSvg';
 import CssSvg from '../UI/PaigeTwo/SVGs/CssSvg';
+import { InfoBox } from '../UI/PaigeTwo/InfoBox';
 
 const item = {
   hidden: { opacity: 0, y: 70 },
@@ -78,7 +79,9 @@ export default function PageTwo() {
             <HtmlSvg />
             <CssSvg />
           </motion.section>
-          <div><p> lorem10</p></div>
+          <InfoBox>
+            <p> lorem10</p>
+          </InfoBox>
         </Box>
         <Box
           viewport={{ once: true }}
