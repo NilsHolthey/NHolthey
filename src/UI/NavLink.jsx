@@ -9,5 +9,8 @@ export const NavLink = styled.a`
   }
   &:hover {
     color: #6667ab;
+    outline: 2px solid #6667ab;
+    outline-offset: 6px;
+    transition: ease-in 0.3s;
   }
 `;
