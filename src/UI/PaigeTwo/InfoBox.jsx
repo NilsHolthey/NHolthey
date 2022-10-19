@@ -10,7 +10,7 @@ export const InfoBox = styled.section`
   -webkit-backdrop-filter: blur(7.5px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transform: translateY(100%);
-  transition: all 300ms;
+  transition: all 350ms;
   color: #f8f8f8;
 
   ul {
