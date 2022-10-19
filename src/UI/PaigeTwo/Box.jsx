@@ -13,7 +13,11 @@ export const Box = styled.div`
   transition: all 300ms;
 
   &:hover {
-    filter: grayscale(75%);
+    svg {
+      filter: grayscale(85%);
+      transition: filter 300ms;
+    }
+
     cursor: pointer;
     scale: 1.1;
     box-shadow: 0 0 1.5px 0 darkgrey;
