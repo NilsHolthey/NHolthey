@@ -103,6 +103,9 @@ export default function PageTwo() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
             excepturi?
           </motion.p>
+          <InfoBox>
+            <p> lorem10</p>
+          </InfoBox>
         </Box>
         <Box
           viewport={{ once: true }}
@@ -120,6 +123,9 @@ export default function PageTwo() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
             excepturi?
           </motion.p>
+          <InfoBox>
+            <p> lorem10</p>
+          </InfoBox>
         </Box>
         <Box
           viewport={{ once: true }}
@@ -138,6 +144,9 @@ export default function PageTwo() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
             excepturi?
           </motion.p>
+          <InfoBox>
+            <p> lorem10</p>
+          </InfoBox>
         </Box>
       </BoxContainer>
     </Container>

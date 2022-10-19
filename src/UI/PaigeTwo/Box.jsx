@@ -17,6 +17,7 @@ export const Box = styled.div`
     cursor: pointer;
     scale: 1.1;
     box-shadow: 0 0 1.5px 0 darkgrey;
+
     z-index: 100;
     section {
       transform: translateY(0);
