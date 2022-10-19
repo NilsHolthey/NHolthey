@@ -80,7 +80,17 @@ export default function PageTwo() {
             <CssSvg />
           </motion.section>
           <InfoBox>
-            <p> lorem10</p>
+            <ul>
+              <li>
+                <h3>HTML & CSS</h3>
+                <ul type="list">
+                  <li>Accessibility (a11y)</li>
+                  <li>Clean Code</li>
+                  <li>Responsive Design</li>
+                  <li>Semantic HTML</li>
+                </ul>
+              </li>
+            </ul>
           </InfoBox>
         </Box>
         <Box
