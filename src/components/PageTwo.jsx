@@ -46,15 +46,52 @@ const text = {
     },
   },
 };
-const list = {
+const listItem1 = {
   hidden: { opacity: 0, x: -20 },
   show: {
     opacity: 1,
     x: 0,
     transition: {
       type: 'spring',
-      duration: 1,
+      duration: 1.2,
       delay: 0.5,
+    },
+  },
+};
+const listItem2 = {
+  hidden: { opacity: 0, x: -20 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: 'spring',
+      duration: 1.2,
+      delay: 0.7,
+    },
+  },
+};
+const listItem3 = {
+  hidden: { opacity: 0, x: -20 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: 'spring',
+      duration: 1.2,
+      delay: 0.9,
+    },
+  },
+};
+
+const listItem4 = {
+  hidden: { opacity: 0, x: -20 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: 'spring',
+      duration: 1.2,
+      delay: 1.1,
     },
   },
 };
@@ -96,12 +133,34 @@ export default function PageTwo() {
             <section>
               <h3>HTML & CSS</h3>
               <ul type="list">
-                <motion.li variants={list} initial="hidden" whileInView="show">
+                <motion.li
+                  variants={listItem1}
+                  initial="hidden"
+                  whileInView="show"
+                >
                   Accessibility (a11y)
                 </motion.li>
-                <li>Clean Code</li>
-                <li>Responsive Design</li>
-                <li>Semantic HTML</li>
+                <motion.li
+                  variants={listItem2}
+                  initial="hidden"
+                  whileInView="show"
+                >
+                  Clean Code
+                </motion.li>
+                <motion.li
+                  variants={listItem3}
+                  initial="hidden"
+                  whileInView="show"
+                >
+                  Responsive Design
+                </motion.li>
+                <motion.li
+                  variants={listItem4}
+                  initial="hidden"
+                  whileInView="show"
+                >
+                  Semantic HTML
+                </motion.li>
               </ul>
             </section>
           </InfoBox>
