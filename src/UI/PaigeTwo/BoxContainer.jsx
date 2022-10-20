@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const BoxContainer = styled.section`
+  position: relative;
   width: 60vw;
   height: 80vh;
   display: grid;
-  padding-top: 2rem;
+  /* padding-top: 2rem; */
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 1rem;

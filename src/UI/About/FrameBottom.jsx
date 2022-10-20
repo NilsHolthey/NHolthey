@@ -8,5 +8,5 @@ export const FrameBottom = styled.span`
   position: absolute;
   right: -2rem;
   bottom: -2rem;
-  z-index: 5;
+  z-index: 1005;
 `;

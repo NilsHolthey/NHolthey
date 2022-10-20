@@ -46,6 +46,18 @@ const text = {
     },
   },
 };
+const list = {
+  hidden: { opacity: 0, x: -20 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: 'spring',
+      duration: 1,
+      delay: 0.5,
+    },
+  },
+};
 
 export default function PageTwo() {
   return (
@@ -62,6 +74,7 @@ export default function PageTwo() {
         </Headline>
       </HeadlineBox>
       <BoxContainer>
+        <Frame />
         <Box
           viewport={{ once: true }}
           as={motion.div}
@@ -80,17 +93,17 @@ export default function PageTwo() {
             <CssSvg />
           </motion.section>
           <InfoBox>
-            <ul>
-              <li>
-                <h3>HTML & CSS</h3>
-                <ul type="list">
-                  <li>Accessibility (a11y)</li>
-                  <li>Clean Code</li>
-                  <li>Responsive Design</li>
-                  <li>Semantic HTML</li>
-                </ul>
-              </li>
-            </ul>
+            <section>
+              <h3>HTML & CSS</h3>
+              <ul type="list">
+                <motion.li variants={list} initial="hidden" whileInView="show">
+                  Accessibility (a11y)
+                </motion.li>
+                <li>Clean Code</li>
+                <li>Responsive Design</li>
+                <li>Semantic HTML</li>
+              </ul>
+            </section>
           </InfoBox>
         </Box>
         <Box
