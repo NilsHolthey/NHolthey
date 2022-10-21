@@ -38,7 +38,7 @@ export const InfoBox = styled.section`
 
       background-repeat: no-repeat;
 
-      background: url('src/UI/PaigeTwo/SVGs/Logo.svg');
+      background: url('/Logo.svg');
       background-size: cover;
       background-position: center;
     }
