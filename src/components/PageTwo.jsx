@@ -119,7 +119,6 @@ export default function PageTwo() {
           initial="hidden"
           whileInView="show"
         >
-          <Frame />
           <motion.section
             viewport={{ once: true }}
             variants={text}
@@ -230,6 +229,7 @@ export default function PageTwo() {
             <p> lorem10</p>
           </InfoBox>
         </Box>
+        <FrameBottom />
       </BoxContainer>
     </Container>
   );

@@ -31,6 +31,8 @@ const Ul = styled.ul`
     width: 100%;
     align-items: center;
     padding-top: 6rem;
+    margin-left: 0;
+    padding-left: 0;
     li {
       padding: unset;
       font-size: 1.6rem;
