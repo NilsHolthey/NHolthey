@@ -23,6 +23,7 @@ import { TextContainer } from '../UI/TextContainer';
 import Navbar from './Navbar';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
+import { ShadowBox } from '../UI/ShadowBox';
 
 export default function MainBg() {
   const changeColor = () => {
@@ -55,6 +56,7 @@ export default function MainBg() {
   return (
     <ProfileWrapper id="home">
       <Navbar />
+      <ShadowBox />
       <InfoRight>
         <Mail href="mailto:nils.holthey@gmx.de">nils.holthey@gmx.de</Mail>
         <LineRight></LineRight>

@@ -11,6 +11,7 @@ export const Container = styled.section`
   width: 100vw;
   background-color: #1c2028;
   background-position: right;
+  background-repeat: no-repeat;
   @media (max-width: 665px) {
     height: 180vh;
   }
