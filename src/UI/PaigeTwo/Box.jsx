@@ -9,14 +9,14 @@ export const Box = styled.div`
   align-items: center;
   position: relative;
   color: #f8f8f8;
-  background-color: #272c39;
+  background: #272c39;
+  box-shadow: -12px -12px 24px #1b1e27, 12px 12px 24px #333a4b;
   transition: all 300ms;
   cursor: pointer;
   z-index: 900;
 
   &:hover {
     scale: 1.1;
-    box-shadow: 0 0 1.5px 0 darkgrey;
     z-index: 1000;
     section {
       transform: translateY(0);

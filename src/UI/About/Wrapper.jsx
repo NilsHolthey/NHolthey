@@ -6,7 +6,12 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(145deg, #232833, #2a2f3d);
-  box-shadow: inset 25px 25px 50px #1e212b;
+  background: rgb(39, 44, 57);
+  background: linear-gradient(
+    0deg,
+    rgba(39, 44, 57, 1) 40%,
+    rgba(220, 220, 220, 1) 95%
+  );
+
   z-index: 2;
 `;

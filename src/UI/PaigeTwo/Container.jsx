@@ -6,12 +6,15 @@ export const Container = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url('/BgLogo.svg');
+
   height: 100vh;
   width: 100vw;
-  background-color: #1c2028;
-  background-position: right;
-  background-repeat: no-repeat;
+  background: rgb(39, 44, 57);
+  background: linear-gradient(
+    180deg,
+    rgba(39, 44, 57, 1) 25%,
+    rgba(28, 32, 40, 1) 100%
+  );
   @media (max-width: 665px) {
     height: 180vh;
   }

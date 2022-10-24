@@ -4,7 +4,8 @@ export const DevImg = styled.img`
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
+  transform: translatex(-50%);
   width: 90vw;
 
   display: flex;

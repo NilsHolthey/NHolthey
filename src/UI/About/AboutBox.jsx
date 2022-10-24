@@ -19,7 +19,7 @@ export const AboutBox = styled.article`
   box-shadow: -5px -5px 0px 0px #272c39; */
   border-radius: 9px;
   background: linear-gradient(225deg, #191d24, #1e222b);
-  box-shadow: -25px 25px 50px #15181e, 25px -25px 50px #232832;
+  box-shadow: -25px 25px 20px #15181e, 25px -25px 52px #232832;
   @media (max-width: 665px) {
     position: relative;
     width: 100%;

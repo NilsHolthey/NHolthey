@@ -27,7 +27,7 @@ import { ShadowBox } from '../UI/ShadowBox';
 
 export default function MainBg() {
   const changeColor = () => {
-    if (window.scrollY > 200) {
+    if (window.scrollY > 150) {
       changeToHidden();
     } else {
       resetDisply();
@@ -44,8 +44,8 @@ export default function MainBg() {
   function changeToHidden() {
     let myNav = document.getElementById('profileImage');
 
-    myNav.style.opacity = '0.1';
-    myNav.style.transition = 'opacity 1.5s ease';
+    myNav.style.opacity = '0';
+    myNav.style.transition = 'opacity 2s ease';
   }
   function resetDisply() {
     let myNav = document.getElementById('profileImage');
@@ -160,6 +160,7 @@ export default function MainBg() {
         <LineLeft></LineLeft>
       </InfoLeft>
       <DevImg
+        id="devImg"
         src="DEVELOPER.png"
         as={motion.img}
         initial={{ opacity: 0.1 }}

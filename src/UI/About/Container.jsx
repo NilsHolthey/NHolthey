@@ -5,8 +5,9 @@ export const Container = styled.section`
   height: 70vh;
 
   color: #f8f8f8;
-  background: linear-gradient(225deg, #191d24, #1e222b);
-  box-shadow: -25px 25px 50px #15181e, 25px -25px 50px #232832;
+  border-radius: 4px;
+  background: linear-gradient(145deg, #2a2f3d, #232833);
+  box-shadow: 12px 12px 24px #1b1e27, -12px -12px 24px #333a4b;
 
   padding: 1rem;
   position: relative;

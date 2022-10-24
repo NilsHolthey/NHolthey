@@ -5,7 +5,6 @@ export const ProfileContainer = styled.div`
   height: 100vh;
   display: flex;
   justify-content: flex-end;
-  border-radius: 9px;
   background: #dcdcdc;
 
   overflow: hidden;
