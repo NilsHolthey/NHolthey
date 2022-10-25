@@ -3,8 +3,7 @@ import { ImageContainer } from '../UI/ImageContainer';
 import { InfoLeft } from '../UI/InfoLeft';
 import { InfoRight } from '../UI/InfoRight';
 import { LineLeft } from '../UI/LineLeft';
-import { LineOne } from '../UI/LineOne';
-import { LineTwo } from '../UI/LineTwo';
+
 import { LinkList } from '../UI/LinkList';
 import { Mail } from '../UI/Mail';
 import MailSvg from '../UI/MailSvg';
@@ -12,19 +11,19 @@ import { LineRight } from '../UI/PaigeTwo/LineRight';
 import { ProfileContainer } from '../UI/ProfileContainer';
 import { ProfileImage } from '../UI/ProfileImage';
 import { ProfileWrapper } from '../UI/Profilewrapper';
-import { QuoteL } from '../UI/QuoteL';
-import { QuoteR } from '../UI/QuoteR';
+
 import { DevImg } from '../UI/DevImg';
 
 import { SocialLink } from '../UI/SocialLinks';
-import { TextBox } from '../UI/TextBox';
+
 import { TextContainer } from '../UI/TextContainer';
 // import DevSvg from './DevSvg';
 import Navbar from './Navbar';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { ShadowBox } from '../UI/ShadowBox';
-import { useState } from 'react';
+import TexBoxHook from './TextBoxhook';
+// import { useState } from 'react';
 
 export default function MainBg() {
   const changeColor = () => {
@@ -35,14 +34,16 @@ export default function MainBg() {
     }
   };
 
-  const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
+  // const [offsetY, setOffsetY] = useState(0);
+  // const handleScroll = () => setOffsetY(window.pageYOffset);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll, changeColor);
+    window.addEventListener('scroll', function () {
+      changeColor();
+    });
 
     return () => {
-      window.removeEventListener('scroll', handleScroll, changeColor);
+      window.removeEventListener('scroll', changeColor);
     };
   }, []);
 
@@ -179,54 +180,7 @@ export default function MainBg() {
       {/* <DevSvg /> */}
       <ProfileContainer>
         <TextContainer>
-          <TextBox style={{ transform: `translateY(-${offsetY * 0.5}px)` }}>
-            {/* <TextBox id="textbox"> */}
-            <QuoteL>
-              <SvgIcon
-                variant="quoteOpen"
-                size="5rem"
-                color="lightgrey"
-                strokeWidth="0"
-              />
-            </QuoteL>
-            <LineOne
-              as={motion.p}
-              initial={{ opacity: 0, y: 50 }}
-              transition={{
-                type: 'spring',
-                duration: 2.8,
-                delay: 0.8,
-                bounce: 0.1,
-              }}
-              animate={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              Hi there,
-            </LineOne>
-            <LineTwo
-              as={motion.p}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 0.8 }}
-              transition={{
-                type: 'spring',
-                bounce: 0.2,
-                duration: 2,
-                delay: 1.3,
-              }}
-              animate={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              lets create something new!
-            </LineTwo>
-            <QuoteR>
-              <SvgIcon
-                variant="quoteClose"
-                size="5rem"
-                color="lightgrey"
-                strokeWidth="0"
-              />
-            </QuoteR>
-          </TextBox>
+          <TexBoxHook />
         </TextContainer>
         <ImageContainer>
           <ProfileImage
