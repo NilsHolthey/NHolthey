@@ -6,5 +6,5 @@ export const ShadowBox = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 15;
 `;

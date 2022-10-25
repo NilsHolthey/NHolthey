@@ -26,9 +26,9 @@ export const AboutBox = styled.article`
   p {
     background-image: linear-gradient(
       125deg,
-      rgba(102, 103, 171, 1) 0%,
-      rgba(226, 97, 190, 1) 49%,
-      rgba(220, 220, 220, 1) 100%
+      rgba(102, 103, 171, 1) 20%,
+      rgba(226, 97, 190, 1) 59%,
+      rgba(220, 220, 220, 1) 90%
     );
     background-clip: text;
     -webkit-background-clip: text;
@@ -36,6 +36,7 @@ export const AboutBox = styled.article`
   }
   @media (max-width: 665px) {
     position: relative;
+    border-radius: 0;
     width: 100%;
     height: 100%;
     bottom: unset;
