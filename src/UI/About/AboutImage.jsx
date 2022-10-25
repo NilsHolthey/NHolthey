@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const AboutImage = styled.img`
   position: absolute;
-  z-index: 10;
+  z-index: 2;
   max-height: 30%;
-  bottom: -2.5rem;
-  right: 0;
-  border-bottom: solid 2px #d9d9d9;
+  top: 20%;
+  left: 3rem;
+  border-bottom: solid 3px #d9d9d9;
   border-radius: 2px;
 
   @media (max-width: 768px) {

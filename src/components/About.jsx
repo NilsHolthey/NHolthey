@@ -6,6 +6,7 @@ import DotGRid from '../UI/About/DotGrid';
 import { Frame } from '../UI/About/Frame';
 import { Headline } from '../UI/About/Headline';
 import { Wrapper } from '../UI/About/Wrapper';
+import ShadowBox from './ShadowBox';
 
 const item = {
   hidden: { opacity: 0, y: 70 },
@@ -64,7 +65,19 @@ export default function About() {
         >
           1. About Me
         </Headline>
-
+        <AboutImage
+          id="profileImage"
+          as={motion.img}
+          src="AboutImage.png"
+          alt="profile"
+          initial={{ opacity: 0, x: 190 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            type: 'spring',
+            bounce: 0.3,
+            duration: 3.5,
+          }}
+        />
         <AboutBox
           viewport={{ once: true }}
           as={motion.article}
@@ -72,19 +85,7 @@ export default function About() {
           initial="hidden"
           whileInView="show"
         >
-          <AboutImage
-            id="profileImage"
-            as={motion.img}
-            src="AboutImage.png"
-            alt="profile"
-            initial={{ opacity: 0, x: 80 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{
-              type: 'spring',
-              bounce: 0.3,
-              duration: 2,
-            }}
-          />
+          <ShadowBox />
           <motion.p
             viewport={{ once: true }}
             variants={text}
@@ -94,7 +95,13 @@ export default function About() {
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga quia
             totam veritatis itaque debitis dolores qui, accusantium quibusdam
             amet officia explicabo et expedita sit velit veniam rem
-            necessitatibus temporibus eos!
+            necessitatibus temporibus eos! Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Fuga quia totam veritatis itaque
+            debitis dolores qui, accusantium quibusdam amet officia explicabo et
+            expedita sit velit veniam rem necessitatibus temporibus eos!
+            consectetur adipisicing elit. Fuga quia totam veritatis itaque
+            debitis dolores qui, accusantium quibusdam amet officia explicabo et
+            expedita sit velit veniam rem necessitatibus temporibus eos!
           </motion.p>
         </AboutBox>
       </Container>

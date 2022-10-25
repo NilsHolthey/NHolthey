@@ -4,7 +4,7 @@ export const Container = styled.section`
   width: 60vw;
   height: 70vh;
 
-  color: #f8f8f8;
+  /* color: #f8f8f8; */
   border-radius: 4px;
   background: linear-gradient(145deg, #2a2f3d, #232833);
   box-shadow: 12px 12px 24px #1b1e27, -12px -12px 24px #333a4b;

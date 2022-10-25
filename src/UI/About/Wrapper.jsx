@@ -9,8 +9,8 @@ export const Wrapper = styled.div`
   background: rgb(39, 44, 57);
   background: linear-gradient(
     0deg,
-    rgba(39, 44, 57, 1) 40%,
-    rgba(220, 220, 220, 1) 95%
+    rgba(39, 44, 57, 1) 25%,
+    rgba(28, 32, 40, 1) 100%
   );
 
   z-index: 2;
