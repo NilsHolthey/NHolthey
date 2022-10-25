@@ -6,6 +6,6 @@ export const ProfileContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   background: #dcdcdc;
-  position: relative;
+
   overflow: hidden;
 `;
