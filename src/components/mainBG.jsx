@@ -24,6 +24,7 @@ import Navbar from './Navbar';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { ShadowBox } from '../UI/ShadowBox';
+import { useState } from 'react';
 
 export default function MainBg() {
   const changeColor = () => {
@@ -34,10 +35,14 @@ export default function MainBg() {
     }
   };
 
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
   useEffect(() => {
-    window.addEventListener('scroll', changeColor);
+    window.addEventListener('scroll', handleScroll, changeColor);
+
     return () => {
-      window.removeEventListener('scroll', changeColor);
+      window.removeEventListener('scroll', handleScroll, changeColor);
     };
   }, []);
 
@@ -174,7 +179,8 @@ export default function MainBg() {
       {/* <DevSvg /> */}
       <ProfileContainer>
         <TextContainer>
-          <TextBox>
+          <TextBox style={{ transform: `translateY(-${offsetY * 0.5}px)` }}>
+            {/* <TextBox id="textbox"> */}
             <QuoteL>
               <SvgIcon
                 variant="quoteOpen"
