@@ -10,7 +10,7 @@ export const Headline = styled.h3`
   z-index: 1;
   font-family: 'Fjalla One', sans-serif;
 
-  @media (min-width: 660px) {
+  @media (max-width: 660px) {
     top: 0;
   }
 `;
