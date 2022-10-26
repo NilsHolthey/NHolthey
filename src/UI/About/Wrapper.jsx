@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
     rgba(39, 44, 57, 1) 25%,
     rgba(28, 32, 40, 1) 100%
   );
+  position: relative;
 
   z-index: 2;
 `;

@@ -20,10 +20,13 @@ export const AboutBox = styled.article`
   /* background-color: #1c2028;
   box-shadow: -5px -5px 0px 0px #272c39; */
   border-radius: 9px;
-  background: linear-gradient(225deg, #191d24, #1e222b);
+  background: rgba(25, 29, 36, 1);
   box-shadow: -25px 25px 20px #15181e, 25px -25px 52px #232832;
+  transition: width 1000ms ease-in-out, bottom 1000ms ease-in-out,
+    right 1000ms ease-in-out;
 
   p {
+    bottom: 3rem;
     background-image: linear-gradient(
       125deg,
       rgba(102, 103, 171, 1) 20%,

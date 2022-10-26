@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 export const AboutImage = styled.img`
-  position: absolute;
-  z-index: 2;
+  position: sticky;
+  top: 1;
+
+  z-index: 11116;
   max-height: 30%;
-  top: 20%;
-  left: 3rem;
+
   border-bottom: solid 3px #d9d9d9;
   border-radius: 2px;
 

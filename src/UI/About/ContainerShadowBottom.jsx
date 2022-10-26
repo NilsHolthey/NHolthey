@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
-export const ContainerShadow = styled.div`
+export const ContainerShadowBottom = styled.div`
   width: 100%;
   height: 150%;
   /* box-shadow: -100px 149px 77px -10px rgba(25, 29, 36, 1),
     100px 149px 77px -10px rgba(25, 29, 36, 1); */
-  top: 30rem;
+  bottom: -110rem;
   z-index: 11115;
   background: rgb(25, 29, 36);
   background: linear-gradient(
-    180deg,
+    0deg,
     rgba(25, 29, 36, 1) 65%,
     rgba(0, 0, 0, 0) 100%
   );

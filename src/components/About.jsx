@@ -1,12 +1,15 @@
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 import { AboutBox } from '../UI/About/AboutBox';
 import { AboutImage } from '../UI/About/AboutImage';
 import { Container } from '../UI/About/Container';
 import DotGRid from '../UI/About/DotGrid';
 import { Frame } from '../UI/About/Frame';
 import { Headline } from '../UI/About/Headline';
+
 import { Wrapper } from '../UI/About/Wrapper';
 import ShadowBox from './ShadowBox';
+import ShadowBoxBottom from './ShadowBoxBottom';
 
 const item = {
   hidden: { opacity: 0, y: 70 },
@@ -45,6 +48,34 @@ const text = {
 };
 
 export default function About() {
+  const changeSize = () => {
+    if (window.scrollY > 850) {
+      changeToFullWidth();
+    } else {
+      resetWidth();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeSize);
+    return () => {
+      window.removeEventListener('scroll', changeSize);
+    };
+  }, []);
+
+  function changeToFullWidth() {
+    let boxSize = document.getElementById('aboutBox');
+
+    boxSize.style.width = '100%';
+    boxSize.style.bottom = '0';
+    boxSize.style.right = '0';
+  }
+  function resetWidth() {
+    let boxSize = document.getElementById('aboutBox');
+    boxSize.style.width = '60%';
+    boxSize.style.bottom = '-2rem';
+    boxSize.style.right = '-2rem';
+  }
   return (
     <Wrapper id="about">
       <Container
@@ -67,25 +98,43 @@ export default function About() {
         </Headline>
         <AboutImage
           id="profileImage"
-          as={motion.img}
+          // as={motion.img}
           src="AboutImage.png"
           alt="profile"
-          initial={{ opacity: 0, x: 190 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{
-            type: 'spring',
-            bounce: 0.3,
-            duration: 3.5,
-          }}
+          // initial={{ opacity: 0 }}
+          // animate={{ opacity: 1 }}
+          // transition={{
+          //   type: 'spring',
+          //   bounce: 0.3,
+          //   duration: 3.5,
+          // }}
         />
         <AboutBox
+          id="aboutBox"
           viewport={{ once: true }}
           as={motion.article}
           variants={subItem}
           initial="hidden"
           whileInView="show"
         >
+          {/* <ImageWrapper>
+            <AboutImage
+              id="profileImage"
+              // as={motion.img}
+              src="AboutImage.png"
+              alt="profile"
+              // initial={{ opacity: 0 }}
+              // animate={{ opacity: 1 }}
+              // transition={{
+              //   type: 'spring',
+              //   bounce: 0.3,
+              //   duration: 3.5,
+              // }}
+            />
+          </ImageWrapper> */}
+          <ShadowBoxBottom />
           <ShadowBox />
+
           <motion.p
             viewport={{ once: true }}
             variants={text}
@@ -99,9 +148,7 @@ export default function About() {
             consectetur adipisicing elit. Fuga quia totam veritatis itaque
             debitis dolores qui, accusantium quibusdam amet officia explicabo et
             expedita sit velit veniam rem necessitatibus temporibus eos!
-            consectetur adipisicing elit. Fuga quia totam veritatis itaque
-            debitis dolores qui, accusantium quibusdam amet officia explicabo et
-            expedita sit velit veniam rem necessitatibus temporibus eos!
+            consectetur adipisicing elit.
           </motion.p>
         </AboutBox>
       </Container>
