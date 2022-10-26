@@ -37,13 +37,12 @@ export const AboutBox = styled.article`
     -webkit-background-clip: text;
     color: transparent;
   }
-  @media (max-width: 665px) {
-    position: relative;
+  @media (max-width: 765px) {
+    position: absolute;
     border-radius: 0;
     width: 100%;
     height: 100%;
-    bottom: unset;
-    right: unset;
-    box-shadow: unset;
+    bottom: 0;
+    right: 0;
   }
 `;

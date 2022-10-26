@@ -14,5 +14,6 @@ export const AboutImage = styled.img`
     max-height: 20%;
     bottom: -1.5rem;
     right: -1rem;
+    display: none;
   }
 `;

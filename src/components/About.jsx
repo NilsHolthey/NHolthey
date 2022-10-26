@@ -49,7 +49,7 @@ const text = {
 
 export default function About() {
   const changeSize = () => {
-    if (window.scrollY > 850) {
+    if (window.scrollY > 780) {
       changeToFullWidth();
     } else {
       resetWidth();
