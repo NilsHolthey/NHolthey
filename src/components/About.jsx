@@ -99,7 +99,7 @@ export default function About() {
         <AboutImage
           id="profileImage"
           // as={motion.img}
-          src="AboutImage.png"
+          src="ProfileAboutBig.png"
           alt="profile"
           // initial={{ opacity: 0 }}
           // animate={{ opacity: 1 }}

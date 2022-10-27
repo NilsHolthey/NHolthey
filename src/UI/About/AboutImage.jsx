@@ -1,19 +1,16 @@
 import styled from 'styled-components';
 
 export const AboutImage = styled.img`
-  position: sticky;
-  top: 1;
+  position: absolute;
+  bottom: 3rem;
 
-  z-index: 11116;
-  max-height: 30%;
+  height: 70%;
+  z-index: 4;
 
-  border-bottom: solid 3px #d9d9d9;
-  border-radius: 2px;
-
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     max-height: 20%;
     bottom: -1.5rem;
     right: -1rem;
     display: none;
-  }
+  } */
 `;
