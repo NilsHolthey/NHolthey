@@ -7,10 +7,11 @@ export const Container = styled.section`
   /* color: #f8f8f8; */
   border-radius: 4px;
   background: linear-gradient(145deg, #2a2f3d, #232833);
-  box-shadow: 12px 12px 24px #1b1e27, -12px -12px 24px #333a4b;
+  box-shadow: 6px 6px 24px #1b1e27, -6px -6px 24px #333a4b;
 
   padding: 1rem;
   position: relative;
+
   @media (max-width: 665px) {
     width: 80vw;
     display: flex;

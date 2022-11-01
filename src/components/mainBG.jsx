@@ -178,6 +178,7 @@ export default function MainBg() {
         }}
       />
       {/* <DevSvg /> */}
+
       <ProfileContainer>
         <TextContainer>
           <TexBoxHook />

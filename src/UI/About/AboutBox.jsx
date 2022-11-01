@@ -21,7 +21,7 @@ export const AboutBox = styled.article`
   box-shadow: -5px -5px 0px 0px #272c39; */
   border-radius: 9px;
   background: rgba(25, 29, 36, 1);
-  box-shadow: -25px 25px 20px #15181e, 25px -25px 52px #232832;
+  box-shadow: -15px 15px 20px #15181e, 15px -15px 52px #232832;
   transition: width 1000ms ease-in-out, bottom 1000ms ease-in-out,
     right 1000ms ease-in-out;
 
@@ -36,6 +36,7 @@ export const AboutBox = styled.article`
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    opacity: 0.5;
   }
   @media (max-width: 765px) {
     position: absolute;
