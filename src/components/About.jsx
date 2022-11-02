@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { AboutBox } from '../UI/About/AboutBox';
 import { AboutImage } from '../UI/About/AboutImage';
+import { AboutImageBox } from '../UI/About/AboutImageBox';
+import { AboutText } from '../UI/About/AboutText';
 import { Container } from '../UI/About/Container';
 import DotGRid from '../UI/About/DotGrid';
 import { Frame } from '../UI/About/Frame';
@@ -84,6 +86,7 @@ export default function About() {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  console.log(offsetY);
   return (
     <Wrapper id="about">
       <Container
@@ -104,20 +107,24 @@ export default function About() {
         >
           1. About Me
         </Headline>
-        <AboutImage
-          id="profileImage"
-          style={{ transform: `translateY(-${offsetY * 0.075}px)` }}
-          // as={motion.img}
-          src="ProfileAboutBig.png"
-          alt="profile"
-          // initial={{ opacity: 0 }}
-          // animate={{ opacity: 1 }}
-          // transition={{
-          //   type: 'spring',
-          //   bounce: 0.3,
-          //   duration: 3.5,
-          // }}
-        />
+
+        <AboutImageBox
+          style={{ transform: `translateY(${offsetY * 0.075}px)` }}
+        >
+          <AboutImage
+            id="profileImage"
+            // as={motion.img}
+            src="ProfileAboutBig.png"
+            alt="profile"
+            // initial={{ opacity: 0 }}
+            // animate={{ opacity: 1 }}
+            // transition={{
+            //   type: 'spring',
+            //   bounce: 0.3,
+            //   duration: 3.5,
+            // }}
+          />
+        </AboutImageBox>
         <AboutBox
           id="aboutBox"
           style={{ transform: `translateY(${offsetY * 0.175}px)` }}
@@ -145,11 +152,18 @@ export default function About() {
           {/* <ShadowBoxBottom />
           <ShadowBox /> */}
 
-          <motion.p
+          <AboutText
+            as={motion.p}
             viewport={{ once: true }}
             variants={text}
             initial="hidden"
             whileInView="show"
+            style={{
+              backgroundImage: `linear-gradient(125deg,
+              rgba(102, 103, 171, ${offsetY * 0.001}) 20%,
+              rgba(226, 97, 190, ${offsetY * 0.001}) 59%,
+              rgba(220, 220, 220, ${offsetY * 0.001}) 90%)`,
+            }}
             // style={{ opacity: `(${offsetY * 0.175})` }}
           >
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga quia
@@ -160,7 +174,7 @@ export default function About() {
             debitis dolores qui, accusantium quibusdam amet officia explicabo et
             expedita sit velit veniam rem necessitatibus temporibus eos!
             consectetur adipisicing elit.
-          </motion.p>
+          </AboutText>
         </AboutBox>
       </Container>
     </Wrapper>

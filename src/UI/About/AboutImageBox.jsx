@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const AboutBox = styled.article`
+export const AboutImageBox = styled.article`
   font-weight: bolder;
   display: flex;
-  width: 60%;
-  height: 100%;
+  width: 50%;
+  height: 80%;
   flex-wrap: wrap;
   /* border-bottom: solid 5px #dcdcdc;
   border-right: solid 5px #dcdcdc; */
@@ -12,16 +12,16 @@ export const AboutBox = styled.article`
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: -2rem;
-  right: -2rem;
+  top: -1rem;
+  left: 0;
   font-size: 1.2rem;
   z-index: 5;
   overflow: hidden;
   /* background-color: #1c2028;
   box-shadow: -5px -5px 0px 0px #272c39; */
   border-radius: 9px;
-  background: rgba(25, 29, 36, 1);
-  box-shadow: -15px 15px 20px #15181e, 15px -15px 52px #232832;
+  background: linear-gradient(145deg, #2a2f3d, #232833);
+  box-shadow: 6px 6px 24px #1b1e27;
   transition: width 1000ms ease-in-out, bottom 1000ms ease-in-out,
     right 1000ms ease-in-out;
 

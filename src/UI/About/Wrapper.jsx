@@ -7,11 +7,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   background: rgb(39, 44, 57);
-  background: linear-gradient(
-    0deg,
-    rgba(39, 44, 57, 1) 25%,
-    rgba(28, 32, 40, 1) 100%
-  );
+
   position: relative;
 
   z-index: 2;
