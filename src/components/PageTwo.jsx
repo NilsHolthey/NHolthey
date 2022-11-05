@@ -10,6 +10,9 @@ import HtmlSvg from '../UI/PaigeTwo/SVGs/HtmlSvg';
 import CssSvg from '../UI/PaigeTwo/SVGs/CssSvg';
 import { InfoBox } from '../UI/PaigeTwo/InfoBox';
 
+import { useState } from 'react';
+import { useEffect } from 'react';
+
 const item = {
   hidden: { opacity: 0, y: 70 },
   show: {
@@ -46,59 +49,70 @@ const text = {
     },
   },
 };
-const listItem1 = {
-  hidden: { opacity: 0, x: -20 },
-  show: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: 'spring',
-      duration: 1.2,
-      delay: 0.5,
-    },
-  },
-};
-const listItem2 = {
-  hidden: { opacity: 0, x: -20 },
-  show: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: 'spring',
-      duration: 1.2,
-      delay: 0.7,
-    },
-  },
-};
-const listItem3 = {
-  hidden: { opacity: 0, x: -20 },
-  show: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: 'spring',
-      duration: 1.2,
-      delay: 0.9,
-    },
-  },
-};
+// const listItem1 = {
+//   hidden: { opacity: 0, x: -20 },
+//   show: {
+//     opacity: 1,
+//     x: 0,
+//     transition: {
+//       type: 'spring',
+//       duration: 1.2,
+//       delay: 0.5,
+//     },
+//   },
+// };
+// const listItem2 = {
+//   hidden: { opacity: 0, x: -20 },
+//   show: {
+//     opacity: 1,
+//     x: 0,
+//     transition: {
+//       type: 'spring',
+//       duration: 1.2,
+//       delay: 0.7,
+//     },
+//   },
+// };
+// const listItem3 = {
+//   hidden: { opacity: 0, x: -20 },
+//   show: {
+//     opacity: 1,
+//     x: 0,
+//     transition: {
+//       type: 'spring',
+//       duration: 1.2,
+//       delay: 0.9,
+//     },
+//   },
+// };
 
-const listItem4 = {
-  hidden: { opacity: 0, x: -20 },
-  show: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: 'spring',
-      duration: 1.2,
-      delay: 1.1,
-    },
-  },
-};
+// const listItem4 = {
+//   hidden: { opacity: 0, x: -20 },
+//   show: {
+//     opacity: 1,
+//     x: 0,
+//     transition: {
+//       type: 'spring',
+//       duration: 1.2,
+//       delay: 1.1,
+//     },
+//   },
+// };
 
 export default function PageTwo() {
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
-    <Container id="skillset">
+    <Container
+      id="skillset"
+      style={{ backgroundColor: `rgba(39, 44, 57, ${offsetY * 0.00022})` }}
+    >
       <HeadlineBox>
         <Headline
           viewport={{ once: true }}
@@ -129,39 +143,15 @@ export default function PageTwo() {
             <CssSvg />
           </motion.section>
           <InfoBox>
-            <section>
+            <motion.section>
               <h3>HTML & CSS</h3>
               <ul type="list">
-                <motion.li
-                  variants={listItem1}
-                  initial="hidden"
-                  whileInView="show"
-                >
-                  Accessibility (a11y)
-                </motion.li>
-                <motion.li
-                  variants={listItem2}
-                  initial="hidden"
-                  whileInView="show"
-                >
-                  Clean Code
-                </motion.li>
-                <motion.li
-                  variants={listItem3}
-                  initial="hidden"
-                  whileInView="show"
-                >
-                  Responsive Design
-                </motion.li>
-                <motion.li
-                  variants={listItem4}
-                  initial="hidden"
-                  whileInView="show"
-                >
-                  Semantic HTML
-                </motion.li>
+                <motion.li>Accessibility (a11y)</motion.li>
+                <motion.li>Clean Code</motion.li>
+                <motion.li>Responsive Design</motion.li>
+                <motion.li>Semantic HTML</motion.li>
               </ul>
-            </section>
+            </motion.section>
           </InfoBox>
         </Box>
         <Box
@@ -176,6 +166,7 @@ export default function PageTwo() {
           }}
         >
           <motion.p
+            className="BoxTwoText"
             viewport={{ once: true }}
             variants={text}
             initial="hidden"

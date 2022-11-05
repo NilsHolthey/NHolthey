@@ -2,15 +2,12 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.section`
   width: 60vw;
-  height: 70vh;
+  height: 90vh;
 
   /* color: #f8f8f8; */
   border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
+
+  background-color: #272c391e;
   position: relative;
 
   @media (max-width: 665px) {

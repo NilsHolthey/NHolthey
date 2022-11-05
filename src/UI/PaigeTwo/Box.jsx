@@ -1,30 +1,37 @@
 import styled from 'styled-components';
+import { Headline } from './Headline';
 
 export const Box = styled.div`
   overflow: hidden;
   display: flex;
-  flex-wrap: wrap;
+
   text-align: center;
   justify-content: center;
   align-items: center;
   position: relative;
   color: #f8f8f8;
-  background: #272c39;
-  box-shadow: -12px -12px 24px #1b1e27, 12px 12px 24px #333a4b;
-  transition: all 300ms;
+  background: rgb(39, 44, 57);
+  /* box-shadow: -4px -4px 6px #6667ab97, 4px 4px 6px #6667ab97; */
+
   cursor: pointer;
   z-index: 900;
-
+  /* clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%); */
+  svg {
+    -webkit-box-reflect: below 0
+      linear-gradient(to bottom, transparent, #88888824);
+  }
+  ${Headline}:hover {
+    background-color: hotpink;
+  }
   &:hover {
-    scale: 1.1;
     z-index: 1000;
     section {
-      transform: translateY(0);
+      scale: 1;
     }
+
     svg {
       filter: grayscale(85%);
       transition: filter 300ms;
     }
   }
 `;
-2;

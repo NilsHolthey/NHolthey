@@ -5,7 +5,7 @@ export const LineLeft = styled.div`
   height: 7rem;
   width: 0.1rem;
   background-color: #f8f8f8;
-  &::after {
+  /* &::after {
     margin-right: 0.2rem;
     content: '';
     position: absolute;
@@ -28,7 +28,7 @@ export const LineLeft = styled.div`
     to {
       transform: scaleY(1);
     }
-  }
+  } */
   @media (max-width: 768px) {
     display: none;
   }

@@ -1,8 +1,5 @@
-
-
 export default function CssSvg() {
   return (
-   
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="112"
@@ -23,6 +20,5 @@ export default function CssSvg() {
         d="M255.805 208.59v56.517H325.4l-6.56 73.299-63.035 17.013v58.8l115.864-32.112.85-9.549 13.28-148.792 1.38-15.176 10.203-114.393H255.805v56.518h79.639L330.3 208.59z"
       />
     </svg>
-    
   );
 }

@@ -4,10 +4,14 @@ import { AboutBox } from '../UI/About/AboutBox';
 import { AboutImage } from '../UI/About/AboutImage';
 import { AboutImageBox } from '../UI/About/AboutImageBox';
 import { AboutText } from '../UI/About/AboutText';
+
+import { BreakLine } from '../UI/About/BreakLine';
 import { Container } from '../UI/About/Container';
 import DotGRid from '../UI/About/DotGrid';
-import { Frame } from '../UI/About/Frame';
+// import { Frame } from '../UI/About/Frame';
 import { Headline } from '../UI/About/Headline';
+import { HeadlineBox } from '../UI/About/HeadlineBox';
+import { TopLine } from '../UI/About/TopLine';
 
 import { Wrapper } from '../UI/About/Wrapper';
 // import ShadowBox from './ShadowBox';
@@ -24,18 +28,18 @@ const item = {
     },
   },
 };
-const subItem = {
-  hidden: { opacity: 0, y: 20 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: 'spring',
-      duration: 1.3,
-      delay: 0.5,
-    },
-  },
-};
+// const subItem = {
+//   hidden: { opacity: 0, y: 20 },
+//   show: {
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       type: 'spring',
+//       duration: 1.3,
+//       delay: 0.5,
+//     },
+//   },
+// };
 const text = {
   hidden: { opacity: 0, y: 10 },
   show: {
@@ -88,7 +92,18 @@ export default function About() {
   }, []);
   console.log(offsetY);
   return (
-    <Wrapper id="about">
+    <Wrapper
+      id="about"
+      style={
+        offsetY > 700
+          ? { backgroundColor: `rgba(39, 44, 57, ${offsetY * 0.00022})` }
+          : { backgroundColor: `rgb(220, 220, 220)` }
+      }
+    >
+      {/* <BackgroundBox
+        style={{ backgroundColor: `rgba(39, 44, 57,
+          rgb(39, 44, 57) ${offsetY * 0.0002})` }}
+      /> */}
       <Container
         viewport={{ once: true }}
         as={motion.section}
@@ -97,19 +112,25 @@ export default function About() {
         whileInView="show"
       >
         <DotGRid />
-        <Frame />
-        <Headline
-          viewport={{ once: true }}
-          as={motion.h3}
-          variants={subItem}
-          initial="hidden"
-          whileInView="show"
-        >
-          1. About Me
-        </Headline>
+        {/* <Frame /> */}
+        <BreakLine />
+        <HeadlineBox>
+          <span>01</span>
+          <TopLine />
+
+          <Headline
+          // viewport={{ once: true }}
+          // as={motion.h3}
+          // variants={subItem}
+          // initial="hidden"
+          // whileInView="show"
+          >
+            About Me
+          </Headline>
+        </HeadlineBox>
 
         <AboutImageBox
-          style={{ transform: `translateY(${offsetY * 0.075}px)` }}
+          style={{ transform: `translateY(-${offsetY * 0.06}px)` }}
         >
           <AboutImage
             id="profileImage"
@@ -127,12 +148,12 @@ export default function About() {
         </AboutImageBox>
         <AboutBox
           id="aboutBox"
-          style={{ transform: `translateY(${offsetY * 0.175}px)` }}
-          viewport={{ once: true }}
-          as={motion.article}
-          variants={subItem}
-          initial="hidden"
-          whileInView="show"
+          // viewport={{ once: true }}
+          // as={motion.article}
+          // variants={subItem}
+          // initial="hidden"
+          // whileInView="show"
+          style={{ transform: `translateY(${offsetY * 0.06}px)` }}
         >
           {/* <ImageWrapper>
             <AboutImage

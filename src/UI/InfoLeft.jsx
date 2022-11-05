@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const InfoLeft = styled.div`
   position: fixed;
   cursor: pointer;
-  z-index: 10;
+  z-index: 1000;
   align-items: center;
   gap: 1rem;
   left: 1rem;
@@ -16,7 +16,7 @@ export const InfoLeft = styled.div`
     left: 0;
     background-color: #1c2028;
     opacity: 0.7;
-    height: 3rem;
+    height: 3.5rem;
     bottom: 0;
   }
 `;

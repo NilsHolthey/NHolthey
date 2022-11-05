@@ -5,12 +5,12 @@ export const InfoBox = styled.section`
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.5);
-
+  /* clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%); */
   backdrop-filter: blur(7.5px);
   -webkit-backdrop-filter: blur(7.5px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  transform: translateY(110%);
-  transition: all 350ms;
+  /* transform: translateY(110%); */
+  transition: all 500ms ease-in-out;
   color: #272c39;
   display: flex;
   justify-content: center;
@@ -18,6 +18,13 @@ export const InfoBox = styled.section`
   font-size: 1.2rem;
   font-family: 'Fjalla One', sans-serif;
   text-align: left;
+  scale: 0;
+  opacity: 0;
+  &:hover {
+    opacity: 1;
+
+    /* transform: translateY(0); */
+  }
 
   ul {
     list-style: none;
@@ -42,5 +49,8 @@ export const InfoBox = styled.section`
       background-size: cover;
       background-position: center;
     }
+  }
+  @media (max-width: 765px) {
+    font-size: 1rem;
   }
 `;

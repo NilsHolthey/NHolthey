@@ -6,8 +6,9 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(39, 44, 57);
+  /* background: rgb(39, 44, 57); */
 
+  overflow: hidden;
   position: relative;
 
   z-index: 2;

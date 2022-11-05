@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Headline = styled.h3`
-  color: #940c0c;
+  color: #f8f8f8;
   padding: 0 0 0 1rem;
   margin: 0.5rem;
   font-weight: 900;

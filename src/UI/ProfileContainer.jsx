@@ -5,7 +5,7 @@ export const ProfileContainer = styled.div`
   height: 100vh;
   display: flex;
   justify-content: flex-end;
-  background: #dcdcdc;
+  background: rgb(220, 220, 220);
 
   overflow: hidden;
 `;
