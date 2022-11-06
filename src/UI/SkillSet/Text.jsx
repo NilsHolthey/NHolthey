@@ -9,5 +9,5 @@ export const Text = styled.p`
   flex-wrap: wrap;
 
   text-align: left;
-  color: #f8f8f8;
+  color: #c0c0c0;
 `;
