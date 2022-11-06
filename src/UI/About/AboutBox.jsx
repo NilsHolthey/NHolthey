@@ -12,7 +12,7 @@ export const AboutBox = styled.article`
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: -4rem;
+  top: -2.955rem;
   right: 0rem;
   font-size: 1.2rem;
   z-index: 5;

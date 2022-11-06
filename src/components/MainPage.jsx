@@ -4,6 +4,7 @@ import Contact from './Contact';
 import MainBg from './mainBG';
 import PageTwo from './PageTwo';
 import PrevWork from './PrevWork';
+import Skillset from './SkillSet';
 
 export default function MainPage() {
   return (
@@ -12,6 +13,7 @@ export default function MainPage() {
       <MainBg />
       <About />
       <PageTwo />
+      <Skillset />
       <PrevWork />
       <Contact />
     </>
