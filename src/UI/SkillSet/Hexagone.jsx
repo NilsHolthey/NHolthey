@@ -2,14 +2,37 @@ import styled from 'styled-components';
 
 export const Hexagon = styled.div`
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: ${({ top = '' }) => top};
   right: ${({ right = '' }) => right};
-  width: 7.7rem;
-  height: 7rem;
+  width: ${({ width = '' }) => width};
+  height: ${({ height = '' }) => height};
   background-color: #ffffffc8;
-  -webkit-clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
-  clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
-
+  border-radius: 50%;
+  background-color: #8485b0;
+  box-shadow: inset -25px -15px 40px rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 220, 0.3) 0%,
+    transparent 100%
+  );
+  div {
+    width: 100%;
+    background-color: #8485b037;
+    height: 100%;
+    position: absolute;
+    border-radius: 100%;
+    box-shadow: inset -25px -15px 40px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(
+      -45deg,
+      rgba(255, 255, 220, 0.1) 0%,
+      transparent 100%
+    );
+  }
+  img {
+  }
   animation-name: floating;
   animation-duration: ${({ duration = '' }) => duration};
   animation-iteration-count: infinite;
@@ -19,7 +42,7 @@ export const Hexagon = styled.div`
       transform: translate(0, 0px);
     }
     65% {
-      transform: translate(0, 10px);
+      transform: translate(-0.1px, 15px);
     }
     to {
       transform: translate(0, -0px);

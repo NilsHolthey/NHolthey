@@ -5,11 +5,11 @@ export const Headline = styled.h3`
   /* padding: 1rem; */
 
   font-weight: 900;
+
   position: absolute;
-  /* position: absolute; */
 
   font-size: 1.5rem;
-  top: 50%;
+  top: 20%;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -23,7 +23,7 @@ export const Headline = styled.h3`
 
   z-index: 100000;
   font-family: 'Fjalla One', sans-serif;
-
+  letter-spacing: 1px;
   span {
   }
   @media (max-width: 660px) {

@@ -11,7 +11,7 @@ import DotGRid from '../UI/About/DotGrid';
 // import { Frame } from '../UI/About/Frame';
 import { Headline } from '../UI/About/Headline';
 import { HeadlineBox } from '../UI/About/HeadlineBox';
-import { TopLine } from '../UI/About/TopLine';
+// import { TopLine } from '../UI/About/TopLine';
 
 import { Wrapper } from '../UI/About/Wrapper';
 // import ShadowBox from './ShadowBox';
@@ -116,7 +116,7 @@ export default function About() {
         <BreakLine />
         <HeadlineBox>
           <span>01</span>
-          <TopLine />
+          {/* <TopLine /> */}
 
           <Headline
           // viewport={{ once: true }}
