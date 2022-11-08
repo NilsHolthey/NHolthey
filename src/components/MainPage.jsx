@@ -2,7 +2,7 @@ import GlobalStyle from '../UI/GlobalStyles';
 import About from './About';
 import Contact from './Contact';
 import MainBg from './mainBG';
-import PageTwo from './PageTwo';
+// import PageTwo from './PageTwo';
 import PrevWork from './PrevWork';
 import Skillset from './SkillSet';
 
@@ -12,7 +12,7 @@ export default function MainPage() {
       <GlobalStyle />
       <MainBg />
       <About />
-      <PageTwo />
+      {/* <PageTwo /> */}
       <Skillset />
       <PrevWork />
       <Contact />

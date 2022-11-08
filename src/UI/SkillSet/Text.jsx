@@ -7,7 +7,7 @@ export const Text = styled.p`
   font-family: 'Fjalla One', sans-serif;
   display: flex;
   flex-wrap: wrap;
-
+  cursor: pointer;
   text-align: left;
-  color: #c0c0c0;
+  color: #d1d1d1;
 `;

@@ -1,22 +1,19 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.section`
-  width: 60vw;
+  width: 70vw;
   height: 90vh;
 
   /* color: #f8f8f8; */
-  border-radius: 4px;
+  border-radius: 8px;
 
-  background-color: #272c391e;
+  background: rgb(39, 44, 57);
+  background: linear-gradient(90deg, #272c3978 0%, rgba(39, 44, 57, 0) 63%);
   position: relative;
 
-  @media (max-width: 665px) {
-    width: 90vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+  @media (max-width: 795px) {
+    width: 95vw;
+
     padding: 0;
-    background-color: rgb(102, 103, 171, 0.3);
-    opacity: 0.3;
   }
 `;

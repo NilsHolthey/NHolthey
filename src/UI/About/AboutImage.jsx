@@ -4,6 +4,7 @@ export const AboutImage = styled.img`
   position: absolute;
   bottom: 2rem;
   filter: grayscale(85%);
+
   transition: filter 1.2s ease-in-out;
   height: auto;
   width: 70%;

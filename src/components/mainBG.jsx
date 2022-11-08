@@ -23,7 +23,7 @@ import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 
 import TexBoxHook from './TextBoxhook';
-import { BreakLine } from '../UI/BreakLine';
+// import { BreakLine } from '../UI/BreakLine';
 // import { useState } from 'react';
 
 export default function MainBg() {
@@ -62,7 +62,6 @@ export default function MainBg() {
 
   return (
     <ProfileWrapper id="home">
-      <BreakLine />
       <Navbar />
 
       <InfoRight>

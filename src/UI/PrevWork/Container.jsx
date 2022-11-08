@@ -10,5 +10,4 @@ export const Container = styled.section`
   align-items: center;
   color: #f8f8f8;
   background: #0004d49e;
-  z-index: -1;
 `;

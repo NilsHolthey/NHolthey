@@ -18,8 +18,10 @@ export const Hexagon = styled.div`
     rgba(255, 255, 220, 0.3) 0%,
     transparent 100%
   );
+  transition: border-radius 1.2s ease-in-out 0.5s, right 0.9s ease-out,
+    width 1.2s ease-out 0.8s;
   div {
-    width: 100%;
+    /* width: 100%;
     background-color: #8485b037;
     height: 100%;
     position: absolute;
@@ -29,13 +31,16 @@ export const Hexagon = styled.div`
       -45deg,
       rgba(255, 255, 220, 0.1) 0%,
       transparent 100%
-    );
+    ); */
   }
-  img {
-  }
+
+  /*  */
+
   animation-name: floating;
+
   animation-duration: ${({ duration = '' }) => duration};
   animation-iteration-count: infinite;
+
   animation-timing-function: ease-in-out;
   @keyframes floating {
     from {

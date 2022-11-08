@@ -4,10 +4,11 @@ export const Container = styled.section`
   position: relative;
   width: 70vw;
   height: 70vh;
-  background: rgb(39, 44, 57);
+  /* background: #272c39;
   background: linear-gradient(
-    110deg,
-    rgba(39, 44, 57, 0.6) 10%,
-    rgba(255, 255, 255, 0) 50%
-  );
+    90deg,
+    rgba(255, 255, 255, 0) 10%,
+    rgba(39, 44, 57, 0.393) 30%,
+    rgba(255, 255, 255, 0) 60%
+  ); */
 `;

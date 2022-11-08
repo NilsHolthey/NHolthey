@@ -39,6 +39,19 @@ const text = {
 };
 
 export default function Skillset() {
+  function moveHtmlLeft() {
+    let hexHtml01 = document.getElementById('hex01');
+    hexHtml01.style.right = '67.5%';
+
+    hexHtml01.style.borderRadius = '5px';
+    hexHtml01.style.width = '15%';
+  }
+  function moveHtmlRight() {
+    let hexHtml01 = document.getElementById('hex01');
+    hexHtml01.style.right = '';
+    hexHtml01.style.borderRadius = '';
+    hexHtml01.style.width = '';
+  }
   function changeBackgroundHtm() {
     let hex01 = document.getElementById('html');
 
@@ -48,6 +61,7 @@ export default function Skillset() {
 
   function changeBackgroundBack() {
     let hex01 = document.getElementById('html');
+
     hex01.style.color = '';
   }
   function changeBackgroundCss() {
@@ -70,6 +84,7 @@ export default function Skillset() {
   }, []);
   return (
     <Wrapper
+      id="skillset"
       style={{ backgroundColor: `rgba(39, 44, 57, ${offsetY * 0.00022})` }}
     >
       <Container
@@ -80,7 +95,7 @@ export default function Skillset() {
         whileInView="show"
       >
         <HeadlineBox>
-          <span>03</span>
+          <span>02</span>
           {/* <TopLine /> */}
 
           <Headline>Skills Set</Headline>
@@ -93,7 +108,14 @@ export default function Skillset() {
             initial="hidden"
             whileInView="show"
           >
-            <span id="html">HTML</span>,&nbsp;<span id="css">CSS</span>,&nbsp;
+            <span
+              id="html"
+              onMouseEnter={moveHtmlLeft}
+              onMouseLeave={moveHtmlRight}
+            >
+              HTML
+            </span>
+            ,&nbsp;<span id="css">CSS</span>,&nbsp;
             <span> JavaScript</span>,&nbsp;<span>React</span>,&nbsp;
             <span>NodeJS</span>,&nbsp;
             <span> NEXT</span>,&nbsp;<span>Zustand</span>,&nbsp;
@@ -148,6 +170,51 @@ export default function Skillset() {
           right="3rem"
         >
           <JsPng src="javascript-39415.png"></JsPng>
+          <div></div>
+        </Hexagon>
+        <Hexagon
+          width="8rem"
+          height="8rem"
+          duration="7.5s"
+          top="5rem"
+          right="23rem"
+        >
+          <div></div>
+        </Hexagon>
+        <Hexagon
+          width="4.5r em"
+          height="4.5rem"
+          duration="4.5s"
+          top="19rem"
+          right="15rem"
+        >
+          <div></div>
+        </Hexagon>
+        <Hexagon
+          width="7rem"
+          height="7rem"
+          duration="9.5s"
+          top="23rem"
+          right="26rem"
+        >
+          <div></div>
+        </Hexagon>
+        <Hexagon
+          width="6rem"
+          height="6rem"
+          duration="7.5s"
+          top="-1rem"
+          right="10rem"
+        >
+          <div></div>
+        </Hexagon>
+        <Hexagon
+          width="4rem"
+          height="4rem"
+          duration="3.5s"
+          top="11rem"
+          right="23rem"
+        >
           <div></div>
         </Hexagon>
       </Container>

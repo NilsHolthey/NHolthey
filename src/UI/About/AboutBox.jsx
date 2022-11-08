@@ -16,7 +16,7 @@ export const AboutBox = styled.article`
   right: 0rem;
   font-size: 1.2rem;
   z-index: 5;
-
+  border-radius: 0 8px 8px 0;
   /* background-color: #1c2028;
   box-shadow: -5px -5px 0px 0px #272c39; */
   background: rgba(25, 29, 36, 0.965);

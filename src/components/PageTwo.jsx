@@ -110,7 +110,6 @@ export default function PageTwo() {
   }, []);
   return (
     <Container
-      id="skillset"
       style={{ backgroundColor: `rgba(39, 44, 57, ${offsetY * 0.00022})` }}
     >
       <HeadlineBox>
