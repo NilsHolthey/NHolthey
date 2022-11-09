@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { useEffect } from 'react';
-import { useState } from 'react';
+// import { useEffect } from 'react';
+// import { useState } from 'react';
 import { Container } from '../UI/Contact/Container';
 import { Footer } from '../UI/Contact/Footer';
 import { Form } from '../UI/Contact/Form';
@@ -36,18 +36,18 @@ const subItem = {
   },
 };
 export default function Contact() {
-  const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
+  // const [offsetY, setOffsetY] = useState(0);
+  // const handleScroll = () => setOffsetY(window.pageYOffset);
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
   return (
     <Wrapper
       id="contacts"
-      style={{ backgroundColor: `rgba(39, 44, 57, ${offsetY * 0.00022})` }}
+      // style={{ backgroundColor: `rgba(39, 44, 57, ${offsetY * 0.00022})` }}
     >
       <Container>
         {/* <LogoForm /> */}

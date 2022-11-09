@@ -9,5 +9,5 @@ export const Container = styled.section`
   justify-content: center;
   align-items: center;
   color: #f8f8f8;
-  background: #0004d49e;
+  background: #dcdcdc;
 `;

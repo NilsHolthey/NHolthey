@@ -1,8 +1,9 @@
-import { useState } from 'react';
-import { useEffect } from 'react';
+// import { useState } from 'react';
+// import { useEffect } from 'react';
 import styled from 'styled-components';
 import { Headline } from '../UI/About/Headline';
 import { HeadlineBox } from '../UI/About/HeadlineBox';
+import { BlurDiv } from '../UI/PrevWork/BlurDiv';
 // import { BackgroundBox } from '../UI/About/BackgroudBox';
 import { Container } from '../UI/PrevWork/Container';
 // import { Headline } from '../UI/PrevWork/Headline';
@@ -62,17 +63,17 @@ const StyledVideoWrapper = styled.div`
 `;
 
 export default function PrevWork() {
-  const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
+  // const [offsetY, setOffsetY] = useState(0);
+  // const handleScroll = () => setOffsetY(window.pageYOffset);
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
   return (
     <Container
-      style={{ backgroundColor: `rgba(39, 44, 57, ${offsetY * 0.00022})` }}
+    // style={{ backgroundColor: `rgba(39, 44, 57, ${offsetY * 0.00022})` }}
     >
       {/* <Headline>3. My Work</Headline>
       <h3> Capstonproject App DidIt</h3> */}
@@ -93,6 +94,14 @@ export default function PrevWork() {
         </HeadlineBox>
 
         <VideoBox>
+          <BlurDiv
+            width="110%"
+            height="20vh"
+            bottom="-12%"
+            left="0%"
+            opacity=".9"
+            zIndex="1"
+          />
           <StyledVideoWrapper style={{ backgroundColor: 'white' }}>
             <StyledVideo autoPlay loop muted>
               <source src={video} type="video/mp4" />

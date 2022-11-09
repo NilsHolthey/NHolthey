@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
 	}
 	html{scroll-behavior: smooth;}
 	body  {
+		overflow-x: hidden;
 		a {
       text-decoration: none;
       &:visited {

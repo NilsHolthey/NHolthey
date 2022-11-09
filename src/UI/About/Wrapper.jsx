@@ -6,10 +6,12 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: rgb(39, 44, 57); */
+  background: #dcdcdc;
 
-  overflow: hidden;
   position: relative;
 
   z-index: 2;
+  @media (max-width: 765px) {
+    height: 150vh;
+  }
 `;

@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import { Headline } from '../UI/About/Headline';
 import { HeadlineBox } from '../UI/About/HeadlineBox';
+import { BreakLine } from '../UI/SkillSet/BreakLine';
 // import { TopLine } from '../UI/About/TopLine';
 import { Container } from '../UI/SkillSet/Container';
 import { Hexagon } from '../UI/SkillSet/Hexagone';
+import { ImageGrid } from '../UI/SkillSet/ImageGrid';
 import { CssPng } from '../UI/SkillSet/PNG/Css';
 import { HtmlPng } from '../UI/SkillSet/PNG/Html';
 import { JsPng } from '../UI/SkillSet/PNG/Js';
@@ -74,18 +76,18 @@ export default function Skillset() {
     let hex01 = document.getElementById('css');
     hex01.style.color = '';
   }
-  const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
+  // const [offsetY, setOffsetY] = useState(0);
+  // const handleScroll = () => setOffsetY(window.pageYOffset);
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
   return (
     <Wrapper
       id="skillset"
-      style={{ backgroundColor: `rgba(39, 44, 57, ${offsetY * 0.00022})` }}
+      // style={{ backgroundColor: `rgba(39, 44, 57, ${offsetY * 0.00022})` }}
     >
       <Container
         viewport={{ once: true }}
@@ -126,97 +128,118 @@ export default function Skillset() {
             <span>ReactDnD</span>,&nbsp;<span>Rest</span>.
           </Text>
         </TextBox>
-        <Hexagon
-          id="hex01"
-          width="7rem"
-          height="7rem"
-          duration="8s"
-          onMouseEnter={changeBackgroundHtm}
-          onMouseLeave={changeBackgroundBack}
-          top="1rem"
-          right="1rem"
-        >
-          <HtmlPng src="html5-logo-31813.png"></HtmlPng>
-          <div></div>
-        </Hexagon>
-        <Hexagon
-          onMouseEnter={changeBackgroundCss}
-          onMouseLeave={changeBackgroundCssBack}
-          width="5rem"
-          height="5rem"
-          duration="6s"
-          top="85%"
-          right="-3rem"
-        >
-          <CssPng src="CSS_3.png"></CssPng>
-          <div></div>
-        </Hexagon>
+        <ImageGrid>
+          <div id="item-0">
+            <HtmlPng src="html5-logo-31813.png"></HtmlPng>
+          </div>
+          <div id="item-1">&nbsp;</div>
+          <div id="item-2">
+            <JsPng src="javascript-39415.png"></JsPng>
+          </div>
+          <div id="item-3">&nbsp;</div>
+          <div id="item-4">
+            <CssPng src="CSS_3.png"></CssPng>
+          </div>
+          <div id="item-5">&nbsp;</div>
+          <div id="item-6">&nbsp;</div>
+          <div id="item-7">
+            <ReactPng src="reactLogo.png" />
+          </div>
+          <div id="item-8">&nbsp;</div>
+          <div id="item-9">&nbsp;</div>
+          <Hexagon
+            id="hex01"
+            width="7rem"
+            height="7rem"
+            duration="8s"
+            onMouseEnter={changeBackgroundHtm}
+            onMouseLeave={changeBackgroundBack}
+            top="1rem"
+            right="1rem"
+          >
+            <HtmlPng src="html5-logo-31813.png" />
+            <div></div>
+          </Hexagon>
+          <Hexagon
+            onMouseEnter={changeBackgroundCss}
+            onMouseLeave={changeBackgroundCssBack}
+            width="5rem"
+            height="5rem"
+            duration="6s"
+            top="85%"
+            right="-3rem"
+          >
+            <CssPng src="CSS_3.png"></CssPng>
+            <div></div>
+          </Hexagon>
 
-        <Hexagon
-          width="8rem"
-          height="8rem"
-          duration="7.5s"
-          top="11rem"
-          right="13rem"
-        >
-          <ReactPng src="reactLogo.png"></ReactPng>
-          <div></div>
-        </Hexagon>
-        <Hexagon
-          width="12rem"
-          height="12rem"
-          duration="7s"
-          top="15rem"
-          right="3rem"
-        >
-          <JsPng src="javascript-39415.png"></JsPng>
-          <div></div>
-        </Hexagon>
-        <Hexagon
-          width="8rem"
-          height="8rem"
-          duration="7.5s"
-          top="5rem"
-          right="23rem"
-        >
-          <div></div>
-        </Hexagon>
-        <Hexagon
-          width="4.5r em"
-          height="4.5rem"
-          duration="4.5s"
-          top="19rem"
-          right="15rem"
-        >
-          <div></div>
-        </Hexagon>
-        <Hexagon
-          width="7rem"
-          height="7rem"
-          duration="9.5s"
-          top="23rem"
-          right="26rem"
-        >
-          <div></div>
-        </Hexagon>
-        <Hexagon
-          width="6rem"
-          height="6rem"
-          duration="7.5s"
-          top="-1rem"
-          right="10rem"
-        >
-          <div></div>
-        </Hexagon>
-        <Hexagon
-          width="4rem"
-          height="4rem"
-          duration="3.5s"
-          top="11rem"
-          right="23rem"
-        >
-          <div></div>
-        </Hexagon>
+          <Hexagon
+            width="8rem"
+            height="8rem"
+            duration="7.5s"
+            top="11rem"
+            right="13rem"
+          >
+            <ReactPng src="reactLogo.png"></ReactPng>
+            <div></div>
+          </Hexagon>
+          <Hexagon
+            width="12rem"
+            height="12rem"
+            duration="7s"
+            top="15rem"
+            right="3rem"
+          >
+            <JsPng src="javascript-39415.png"></JsPng>
+            <div></div>
+          </Hexagon>
+          <Hexagon
+            width="8rem"
+            height="8rem"
+            duration="7.5s"
+            top="5rem"
+            right="23rem"
+          >
+            <div></div>
+          </Hexagon>
+          <Hexagon
+            width="4.5r em"
+            height="4.5rem"
+            duration="4.5s"
+            top="19rem"
+            right="15rem"
+          >
+            <div></div>
+          </Hexagon>
+          <Hexagon
+            width="7rem"
+            height="7rem"
+            duration="9.5s"
+            top="23rem"
+            right="26rem"
+          >
+            <div></div>
+          </Hexagon>
+          <Hexagon
+            width="6rem"
+            height="6rem"
+            duration="7.5s"
+            top="-1rem"
+            right="10rem"
+          >
+            <div></div>
+          </Hexagon>
+          <Hexagon
+            width="4rem"
+            height="4rem"
+            duration="3.5s"
+            top="11rem"
+            right="23rem"
+          >
+            <div></div>
+          </Hexagon>
+        </ImageGrid>
+        <BreakLine />
       </Container>
     </Wrapper>
   );

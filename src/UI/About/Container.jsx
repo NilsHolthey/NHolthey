@@ -6,18 +6,16 @@ export const Container = styled.section`
 
   /* color: #f8f8f8; */
   border-radius: 4px;
-  z-index: -1;
+  z-index: 0;
   padding: 1rem;
   position: relative;
-
-  @media (max-width: 665px) {
-    width: 80vw;
+  background: rgba(25, 29, 36);
+  @media (max-width: 765px) {
+    width: 90vw;
     display: flex;
-    height: 150vh;
+    height: 120vh;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: 0;
-    background-color: rgb(102, 103, 171, 0.3);
-    opacity: 0.3;
+    align-items: center;
+    justify-content: center;
   }
 `;

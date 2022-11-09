@@ -26,11 +26,12 @@ export const AboutImageBox = styled.article`
     right 1000ms ease-in-out; */
 
   @media (max-width: 765px) {
-    position: absolute;
+    position: relative;
     border-radius: 0;
     width: 100%;
-    height: 100%;
-    bottom: 0;
+    height: 30%;
+    top: 0;
     right: 0;
+    background: rgba(25, 29, 36, 0);
   }
 `;

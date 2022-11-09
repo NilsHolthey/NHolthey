@@ -8,14 +8,12 @@ import { AboutText } from '../UI/About/AboutText';
 import { BreakLine } from '../UI/About/BreakLine';
 import { Container } from '../UI/About/Container';
 import DotGRid from '../UI/About/DotGrid';
-// import { Frame } from '../UI/About/Frame';
+
 import { Headline } from '../UI/About/Headline';
 import { HeadlineBox } from '../UI/About/HeadlineBox';
-// import { TopLine } from '../UI/About/TopLine';
 
 import { Wrapper } from '../UI/About/Wrapper';
-// import ShadowBox from './ShadowBox';
-// import ShadowBoxBottom from './ShadowBoxBottom';
+import { BlurDiv } from '../UI/BlurDiv';
 
 const item = {
   hidden: { opacity: 0, y: 70 },
@@ -55,34 +53,6 @@ const text = {
 };
 
 export default function About() {
-  // const changeSize = () => {
-  //   if (window.scrollY > 780) {
-  //     changeToFullWidth();
-  //   } else {
-  //     resetWidth();
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener('scroll', changeSize);
-  //   return () => {
-  //     window.removeEventListener('scroll', changeSize);
-  //   };
-  // }, []);
-
-  // function changeToFullWidth() {
-  //   let boxSize = document.getElementById('aboutBox');
-
-  //   boxSize.style.width = '100%';
-  //   boxSize.style.bottom = '0';
-  //   boxSize.style.right = '0';
-  // }
-  // function resetWidth() {
-  //   let boxSize = document.getElementById('aboutBox');
-  //   boxSize.style.width = '60%';
-  //   boxSize.style.bottom = '-2rem';
-  //   boxSize.style.right = '-2rem';
-  // }
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
@@ -95,11 +65,11 @@ export default function About() {
   return (
     <Wrapper
       id="about"
-      style={
-        offsetY > 700
-          ? { backgroundColor: `rgba(39, 44, 57, ${offsetY * 0.00022})` }
-          : { backgroundColor: `rgb(220, 220, 220)` }
-      }
+      // style={
+      //   offsetY > 700
+      //     ? { backgroundColor: `rgba(39, 44, 57, ${offsetY * 0.00022})` }
+      //     : { backgroundColor: `rgb(220, 220, 220)` }
+      // }
     >
       {/* <BackgroundBox
         style={{ backgroundColor: `rgba(39, 44, 57,
@@ -199,6 +169,21 @@ export default function About() {
           </AboutText>
         </AboutBox>
       </Container>
+      <BlurDiv
+        width="10rem"
+        height="10rem"
+        bottom="-2%"
+        right="-1%"
+        opacity="0.4"
+      />
+      <BlurDiv width="8rem" height="8rem" top="6%" right="11%" zIndex="-1" />
+      <BlurDiv
+        width="18rem"
+        height="5rem"
+        bottom="10%"
+        left="11%"
+        zIndex="-1"
+      />
     </Wrapper>
   );
 }

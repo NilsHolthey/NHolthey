@@ -7,7 +7,7 @@ export const Wrapper = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #dcdcdc;
+  background: #dcdcdc;
   overflow: hidden;
   flex-direction: column;
 `;

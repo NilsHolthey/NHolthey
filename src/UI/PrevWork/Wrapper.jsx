@@ -7,13 +7,11 @@ export const Wrapper = styled.section`
   /* color: #f8f8f8; */
   border-radius: 8px;
 
-  background: rgb(39, 44, 57);
-  background: linear-gradient(90deg, #272c3978 0%, rgba(39, 44, 57, 0) 63%);
+  background: rgba(25, 29, 36, 0.965);
+
   position: relative;
 
   @media (max-width: 795px) {
-    width: 95vw;
-
-    padding: 0;
+    width: 90vw;
   }
 `;
