@@ -30,5 +30,6 @@ export const AboutBox = styled.article`
     border-radius: 0;
     width: 100%;
     height: 60%;
+    background: rgba(25, 29, 36, 0);
   }
 `;
