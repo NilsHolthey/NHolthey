@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const AboutImage = styled.img`
-  position: absolute;
-  bottom: 2rem;
   filter: grayscale(85%);
 
   transition: filter 1.2s ease-in-out;
@@ -20,4 +18,7 @@ export const AboutImage = styled.img`
     right: -1rem;
     display: none;
   } */
+  @media (max-width: 765px) {
+    /* width: 40%; */
+  }
 `;

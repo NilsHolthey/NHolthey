@@ -101,7 +101,7 @@ export default function About() {
         </HeadlineBox>
 
         <AboutImageBox
-          style={{ transform: `translateY(-${offsetY * 0.05}px)` }}
+        // style={{ transform: `translateY(-${offsetY * 0.05}px)` }}
         >
           <AboutImage
             id="profileImage"
@@ -124,7 +124,7 @@ export default function About() {
           // variants={subItem}
           // initial="hidden"
           // whileInView="show"
-          style={{ transform: `translateY(${offsetY * 0.05}px)` }}
+          // style={{ transform: `translateY(${offsetY * 0.05}px)` }}
         >
           {/* <ImageWrapper>
             <AboutImage

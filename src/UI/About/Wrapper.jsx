@@ -12,6 +12,6 @@ export const Wrapper = styled.div`
 
   z-index: 2;
   @media (max-width: 765px) {
-    height: 150vh;
+    height: 200vh;
   }
 `;

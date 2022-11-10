@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.section`
   width: 70vw;
   height: 70vh;
-
+  display: flex;
   /* color: #f8f8f8; */
   border-radius: 4px;
   z-index: 0;
@@ -13,7 +13,7 @@ export const Container = styled.section`
   @media (max-width: 765px) {
     width: 90vw;
     display: flex;
-    height: 120vh;
+    height: 160vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;

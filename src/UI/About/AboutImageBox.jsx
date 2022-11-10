@@ -11,10 +11,7 @@ export const AboutImageBox = styled.article`
   padding: 1rem;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 2rem;
-  left: 0;
-  font-size: 1.2rem;
+
   z-index: 5;
   overflow: hidden;
   /* background-color: #1c2028;
@@ -25,13 +22,10 @@ export const AboutImageBox = styled.article`
   transition: width 1000ms ease-in-out, bottom 1000ms ease-in-out,
     right 1000ms ease-in-out; */
 
-  @media (max-width: 765px) {
-    position: relative;
+  @media (max-width: 465px) {
     border-radius: 0;
     width: 100%;
     height: 40%;
-    top: 0;
-    right: 0;
     background: rgba(25, 29, 36, 0);
   }
 `;

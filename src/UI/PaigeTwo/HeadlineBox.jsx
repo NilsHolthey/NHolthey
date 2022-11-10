@@ -20,7 +20,7 @@ export const HeadlineBox = styled.div`
     color: rgba(25, 29, 36, 0.238);
   }
   @media (max-width: 765px) {
-    top: -10%;
+    top: -5rem;
     width: 100%;
   }
 `;

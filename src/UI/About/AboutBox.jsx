@@ -11,10 +11,8 @@ export const AboutBox = styled.article`
   padding: 1.5rem;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: -2.955rem;
-  right: 0rem;
-  font-size: 1.2rem;
+
+  font-size: 2.5vh;
   z-index: 5;
   border-radius: 0 8px 8px 0;
   /* background-color: #1c2028;
@@ -29,7 +27,7 @@ export const AboutBox = styled.article`
     position: relative;
     border-radius: 0;
     width: 100%;
-    height: 60%;
+    height: 50%;
     background: rgba(25, 29, 36, 0);
   }
 `;

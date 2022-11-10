@@ -18,7 +18,9 @@ export const Container = styled.section`
   ); */
   @media (max-width: 765px) {
     width: 90vw;
-    height: 90vh;
+    height: 160vh;
     flex-direction: column;
+    justify-content: center;
+    padding-bottom: 3%;
   }
 `;

@@ -10,6 +10,6 @@ export const Wrapper = styled.section`
   background: #dcdcdc;
   @media (max-width: 765px) {
     width: 100vw;
-    height: 120vh;
+    height: 180vh;
   }
 `;

@@ -2,12 +2,14 @@ import styled from 'styled-components';
 export const Text = styled.p`
   margin: 0;
   width: 80%;
+  height: 50%;
   font-weight: bolder;
-  font-size: 1.8rem;
+  font-size: 3.5vh;
   font-family: 'Fjalla One', sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   color: #d1d1d1;
   span {
     animation-name: opacity;
@@ -25,5 +27,8 @@ export const Text = styled.p`
       }
     }
     transition: all 300ms ease;
+  }
+  @media (max-width: 765px) {
+    height: 50%;
   }
 `;

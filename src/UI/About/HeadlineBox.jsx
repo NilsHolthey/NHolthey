@@ -2,13 +2,12 @@ import styled from 'styled-components';
 
 export const HeadlineBox = styled.div`
   color: #f8f8f8;
-
   font-weight: 900;
   position: absolute;
-  height: 100%;
+  height: 10rem;
   font-size: 2rem;
   top: 0;
-  width: 10rem;
+  width: 6rem;
   display: flex;
   justify-content: center;
   left: -8rem;
@@ -20,7 +19,7 @@ export const HeadlineBox = styled.div`
     color: rgba(25, 29, 36, 0.238);
   }
   @media (max-width: 765px) {
-    top: -10%;
-    width: 100%;
+    top: -5rem;
+    left: 0;
   }
 `;
