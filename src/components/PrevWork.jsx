@@ -14,6 +14,7 @@ import video from '../Video/video.mp4';
 
 const StyledVideo = styled.video`
   position: absolute;
+
   z-index: 0;
   top: 0;
   left: 0;
@@ -95,14 +96,14 @@ export default function PrevWork() {
 
         <VideoBox>
           <BlurDiv
-            width="110%"
-            height="20vh"
-            bottom="-12%"
-            left="0%"
+            width="100%"
+            height="120%"
+            bottom="-8%"
+            right="-15%"
             opacity=".9"
             zIndex="1"
           />
-          <StyledVideoWrapper style={{ backgroundColor: 'white' }}>
+          <StyledVideoWrapper style={{ backgroundColor: 'transparent' }}>
             <StyledVideo autoPlay loop muted>
               <source src={video} type="video/mp4" />
             </StyledVideo>

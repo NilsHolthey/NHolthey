@@ -21,8 +21,10 @@ export const BlurDiv = styled.div`
     rgba(220, 220, 220, 1) 90%
   );
 
-  border-radius: 50%;
-  /* background-color: #e261bd74; */
+  border-radius: 75% 25% 43% 25% / 44% 25% 75% 41%; /* background-color: #e261bd74; */
 
   filter: blur(50px);
+  @media (max-width: 765px) {
+    display: none;
+  }
 `;

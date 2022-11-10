@@ -20,23 +20,24 @@ export const ImageGrid = styled.section`
     box-shadow: -5px -5px 5px #5c5c5c19, 10px 10px 10px rgba(0, 0, 0, 0.4),
       -5px -5px 5px rgba(82, 82, 82, 0.2), 10px 10px 10px rgba(0, 0, 0, 0.4);
     span {
-      width: 96%;
-      height: 96%;
-      border-radius: 8px;
+      width: 95%;
+      height: 95%;
+
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 92%;
+      height: 92%;
+      border-radius: 8px;
+      background: #262c36;
+      box-shadow: inset 5px 5px 10px #20252e, inset -5px -5px 10px #2c333e;
     }
-    &:hover {
+    /* &:hover {
       box-shadow: inset -6px -6px 10px rgba(12, 12, 12, 0.557),
         inset 6px 6px 10px rgba(92, 92, 92, 0.2);
       span {
-        width: 90%;
-        height: 90%;
-        background: #262c36;
-        box-shadow: inset 5px 5px 10px #20252e, inset -5px -5px 10px #2c333e;
       }
-    }
+    } */
   }
   #item-0 {
     grid-row-start: 1;
@@ -111,6 +112,6 @@ export const ImageGrid = styled.section`
 
   @media (max-width: 765px) {
     width: 100%;
-    height: 50%;
+    height: 70%;
   }
 `;

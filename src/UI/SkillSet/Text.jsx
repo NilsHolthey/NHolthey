@@ -7,7 +7,23 @@ export const Text = styled.p`
   font-family: 'Fjalla One', sans-serif;
   display: flex;
   flex-wrap: wrap;
-  cursor: pointer;
-  text-align: left;
+  /* justify-content: center; */
   color: #d1d1d1;
+  span {
+    animation-name: opacity;
+
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+
+    animation-timing-function: ease-in-out;
+    @keyframes opacity {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    transition: all 300ms ease;
+  }
 `;

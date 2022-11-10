@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 // import { useEffect, useState } from 'react';
 import { Headline } from '../UI/About/Headline';
 import { HeadlineBox } from '../UI/About/HeadlineBox';
+import { BinarySpan } from '../UI/SkillSet/BinarySpan';
 import { BreakLine } from '../UI/SkillSet/BreakLine';
 // import { TopLine } from '../UI/About/TopLine';
 import { Container } from '../UI/SkillSet/Container';
@@ -41,43 +43,14 @@ const text = {
 };
 
 export default function Skillset() {
-  function moveHtmlLeft() {
-    let hexHtml01 = document.getElementById('hex01');
-    hexHtml01.style.right = '67.5%';
-
-    hexHtml01.style.borderRadius = '5px';
-    hexHtml01.style.width = '15%';
-  }
-  function moveHtmlRight() {
-    let hexHtml01 = document.getElementById('hex01');
-    hexHtml01.style.right = '';
-    hexHtml01.style.borderRadius = '';
-    hexHtml01.style.width = '';
-  }
-  // function changeBackgroundHtm() {
-  //   let hex01 = document.getElementById('html');
-
-  //   hex01.style.transition = 'color 0.1s ease-in-out';
-  //   hex01.style.color = '#6667ab';
-  // }
-
-  // function changeBackgroundBack() {
-  //   let hex01 = document.getElementById('html');
-
-  //   hex01.style.color = '';
-  // }
-  // function changeBackgroundCss() {
-  //   let hex02 = document.getElementById('css');
-
-  //   hex02.style.transition = 'color 0.1s ease-in-out';
-  //   hex02.style.color = '#6667ab';
-  // }
-  // function changeBackgroundCssBack() {
-  //   let hex01 = document.getElementById('css');
-  //   hex01.style.color = '';
-  // }
-  // const [offsetY, setOffsetY] = useState(0);
-  // const handleScroll = () => setOffsetY(window.pageYOffset);
+  const [showHtml, setShowHtml] = useState(false);
+  const handleShowHtml = () => setShowHtml(!showHtml);
+  const [showJs, setShowJs] = useState(false);
+  const handleShowJs = () => setShowJs(!showJs);
+  const [showCss, setShowCss] = useState(false);
+  const handleShowCss = () => setShowCss(!showCss);
+  const [showReact, setShowReact] = useState(false);
+  const handleShowReact = () => setShowReact(!showReact);
 
   // useEffect(() => {
   //   window.addEventListener('scroll', handleScroll);
@@ -110,42 +83,115 @@ export default function Skillset() {
             initial="hidden"
             whileInView="show"
           >
-            <span
-              id="html"
-              onMouseEnter={moveHtmlLeft}
-              onMouseLeave={moveHtmlRight}
-            >
-              HTML
-            </span>
-            ,&nbsp;<span id="css">CSS</span>,&nbsp;
-            <span> JavaScript</span>,&nbsp;<span>React</span>,&nbsp;
-            <span>NodeJS</span>,&nbsp;
-            <span> NEXT</span>,&nbsp;<span>Zustand</span>,&nbsp;
-            <span>styled-components</span>,&nbsp;<span>MongoDB</span>,&nbsp;
-            <span>Git</span>
-            ,&nbsp;<span>GitHub</span>,&nbsp;<span>Figma</span>,&nbsp;
-            <span>AdobeXD</span>,&nbsp;
-            <span>ReactDnD</span>,&nbsp;<span>Rest</span>.
+            {showHtml ? (
+              <span>HTML&nbsp;|&nbsp;</span>
+            ) : (
+              <BinarySpan id="html">
+                01001000 01010100 01001101 01001100 &nbsp;
+              </BinarySpan>
+            )}
+            {showCss ? (
+              <span id="css">CSS &nbsp;|&nbsp;</span>
+            ) : (
+              <BinarySpan>01000011 01010011 01010011&nbsp;</BinarySpan>
+            )}
+            {showJs ? (
+              <span> JavaScript &nbsp;|&nbsp;</span>
+            ) : (
+              <BinarySpan>
+                01001010 01100001 01110110 01100001 01010011 01100011 01110010
+                01101001 01110000 01110100&nbsp;
+              </BinarySpan>
+            )}
+            {showReact ? (
+              <span>React&nbsp;|&nbsp;</span>
+            ) : (
+              <BinarySpan>
+                01010010 01100101 01100001 01100011 01110100&nbsp;
+              </BinarySpan>
+            )}
+            <span>NodeJS</span>&nbsp;|&nbsp;
+            <span> NEXT</span>&nbsp;|&nbsp;<span>Zustand</span>&nbsp;|&nbsp;
+            <span>styled-components</span>&nbsp;|&nbsp;<span>MongoDB</span>
+            &nbsp;|&nbsp;
+            <span>Git</span>&nbsp; |&nbsp;<span>GitHub</span>&nbsp;|&nbsp;
+            <span>Figma</span>&nbsp;|&nbsp;
+            <span>AdobeXD</span>&nbsp;|&nbsp;
+            <span>ReactDnD</span>&nbsp;|&nbsp;<span>Rest</span>.
           </Text>
         </TextBox>
         <ImageGrid>
-          <div id="item-0">
-            <span>
+          <div
+            id="item-0"
+            onClick={handleShowHtml}
+            style={{
+              boxShadow: showHtml
+                ? 'inset -6px -6px 10px rgba(12, 12, 12, 0.557), inset 6px 6px 10px rgba(92, 92, 92, 0.2)'
+                : '',
+            }}
+          >
+            {showHtml ? (
+              <span>
+                <HtmlPng src="html5-logo-31813.png"></HtmlPng>
+              </span>
+            ) : (
               <HtmlPng src="html5-logo-31813.png"></HtmlPng>
-            </span>
+            )}
           </div>
           <div id="item-1">&nbsp;</div>
-          <div id="item-2">
-            <JsPng src="javascript-39415.png"></JsPng>
+          <div
+            id="item-2"
+            onClick={handleShowJs}
+            style={{
+              boxShadow: showJs
+                ? 'inset -6px -6px 10px rgba(12, 12, 12, 0.557), inset 6px 6px 10px rgba(92, 92, 92, 0.2)'
+                : '',
+            }}
+          >
+            {showJs ? (
+              <span>
+                <JsPng src="javascript-39415.png"></JsPng>
+              </span>
+            ) : (
+              <JsPng src="javascript-39415.png"></JsPng>
+            )}
           </div>
           <div id="item-3">&nbsp;</div>
-          <div id="item-4">
-            <CssPng src="CSS_3.png"></CssPng>
+          <div
+            id="item-4"
+            onClick={handleShowCss}
+            style={{
+              boxShadow: showCss
+                ? 'inset -6px -6px 10px rgba(12, 12, 12, 0.557), inset 6px 6px 10px rgba(92, 92, 92, 0.2)'
+                : '',
+            }}
+          >
+            {showCss ? (
+              <span>
+                <CssPng src="CSS_3.png"></CssPng>
+              </span>
+            ) : (
+              <CssPng src="CSS_3.png"></CssPng>
+            )}
           </div>
           <div id="item-5">&nbsp;</div>
           <div id="item-6">&nbsp;</div>
-          <div id="item-7">
-            <ReactPng src="reactLogo.png" />
+          <div
+            id="item-7"
+            onClick={handleShowReact}
+            style={{
+              boxShadow: showReact
+                ? 'inset -6px -6px 10px rgba(12, 12, 12, 0.557), inset 6px 6px 10px rgba(92, 92, 92, 0.2)'
+                : '',
+            }}
+          >
+            {showReact ? (
+              <span>
+                <ReactPng src="reactLogo.png" />
+              </span>
+            ) : (
+              <ReactPng src="reactLogo.png" />
+            )}
           </div>
           <div id="item-8">&nbsp;</div>
           <div id="item-9">&nbsp;</div>
