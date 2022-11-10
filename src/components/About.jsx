@@ -13,7 +13,7 @@ import { Headline } from '../UI/About/Headline';
 import { HeadlineBox } from '../UI/About/HeadlineBox';
 
 import { Wrapper } from '../UI/About/Wrapper';
-import { BlurDiv } from '../UI/BlurDiv';
+// import { BlurDiv } from '../UI/BlurDiv';
 
 const item = {
   hidden: { opacity: 0, y: 70 },
@@ -169,7 +169,7 @@ export default function About() {
           </AboutText>
         </AboutBox>
       </Container>
-      <BlurDiv
+      {/* <BlurDiv
         width="10rem"
         height="10rem"
         bottom="-2%"
@@ -183,7 +183,7 @@ export default function About() {
         bottom="10%"
         left="11%"
         zIndex="-1"
-      />
+      /> */}
     </Wrapper>
   );
 }

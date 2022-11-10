@@ -196,6 +196,8 @@ export default function Skillset() {
           </div>
           <div id="item-8">&nbsp;</div>
           <div id="item-9">&nbsp;</div>
+          <div id="item-10">&nbsp;</div>
+          <div id="item-11">&nbsp;</div>
           {/* <Hexagon
             id="hex01"
             width="7rem"

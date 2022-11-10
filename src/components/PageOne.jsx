@@ -23,7 +23,7 @@ import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 
 import TexBoxHook from './TextBoxhook';
-import { BlurDiv } from '../UI/BlurDiv';
+// import { BlurDiv } from '../UI/BlurDiv';
 // import { BreakLine } from '../UI/BreakLine';
 // import { useState } from 'react';
 
@@ -201,7 +201,7 @@ export default function MainBg() {
           />
         </ImageContainer>
       </ProfileContainer>
-      <BlurDiv
+      {/* <BlurDiv
         width="4rem"
         height="4rem"
         top="20%"
@@ -216,7 +216,7 @@ export default function MainBg() {
         left="10%"
         backgroundColor="#E261BE"
       />
-      <BlurDiv width="10rem" height="10rem" top="-2%" left="-1%" />
+      <BlurDiv width="10rem" height="10rem" top="-2%" left="-1%" /> */}
     </ProfileWrapper>
   );
 }
