@@ -5,7 +5,7 @@ import { HeadlineBox } from '../UI/About/HeadlineBox';
 import { BreakLine } from '../UI/SkillSet/BreakLine';
 // import { TopLine } from '../UI/About/TopLine';
 import { Container } from '../UI/SkillSet/Container';
-import { Hexagon } from '../UI/SkillSet/Hexagone';
+// import { Hexagon } from '../UI/SkillSet/Hexagone';
 import { ImageGrid } from '../UI/SkillSet/ImageGrid';
 import { CssPng } from '../UI/SkillSet/PNG/Css';
 import { HtmlPng } from '../UI/SkillSet/PNG/Html';
@@ -54,28 +54,28 @@ export default function Skillset() {
     hexHtml01.style.borderRadius = '';
     hexHtml01.style.width = '';
   }
-  function changeBackgroundHtm() {
-    let hex01 = document.getElementById('html');
+  // function changeBackgroundHtm() {
+  //   let hex01 = document.getElementById('html');
 
-    hex01.style.transition = 'color 0.1s ease-in-out';
-    hex01.style.color = '#6667ab';
-  }
+  //   hex01.style.transition = 'color 0.1s ease-in-out';
+  //   hex01.style.color = '#6667ab';
+  // }
 
-  function changeBackgroundBack() {
-    let hex01 = document.getElementById('html');
+  // function changeBackgroundBack() {
+  //   let hex01 = document.getElementById('html');
 
-    hex01.style.color = '';
-  }
-  function changeBackgroundCss() {
-    let hex02 = document.getElementById('css');
+  //   hex01.style.color = '';
+  // }
+  // function changeBackgroundCss() {
+  //   let hex02 = document.getElementById('css');
 
-    hex02.style.transition = 'color 0.1s ease-in-out';
-    hex02.style.color = '#6667ab';
-  }
-  function changeBackgroundCssBack() {
-    let hex01 = document.getElementById('css');
-    hex01.style.color = '';
-  }
+  //   hex02.style.transition = 'color 0.1s ease-in-out';
+  //   hex02.style.color = '#6667ab';
+  // }
+  // function changeBackgroundCssBack() {
+  //   let hex01 = document.getElementById('css');
+  //   hex01.style.color = '';
+  // }
   // const [offsetY, setOffsetY] = useState(0);
   // const handleScroll = () => setOffsetY(window.pageYOffset);
 
@@ -130,7 +130,9 @@ export default function Skillset() {
         </TextBox>
         <ImageGrid>
           <div id="item-0">
-            <HtmlPng src="html5-logo-31813.png"></HtmlPng>
+            <span>
+              <HtmlPng src="html5-logo-31813.png"></HtmlPng>
+            </span>
           </div>
           <div id="item-1">&nbsp;</div>
           <div id="item-2">
@@ -147,7 +149,7 @@ export default function Skillset() {
           </div>
           <div id="item-8">&nbsp;</div>
           <div id="item-9">&nbsp;</div>
-          <Hexagon
+          {/* <Hexagon
             id="hex01"
             width="7rem"
             height="7rem"
@@ -237,7 +239,7 @@ export default function Skillset() {
             right="23rem"
           >
             <div></div>
-          </Hexagon>
+          </Hexagon> */}
         </ImageGrid>
         <BreakLine />
       </Container>
