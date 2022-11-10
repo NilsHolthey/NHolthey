@@ -2,11 +2,12 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 // import { useEffect, useState } from 'react';
 import { Headline } from '../UI/About/Headline';
-import { HeadlineBox } from '../UI/About/HeadlineBox';
+
 import { BinarySpan } from '../UI/SkillSet/BinarySpan';
 import { BreakLine } from '../UI/SkillSet/BreakLine';
 // import { TopLine } from '../UI/About/TopLine';
 import { Container } from '../UI/SkillSet/Container';
+import { HeadlineBox } from '../UI/SkillSet/HeadlineBox';
 // import { Hexagon } from '../UI/SkillSet/Hexagone';
 import { ImageGrid } from '../UI/SkillSet/ImageGrid';
 import { CssPng } from '../UI/SkillSet/PNG/Css';

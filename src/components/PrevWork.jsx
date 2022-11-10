@@ -2,10 +2,11 @@
 // import { useEffect } from 'react';
 import styled from 'styled-components';
 import { Headline } from '../UI/About/Headline';
-import { HeadlineBox } from '../UI/About/HeadlineBox';
+
 import { BlurDiv } from '../UI/PrevWork/BlurDiv';
 // import { BackgroundBox } from '../UI/About/BackgroudBox';
 import { Container } from '../UI/PrevWork/Container';
+import { HeadlineBox } from '../UI/PrevWork/HeadlineBox';
 // import { Headline } from '../UI/PrevWork/Headline';
 // import { StyledVideo } from '../UI/PrevWork/StyledVideo';
 import { VideoBox } from '../UI/PrevWork/VideoBox';
@@ -103,7 +104,7 @@ export default function PrevWork() {
             opacity=".9"
             zIndex="1"
           />
-          <StyledVideoWrapper style={{ backgroundColor: 'transparent' }}>
+          <StyledVideoWrapper style={{ backgroundColor: 'white' }}>
             <StyledVideo autoPlay loop muted>
               <source src={video} type="video/mp4" />
             </StyledVideo>

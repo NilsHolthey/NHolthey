@@ -10,4 +10,8 @@ export const Container = styled.section`
   align-items: center;
   color: #f8f8f8;
   background: #dcdcdc;
+  @media (max-width: 765px) {
+    width: 100vw;
+    height: 120vh;
+  }
 `;

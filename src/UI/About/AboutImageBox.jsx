@@ -29,7 +29,7 @@ export const AboutImageBox = styled.article`
     position: relative;
     border-radius: 0;
     width: 100%;
-    height: 30%;
+    height: 40%;
     top: 0;
     right: 0;
     background: rgba(25, 29, 36, 0);

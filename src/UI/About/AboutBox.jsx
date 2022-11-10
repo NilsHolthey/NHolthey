@@ -25,9 +25,10 @@ export const AboutBox = styled.article`
     right 1000ms ease-in-out; */
 
   @media (max-width: 765px) {
+    font-size: 1.1rem;
     position: relative;
     border-radius: 0;
     width: 100%;
-    height: 50%;
+    height: 60%;
   }
 `;

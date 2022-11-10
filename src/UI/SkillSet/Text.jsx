@@ -7,7 +7,7 @@ export const Text = styled.p`
   font-family: 'Fjalla One', sans-serif;
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: center; */
+  justify-content: center;
   color: #d1d1d1;
   span {
     animation-name: opacity;

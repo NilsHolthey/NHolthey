@@ -11,7 +11,7 @@ export const VideoBox = styled.section`
   transform: translatey(-55%);
   transition: scale 300ms ease, left 300ms ease;
   @media (max-width: 765px) {
-    scale: 0.7;
+    scale: 0.6;
     left: 20%;
     div {
       width: 80vw;
