@@ -17,34 +17,36 @@ const StyledVideo = styled.video`
   position: absolute;
 
   z-index: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 0 0 18px 18px;
-  filter: drop-shadow(6px 35px 44px black);
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 41vh;
+  height: 110%;
+  border-radius: 8%;
+  z-index: 20;
+  /* filter: drop-shadow(6px 35px 44px black); */
 `;
 
-const aspectRatio = 667 / 375;
-const phoneSize = 40.6;
+// const aspectRatio = 667 / 375;
+// const phoneSize = 40.6;
 const StyledPhoneImg = styled.img`
   position: absolute;
   top: 49%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 45vh;
-  height: 110%;
+  height: 108%;
   object-position: center;
 
   z-index: 30;
 `;
 const StyledVideoWrapper = styled.div`
   position: absolute;
-
+  display: none;
   top: 50%;
   left: 50%;
-  width: ${phoneSize}vh;
-  height: ${aspectRatio * phoneSize}vh;
+  width: 50%;
+  height: 110%;
   transform: translate(-50%, -50%);
   border-radius: 0 0 2rem 2rem;
   background: #000;
@@ -104,11 +106,14 @@ export default function PrevWork() {
             opacity=".9"
             zIndex="1"
           />
-          <StyledVideoWrapper style={{ backgroundColor: 'white' }}>
+          <StyledVideoWrapper>
             <StyledVideo autoPlay loop muted>
               <source src={video} type="video/mp4" />
             </StyledVideo>
           </StyledVideoWrapper>
+          <StyledVideo autoPlay loop muted>
+            <source src={video} type="video/mp4" />
+          </StyledVideo>
           <StyledPhoneImg src="ScaledPhone1.png" layout="fill" />
         </VideoBox>
       </Wrapper>
