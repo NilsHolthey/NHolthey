@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 import { useState } from 'react';
 // import { useEffect, useState } from 'react';
 import { Headline } from '../UI/About/Headline';
 
 import { BinarySpan } from '../UI/SkillSet/BinarySpan';
 import { BreakLine } from '../UI/SkillSet/BreakLine';
+import { BreakLine2 } from '../UI/SkillSet/BreakLine2';
 // import { TopLine } from '../UI/About/TopLine';
 import { Container } from '../UI/SkillSet/Container';
 import { HeadlineBox } from '../UI/SkillSet/HeadlineBox';
@@ -44,6 +46,15 @@ const text = {
 };
 
 export default function Skillset() {
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const [showHtml, setShowHtml] = useState(false);
   const handleShowHtml = () => setShowHtml(!showHtml);
   const [showJs, setShowJs] = useState(false);
@@ -76,7 +87,14 @@ export default function Skillset() {
 
           <Headline>Skills Set</Headline>
         </HeadlineBox>
-        <TextBox>
+        <TextBox
+          id="textBox"
+          style={{
+            background: `radial-gradient(circle, #e261bd70 0%, rgba(39, 44, 57, 0)  ${
+              offsetY * 0.04
+            }%)`,
+          }}
+        >
           <Text
             as={motion.p}
             viewport={{ once: true }}
@@ -120,6 +138,7 @@ export default function Skillset() {
             <span>AdobeXD</span>&nbsp;|&nbsp;
             <span>ReactDnD</span>&nbsp;|&nbsp;<span>Rest</span>.
           </Text>
+          <BreakLine2 />
         </TextBox>
         <ImageGrid>
           <div
@@ -136,7 +155,9 @@ export default function Skillset() {
                 <HtmlPng src="html5-logo-31813.png"></HtmlPng>
               </span>
             ) : (
-              <HtmlPng src="html5-logo-31813.png"></HtmlPng>
+              <a href="#textBox">
+                <HtmlPng src="html5-logo-31813.png"></HtmlPng>
+              </a>
             )}
           </div>
           <div id="item-1">&nbsp;</div>
@@ -154,7 +175,9 @@ export default function Skillset() {
                 <JsPng src="javascript-39415.png"></JsPng>
               </span>
             ) : (
-              <JsPng src="javascript-39415.png"></JsPng>
+              <a href="#textBox">
+                <JsPng src="javascript-39415.png"></JsPng>
+              </a>
             )}
           </div>
           <div id="item-3">&nbsp;</div>
@@ -172,7 +195,9 @@ export default function Skillset() {
                 <CssPng src="CSS_3.png"></CssPng>
               </span>
             ) : (
-              <CssPng src="CSS_3.png"></CssPng>
+              <a href="#textBox">
+                <CssPng src="CSS_3.png"></CssPng>
+              </a>
             )}
           </div>
           <div id="item-5">&nbsp;</div>
@@ -191,7 +216,9 @@ export default function Skillset() {
                 <ReactPng src="reactLogo.png" />
               </span>
             ) : (
-              <ReactPng src="reactLogo.png" />
+              <a href="#textBox">
+                <ReactPng src="reactLogo.png" />
+              </a>
             )}
           </div>
           <div id="item-8">&nbsp;</div>

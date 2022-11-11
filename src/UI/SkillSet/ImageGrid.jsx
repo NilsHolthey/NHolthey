@@ -15,6 +15,7 @@ export const ImageGrid = styled.section`
     width: 100%;
   }
   div {
+    z-index: 3;
     border-radius: 8px;
     display: flex;
     justify-content: center;

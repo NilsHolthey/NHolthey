@@ -152,9 +152,9 @@ export default function About() {
             whileInView="show"
             style={{
               backgroundImage: `linear-gradient(125deg,
-              rgba(102, 103, 171, ${offsetY * 0.001}) 20%,
-              rgba(226, 97, 190, ${offsetY * 0.001}) 59%,
-              rgba(220, 220, 220, ${offsetY * 0.001}) 90%)`,
+              rgba(102, 103, 171, ${offsetY * 0.001}) ${offsetY * 0.025}%,
+              rgba(226, 97, 190, ${offsetY * 0.001}) ${offsetY * 0.075}%,
+              rgba(220, 220, 220, ${offsetY * 0.001}) ${offsetY * 0.1125}%)`,
             }}
             // style={{ opacity: `(${offsetY * 0.175})` }}
           >
