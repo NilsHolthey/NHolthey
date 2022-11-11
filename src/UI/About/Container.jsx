@@ -10,6 +10,7 @@ export const Container = styled.section`
   padding: 1rem;
   position: relative;
   background: rgba(25, 29, 36);
+
   @media (max-width: 765px) {
     width: 90vw;
     display: flex;

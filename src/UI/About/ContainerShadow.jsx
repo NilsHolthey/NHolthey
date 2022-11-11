@@ -8,6 +8,8 @@ export const ContainerShadow = styled.div`
   top: 30rem;
   z-index: 11115;
   background: rgb(25, 29, 36);
+  background-image: url('/Grunge-PNG.png');
+
   background: linear-gradient(
     180deg,
     rgba(25, 29, 36, 1) 65%,
