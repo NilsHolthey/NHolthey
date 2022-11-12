@@ -5,6 +5,7 @@ import MainBg from './PageOne';
 // import PageTwo from './PageTwo';
 import PrevWork from './PrevWork';
 import Skillset from './SkillSet';
+import Work from './Work';
 
 export default function MainPage() {
   return (
@@ -15,6 +16,7 @@ export default function MainPage() {
       {/* <PageTwo /> */}
       <Skillset />
       <PrevWork />
+      <Work />
       <Contact />
     </>
   );

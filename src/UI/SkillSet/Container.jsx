@@ -6,7 +6,7 @@ export const Container = styled.section`
   align-items: center;
   width: 70vw;
   height: 70vh;
-  background: #262c36;
+  background: rgba(25, 29, 36, 0.965);
   border-radius: 8px;
   /* background: #272c39;
   background: linear-gradient(

@@ -43,22 +43,22 @@ const Ul = styled.ul`
   }
 `;
 
-const RightNav = ({ open, setOpen }) => {
+const RightNav = ({ open, handelClick }) => {
   return (
     <Ul open={open}>
       <li>Home</li>
       <li>
-        <a href="#about" onClick={() => setOpen(!open)}>
+        <a href="#about" onClick={handelClick}>
           AboutMe
         </a>
       </li>
       <li>
-        <a href="#skillset" onClick={() => setOpen(!open)}>
+        <a href="#skillset" onClick={handelClick}>
           Skillset
         </a>
       </li>
       <li>
-        <a href="#contacts" onClick={() => setOpen(!open)}>
+        <a href="#contacts" onClick={handelClick}>
           Contacts
         </a>
       </li>

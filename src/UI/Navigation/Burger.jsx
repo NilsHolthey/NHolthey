@@ -54,6 +54,22 @@ const Burger = () => {
     };
   }, []);
 
+  function changeOverflow() {
+    if (open == false) {
+      changeToFixed();
+    } else {
+      reset();
+    }
+  }
+
+  function changeToFixed() {
+    let body = document.body;
+    body.style.overflowY = 'hidden';
+  }
+  function reset() {
+    let body = document.body;
+    body.style.overflowY = '';
+  }
   function changeToHidden() {
     let burger = document.getElementById('burger');
 
@@ -63,15 +79,19 @@ const Burger = () => {
     let burger = document.getElementById('burger');
     burger.style.display = 'none';
   }
+  function handelClick() {
+    setOpen(!open);
+    changeOverflow();
+  }
 
   return (
     <>
-      <StyledBurger id="burger" open={open} onClick={() => setOpen(!open)}>
+      <StyledBurger id="burger" open={open} onClick={handelClick}>
         <div />
         <div />
         <div />
       </StyledBurger>
-      <RightNav open={open} setOpen={setOpen} />
+      <RightNav open={open} setOpen={setOpen} handelClick={handelClick} />
     </>
   );
 };

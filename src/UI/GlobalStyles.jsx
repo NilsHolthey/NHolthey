@@ -11,8 +11,9 @@ const GlobalStyle = createGlobalStyle`
 		--secondary-color: navy;
 	}
 	html{scroll-behavior: smooth;}
-	body  {
-		overflow-x: hidden;
+	body  {overflow-x:hidden;
+		
+		
 		a {
       text-decoration: none;
       &:visited {
