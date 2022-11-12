@@ -107,7 +107,7 @@ export default function PrevWork() {
             zIndex="1"
           />
           <StyledVideoWrapper>
-            <StyledVideo autoPlay loop muted>
+            <StyledVideo playsInline autoPlay loop muted>
               <source src={video} type="video/mp4" />
             </StyledVideo>
           </StyledVideoWrapper>
