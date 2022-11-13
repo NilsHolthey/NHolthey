@@ -15,4 +15,8 @@ export const TextBox = styled.section`
     width: 100%;
     height: 50%;
   }
+  @media (orientation: portrait) {
+    width: 100%;
+    height: 50%;
+  }
 `;

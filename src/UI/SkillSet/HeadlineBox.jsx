@@ -23,4 +23,9 @@ export const HeadlineBox = styled.div`
     top: -5rem;
     left: 0;
   }
+
+  @media (orientation: portrait) {
+    top: -5rem;
+    left: 0;
+  }
 `;

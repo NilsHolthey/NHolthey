@@ -61,6 +61,9 @@ export default function Navbar() {
         <li>
           <NavLink href="#contacts">Contacts</NavLink>
         </li>
+        <li>
+          <NavLink href="#work">Work</NavLink>
+        </li>
       </NavList>
     </Nav>
   );

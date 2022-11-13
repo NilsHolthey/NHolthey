@@ -8,6 +8,7 @@ export const Container = styled.section`
   height: 70vh;
   background: rgba(25, 29, 36, 0.965);
   border-radius: 8px;
+  height: 80vh;
   /* background: #272c39;
   background: linear-gradient(
     90deg,
@@ -17,6 +18,13 @@ export const Container = styled.section`
 
   ); */
   @media (max-width: 765px) {
+    width: 90vw;
+    height: 160vh;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 3%;
+  }
+  @media (orientation: portrait) {
     width: 90vw;
     height: 160vh;
     flex-direction: column;

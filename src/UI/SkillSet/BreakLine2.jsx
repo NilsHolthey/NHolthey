@@ -13,4 +13,7 @@ export const BreakLine2 = styled.div`
   @media (max-width: 765px) {
     display: block;
   }
+  @media (orientation: portrait) {
+    display: block;
+  }
 `;

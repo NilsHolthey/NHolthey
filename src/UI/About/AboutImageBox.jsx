@@ -11,7 +11,7 @@ export const AboutImageBox = styled.article`
   padding: 1rem;
   justify-content: center;
   align-items: center;
-
+  position: relative;
   overflow: hidden;
   /* background-color: #1c2028;
   box-shadow: -5px -5px 0px 0px #272c39; */
@@ -22,12 +22,15 @@ export const AboutImageBox = styled.article`
     right 1000ms ease-in-out; */
 
   @media (max-width: 465px) {
+    align-items: flex-start;
+
     border-radius: 0;
     width: 100%;
     height: 40%;
     background: rgba(25, 29, 36, 0);
   }
   @media (orientation: portrait) {
-    height: 30%;
+    height: 50%;
+    align-items: flex-start;
   }
 `;

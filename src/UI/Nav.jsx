@@ -12,4 +12,7 @@ export const Nav = styled.nav`
   opacity: 0.8;
   background-color: transparent;
   z-index: 1113;
+  @media (orientation: portrait) {
+    top: 0.5rem;
+  }
 `;

@@ -14,6 +14,10 @@ export const ImageGrid = styled.section`
     height: 50%;
     width: 100%;
   }
+  @media (orientation: portrait) {
+    height: 50%;
+    width: 100%;
+  }
   div {
     z-index: 3;
     border-radius: 8px;

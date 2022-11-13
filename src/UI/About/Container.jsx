@@ -10,7 +10,7 @@ export const Container = styled.section`
   padding: 1rem;
   position: relative;
   background: rgba(25, 29, 36);
-
+  height: 80vh;
   @media (max-width: 765px) {
     width: 90vw;
     display: flex;
@@ -18,5 +18,9 @@ export const Container = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  @media (orientation: portrait) {
+    height: 130vh;
   }
 `;

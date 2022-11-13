@@ -7,18 +7,22 @@ const GlobalStyle = createGlobalStyle`
 		box-sizing: border-box;
 	}
 	:root {
-		--primary-color: crimson;
+		--primary-color:  #dcdcdc;
 		--secondary-color: navy;
 	}
-	html{scroll-behavior: smooth;}
-	body  {overflow-x:hidden;
-		
+	html{
+		scroll-behavior: smooth;
+	}
+	body  {
+		overflow-x:hidden;
+		background: #dcdcdc;
 		
 		a {
-      text-decoration: none;
-      &:visited {
-        color: inherit;
-      }}
+      		text-decoration: none;
+      		&:visited {
+       		 color: inherit;
+      }
+	}
 		
 		
 		margin: 0;

@@ -14,6 +14,9 @@ const StyledBurger = styled.div`
   justify-content: space-around;
   align-items: flex-end;
   flex-flow: column nowrap;
+  @media (orientation: portrait) {
+    top: 1.5rem;
+  }
 
   div {
     width: 2rem;

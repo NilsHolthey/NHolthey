@@ -2,11 +2,10 @@ import styled from 'styled-components';
 
 export const AboutImage = styled.img`
   filter: grayscale(85%);
-
+  position: absolute;
   transition: filter 1.2s ease-in-out;
   height: auto;
   width: 70%;
-  z-index: 14;
 
   &:hover {
     filter: grayscale(1%);
@@ -23,5 +22,6 @@ export const AboutImage = styled.img`
   }
   @media (orientation: portrait) {
     width: 100%;
+    top: 10%;
   }
 `;

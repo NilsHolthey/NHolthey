@@ -16,13 +16,17 @@ export const BlurDiv = styled.div`
   background-color: ${({ backgroundColor = '#6667ab' }) => backgroundColor};
   background-image: linear-gradient(
     125deg,
-    rgba(102, 103, 171, 1) 40%,
-    rgba(226, 97, 190, 1) 79%,
-    rgba(220, 220, 220, 1) 90%
+    rgba(102, 103, 171, 1) 50%,
+
+    rgba(220, 220, 220, 1) 100%
   );
 
   border-radius: 50%;
   /* background-color: #e261bd74; */
 
   filter: blur(50px);
+  @media (max-width: 765px) {
+    right: 0;
+    height: 70%;
+  }
 `;

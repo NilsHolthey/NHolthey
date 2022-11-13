@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
 export const ScreenShot = styled.img`
-  width: 40%;
+  height: 90%;
+  z-index: 2;
 `;

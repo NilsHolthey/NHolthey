@@ -77,7 +77,8 @@ export default function PrevWork() {
   // }, []);
   return (
     <Container
-    // style={{ backgroundColor: `rgba(39, 44, 57, ${offsetY * 0.00022})` }}
+      id="work"
+      // style={{ backgroundColor: `rgba(39, 44, 57, ${offsetY * 0.00022})` }}
     >
       {/* <Headline>3. My Work</Headline>
       <h3> Capstonproject App DidIt</h3> */}

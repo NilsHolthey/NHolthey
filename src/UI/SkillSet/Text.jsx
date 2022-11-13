@@ -31,4 +31,7 @@ export const Text = styled.p`
   @media (max-width: 765px) {
     height: 50%;
   }
+  @media (orientation: portrait) {
+    height: 50%;
+  }
 `;
