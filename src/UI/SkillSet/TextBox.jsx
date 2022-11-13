@@ -6,6 +6,7 @@ export const TextBox = styled.section`
   display: flex;
   z-index: 2;
   flex-wrap: wrap;
+  border-radius: 12px;
   justify-content: center;
   align-items: center;
   background: rgb(39, 44, 57);

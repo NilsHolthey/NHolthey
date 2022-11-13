@@ -14,4 +14,7 @@ export const Wrapper = styled.div`
   @media (max-width: 765px) {
     height: 200vh;
   }
+  @media (orientation: portrait) {
+    height: 150vh;
+  }
 `;

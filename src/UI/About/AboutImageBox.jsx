@@ -30,7 +30,7 @@ export const AboutImageBox = styled.article`
     background: rgba(25, 29, 36, 0);
   }
   @media (orientation: portrait) {
-    height: 50%;
-    align-items: flex-start;
+    height: 40%;
+    align-items: center;
   }
 `;

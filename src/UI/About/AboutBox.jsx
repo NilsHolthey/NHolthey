@@ -30,4 +30,12 @@ export const AboutBox = styled.article`
     height: 50%;
     background: rgba(25, 29, 36, 0);
   }
+  @media (orientation: portrait) {
+    font-size: 1.1rem;
+    position: relative;
+    border-radius: 0;
+    width: 100%;
+    height: 60%;
+    background: rgba(25, 29, 36, 0);
+  }
 `;
