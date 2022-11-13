@@ -19,12 +19,17 @@ export const TextBox = styled.section`
   @media (max-width: 765px) {
     height: 35%;
     width: 100%;
-    p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* p {
       font-size: 2.5vh;
-    }
+    } */
   }
   @media (orientation: portrait) {
+    top: 0;
     height: 35%;
+    position: absolute;
     width: 100%;
     p {
       font-size: 2.5vh;

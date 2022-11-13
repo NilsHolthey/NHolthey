@@ -1,6 +1,7 @@
 import GlobalStyle from '../UI/GlobalStyles';
 import About from './About';
 import Contact from './Contact';
+
 import MainBg from './PageOne';
 // import PageTwo from './PageTwo';
 import PrevWork from './PrevWork';
@@ -17,6 +18,7 @@ export default function MainPage() {
       <Skillset />
       <PrevWork />
       <Work />
+
       <Contact />
     </>
   );

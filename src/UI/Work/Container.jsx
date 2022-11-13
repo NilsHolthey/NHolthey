@@ -7,20 +7,18 @@ export const Container = styled.section`
   border-radius: 30px;
   display: flex;
 
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+
   @media (max-width: 765px) {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     width: 90vw;
   }
   @media (orientation: portrait) {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     width: 90vw;
   }
 `;
