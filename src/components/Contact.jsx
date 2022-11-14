@@ -4,10 +4,7 @@ import { motion } from 'framer-motion';
 import { Container } from '../UI/Contact/Container';
 import { Footer } from '../UI/Contact/Footer';
 import { Form } from '../UI/Contact/Form';
-import { Frame } from '../UI/Contact/Frame';
-import { FrameBottom } from '../UI/Contact/FrameBottom';
-import { Headline } from '../UI/Contact/Headline';
-import { HeadlineBox } from '../UI/Contact/HeadlineBox';
+
 // import LogoForm from '../UI/Contact/LogoForm';
 import { Wrapper } from '../UI/Contact/Wrapper';
 import emailjs from '@emailjs/browser';
@@ -21,19 +18,6 @@ const item = {
     transition: {
       type: 'spring',
       duration: 1.6,
-    },
-  },
-};
-
-const subItem = {
-  hidden: { opacity: 0, y: 20 },
-  show: {
-    opacity: 0.8,
-    y: 0,
-    transition: {
-      type: 'spring',
-      duration: 1.3,
-      delay: 0.5,
     },
   },
 };
@@ -74,19 +58,6 @@ export default function Contact() {
           initial="hidden"
           whileInView="show"
         >
-          <HeadlineBox>
-            <Headline
-              viewport={{ once: true }}
-              as={motion.h3}
-              variants={subItem}
-              initial="hidden"
-              whileInView="show"
-            >
-              3. Contact Me
-            </Headline>
-          </HeadlineBox>
-          <Frame />
-          <FrameBottom />
           <label>Name</label>
           <input type="text" name="user_name" />
           <label>Email</label>
