@@ -14,6 +14,6 @@ export const Wrapper = styled.section`
   }
   @media (orientation: portrait) {
     width: 100vw;
-    height: 180vh;
+    height: 140vh;
   }
 `;

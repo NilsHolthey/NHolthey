@@ -26,7 +26,8 @@ export const BlurDiv = styled.div`
 
   filter: blur(50px);
   @media (max-width: 765px) {
-    right: 0;
-    height: 70%;
+    right: 3%;
+    height: 55%;
+    bottom: 6%;
   }
 `;

@@ -6,7 +6,7 @@ export const TextBox = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  z-index: 12;
   p {
     font-weight: bolder;
     font-size: 3.5vh;
@@ -22,9 +22,9 @@ export const TextBox = styled.section`
     position: absolute;
     width: 100%;
     height: 100%;
-    /* p {
+    p {
       font-size: 2.5vh;
-    } */
+    }
   }
   @media (orientation: portrait) {
     top: 0;

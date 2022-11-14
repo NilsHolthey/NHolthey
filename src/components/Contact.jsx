@@ -10,6 +10,8 @@ import { Headline } from '../UI/Contact/Headline';
 import { HeadlineBox } from '../UI/Contact/HeadlineBox';
 // import LogoForm from '../UI/Contact/LogoForm';
 import { Wrapper } from '../UI/Contact/Wrapper';
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
 
 const item = {
   hidden: { opacity: 0, y: 70 },
@@ -35,23 +37,37 @@ const subItem = {
     },
   },
 };
+
 export default function Contact() {
-  // const [offsetY, setOffsetY] = useState(0);
-  // const handleScroll = () => setOffsetY(window.pageYOffset);
+  const form = useRef();
 
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll);
+  const sendEmail = e => {
+    e.preventDefault();
 
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
+    emailjs
+      .sendForm(
+        'service_qi1lc4r',
+        'template_nzntalt',
+        form.current,
+        'K8UPqxtkHCh1EeJSp'
+      )
+      .then(
+        result => {
+          console.log(result.text);
+        },
+        error => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
-    <Wrapper
-      id="contacts"
-      // style={{ backgroundColor: `rgba(39, 44, 57, ${offsetY * 0.00022})` }}
-    >
+    <Wrapper id="contacts">
       <Container>
         {/* <LogoForm /> */}
         <Form
+          ref={form}
+          onSubmit={sendEmail}
           viewport={{ once: true }}
           as={motion.form}
           variants={item}
@@ -71,10 +87,13 @@ export default function Contact() {
           </HeadlineBox>
           <Frame />
           <FrameBottom />
-          <input type="text" />
-          <input type="email" />
-          <textarea></textarea>
-          <button type="submit">send</button>
+          <label>Name</label>
+          <input type="text" name="user_name" />
+          <label>Email</label>
+          <input type="email" name="user_email" />
+          <label>Message</label>
+          <textarea name="message" />
+          <input type="submit" value="Send" />
         </Form>
       </Container>
       <Footer>
