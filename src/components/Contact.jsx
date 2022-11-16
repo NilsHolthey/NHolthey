@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 // import { useState } from 'react';
 import { Container } from '../UI/Contact/Container';
 import { Footer } from '../UI/Contact/Footer';
-import { Form } from '../UI/Contact/Form';
+// import { Form } from '../UI/Contact/Form';
 
 // import LogoForm from '../UI/Contact/LogoForm';
 import { Wrapper } from '../UI/Contact/Wrapper';
@@ -24,6 +24,7 @@ import { ContactBox } from '../UI/Contact/ContactBox';
 import { useState } from 'react';
 import { TestDiv } from '../UI/Contact/TestDiv';
 import { TestDivName } from '../UI/Contact/TestDivName';
+import { TestDivTextarea } from '../UI/Contact/TestDivTextarea';
 
 const item = {
   hidden: { opacity: 0, y: 70 },
@@ -189,7 +190,7 @@ export default function Contact() {
             <Headline>Contact Me</Headline>
           </HeadlineBox>
 
-          <Form
+          {/* <Form
             ref={form}
             onSubmit={sendEmail}
             viewport={{ once: true }}
@@ -205,14 +206,24 @@ export default function Contact() {
             <label>Message</label>
             <textarea name="message" required />
             <input type="submit" value="Send" />
-          </Form>
-          <ContactBox>
+          </Form> */}
+          <ContactBox
+            ref={form}
+            onSubmit={sendEmail}
+            viewport={{ once: true }}
+            as={motion.form}
+            variants={item}
+            initial="hidden"
+            whileInView="show"
+          >
             <TestDivName className="ad-textbox">
               <input
                 onChange={handleChangeName}
                 className={`${valueName ? 'has-valueName' : ''}`}
                 id="textbox"
                 type="text"
+                name="user_name"
+                required
               />
               <span className="material-icons">person_outline</span>
               <label htmlFor="textbox">Name</label>
@@ -224,23 +235,28 @@ export default function Contact() {
                 className={`${value ? 'has-value' : ''}`}
                 id="email"
                 type="email"
+                name="user_email"
+                required
               />
               <span className="material-icons">alternate_email</span>
               <label htmlFor="email">Email Address</label>
               <div className="underline" />
             </TestDiv>
-            <TestDiv className="ad-textbox">
+            <TestDivTextarea className="ad-textbox">
               <textarea
                 rows="5"
                 cols="33"
                 onChange={handleChangeMessage}
                 className={`${valueMessage ? 'has-valueName' : ''}`}
                 id="message"
+                name="message"
+                required
               />
               <span className="material-icons">mail_outline</span>
               <label htmlFor="message">Message</label>
               <div className="underline" />
-            </TestDiv>
+            </TestDivTextarea>
+            <input type="submit" value="Send" />
           </ContactBox>
         </Container>
       </Wrapper>
