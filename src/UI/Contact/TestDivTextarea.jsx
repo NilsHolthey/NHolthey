@@ -11,7 +11,7 @@ export const TestDivTextarea = styled.div`
   &.ad-textbox > .underline {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 4px;
     width: 100%;
     height: 2px;
     background: #6667ab;

@@ -44,6 +44,7 @@ export const TestDiv = styled.div`
     padding-left: 34px;
     background: transparent;
     border: 0;
+    border-radius: 0;
     outline: none;
     border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 
