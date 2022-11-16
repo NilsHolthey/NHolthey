@@ -11,6 +11,19 @@ import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 import { Headline } from '../UI/About/Headline';
 import { HeadlineBox } from '../UI/About/HeadlineBox';
+import { InfoRight } from '../UI/InfoRight';
+import { Mail } from '../UI/Mail';
+import { LineRight } from '../UI/PaigeTwo/LineRight';
+import { InfoLeft } from '../UI/InfoLeft';
+import { LinkList } from '../UI/LinkList';
+import { SocialLink } from '../UI/SocialLinks';
+import SvgIcon from '../UI/icons';
+import { LineLeft } from '../UI/LineLeft';
+import MailSvg from '../UI/MailSvg';
+import { ContactBox } from '../UI/Contact/ContactBox';
+import { useState } from 'react';
+import { TestDiv } from '../UI/Contact/TestDiv';
+import { TestDivName } from '../UI/Contact/TestDivName';
 
 const item = {
   hidden: { opacity: 0, y: 70 },
@@ -26,6 +39,23 @@ const item = {
 
 export default function Contact() {
   const form = useRef();
+
+  const [valueName, setValueName] = useState();
+  const [valueMessage, setValueMessage] = useState();
+  const [value, setValue] = useState('');
+
+  const handleChangeName = e => {
+    setValueName(e.target.value);
+    console.log(valueName);
+  };
+  const handleChangeMail = e => {
+    setValue(e.target.value);
+    console.log(value);
+  };
+  const handleChangeMessage = e => {
+    setValueMessage(e.target.value);
+    console.log(value);
+  };
 
   const sendEmail = e => {
     e.preventDefault();
@@ -51,22 +81,114 @@ export default function Contact() {
   return (
     <>
       <Wrapper id="contacts">
+        <InfoRight>
+          <Mail href="mailto:nils.holthey@gmx.de">nils.holthey@gmx.de</Mail>
+          <LineRight></LineRight>
+        </InfoRight>
+        <InfoLeft>
+          <LinkList>
+            <SocialLink>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/NilsHolthey"
+              >
+                <SvgIcon
+                  strokeWidth="2"
+                  variant="github"
+                  size="28px"
+                  color="none"
+                />
+              </a>
+            </SocialLink>
+            <SocialLink>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/nholthey"
+              >
+                <SvgIcon
+                  strokeWidth="2"
+                  variant="instagram"
+                  strokeLinecap="round"
+                  size="28px"
+                  color="none"
+                  line={<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>}
+                  rect={
+                    <rect
+                      fill="none"
+                      x="2"
+                      y="2"
+                      width="20"
+                      height="20"
+                      rx="5"
+                      ry="5"
+                    ></rect>
+                  }
+                />
+              </a>
+            </SocialLink>
+            <SocialLink>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://codepen.io/NHolthey"
+              >
+                <SvgIcon
+                  strokeWidth="2"
+                  size="28px"
+                  color="none"
+                  polygon={
+                    <polygon
+                      fill="none"
+                      points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"
+                    ></polygon>
+                  }
+                  polyline={
+                    <polyline
+                      fill="none"
+                      points="22 8.5 12 15.5 2 8.5"
+                    ></polyline>
+                  }
+                  polyline2={
+                    <polyline
+                      fill="none"
+                      points="2 15.5 12 8.5 22 15.5"
+                    ></polyline>
+                  }
+                  line={<line x1="12" y1="22" x2="12" y2="15.5"></line>}
+                  line2={<line x1="12" y1="2" x2="12" y2="8.5"></line>}
+                />
+              </a>
+            </SocialLink>
+            <SocialLink>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://twitter.com/nholthey"
+              >
+                <SvgIcon
+                  variant="twitter"
+                  size="28px"
+                  color="none"
+                  strokeWidth="2"
+                />
+              </a>
+            </SocialLink>
+            <SocialLink>
+              <a hreff="#">
+                <MailSvg />
+              </a>
+            </SocialLink>
+          </LinkList>
+          <LineLeft></LineLeft>
+        </InfoLeft>
         <Container>
           <HeadlineBox>
             <span>04</span>
-            {/* <TopLine /> */}
-
-            <Headline
-            // viewport={{ once: true }}
-            // as={motion.h3}
-            // variants={subItem}
-            // initial="hidden"
-            // whileInView="show"
-            >
-              Contact Me
-            </Headline>
+            <Headline>Contact Me</Headline>
           </HeadlineBox>
-          {/* <LogoForm /> */}
+
           <Form
             ref={form}
             onSubmit={sendEmail}
@@ -84,6 +206,42 @@ export default function Contact() {
             <textarea name="message" required />
             <input type="submit" value="Send" />
           </Form>
+          <ContactBox>
+            <TestDivName className="ad-textbox">
+              <input
+                onChange={handleChangeName}
+                className={`${valueName ? 'has-valueName' : ''}`}
+                id="textbox"
+                type="text"
+              />
+              <span className="material-icons">person_outline</span>
+              <label htmlFor="textbox">Name</label>
+              <div className="underline" />
+            </TestDivName>
+            <TestDiv className="ad-textbox">
+              <input
+                onChange={handleChangeMail}
+                className={`${value ? 'has-value' : ''}`}
+                id="email"
+                type="email"
+              />
+              <span className="material-icons">alternate_email</span>
+              <label htmlFor="email">Email Address</label>
+              <div className="underline" />
+            </TestDiv>
+            <TestDiv className="ad-textbox">
+              <textarea
+                rows="5"
+                cols="33"
+                onChange={handleChangeMessage}
+                className={`${valueMessage ? 'has-valueName' : ''}`}
+                id="message"
+              />
+              <span className="material-icons">mail_outline</span>
+              <label htmlFor="message">Message</label>
+              <div className="underline" />
+            </TestDiv>
+          </ContactBox>
         </Container>
       </Wrapper>
       <Footer>

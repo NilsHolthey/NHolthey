@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Form = styled.form`
-  height: 60vh;
-  width: 60vw;
+  height: 100%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,6 +10,7 @@ export const Form = styled.form`
   gap: 2rem;
   color: #d1d1d1;
   position: relative;
+  background-color: darkgray;
 
   @media (max-width: 665px) {
     width: 80vw;

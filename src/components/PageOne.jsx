@@ -1,18 +1,18 @@
-import SvgIcon from '../UI/icons';
+// import SvgIcon from '../UI/icons';
 import { ImageContainer } from '../UI/ImageContainer';
-import { InfoLeft } from '../UI/InfoLeft';
-import { InfoRight } from '../UI/InfoRight';
-import { LineLeft } from '../UI/LineLeft';
+// import { InfoLeft } from '../UI/InfoLeft';
+// import { InfoRight } from '../UI/InfoRight';
+// import { LineLeft } from '../UI/LineLeft';
 
-import { LinkList } from '../UI/LinkList';
-import { Mail } from '../UI/Mail';
-import MailSvg from '../UI/MailSvg';
-import { LineRight } from '../UI/PaigeTwo/LineRight';
+// import { LinkList } from '../UI/LinkList';
+// import { Mail } from '../UI/Mail';
+// import MailSvg from '../UI/MailSvg';
+// import { LineRight } from '../UI/PaigeTwo/LineRight';
 import { ProfileContainer } from '../UI/ProfileContainer';
 import { ProfileImage } from '../UI/ProfileImage';
 import { ProfileWrapper } from '../UI/Profilewrapper';
 
-import { SocialLink } from '../UI/SocialLinks';
+// import { SocialLink } from '../UI/SocialLinks';
 
 import { TextContainer } from '../UI/TextContainer';
 // import DevSvg from './DevSvg';
@@ -64,7 +64,7 @@ export default function MainBg() {
   return (
     <ProfileWrapper id="home">
       <Navbar />
-      <InfoRight>
+      {/* <InfoRight>
         <Mail href="mailto:nils.holthey@gmx.de">nils.holthey@gmx.de</Mail>
         <LineRight></LineRight>
       </InfoRight>
@@ -165,7 +165,7 @@ export default function MainBg() {
           </SocialLink>
         </LinkList>
         <LineLeft></LineLeft>
-      </InfoLeft>
+      </InfoLeft> */}
       <DevImg
         id="devImg"
         src="DEVELOPER.png"
