@@ -9,5 +9,4 @@ export const Wrapper = styled.section`
   align-items: center;
   background: #dcdcdc;
   overflow: hidden;
-  flex-direction: column;
 `;

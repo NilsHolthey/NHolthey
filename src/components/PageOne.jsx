@@ -12,8 +12,6 @@ import { ProfileContainer } from '../UI/ProfileContainer';
 import { ProfileImage } from '../UI/ProfileImage';
 import { ProfileWrapper } from '../UI/Profilewrapper';
 
-import { DevImg } from '../UI/DevImg';
-
 import { SocialLink } from '../UI/SocialLinks';
 
 import { TextContainer } from '../UI/TextContainer';
@@ -23,6 +21,8 @@ import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 
 import TexBoxHook from './TextBoxhook';
+
+import { DevImg } from '../UI/DevImg';
 // import { BlurDiv } from '../UI/BlurDiv';
 // import { BreakLine } from '../UI/BreakLine';
 // import { useState } from 'react';
@@ -64,7 +64,6 @@ export default function MainBg() {
   return (
     <ProfileWrapper id="home">
       <Navbar />
-
       <InfoRight>
         <Mail href="mailto:nils.holthey@gmx.de">nils.holthey@gmx.de</Mail>
         <LineRight></LineRight>
@@ -178,9 +177,8 @@ export default function MainBg() {
           bounce: 0.2,
           duration: 2,
         }}
-      />
+      />{' '}
       {/* <DevSvg /> */}
-
       <ProfileContainer>
         <TextContainer>
           <TexBoxHook />

@@ -1,6 +1,7 @@
 import { Headline } from '../UI/About/Headline';
 import { BlurDiv } from '../UI/PrevWork/BlurDiv';
-import { HeadlineBox } from '../UI/PrevWork/HeadlineBox';
+
+import { HeadlineBox } from '../UI/About/HeadlineBox';
 import { Container } from '../UI/Work/Container';
 import { ImageBox } from '../UI/Work/ImageBox';
 import { ScreenShot } from '../UI/Work/SreenShot';

@@ -5,11 +5,11 @@ export const Headline = styled.h3`
   /* padding: 1rem; */
 
   font-weight: 900;
-
+  text-align: right;
   position: absolute;
-
+  width: 120%;
   font-size: 1.5rem;
-  top: 20%;
+  top: 30%;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);

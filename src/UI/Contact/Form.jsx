@@ -8,7 +8,7 @@ export const Form = styled.form`
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  background-color: rgb(39, 44, 57, 0.2);
+  color: #d1d1d1;
   position: relative;
 
   @media (max-width: 665px) {

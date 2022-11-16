@@ -6,7 +6,8 @@ import { Headline } from '../UI/About/Headline';
 import { BlurDiv } from '../UI/PrevWork/BlurDiv';
 // import { BackgroundBox } from '../UI/About/BackgroudBox';
 import { Container } from '../UI/PrevWork/Container';
-import { HeadlineBox } from '../UI/PrevWork/HeadlineBox';
+
+import { HeadlineBox } from '../UI/About/HeadlineBox';
 // import { Headline } from '../UI/PrevWork/Headline';
 // import { StyledVideo } from '../UI/PrevWork/StyledVideo';
 import { VideoBox } from '../UI/PrevWork/VideoBox';

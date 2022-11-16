@@ -9,7 +9,8 @@ import { BreakLine } from '../UI/SkillSet/BreakLine';
 import { BreakLine2 } from '../UI/SkillSet/BreakLine2';
 // import { TopLine } from '../UI/About/TopLine';
 import { Container } from '../UI/SkillSet/Container';
-import { HeadlineBox } from '../UI/SkillSet/HeadlineBox';
+
+import { HeadlineBox } from '../UI/About/HeadlineBox';
 // import { Hexagon } from '../UI/SkillSet/Hexagone';
 import { ImageGrid } from '../UI/SkillSet/ImageGrid';
 import { CssPng } from '../UI/SkillSet/PNG/Css';
@@ -85,7 +86,7 @@ export default function Skillset() {
           <span>02</span>
           {/* <TopLine /> */}
 
-          <Headline>Skills Set</Headline>
+          <Headline>Skill Set</Headline>
         </HeadlineBox>
         <TextBox
           id="textBox"

@@ -5,6 +5,9 @@ export const NavList = styled.ul`
   justify-content: space-around;
   width: 40vw;
   list-style: none;
+  padding: none;
+  margin-right: 1em;
+
   font-weight: 900;
   gap: 1rem;
   font-size: 1.1rem;

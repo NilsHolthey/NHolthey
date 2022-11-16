@@ -5,4 +5,5 @@ export const ProfileWrapper = styled.div`
   position: relative;
   background-color: rgba(39, 44, 57, 1);
   width: 100vw;
+  overflow: hidden;
 `;

@@ -10,6 +10,7 @@ export const HeadlineBox = styled.div`
   width: 6rem;
   display: flex;
   justify-content: center;
+
   left: -8rem;
   z-index: 100000;
   font-family: 'Fjalla One', sans-serif;
@@ -18,6 +19,7 @@ export const HeadlineBox = styled.div`
     position: absolute;
     color: rgba(25, 29, 36, 0.238);
   }
+
   @media (max-width: 765px) {
     top: -5rem;
     left: 0;
