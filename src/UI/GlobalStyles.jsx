@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
 	:root {
 		--primary-color:  #dcdcdc;
 		--secondary-color: navy;
+		
 	}
 	html{
 		scroll-behavior: smooth;

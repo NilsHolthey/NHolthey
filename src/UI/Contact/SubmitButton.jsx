@@ -14,9 +14,24 @@ export const SubmitButton = styled.button`
   border-radius: 28px;
   font-family: 'Fjalla One', sans-serif;
   color: #f7f7f7;
-  background: #6667ab;
+  background: transparent;
   cursor: pointer;
-
+  box-shadow: 7px 7px 20px 2px rgba(0, 0, 0, 0.2),
+    -7px -7px 20px 2px rgba(77, 71, 100, 0.4),
+    -1px -1px 4px 2px rgba(77, 71, 100, 0.4);
+  transition: background 0.1s ease-in-out;
+  &.pressed {
+    box-shadow: inset 5px 5px 8px 1px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 8px 0px rgba(77, 71, 100, 0.3),
+      inset -1px -2px 2px 0px rgba(77, 71, 100, 0.4);
+    transition: all 0.3s ease-in-out;
+  }
+  &:active {
+    box-shadow: inset 5px 5px 8px 1px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 8px 0px rgba(77, 71, 100, 0.3),
+      inset -1px -2px 2px 0px rgba(77, 71, 100, 0.4);
+    background: rgba(25, 29, 36, 0.973);
+  }
   &.text {
     display: block;
     white-space: nowrap;

@@ -282,11 +282,11 @@ export default function Contact() {
               type="submit"
               value="Send"
               // onClick={valueMessage && valueName && value ? handleClick : ''}
-              className={isSending || isSent ? 'sending' : ''}
+              className={isSending || isSent ? 'sending pressed' : ''}
               style={{
-                backgroundColor: isSent ? 'lightgreen' : '',
-                color: isSent ? '#525151' : '',
                 fontWeight: isSent ? 'bolder' : '',
+                backgroundColor:
+                  (isSent ? ' #042c10' : '') || (isSending ? ' #6667ab' : ''),
               }}
             >
               <span className="icon material-icons">
