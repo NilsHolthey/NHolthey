@@ -17,19 +17,20 @@ export const SubmitButton = styled.button`
   background: transparent;
   cursor: pointer;
   box-shadow: 7px 7px 20px 2px rgba(0, 0, 0, 0.2),
-    -7px -7px 20px 2px rgba(77, 71, 100, 0.4),
-    -1px -1px 4px 2px rgba(77, 71, 100, 0.4);
+    -7px -7px 20px 2px rgba(102, 103, 171, 0.4),
+    -1px -1px 4px 2px rgba(102, 103, 171, 0.4);
   transition: background 0.1s ease-in-out;
   &.pressed {
-    box-shadow: inset 5px 5px 8px 1px rgba(0, 0, 0, 0.2),
-      inset -5px -5px 8px 0px rgba(77, 71, 100, 0.3),
-      inset -1px -2px 2px 0px rgba(77, 71, 100, 0.4);
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.5),
+      inset -2px -2px 8px rgba(1, 69, 16, 0.3), inset -4px -4px 10px #02361390;
+
+    border: 1px solid #191919;
     transition: all 0.3s ease-in-out;
   }
   &:active {
     box-shadow: inset 5px 5px 8px 1px rgba(0, 0, 0, 0.2),
-      inset -5px -5px 8px 0px rgba(77, 71, 100, 0.3),
-      inset -1px -2px 2px 0px rgba(77, 71, 100, 0.4);
+      inset -5px -5px 8px 0px rgba(102, 103, 171, 0.3),
+      inset -1px -2px 2px 0px rgba(102, 103, 171, 0.4);
     background: rgba(25, 29, 36, 0.973);
   }
   &.text {

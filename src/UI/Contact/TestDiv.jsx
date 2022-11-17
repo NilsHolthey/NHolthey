@@ -13,7 +13,7 @@ export const TestDiv = styled.div`
     bottom: 0;
     width: 100%;
     height: 2px;
-    background: #6667ab;
+    background: rgb(102, 103, 171);
     transform: scaleX(0);
     transition: 0.35s;
   }
