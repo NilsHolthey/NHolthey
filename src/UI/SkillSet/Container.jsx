@@ -26,7 +26,7 @@ export const Container = styled.section`
   }
   @media (orientation: portrait) {
     width: 90vw;
-    height: 120vh;
+    height: 140vh;
     flex-direction: column;
     justify-content: center;
     padding-bottom: 3%;

@@ -25,6 +25,7 @@ import { useState } from 'react';
 import { TestDiv } from '../UI/Contact/TestDiv';
 import { TestDivName } from '../UI/Contact/TestDivName';
 import { TestDivTextarea } from '../UI/Contact/TestDivTextarea';
+import { SubmitButton } from '../UI/Contact/SubmitButton';
 
 const item = {
   hidden: { opacity: 0, y: 70 },
@@ -76,8 +77,28 @@ export default function Contact() {
           console.log(error.text);
         }
       );
+    handleClick();
     e.target.reset();
   };
+
+  const [isSending, setIsSending] = useState(false);
+  const [isSent, setIsSent] = useState(false);
+
+  const handleClick = () => {
+    setIsSending(true);
+    setTimeout(() => {
+      setIsSending(false);
+      setIsSent(true);
+      setTimeout(() => setIsSent(false), 2500);
+    }, 2000);
+  };
+
+  // const handleSubmit = e => {
+  //   e.preventDefault();
+  //   sendEmail();
+
+  //   e.target.reset();
+  // };
 
   return (
     <>
@@ -256,7 +277,26 @@ export default function Contact() {
               <label htmlFor="message">Message</label>
               <div className="underline" />
             </TestDivTextarea>
-            <input type="submit" value="Send" />
+            {/* <input type="submit" value="Send" /> */}
+            <SubmitButton
+              type="submit"
+              value="Send"
+              // onClick={valueMessage && valueName && value ? handleClick : ''}
+              className={isSending || isSent ? 'sending' : ''}
+              style={{
+                backgroundColor: isSent ? 'lightgreen' : '',
+                color: isSent ? '#525151' : '',
+                fontWeight: isSent ? 'bolder' : '',
+              }}
+            >
+              <span className="icon material-icons">
+                {isSent ? 'check' : ''}
+              </span>
+              <span className="text">
+                {isSending ? 'Sending ...' : isSent ? 'Sent' : 'Send Message'}
+                {/* {isSending ? 'Sending ...' : isSent ? 'Sent' : 'Send Message'} */}
+              </span>
+            </SubmitButton>
           </ContactBox>
         </Container>
       </Wrapper>

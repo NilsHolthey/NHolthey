@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ContactBox = styled.div`
+export const ContactBox = styled.form`
   width: 50%;
   height: 100%;
   flex-direction: column;
@@ -8,4 +8,10 @@ export const ContactBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 765px) {
+    width: 100%;
+  }
+  @media (orientation: portrait) {
+    width: 100%;
+  }
 `;
