@@ -26,6 +26,7 @@ import { TestDiv } from '../UI/Contact/TestDiv';
 import { TestDivName } from '../UI/Contact/TestDivName';
 import { TestDivTextarea } from '../UI/Contact/TestDivTextarea';
 import { SubmitButton } from '../UI/Contact/SubmitButton';
+import { FormModal } from '../UI/Contact/FormModal';
 
 const item = {
   hidden: { opacity: 0, y: 70 },
@@ -210,6 +211,7 @@ export default function Contact() {
             <span>04</span>
             <Headline>Contact Me</Headline>
           </HeadlineBox>
+          {isSending || isSent ? <FormModal /> : ''}
 
           {/* <Form
             ref={form}
@@ -287,6 +289,9 @@ export default function Contact() {
                 fontWeight: isSent ? 'bolder' : '',
                 backgroundColor:
                   (isSent ? ' #042c10' : '') || (isSending ? ' #6667ab' : ''),
+                boxShadow: isSending
+                  ? 'inset 4px 4px 10px rgba(0, 0, 0, 0.5),inset -2px -2px 8px rgba(59, 48, 77, 0.3), inset -4px -4px 10px #ccc8cf90'
+                  : '',
               }}
             >
               <span className="icon material-icons">

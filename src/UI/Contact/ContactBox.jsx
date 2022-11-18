@@ -8,6 +8,7 @@ export const ContactBox = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10000000;
   @media (max-width: 765px) {
     width: 100%;
   }
