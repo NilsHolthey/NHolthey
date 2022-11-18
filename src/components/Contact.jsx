@@ -47,6 +47,9 @@ export default function Contact() {
   const [valueMessage, setValueMessage] = useState();
   const [value, setValue] = useState('');
 
+  const [isSending, setIsSending] = useState(false);
+  const [isSent, setIsSent] = useState(false);
+
   const handleChangeName = e => {
     setValueName(e.target.value);
     console.log(valueName);
@@ -81,9 +84,6 @@ export default function Contact() {
     handleClick();
     e.target.reset();
   };
-
-  const [isSending, setIsSending] = useState(false);
-  const [isSent, setIsSent] = useState(false);
 
   const handleClick = () => {
     setIsSending(true);
@@ -206,12 +206,12 @@ export default function Contact() {
           </LinkList>
           <LineLeft></LineLeft>
         </InfoLeft>
+        {isSending || isSent ? <FormModal /> : ''}
         <Container>
           <HeadlineBox>
             <span>04</span>
             <Headline>Contact Me</Headline>
           </HeadlineBox>
-          {isSending || isSent ? <FormModal /> : ''}
 
           {/* <Form
             ref={form}

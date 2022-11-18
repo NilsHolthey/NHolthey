@@ -7,8 +7,17 @@ import { ImageBox } from '../UI/Work/ImageBox';
 import { ScreenShot } from '../UI/Work/SreenShot';
 import { TextBox } from '../UI/Work/TextBox';
 import { Wrapper } from '../UI/Work/Wrapper';
+import ModalVideo from './ModalVideo';
+import { VideoContainer } from '../UI/Work/VideoContainer';
+import { useState } from 'react';
 
 export default function Work() {
+  const [isActive, setIsActive] = useState(false);
+
+  function handelClick() {
+    setIsActive(!isActive);
+  }
+
   return (
     <Wrapper>
       <Container>
@@ -42,9 +51,17 @@ export default function Work() {
             opacity="0.6"
             zIndex="0"
           />
-          <ScreenShot src="/ScreenShot.png" />
+          <ScreenShot src="/ScreenShot.png" onClick={handelClick} />
         </ImageBox>
       </Container>
+
+      {isActive ? (
+        <VideoContainer>
+          <ModalVideo handelClick={handelClick} />
+        </VideoContainer>
+      ) : (
+        ''
+      )}
     </Wrapper>
   );
 }
