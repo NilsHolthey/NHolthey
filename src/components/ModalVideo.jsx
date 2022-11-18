@@ -6,7 +6,7 @@ import video from '../Video/video.mp4';
 export default function ModalVideo({ handelClick }) {
   return (
     <PlayerWrapper>
-      <StyledVideo playsInline autoPlay loop muted>
+      <StyledVideo playsInline autoPlay loop>
         <source src={video} type="video/mp4" />
       </StyledVideo>
       <button type="button" onClick={handelClick}>
