@@ -10,7 +10,7 @@ import Work from './Work';
 
 export default function MainPage() {
   return (
-    <>
+    <div id="pageWrapper">
       <GlobalStyle />
       <MainBg />
       <About />
@@ -20,6 +20,6 @@ export default function MainPage() {
       <Work />
 
       <Contact />
-    </>
+    </div>
   );
 }

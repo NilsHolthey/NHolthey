@@ -16,6 +16,24 @@ export default function Work() {
 
   function handelClick() {
     setIsActive(!isActive);
+    changeOverflow();
+  }
+
+  function changeOverflow() {
+    if (isActive == false) {
+      changeToFixed();
+    } else {
+      reset();
+    }
+  }
+
+  function changeToFixed() {
+    let pageWrapper = document.body;
+    pageWrapper.style.overflowY = 'hidden';
+  }
+  function reset() {
+    let pageWrapper = document.body;
+    pageWrapper.style.overflowY = '';
   }
 
   return (
