@@ -65,16 +65,8 @@ export default function Skillset() {
   const [showReact, setShowReact] = useState(false);
   const handleShowReact = () => setShowReact(!showReact);
 
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
   return (
-    <Wrapper
-      id="skillset"
-      // style={{ backgroundColor: `rgba(39, 44, 57, ${offsetY * 0.00022})` }}
-    >
+    <Wrapper id="skillset">
       <Container
         viewport={{ once: true }}
         as={motion.section}
@@ -84,8 +76,6 @@ export default function Skillset() {
       >
         <HeadlineBox>
           <span>02</span>
-          {/* <TopLine /> */}
-
           <Headline>Skill Set</Headline>
         </HeadlineBox>
         <TextBox
@@ -226,97 +216,6 @@ export default function Skillset() {
           <div id="item-9">&nbsp;</div>
           <div id="item-10">&nbsp;</div>
           <div id="item-11">&nbsp;</div>
-          {/* <Hexagon
-            id="hex01"
-            width="7rem"
-            height="7rem"
-            duration="8s"
-            onMouseEnter={changeBackgroundHtm}
-            onMouseLeave={changeBackgroundBack}
-            top="1rem"
-            right="1rem"
-          >
-            <HtmlPng src="html5-logo-31813.png" />
-            <div></div>
-          </Hexagon>
-          <Hexagon
-            onMouseEnter={changeBackgroundCss}
-            onMouseLeave={changeBackgroundCssBack}
-            width="5rem"
-            height="5rem"
-            duration="6s"
-            top="85%"
-            right="-3rem"
-          >
-            <CssPng src="CSS_3.png"></CssPng>
-            <div></div>
-          </Hexagon>
-
-          <Hexagon
-            width="8rem"
-            height="8rem"
-            duration="7.5s"
-            top="11rem"
-            right="13rem"
-          >
-            <ReactPng src="reactLogo.png"></ReactPng>
-            <div></div>
-          </Hexagon>
-          <Hexagon
-            width="12rem"
-            height="12rem"
-            duration="7s"
-            top="15rem"
-            right="3rem"
-          >
-            <JsPng src="javascript-39415.png"></JsPng>
-            <div></div>
-          </Hexagon>
-          <Hexagon
-            width="8rem"
-            height="8rem"
-            duration="7.5s"
-            top="5rem"
-            right="23rem"
-          >
-            <div></div>
-          </Hexagon>
-          <Hexagon
-            width="4.5r em"
-            height="4.5rem"
-            duration="4.5s"
-            top="19rem"
-            right="15rem"
-          >
-            <div></div>
-          </Hexagon>
-          <Hexagon
-            width="7rem"
-            height="7rem"
-            duration="9.5s"
-            top="23rem"
-            right="26rem"
-          >
-            <div></div>
-          </Hexagon>
-          <Hexagon
-            width="6rem"
-            height="6rem"
-            duration="7.5s"
-            top="-1rem"
-            right="10rem"
-          >
-            <div></div>
-          </Hexagon>
-          <Hexagon
-            width="4rem"
-            height="4rem"
-            duration="3.5s"
-            top="11rem"
-            right="23rem"
-          >
-            <div></div>
-          </Hexagon> */}
         </ImageGrid>
         <BreakLine />
       </Container>

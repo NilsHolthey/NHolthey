@@ -27,6 +27,7 @@ import { TestDivName } from '../UI/Contact/TestDivName';
 import { TestDivTextarea } from '../UI/Contact/TestDivTextarea';
 import { SubmitButton } from '../UI/Contact/SubmitButton';
 import { FormModal } from '../UI/Contact/FormModal';
+import { TextBox } from '../UI/Contact/TextBox';
 
 const item = {
   hidden: { opacity: 0, y: 70 },
@@ -212,24 +213,15 @@ export default function Contact() {
             <span>04</span>
             <Headline>Contact Me</Headline>
           </HeadlineBox>
-
-          {/* <Form
-            ref={form}
-            onSubmit={sendEmail}
-            viewport={{ once: true }}
-            as={motion.form}
-            variants={item}
-            initial="hidden"
-            whileInView="show"
-          >
-            <label>Name</label>
-            <input type="text" name="user_name" required />
-            <label>Email</label>
-            <input type="email" name="user_email" required />
-            <label>Message</label>
-            <textarea name="message" required />
-            <input type="submit" value="Send" />
-          </Form> */}
+          <TextBox>
+            <div>
+              <p>Love to hear from you, </p>
+              <p>
+                Get in touch{' '}
+                <span className="icon material-icons">waving_hand</span>
+              </p>
+            </div>
+          </TextBox>
           <ContactBox
             ref={form}
             onSubmit={sendEmail}
@@ -279,11 +271,10 @@ export default function Contact() {
               <label htmlFor="message">Message</label>
               <div className="underline" />
             </TestDivTextarea>
-            {/* <input type="submit" value="Send" /> */}
+
             <SubmitButton
               type="submit"
               value="Send"
-              // onClick={valueMessage && valueName && value ? handleClick : ''}
               className={isSending || isSent ? 'sending pressed' : ''}
               style={{
                 fontWeight: isSent ? 'bolder' : '',
