@@ -11,6 +11,7 @@ import ModalVideo from './ModalVideo';
 import { VideoContainer } from '../UI/Work/VideoContainer';
 import { useState } from 'react';
 import PlayButton from '../UI/Work/PlayButton';
+import SvgIcon from '../UI/icons';
 
 export default function Work() {
   const [isActive, setIsActive] = useState(false);
@@ -58,7 +59,20 @@ export default function Work() {
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa porro
             perspiciatis amet dignissimos! In, facere repellendus cum est sit
-            eius.
+            eius.{' '}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/NilsHolthey/capstone-project"
+            >
+              sourcecode:
+              <SvgIcon
+                strokeWidth="2"
+                variant="github"
+                size="2.2vh"
+                color="none"
+              />
+            </a>
           </p>
         </TextBox>
         <ImageBox>
