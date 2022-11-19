@@ -5,8 +5,8 @@ export const Button = styled.div`
   bottom: 13%;
   left: 53%;
   transform: translate(-50%, -50%);
-  width: 5.5rem;
-  height: 5.5rem;
+  width: 11vh;
+  height: 11vh;
   background: var(--greyLight-1);
   box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2),
     -0.2rem -0.2rem 0.5rem var(--white);
