@@ -156,7 +156,7 @@ export default function Skillset() {
                 <HtmlPng src="html5-logo-31813.png"></HtmlPng>
               </span>
             ) : (
-              <a href="#textBox">
+              <a href="#skillset">
                 <HtmlPng src="html5-logo-31813.png"></HtmlPng>
               </a>
             )}
@@ -176,7 +176,7 @@ export default function Skillset() {
                 <JsPng src="javascript-39415.png"></JsPng>
               </span>
             ) : (
-              <a href="#textBox">
+              <a href="#skillset">
                 <JsPng src="javascript-39415.png"></JsPng>
               </a>
             )}

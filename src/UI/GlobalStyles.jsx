@@ -10,14 +10,14 @@ const GlobalStyle = createGlobalStyle`
 		--primary-color:  #dcdcdc;
 		--secondary-color: navy;
 		--primary-light: #8abdff;
-  --primary: #6d5dfc;
-  --primary-dark: #5b0eeb;
+  		--primary: #6d5dfc;
+  		--primary-dark: #5b0eeb;
   
-  --white: #FFFFFF;
-  --greyLight-1: #E4EBF5;
-  --greyLight-2: #c8d0e7;
-  --greyLight-3: #bec8e4;
-  --greyDark: #9baacf;
+  		--white: #FFFFFF;
+  		--greyLight-1: #E4EBF5;
+  		--greyLight-2: #c8d0e7;
+  		--greyLight-3: #bec8e4;
+  		--greyDark: #9baacf;
 		
 	}
 	html{
