@@ -4,7 +4,7 @@ export const Container = styled.section`
   width: 70vw;
   height: 80vh;
   background: rgba(25, 29, 36, 0.965);
-  border-radius: 30px;
+  border-radius: 8px;
   display: flex;
 
   position: relative;
