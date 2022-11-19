@@ -9,9 +9,9 @@ export default function ModalVideo({ handelClick }) {
       <StyledVideo playsInline autoPlay loop>
         <source src={video} type="video/mp4" />
       </StyledVideo>
-      <button type="button" onClick={handelClick}>
-        close
-      </button>
+      <span className="material-icons" onClick={handelClick}>
+        highlight_off
+      </span>
     </PlayerWrapper>
   );
 }

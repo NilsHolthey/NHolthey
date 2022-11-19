@@ -1,17 +1,25 @@
 import styled from 'styled-components';
 
-export const PlayerWrapper = styled.section`
-  position: relative;
-  span {
-    position: absolute;
-    color: white;
-    cursor: pointer;
-    font-size: 35px;
-    top: -5%;
-    right: 0;
-    transform: translate(50%, 0);
-  }
+export const Button = styled.div`
+  position: absolute;
+  bottom: 13%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  width: 5.5rem;
+  height: 5.5rem;
+  background: var(--greyLight-1);
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2),
+    -0.2rem -0.2rem 0.5rem var(--white);
+  border-radius: 100%;
 
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .circle {
+    color: lightgray;
+    font-size: 45px;
+  }
   &.material-icons {
     font-family: 'Material Icons';
     font-weight: normal;

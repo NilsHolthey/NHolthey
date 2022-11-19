@@ -11,4 +11,10 @@ export const VideoContainer = styled.section`
   justify-content: center;
   /* transform: -50% -50%; */
   z-index: 11111150;
+  @media (max-width: 765px) {
+    background-color: #000000;
+  }
+  @media (orientation: portrait) {
+    background-color: #000000;
+  }
 `;

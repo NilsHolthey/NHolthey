@@ -10,6 +10,7 @@ import { Wrapper } from '../UI/Work/Wrapper';
 import ModalVideo from './ModalVideo';
 import { VideoContainer } from '../UI/Work/VideoContainer';
 import { useState } from 'react';
+import PlayButton from '../UI/Work/PlayButton';
 
 export default function Work() {
   const [isActive, setIsActive] = useState(false);
@@ -37,7 +38,7 @@ export default function Work() {
   }
 
   return (
-    <Wrapper>
+    <Wrapper id="work">
       <Container>
         <HeadlineBox>
           <span>03</span>
@@ -69,7 +70,8 @@ export default function Work() {
             opacity="0.6"
             zIndex="0"
           />
-          <ScreenShot src="/ScreenShot.png" onClick={handelClick} />
+          <ScreenShot src="/ScreenShot.png" />
+          <PlayButton handelClick={handelClick} />
         </ImageBox>
       </Container>
 
