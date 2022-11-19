@@ -8,4 +8,11 @@ export const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   background: #dcdcdc;
+
+  @media (max-width: 765px) {
+    height: 160vh;
+  }
+  @media (orientation: portrait) {
+    height: 160vh;
+  }
 `;

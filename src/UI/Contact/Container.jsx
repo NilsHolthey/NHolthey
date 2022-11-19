@@ -11,7 +11,7 @@ export const Container = styled.article`
   position: relative;
   @media (max-width: 765px) {
     width: 90vw;
-
+    height: 140vh;
     flex-direction: column;
     justify-content: center;
   }
@@ -20,5 +20,6 @@ export const Container = styled.article`
 
     flex-direction: column;
     justify-content: center;
+    height: 140vh;
   }
 `;

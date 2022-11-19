@@ -6,7 +6,7 @@ export const ImageGrid = styled.section`
   padding: 15px;
   display: grid;
 
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: repeat(3, 1fr);
 
   gap: 10px;

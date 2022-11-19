@@ -42,6 +42,7 @@ const item = {
 };
 
 export default function Contact() {
+  const copyright = new Date().getFullYear();
   const form = useRef();
 
   const [valueName, setValueName] = useState();
@@ -297,7 +298,7 @@ export default function Contact() {
         </Container>
       </Wrapper>
       <Footer>
-        <p>copyright by me©</p>
+        <p> ©{copyright} Nils Holthey</p>
       </Footer>
     </>
   );

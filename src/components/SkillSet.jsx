@@ -216,6 +216,9 @@ export default function Skillset() {
           <div id="item-9">&nbsp;</div>
           <div id="item-10">&nbsp;</div>
           <div id="item-11">&nbsp;</div>
+          <div id="item-12">&nbsp;</div>
+          <div id="item-13">&nbsp;</div>
+          <div id="item-14">&nbsp;</div>
         </ImageGrid>
         <BreakLine />
       </Container>
