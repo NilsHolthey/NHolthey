@@ -20,7 +20,7 @@ import { SocialLink } from '../UI/SocialLinks';
 import SvgIcon from '../UI/icons';
 import { LineLeft } from '../UI/LineLeft';
 import MailSvg from '../UI/MailSvg';
-import { ContactBox } from '../UI/Contact/ContactBox';
+
 import { useState } from 'react';
 import { TestDiv } from '../UI/Contact/TestDiv';
 import { TestDivName } from '../UI/Contact/TestDivName';
@@ -28,6 +28,7 @@ import { TestDivTextarea } from '../UI/Contact/TestDivTextarea';
 import { SubmitButton } from '../UI/Contact/SubmitButton';
 import { FormModal } from '../UI/Contact/FormModal';
 import { TextBox } from '../UI/Contact/TextBox';
+import { Form } from '../UI/Contact/Form';
 
 const item = {
   hidden: { opacity: 0, y: 70 },
@@ -250,11 +251,20 @@ export default function Contact() {
               <p>Love to hear from you, </p>
               <p>
                 Get in touch{' '}
-                <span className="icon material-icons">waving_hand</span>
+                <motion.span
+                  className="icon material-icons"
+                  whileInView="show"
+                  animate={{
+                    scale: [1, 2, 2, 1, 1],
+                    rotate: [0, 0, 270, 270, 0],
+                  }}
+                >
+                  waving_hand
+                </motion.span>
               </p>
             </div>
           </TextBox>
-          <ContactBox
+          <Form
             ref={form}
             onSubmit={sendEmail}
             viewport={{ once: true }}
@@ -324,7 +334,7 @@ export default function Contact() {
                 {isSending ? 'Sending ...' : isSent ? 'Sent' : 'Send Message'}
               </span>
             </SubmitButton>
-          </ContactBox>
+          </Form>
         </Container>
       </Wrapper>
       <Footer>

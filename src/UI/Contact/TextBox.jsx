@@ -6,13 +6,13 @@ export const TextBox = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgb(39, 44, 57);
+  background: radial-gradient(
+    circle 20rem,
+    rgba(102, 103, 171, 0.717) 0%,
+    rgba(39, 44, 57, 0) 63%
+  );
   div {
-    background: rgb(39, 44, 57);
-    background: radial-gradient(
-      circle 20rem,
-      rgba(102, 103, 171, 0.717) 0%,
-      rgba(39, 44, 57, 0) 63%
-    );
     padding: 2rem;
     display: flex;
     flex-direction: column;

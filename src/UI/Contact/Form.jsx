@@ -1,18 +1,23 @@
 import styled from 'styled-components';
 
 export const Form = styled.form`
-  height: 100%;
   width: 50%;
-  display: flex;
+  height: 100%;
   flex-direction: column;
-  align-items: center;
+  gap: 3rem;
+  display: flex;
   justify-content: center;
-  gap: 2rem;
-  color: #d1d1d1;
-  position: relative;
-  background-color: darkgray;
+  align-items: center;
+  z-index: 1000000;
 
-  @media (max-width: 665px) {
-    width: 80vw;
+  @media (max-width: 765px) {
+    width: 100%;
+  }
+
+  @media (orientation: portrait) {
+    width: 100%;
+  }
+  @media (max-width: 899px) and (orientation: landscape) {
+    width: 800%;
   }
 `;
