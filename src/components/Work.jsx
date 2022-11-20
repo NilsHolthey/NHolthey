@@ -40,18 +40,18 @@ export default function Work() {
   const modalRef = useRef();
   const closeModal = e => {
     if (modalRef.current === e.target) {
-      setIsActive(false);
+      handelClick();
     }
   };
 
   const keyPress = useCallback(
     e => {
       if (e.key === 'Escape' && isActive) {
-        setIsActive(false);
+        handelClick();
         console.log('I pressed');
       }
     },
-    [setIsActive, isActive]
+    [handelClick, isActive]
   );
 
   useEffect(() => {
