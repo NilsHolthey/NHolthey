@@ -22,13 +22,13 @@ import { TextBox } from '../UI/SkillSet/TextBox';
 import { Wrapper } from '../UI/SkillSet/Wrapper';
 
 const item = {
-  hidden: { opacity: 0, y: 70 },
+  hidden: { opacity: 0, y: 90 },
   show: {
     opacity: 1,
     y: 0,
     transition: {
       type: 'spring',
-      duration: 1.6,
+      duration: 1.8,
     },
   },
 };
@@ -41,7 +41,7 @@ const text = {
     transition: {
       type: 'spring',
       duration: 1,
-      delay: 0.5,
+      delay: 0.8,
     },
   },
 };
@@ -131,7 +131,13 @@ export default function Skillset() {
           </Text>
           <BreakLine2 />
         </TextBox>
-        <ImageGrid>
+        <ImageGrid
+          as={motion.section}
+          viewport={{ once: true }}
+          variants={text}
+          initial="hidden"
+          whileInView="show"
+        >
           <div
             id="item-0"
             onClick={handleShowHtml}

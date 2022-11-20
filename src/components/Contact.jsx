@@ -209,7 +209,13 @@ export default function Contact() {
           <LineLeft></LineLeft>
         </InfoLeft>
         {isSending || isSent ? <FormModal /> : ''}
-        <Container>
+        <Container
+          viewport={{ once: true }}
+          as={motion.section}
+          variants={item}
+          initial="hidden"
+          whileInView="show"
+        >
           <HeadlineBox>
             <span>04</span>
             <Headline>Contact Me</Headline>

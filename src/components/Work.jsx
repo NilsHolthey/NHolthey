@@ -12,6 +12,43 @@ import { VideoContainer } from '../UI/Work/VideoContainer';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import PlayButton from '../UI/Work/PlayButton';
 import SvgIcon from '../UI/icons';
+import { motion } from 'framer-motion';
+
+const text = {
+  hidden: { opacity: 0, y: 10 },
+  show: {
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      type: 'spring',
+      duration: 1.3,
+      delay: 0.7,
+    },
+  },
+};
+const item = {
+  hidden: { opacity: 0, y: 90 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      duration: 1.8,
+    },
+  },
+};
+const item2 = {
+  hidden: { opacity: 0, x: 90 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: 'spring',
+      duration: 1.8,
+    },
+  },
+};
 
 export default function Work() {
   const [isActive, setIsActive] = useState(false);
@@ -60,7 +97,13 @@ export default function Work() {
   }, [keyPress]);
   return (
     <Wrapper id="work">
-      <Container>
+      <Container
+        viewport={{ once: true }}
+        as={motion.section}
+        variants={item}
+        initial="hidden"
+        whileInView="show"
+      >
         <HeadlineBox>
           <span>03</span>
           {/* <TopLine /> */}
@@ -76,7 +119,12 @@ export default function Work() {
           </Headline>
         </HeadlineBox>
         <TextBox>
-          <p>
+          <motion.p
+            viewport={{ once: true }}
+            variants={text}
+            initial="hidden"
+            whileInView="show"
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa porro
             perspiciatis amet dignissimos! In, facere repellendus cum est sit
             eius.{' '}
@@ -93,9 +141,15 @@ export default function Work() {
                 color="none"
               />
             </a>
-          </p>
+          </motion.p>
         </TextBox>
-        <ImageBox>
+        <ImageBox
+          viewport={{ once: true }}
+          as={motion.section}
+          variants={item2}
+          initial="hidden"
+          whileInView="show"
+        >
           <BlurDiv
             width="40%"
             height="80%"

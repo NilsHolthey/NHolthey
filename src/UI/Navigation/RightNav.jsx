@@ -46,7 +46,11 @@ const Ul = styled.ul`
 const RightNav = ({ open, handelClick }) => {
   return (
     <Ul open={open}>
-      <li>Home</li>
+      <li>
+        <a href="#home" onClick={handelClick}>
+          Home
+        </a>
+      </li>
       <li>
         <a href="#about" onClick={handelClick}>
           AboutMe
@@ -55,6 +59,11 @@ const RightNav = ({ open, handelClick }) => {
       <li>
         <a href="#skillset" onClick={handelClick}>
           Skillset
+        </a>
+      </li>
+      <li>
+        <a href="#work" onClick={handelClick}>
+          Work
         </a>
       </li>
       <li>
