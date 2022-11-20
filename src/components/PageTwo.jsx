@@ -49,55 +49,6 @@ const text = {
     },
   },
 };
-// const listItem1 = {
-//   hidden: { opacity: 0, x: -20 },
-//   show: {
-//     opacity: 1,
-//     x: 0,
-//     transition: {
-//       type: 'spring',
-//       duration: 1.2,
-//       delay: 0.5,
-//     },
-//   },
-// };
-// const listItem2 = {
-//   hidden: { opacity: 0, x: -20 },
-//   show: {
-//     opacity: 1,
-//     x: 0,
-//     transition: {
-//       type: 'spring',
-//       duration: 1.2,
-//       delay: 0.7,
-//     },
-//   },
-// };
-// const listItem3 = {
-//   hidden: { opacity: 0, x: -20 },
-//   show: {
-//     opacity: 1,
-//     x: 0,
-//     transition: {
-//       type: 'spring',
-//       duration: 1.2,
-//       delay: 0.9,
-//     },
-//   },
-// };
-
-// const listItem4 = {
-//   hidden: { opacity: 0, x: -20 },
-//   show: {
-//     opacity: 1,
-//     x: 0,
-//     transition: {
-//       type: 'spring',
-//       duration: 1.2,
-//       delay: 1.1,
-//     },
-//   },
-// };
 
 export default function PageTwo() {
   const [offsetY, setOffsetY] = useState(0);

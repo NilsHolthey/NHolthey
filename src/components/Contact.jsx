@@ -8,7 +8,7 @@ import { Footer } from '../UI/Contact/Footer';
 // import LogoForm from '../UI/Contact/LogoForm';
 import { Wrapper } from '../UI/Contact/Wrapper';
 import emailjs from '@emailjs/browser';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Headline } from '../UI/About/Headline';
 import { HeadlineBox } from '../UI/About/HeadlineBox';
 import { InfoRight } from '../UI/InfoRight';
@@ -42,6 +42,38 @@ const item = {
 };
 
 export default function Contact() {
+  const [addClass, setAddClass] = useState(false);
+
+  const changeColor = () => {
+    if (window.scrollY > 2800) {
+      resetDisply();
+      setAddClass(true);
+    } else if (window.scrollY > 50) {
+      changeToHidden();
+      setAddClass(false);
+    } else {
+      resetDisply();
+      setAddClass(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeColor);
+    return () => {
+      window.removeEventListener('scroll', changeColor);
+    };
+  }, []);
+
+  function changeToHidden() {
+    let MylinkList = document.getElementById('linkList');
+
+    MylinkList.style.scale = '0.8';
+  }
+  function resetDisply() {
+    let MylinkList = document.getElementById('linkList');
+    MylinkList.style.scale = '1';
+  }
+
   const copyright = new Date().getFullYear();
   const form = useRef();
 
@@ -96,13 +128,6 @@ export default function Contact() {
     }, 2000);
   };
 
-  // const handleSubmit = e => {
-  //   e.preventDefault();
-  //   sendEmail();
-
-  //   e.target.reset();
-  // };
-
   return (
     <>
       <Wrapper id="contacts">
@@ -111,8 +136,8 @@ export default function Contact() {
           <LineRight></LineRight>
         </InfoRight>
         <InfoLeft>
-          <LinkList>
-            <SocialLink>
+          <LinkList id="linkList">
+            <SocialLink className={`${addClass ? 'contacts' : ''}`}>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -126,7 +151,7 @@ export default function Contact() {
                 />
               </a>
             </SocialLink>
-            <SocialLink>
+            <SocialLink className="contacts">
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -153,7 +178,7 @@ export default function Contact() {
                 />
               </a>
             </SocialLink>
-            <SocialLink>
+            <SocialLink className="contacts">
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -186,7 +211,7 @@ export default function Contact() {
                 />
               </a>
             </SocialLink>
-            <SocialLink>
+            <SocialLink className="contacts">
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -200,7 +225,7 @@ export default function Contact() {
                 />
               </a>
             </SocialLink>
-            <SocialLink>
+            <SocialLink className="contacts">
               <a hreff="#">
                 <MailSvg />
               </a>
@@ -297,7 +322,6 @@ export default function Contact() {
               </span>
               <span className="text">
                 {isSending ? 'Sending ...' : isSent ? 'Sent' : 'Send Message'}
-                {/* {isSending ? 'Sending ...' : isSent ? 'Sent' : 'Send Message'} */}
               </span>
             </SubmitButton>
           </ContactBox>

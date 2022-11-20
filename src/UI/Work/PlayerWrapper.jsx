@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const PlayerWrapper = styled.section`
   position: relative;
+
   span {
     position: absolute;
     color: white;

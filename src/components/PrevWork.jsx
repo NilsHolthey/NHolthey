@@ -1,22 +1,19 @@
-// import { useState } from 'react';
-// import { useEffect } from 'react';
 import styled from 'styled-components';
 import { Headline } from '../UI/About/Headline';
 
 import { BlurDiv } from '../UI/PrevWork/BlurDiv';
-// import { BackgroundBox } from '../UI/About/BackgroudBox';
+
 import { Container } from '../UI/PrevWork/Container';
 
 import { HeadlineBox } from '../UI/About/HeadlineBox';
-// import { Headline } from '../UI/PrevWork/Headline';
-// import { StyledVideo } from '../UI/PrevWork/StyledVideo';
+
 import { VideoBox } from '../UI/PrevWork/VideoBox';
 import { Wrapper } from '../UI/PrevWork/Wrapper';
+
 import video from '../Video/video.mp4';
 
 const StyledVideo = styled.video`
   position: absolute;
-
   z-index: 0;
   top: 49%;
   left: 50%;
@@ -25,11 +22,8 @@ const StyledVideo = styled.video`
   height: 110%;
   border-radius: 8%;
   z-index: 20;
-  /* filter: drop-shadow(6px 35px 44px black); */
 `;
 
-// const aspectRatio = 667 / 375;
-// const phoneSize = 40.6;
 const StyledPhoneImg = styled.img`
   position: absolute;
   top: 49%;
@@ -68,35 +62,13 @@ const StyledVideoWrapper = styled.div`
 `;
 
 export default function PrevWork() {
-  // const [offsetY, setOffsetY] = useState(0);
-  // const handleScroll = () => setOffsetY(window.pageYOffset);
-
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
   return (
-    <Container
-
-    // style={{ backgroundColor: `rgba(39, 44, 57, ${offsetY * 0.00022})` }}
-    >
-      {/* <Headline>3. My Work</Headline>
-      <h3> Capstonproject App DidIt</h3> */}
+    <Container>
       <Wrapper>
         <HeadlineBox>
           <span>03</span>
-          {/* <TopLine /> */}
 
-          <Headline
-          // viewport={{ once: true }}
-          // as={motion.h3}
-          // variants={subItem}
-          // initial="hidden"
-          // whileInView="show"
-          >
-            My Work
-          </Headline>
+          <Headline>My Work</Headline>
         </HeadlineBox>
 
         <VideoBox>

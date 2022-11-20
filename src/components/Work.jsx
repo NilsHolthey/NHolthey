@@ -106,17 +106,8 @@ export default function Work() {
       >
         <HeadlineBox>
           <span>03</span>
-          {/* <TopLine /> */}
 
-          <Headline
-          // viewport={{ once: true }}
-          // as={motion.h3}
-          // variants={subItem}
-          // initial="hidden"
-          // whileInView="show"
-          >
-            My Work
-          </Headline>
+          <Headline>My Work</Headline>
         </HeadlineBox>
         <TextBox>
           <motion.p

@@ -10,16 +10,13 @@ import Work from './Work';
 
 export default function MainPage() {
   return (
-    <div id="pageWrapper">
+    <>
       <GlobalStyle />
       <MainBg />
       <About />
-      {/* <PageTwo /> */}
       <Skillset />
-
       <Work />
-
       <Contact />
-    </div>
+    </>
   );
 }
