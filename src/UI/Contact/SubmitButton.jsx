@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const SubmitButton = styled.button`
-  position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;

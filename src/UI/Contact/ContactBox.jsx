@@ -12,7 +12,14 @@ export const ContactBox = styled.form`
   @media (max-width: 765px) {
     width: 100%;
   }
+
+  @media (max-width: 765px) {
+    width: 100%;
+  }
+
   @media (orientation: portrait) {
     width: 100%;
+  }
+  @media (max-height: 765px) {
   }
 `;

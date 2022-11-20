@@ -39,7 +39,7 @@ export const TestDiv = styled.div`
   }
 
   &.ad-textbox > input {
-    height: 60px;
+    height: 8vh;
     width: 100%;
     padding-left: 34px;
     background: transparent;

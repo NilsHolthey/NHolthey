@@ -49,4 +49,9 @@ export const TextBox = styled.section`
       font-size: 2.5vh;
     }
   }
+  @media (max-width: 765px) and (orientation: landscape) {
+    width: 50%;
+    height: 100%;
+    left: 0;
+  }
 `;

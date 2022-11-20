@@ -21,4 +21,12 @@ export const Container = styled.section`
     justify-content: flex-end;
     width: 90vw;
   }
+
+  @media (max-width: 765px) and (orientation: landscape) {
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    width: 90;
+  }
 `;

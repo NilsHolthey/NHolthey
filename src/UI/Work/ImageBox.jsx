@@ -19,4 +19,9 @@ export const ImageBox = styled.section`
     height: 100%;
     width: 100%;
   }
+  @media (max-width: 765px) and (orientation: landscape) {
+    width: 50%;
+    height: 100%;
+    justify-content: flex;
+  }
 `;

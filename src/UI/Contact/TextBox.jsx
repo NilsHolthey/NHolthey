@@ -40,6 +40,17 @@ export const TextBox = styled.section`
       font-size: 5vh;
     }
   }
+
+  @media (max-width: 765px) {
+    display: none;
+  }
+
+  @media (orientation: portrait) {
+    display: none;
+  }
+  @media (max-height: 765px) {
+    display: none;
+  }
   &.material-icons {
     font-family: 'Material Icons';
     font-weight: normal;

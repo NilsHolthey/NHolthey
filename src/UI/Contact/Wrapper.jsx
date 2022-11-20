@@ -10,9 +10,18 @@ export const Wrapper = styled.section`
   background: #dcdcdc;
 
   @media (max-width: 765px) {
-    height: 160vh;
+    height: fit-content;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  @media (max-height: 765px) {
+    height: fit-content;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
   @media (orientation: portrait) {
-    height: 160vh;
+    height: fit-content;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 `;

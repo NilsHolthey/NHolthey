@@ -11,4 +11,8 @@ export const ScreenShot = styled.img`
   @media (orientation: portrait) {
     height: 60%;
   }
+
+  @media (max-width: 765px) and (orientation: landscape) {
+    height: 90%;
+  }
 `;
