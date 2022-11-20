@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const VideoContainer = styled.section`
   position: fixed;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   background-color: #000000ba;
   top: 0;
