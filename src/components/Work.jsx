@@ -9,7 +9,7 @@ import { TextBox } from '../UI/Work/TextBox';
 import { Wrapper } from '../UI/Work/Wrapper';
 import ModalVideo from './ModalVideo';
 import { VideoContainer } from '../UI/Work/VideoContainer';
-import { useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import PlayButton from '../UI/Work/PlayButton';
 import SvgIcon from '../UI/icons';
 
@@ -37,7 +37,27 @@ export default function Work() {
     let pageWrapper = document.body;
     pageWrapper.style.overflowY = '';
   }
+  const modalRef = useRef();
+  const closeModal = e => {
+    if (modalRef.current === e.target) {
+      setIsActive(false);
+    }
+  };
 
+  const keyPress = useCallback(
+    e => {
+      if (e.key === 'Escape' && isActive) {
+        setIsActive(false);
+        console.log('I pressed');
+      }
+    },
+    [setIsActive, isActive]
+  );
+
+  useEffect(() => {
+    document.addEventListener('keydown', keyPress);
+    return () => document.removeEventListener('keydown', keyPress);
+  }, [keyPress]);
   return (
     <Wrapper id="work">
       <Container>
@@ -90,7 +110,7 @@ export default function Work() {
       </Container>
 
       {isActive ? (
-        <VideoContainer>
+        <VideoContainer onClick={closeModal} ref={modalRef}>
           <ModalVideo handelClick={handelClick} />
         </VideoContainer>
       ) : (
