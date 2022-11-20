@@ -8,10 +8,7 @@ export const ContactBox = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10000000;
-  @media (max-width: 765px) {
-    width: 100%;
-  }
+  z-index: 1000000;
 
   @media (max-width: 765px) {
     width: 100%;
@@ -20,6 +17,7 @@ export const ContactBox = styled.form`
   @media (orientation: portrait) {
     width: 100%;
   }
-  @media (max-height: 765px) {
+  @media (max-width: 899px) and (orientation: landscape) {
+    width: 800%;
   }
 `;

@@ -22,6 +22,5 @@ export const ImageBox = styled.section`
   @media (max-width: 765px) and (orientation: landscape) {
     width: 50%;
     height: 100%;
-    justify-content: flex;
   }
 `;

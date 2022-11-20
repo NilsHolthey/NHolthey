@@ -25,5 +25,6 @@ export const Container = styled.article`
     height: fit-content;
     padding-top: 5rem;
     padding-bottom: 5rem;
+    justify-content: center;
   }
 `;

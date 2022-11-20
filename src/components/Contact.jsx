@@ -151,7 +151,7 @@ export default function Contact() {
                 />
               </a>
             </SocialLink>
-            <SocialLink className="contacts">
+            <SocialLink className={`${addClass ? 'contacts' : ''}`}>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -178,7 +178,7 @@ export default function Contact() {
                 />
               </a>
             </SocialLink>
-            <SocialLink className="contacts">
+            <SocialLink className={`${addClass ? 'contacts' : ''}`}>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -211,7 +211,7 @@ export default function Contact() {
                 />
               </a>
             </SocialLink>
-            <SocialLink className="contacts">
+            <SocialLink className={`${addClass ? 'contacts' : ''}`}>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -225,7 +225,7 @@ export default function Contact() {
                 />
               </a>
             </SocialLink>
-            <SocialLink className="contacts">
+            <SocialLink className={`${addClass ? 'contacts' : ''}`}>
               <a hreff="#">
                 <MailSvg />
               </a>

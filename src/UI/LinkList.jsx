@@ -7,31 +7,22 @@ export const LinkList = styled.ul`
   padding: 0;
   gap: 0.5rem;
   transition: scale 500ms ease-in-out;
-  li {
-    &.contacts {
-      background-color: #6667abcf;
-      outline: 2px solid #6667abb1;
-      outline-offset: 3px;
-      transition: ease-in 0.3s;
-      gap: 0.7rem;
+
+  .contacts {
+    :nth-child(1) {
+      animation: pulse 2.5s ease-in-out 3.5s;
     }
-  }
-  /* li:nth-child(1) {
-    animation: pulse 2.5s ease-in-out 3.5s;
-  }
-  li:nth-child(2) {
-    animation: pulse 2.5s ease-in-out 3.1s;
-  }
-  li:nth-child(3) {
-    animation: pulse 2.5s ease-in-out 2.7s;
-  }
-  li:nth-child(4) {
-    animation: pulse 2.5s ease-in-out 2.3s;
-  }
-  li:nth-child(5) {
-    animation: pulse 2.5 ease-in-out 1.9s;
-    @media (min-width: 770px) {
-      display: none;
+    :nth-child(2) {
+      animation: pulse 2.5s ease-in-out 3.1s;
+    }
+    :nth-child(3) {
+      animation: pulse 2.5s ease-in-out 2.7s;
+    }
+    :nth-child(4) {
+      animation: pulse 2.5s ease-in-out 2.3s;
+    }
+    :nth-child(5) {
+      animation: pulse 2.5s ease-in-out 1.9s;
     }
   }
 
@@ -60,7 +51,8 @@ export const LinkList = styled.ul`
       -moz-box-shadow: 0 0 0 0 rgba(102, 103, 171, 0);
       box-shadow: 0 0 0 0 rgba(102, 103, 171, 0);
     }
-  } */
+  }
+
   @media (max-width: 768px) {
     flex-direction: row;
     display: flex;
