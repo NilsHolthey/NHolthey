@@ -14,14 +14,12 @@ export const Container = styled.section`
     align-items: center;
     justify-content: flex-end;
     width: 90vw;
-    overflow-x: hidden;
   }
   @media (orientation: portrait) {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
     width: 90vw;
-    overflow-x: hidden;
   }
 
   @media (max-width: 765px) and (orientation: landscape) {

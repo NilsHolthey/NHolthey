@@ -12,7 +12,7 @@ export const AboutImageBox = styled.article`
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: hidden;
+
   /* background-color: #1c2028;
   box-shadow: -5px -5px 0px 0px #272c39; */
   border-radius: 8px 0 0 8px;

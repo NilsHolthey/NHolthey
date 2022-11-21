@@ -6,7 +6,7 @@ export const AboutImage = styled.img`
   transition: filter 1.2s ease-in-out;
   height: auto;
   width: 70%;
-
+  z-index: 2;
   &:hover {
     filter: grayscale(1%);
   }
