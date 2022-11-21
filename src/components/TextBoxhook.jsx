@@ -26,7 +26,7 @@ export default function TexBoxHook() {
         <SvgIcon
           variant="quoteOpen"
           size="5rem"
-          color="lightgrey"
+          color="#a7a7a7"
           strokeWidth="0"
         />
       </QuoteL>
@@ -63,7 +63,7 @@ export default function TexBoxHook() {
         <SvgIcon
           variant="quoteClose"
           size="5rem"
-          color="lightgrey"
+          color="#a7a7a7"
           strokeWidth="0"
         />
       </QuoteR>
