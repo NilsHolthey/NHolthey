@@ -21,6 +21,6 @@ export const Container = styled.section`
   }
 
   @media (orientation: portrait) {
-    height: 130vh;
+    height: fit-content;
   }
 `;
