@@ -37,6 +37,9 @@ const StyledBurger = styled.div`
       transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
     }
   }
+  @media (orientation: portrait) {
+    right: 10px;
+  }
 `;
 
 const Burger = () => {
