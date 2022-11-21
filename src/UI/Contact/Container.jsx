@@ -12,19 +12,25 @@ export const Container = styled.article`
   @media (max-width: 765px) {
     width: 90vw;
     height: fit-content;
-    padding-top: 5rem;
+    padding-top: 3rem;
     padding-bottom: 5rem;
+    flex-direction: column;
   }
   @media (orientation: portrait) {
     width: 90vw;
-    padding-top: 5rem;
+    padding-top: 3rem;
     padding-bottom: 5rem;
     height: fit-content;
+    flex-direction: column;
   }
   @media (max-height: 765px) {
     height: fit-content;
-    padding-top: 5rem;
+    width: 90vw;
+    padding-top: 3rem;
+
     padding-bottom: 5rem;
     justify-content: center;
+    flex-direction: column;
+    display: flex;
   }
 `;

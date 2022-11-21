@@ -31,6 +31,7 @@ export const TextBox = styled.section`
 
     width: 80%;
     color: #d1d1d1;
+
     span {
       transition: transform 300ms ease-out;
       &:hover {
@@ -42,14 +43,69 @@ export const TextBox = styled.section`
   }
 
   @media (max-width: 765px) {
-    display: none;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: transparent;
+    padding-top: 0;
+    flex-direction: column;
+    div {
+      padding: 0 1rem 2rem 1rem;
+      gap: 1rem;
+    }
+    p {
+      font-size: 3vh;
+      span {
+        font-size: 4vh;
+      }
+    }
   }
 
   @media (orientation: portrait) {
-    display: none;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: transparent;
+    padding-top: 0;
+    div {
+      padding: 0 1rem 1rem 1rem;
+      gap: 1rem;
+    }
+    p {
+      font-size: 3vh;
+      span {
+        font-size: 4vh;
+      }
+    }
   }
-  @media (max-height: 765px) {
-    display: none;
+  @media (max-height: 765px) and (orientation: landscape) {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    padding-top: 0;
+
+    div {
+      display: flex;
+      justify-content: center;
+      padding: 0 1rem 1rem 1rem;
+      gap: 1rem;
+    }
+    p {
+      width: fit-content;
+      display: flex;
+      font-size: 5vh;
+      span {
+        font-size: 4vh;
+      }
+    }
   }
   &.material-icons {
     font-family: 'Material Icons';

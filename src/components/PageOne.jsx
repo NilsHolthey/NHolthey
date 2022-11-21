@@ -1,6 +1,6 @@
 import { ImageContainer } from '../UI/ImageContainer';
 import { ProfileContainer } from '../UI/ProfileContainer';
-import { ProfileImage } from '../UI/ProfileImage';
+
 import { ProfileWrapper } from '../UI/Profilewrapper';
 import { TextContainer } from '../UI/TextContainer';
 import Navbar from './Navbar';
@@ -8,10 +8,11 @@ import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import TexBoxHook from './TextBoxhook';
 import { DevImg } from '../UI/DevImg';
+import ProfileImg from './ProfileImg';
 
 export default function MainBg() {
   const changeColor = () => {
-    if (window.scrollY > 150) {
+    if (window.scrollY > 50) {
       changeToHidden();
     } else {
       resetDisply();
@@ -32,7 +33,7 @@ export default function MainBg() {
     let myNav = document.getElementById('profileImage');
 
     myNav.style.opacity = '0';
-    myNav.style.transition = 'opacity 2s ease';
+    myNav.style.transition = 'opacity 1.1s ease';
   }
   function resetDisply() {
     let myNav = document.getElementById('profileImage');
@@ -61,19 +62,7 @@ export default function MainBg() {
           <TexBoxHook />
         </TextContainer>
         <ImageContainer>
-          <ProfileImage
-            id="profileImage"
-            as={motion.img}
-            src="ProfilegreyResize.png"
-            alt="profile"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.75 }}
-            transition={{
-              type: 'spring',
-              bounce: 0.2,
-              duration: 2,
-            }}
-          />
+          <ProfileImg />
         </ImageContainer>
       </ProfileContainer>
     </ProfileWrapper>

@@ -4,7 +4,7 @@ export const Wrapper = styled.section`
   position: relative;
   height: 100vh;
   width: 100vw;
-  background: #dcdcdc;
+  /* background: #dcdcdc; */
   display: flex;
   justify-content: center;
   align-items: center;

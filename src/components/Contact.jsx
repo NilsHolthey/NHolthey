@@ -1,11 +1,8 @@
 import { motion } from 'framer-motion';
-// import { useEffect } from 'react';
-// import { useState } from 'react';
+
 import { Container } from '../UI/Contact/Container';
 import { Footer } from '../UI/Contact/Footer';
-// import { Form } from '../UI/Contact/Form';
 
-// import LogoForm from '../UI/Contact/LogoForm';
 import { Wrapper } from '../UI/Contact/Wrapper';
 import emailjs from '@emailjs/browser';
 import { useEffect, useRef } from 'react';
@@ -253,11 +250,16 @@ export default function Contact() {
                 Get in touch{' '}
                 <motion.span
                   className="icon material-icons"
-                  whileInView="show"
-                  animate={{
-                    scale: [1, 2, 2, 1, 1],
-                    rotate: [0, 0, 270, 270, 0],
+                  whileInView={{
+                    scale: [1, 1.5, 1.5, 1, 1],
+                    rotate: [0, 0, 80, -80, 0],
+                    transition: {
+                      type: 'spring',
+                      duration: 1.3,
+                      delay: 0.7,
+                    },
                   }}
+                  viewport={{ once: true }}
                 >
                   waving_hand
                 </motion.span>

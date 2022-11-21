@@ -18,6 +18,7 @@ export const Form = styled.form`
     width: 100%;
   }
   @media (max-width: 899px) and (orientation: landscape) {
-    width: 800%;
+    width: 80%;
+    scale: 0.8;
   }
 `;

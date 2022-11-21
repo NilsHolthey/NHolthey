@@ -7,7 +7,7 @@ export const Wrapper = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #dcdcdc;
+  /* background: #dcdcdc; */
   @media (max-width: 765px) {
     width: 100vw;
     height: 180vh;
