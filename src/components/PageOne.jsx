@@ -50,7 +50,7 @@ export default function MainBg() {
         src="DEVELOPER.png"
         as={motion.img}
         initial={{ opacity: 0.1 }}
-        animate={{ opacity: 0.05 }}
+        animate={{ opacity: 0.04 }}
         transition={{
           type: 'spring',
           bounce: 0.2,

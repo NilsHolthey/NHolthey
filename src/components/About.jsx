@@ -89,61 +89,17 @@ export default function About() {
           <span>01</span>
           {/* <TopLine /> */}
 
-          <Headline
-          // viewport={{ once: true }}
-          // as={motion.h3}
-          // variants={subItem}
-          // initial="hidden"
-          // whileInView="show"
-          >
-            About Me
-          </Headline>
+          <Headline>About Me</Headline>
         </HeadlineBox>
 
-        <AboutImageBox
-        // style={{ transform: `translateY(-${offsetY * 0.05}px)` }}
-        >
+        <AboutImageBox>
           <AboutImage
             id="profileImage"
-            // as={motion.img}
             src="ProfileAboutBig.png"
             alt="profile"
-            // initial={{ opacity: 0 }}
-            // animate={{ opacity: 1 }}
-            // transition={{
-            //   type: 'spring',
-            //   bounce: 0.3,
-            //   duration: 3.5,
-            // }}
           />
         </AboutImageBox>
-        <AboutBox
-          id="aboutBox"
-          // viewport={{ once: true }}
-          // as={motion.article}
-          // variants={subItem}
-          // initial="hidden"
-          // whileInView="show"
-          // style={{ transform: `translateY(${offsetY * 0.05}px)` }}
-        >
-          {/* <ImageWrapper>
-            <AboutImage
-              id="profileImage"
-              // as={motion.img}
-              src="AboutImage.png"
-              alt="profile"
-              // initial={{ opacity: 0 }}
-              // animate={{ opacity: 1 }}
-              // transition={{
-              //   type: 'spring',
-              //   bounce: 0.3,
-              //   duration: 3.5,
-              // }}
-            />
-          </ImageWrapper> */}
-          {/* <ShadowBoxBottom />
-          <ShadowBox /> */}
-
+        <AboutBox id="aboutBox">
           <AboutText
             as={motion.p}
             viewport={{ once: true }}
@@ -156,7 +112,6 @@ export default function About() {
               rgba(226, 97, 190, ${offsetY * 0.001}) ${offsetY * 0.075}%,
               rgba(220, 220, 220, ${offsetY * 0.001}) ${offsetY * 0.1135}%)`,
             }}
-            // style={{ opacity: `(${offsetY * 0.175})` }}
           >
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga quia
             totam veritatis itaque debitis dolores qui, accusantium quibusdam

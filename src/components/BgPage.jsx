@@ -4,6 +4,7 @@ export const BgPage = styled.section`
   width: 100vw;
   height: 100vh;
   position: fixed;
+
   top: 0;
   z-index: -1;
   background: rgb(220, 220, 220);

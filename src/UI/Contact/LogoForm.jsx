@@ -5,9 +5,8 @@ export default function LogoForm() {
   return (
     <LogoContainer>
       <StyledSvg
-        id="rotate"
-        width="90rem"
-        height="90rem"
+        width="100vw"
+        height="200vh"
         viewBox="0 0 330 366"
         fill="#dcdcdc"
         xmlns="http://www.w3.org/2000/svg"

@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
   		--primary-dark: #5b0eeb;
   
   		--white: #FFFFFF;
-  		--greyLight-1: #E4EBF5;
+  		--greyLight-1: #f8f8f8;
   		--greyLight-2: #c8d0e7;
   		--greyLight-3: #bec8e4;
   		--greyDark: #9baacf;
@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
 	body  {
 		overflow-x:hidden;
 		background: #dcdcdc;
+		scroll-behavior: smooth;
 		
 		a {
       		text-decoration: none;

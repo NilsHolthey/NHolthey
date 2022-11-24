@@ -34,7 +34,7 @@ const item = {
 };
 
 const text = {
-  hidden: { opacity: 0, y: 10 },
+  hidden: { opacity: 0, y: 15 },
   show: {
     opacity: 1,
     y: 0,
@@ -97,7 +97,7 @@ export default function Skillset() {
               <span>HTML&nbsp;|&nbsp;</span>
             ) : (
               <BinarySpan id="html">
-                01001000 01010100 01001101 01001100 &nbsp;
+                01001000 0101010 01001101 01001100 &nbsp;
               </BinarySpan>
             )}
             {showCss ? (

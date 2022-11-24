@@ -9,7 +9,7 @@ export const ImageGrid = styled.section`
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 10px;
+  gap: 15px 10px;
   @media (max-width: 765px) {
     height: 50%;
     width: 100%;
@@ -19,6 +19,7 @@ export const ImageGrid = styled.section`
     width: 100%;
   }
   div {
+    cursor: pointer;
     z-index: 3;
     border-radius: 8px;
     display: flex;

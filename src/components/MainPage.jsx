@@ -1,3 +1,5 @@
+import LogoForm from '../UI/Contact/LogoForm';
+
 import GlobalStyle from '../UI/GlobalStyles';
 import About from './About';
 import { BgPage } from './BgPage';
@@ -13,7 +15,9 @@ export default function MainPage() {
   return (
     <>
       <GlobalStyle />
-      <BgPage />
+      <BgPage>
+        <LogoForm />
+      </BgPage>
       <MainBg />
       <About />
       <Skillset />
