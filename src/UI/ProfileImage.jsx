@@ -5,7 +5,7 @@ export const ProfileImage = styled.img`
   max-height: 100vh;
   transition: all 300ms;
   height: 80vh;
-  filter: grayscale(40%);
+  filter: grayscale(20%);
 
   @media (max-width: 768px) {
     height: 80vh;

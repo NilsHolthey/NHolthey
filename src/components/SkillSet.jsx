@@ -20,6 +20,8 @@ import { ReactPng } from '../UI/SkillSet/PNG/React';
 import { Text } from '../UI/SkillSet/Text';
 import { TextBox } from '../UI/SkillSet/TextBox';
 import { Wrapper } from '../UI/SkillSet/Wrapper';
+import { NodeJs } from '../UI/SkillSet/PNG/NodeJs';
+import { NextJs } from '../UI/SkillSet/PNG/NextJs';
 
 const item = {
   hidden: { opacity: 0, y: 90 },
@@ -60,6 +62,10 @@ export default function Skillset() {
   const handleShowHtml = () => setShowHtml(!showHtml);
   const [showJs, setShowJs] = useState(false);
   const handleShowJs = () => setShowJs(!showJs);
+  const [showNode, setShowNode] = useState(false);
+  const handleShowNode = () => setShowNode(!showNode);
+  const [showNext, setShowNext] = useState(false);
+  const handleShowNext = () => setShowNext(!showNext);
   const [showCss, setShowCss] = useState(false);
   const handleShowCss = () => setShowCss(!showCss);
   const [showReact, setShowReact] = useState(false);
@@ -120,8 +126,19 @@ export default function Skillset() {
                 01010010 01100101 01100001 01100011 01110100&nbsp;
               </BinarySpan>
             )}
-            <span>NodeJS</span>&nbsp;|&nbsp;
-            <span> NEXT</span>&nbsp;|&nbsp;<span>Zustand</span>&nbsp;|&nbsp;
+            {showNode ? (
+              <span>NodeJs&nbsp;|&nbsp;</span>
+            ) : (
+              <BinarySpan>
+                01001110 01101111 01100100 01100101 01001010 01110011&nbsp;
+              </BinarySpan>
+            )}
+            {showNext ? (
+              <span>NEXT&nbsp;|&nbsp;</span>
+            ) : (
+              <BinarySpan>01001110 01000101 01011000 01010100&nbsp;</BinarySpan>
+            )}
+            <span>Zustand</span>&nbsp;|&nbsp;
             <span>styled-components</span>&nbsp;|&nbsp;<span>MongoDB</span>
             &nbsp;|&nbsp;
             <span>Git</span>&nbsp; |&nbsp;<span>GitHub</span>&nbsp;|&nbsp;
@@ -157,7 +174,25 @@ export default function Skillset() {
               </a>
             )}
           </div>
-          <div id="item-1">&nbsp;</div>
+          <div
+            id="item-1"
+            onClick={handleShowNode}
+            style={{
+              boxShadow: showNode
+                ? 'inset -6px -6px 10px rgba(12, 12, 12, 0.557), inset 6px 6px 10px rgba(92, 92, 92, 0.2)'
+                : '',
+            }}
+          >
+            {showNode ? (
+              <span>
+                <NodeJs src="nodejs-icon-890222153.png"></NodeJs>
+              </span>
+            ) : (
+              <a href="#skillset">
+                <NodeJs src="nodejs-icon-890222153.png"></NodeJs>
+              </a>
+            )}
+          </div>
           <div
             id="item-2"
             onClick={handleShowJs}
@@ -197,7 +232,25 @@ export default function Skillset() {
               </a>
             )}
           </div>
-          <div id="item-5">&nbsp;</div>
+          <div
+            id="item-5"
+            onClick={handleShowNext}
+            style={{
+              boxShadow: showNext
+                ? 'inset -6px -6px 10px rgba(12, 12, 12, 0.557), inset 6px 6px 10px rgba(92, 92, 92, 0.2)'
+                : '',
+            }}
+          >
+            {showNext ? (
+              <span>
+                <NextJs src="next-js-logo.png"></NextJs>
+              </span>
+            ) : (
+              <a href="#skillset">
+                <NextJs src="next-js-logo.png"></NextJs>
+              </a>
+            )}
+          </div>
           <div id="item-6">&nbsp;</div>
           <div
             id="item-7"

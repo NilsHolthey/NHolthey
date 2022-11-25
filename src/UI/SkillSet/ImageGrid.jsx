@@ -38,6 +38,11 @@ export const ImageGrid = styled.section`
       background: rgba(22, 26, 32, 0);
       box-shadow: inset 5px 5px 10px #20252e, inset -5px -5px 10px #2c333e;
     }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     /* &:hover {
       box-shadow: inset -6px -6px 10px rgba(12, 12, 12, 0.557),
         inset 6px 6px 10px rgba(92, 92, 92, 0.2);
