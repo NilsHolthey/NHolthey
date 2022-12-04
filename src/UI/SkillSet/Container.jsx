@@ -31,4 +31,10 @@ export const Container = styled.section`
     justify-content: center;
     padding-bottom: 3%;
   }
+  @media (max-width: 765px) and (orientation: landscape) {
+    width: 90vw;
+    height: 220vh;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;

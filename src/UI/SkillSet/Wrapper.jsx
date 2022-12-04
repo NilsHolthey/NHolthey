@@ -16,4 +16,9 @@ export const Wrapper = styled.section`
     width: 100vw;
     height: 160vh;
   }
+  @media (max-width: 765px) and (orientation: landscape) {
+    width: 100vw;
+    height: 250vh;
+    padding-bottom: 2rem;
+  }
 `;
