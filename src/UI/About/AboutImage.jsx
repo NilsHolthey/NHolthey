@@ -21,7 +21,7 @@ export const AboutImage = styled.img`
     /* width: 40%; */
   }
   @media (orientation: portrait) {
-    width: 100%;
-    top: 15%;
+    width: 80%;
+    top: 10%;
   }
 `;

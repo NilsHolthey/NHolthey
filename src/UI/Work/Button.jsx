@@ -2,16 +2,16 @@ import styled from 'styled-components';
 
 export const Button = styled.div`
   position: absolute;
-  bottom: 13%;
+  bottom: 10%;
   left: 53%;
   transform: translate(-50%, -50%);
-  width: 12vh;
-  height: 12vh;
+  width: 10vh;
+  height: 10vh;
   background: var(--greyLight-1);
   transition: all 0.3s ease-in;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1),
     -10px -10px 10px rgba(255, 255, 255, 0.6);
-  border-radius: 30%;
+  border-radius: 50%;
 
   cursor: pointer;
   display: flex;

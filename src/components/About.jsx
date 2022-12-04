@@ -54,14 +54,17 @@ const text = {
 
 export default function About() {
   const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
+  const windowRatio = window.pageYOffset / window.innerHeight;
+  const handleScroll = () =>
+    setOffsetY((window.pageYOffset / window.innerHeight) * 1000);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  console.log(offsetY);
+  console.log(offsetY, window.innerHeight, windowRatio);
+
   return (
     <Wrapper
       id="about"
@@ -107,10 +110,10 @@ export default function About() {
             initial="hidden"
             whileInView="show"
             style={{
-              backgroundImage: `linear-gradient(135deg,
-              rgba(102, 103, 171, ${offsetY * 0.001}) ${offsetY * 0.025}%,
-              rgba(226, 97, 190, ${offsetY * 0.001}) ${offsetY * 0.075}%,
-              rgba(220, 220, 220, ${offsetY * 0.001}) ${offsetY * 0.1135}%)`,
+              backgroundImage: `linear-gradient(0deg,
+              rgba(102, 103, 171, ${offsetY * 0.0008}) ${offsetY * 0.025}%,
+              rgba(226, 97, 190, ${offsetY * 0.0008}) ${offsetY * 0.075}%,
+              rgba(25, 29, 36, ${offsetY * 0.0015}) ${offsetY * 0.115}%)`,
             }}
           >
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga quia

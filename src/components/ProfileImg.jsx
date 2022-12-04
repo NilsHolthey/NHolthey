@@ -7,7 +7,7 @@ export default function ProfileImg() {
     <ProfileImage
       id="profileImage"
       as={motion.img}
-      src="ProfilegreyResize.png"
+      src="ProfilImage.png"
       alt="profile"
       initial={{ opacity: 0 }}
       animate={{ opacity: 0.75 }}

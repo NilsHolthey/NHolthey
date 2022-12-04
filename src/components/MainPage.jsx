@@ -1,6 +1,7 @@
 import LogoForm from '../UI/Contact/LogoForm';
 
 import GlobalStyle from '../UI/GlobalStyles';
+
 import About from './About';
 import { BgPage } from './BgPage';
 import Contact from './Contact';

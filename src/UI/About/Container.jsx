@@ -22,5 +22,6 @@ export const Container = styled.section`
 
   @media (orientation: portrait) {
     height: fit-content;
+    flex-direction: column-reverse;
   }
 `;

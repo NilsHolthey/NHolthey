@@ -26,11 +26,11 @@ export const AboutImageBox = styled.article`
 
     border-radius: 0;
     width: 100%;
-    height: 40%;
+    height: 30%;
     background: rgba(25, 29, 36, 0);
   }
   @media (orientation: portrait) {
-    height: 40%;
+    height: 30%;
     align-items: center;
   }
 `;

@@ -9,7 +9,7 @@ export const BgPage = styled.section`
   z-index: -1;
   background: rgb(220, 220, 220);
   background: linear-gradient(
-    266deg,
+    90deg,
     rgba(220, 220, 220, 1) 51%,
     rgba(167, 167, 167, 1) 100%
   );
