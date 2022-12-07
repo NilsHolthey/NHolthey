@@ -96,11 +96,7 @@ export default function About() {
         </HeadlineBox>
 
         <AboutImageBox>
-          <AboutImage
-            id="profileImage"
-            src="ProfileAboutBig.png"
-            alt="profile"
-          />
+          <AboutImage id="profileImage" src="ProfileBlub.png" alt="profile" />
         </AboutImageBox>
         <AboutBox id="aboutBox">
           <AboutText
