@@ -23,9 +23,9 @@ export const Container = styled.article`
     height: fit-content;
     flex-direction: column;
   }
-  @media (max-height: 765px) {
+  @media (max-height: 465px) {
     height: fit-content;
-    width: 90vw;
+    width: 70vw;
     padding-top: 3rem;
 
     padding-bottom: 5rem;

@@ -9,6 +9,7 @@ export const Form = styled.form`
   justify-content: center;
   align-items: center;
   z-index: 1000000;
+  scale: 0.9;
 
   @media (max-width: 765px) {
     width: 100%;

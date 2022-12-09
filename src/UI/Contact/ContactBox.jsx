@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ContactBox = styled.form`
   width: 50%;
-  height: 100%;
+  height: 90%;
   flex-direction: column;
   gap: 3rem;
   display: flex;
@@ -18,6 +18,6 @@ export const ContactBox = styled.form`
     width: 100%;
   }
   @media (max-width: 899px) and (orientation: landscape) {
-    width: 800%;
+    width: 80%;
   }
 `;

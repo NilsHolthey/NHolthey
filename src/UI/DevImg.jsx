@@ -14,7 +14,7 @@ export const DevImg = styled.img`
   filter: drop-shadow(13px 15px 75px rgba(74, 74, 74, 0.95));
 
   @media (max-width: 550px) {
-    top: 30%;
+    top: 40%;
     opacity: 0.09;
   }
 `;

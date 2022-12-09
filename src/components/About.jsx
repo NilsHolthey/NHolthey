@@ -16,13 +16,14 @@ import { Wrapper } from '../UI/About/Wrapper';
 // import { BlurDiv } from '../UI/BlurDiv';
 
 const item = {
-  hidden: { opacity: 0, y: 70 },
+  hidden: { opacity: 0, y: 100 },
   show: {
     opacity: 1,
     y: 0,
     transition: {
       type: 'spring',
       duration: 1.6,
+      delay: 0.7,
     },
   },
 };
@@ -106,7 +107,7 @@ export default function About() {
             initial="hidden"
             whileInView="show"
             style={{
-              backgroundImage: `linear-gradient(0deg,
+              backgroundImage: `linear-gradient(350deg,
               rgba(102, 103, 171, ${offsetY * 0.0008}) ${offsetY * 0.025}%,
               rgba(226, 97, 190, ${offsetY * 0.0008}) ${offsetY * 0.075}%,
               rgba(25, 29, 36, ${offsetY * 0.0015}) ${offsetY * 0.115}%)`,

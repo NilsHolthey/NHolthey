@@ -83,7 +83,7 @@ export const TextBox = styled.section`
       }
     }
   }
-  @media (max-height: 765px) and (orientation: landscape) {
+  @media (max-height: 465px) and (orientation: landscape) {
     width: 100%;
     height: 30%;
     display: flex;
