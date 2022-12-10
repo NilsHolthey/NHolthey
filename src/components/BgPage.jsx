@@ -8,8 +8,8 @@ export const BgPage = styled.section`
   top: 0;
   z-index: -1;
   background: rgb(220, 220, 220);
-  background: linear-gradient(
-    270deg,
+  background: conic-gradient(
+    from 15deg,
     rgba(220, 220, 220, 1) 51%,
     rgba(167, 167, 167, 1) 100%
   );

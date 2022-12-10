@@ -155,7 +155,14 @@ export default function Work() {
       </Container>
 
       {isActive ? (
-        <VideoContainer onClick={closeModal} ref={modalRef}>
+        <VideoContainer
+          as={motion.section}
+          onClick={closeModal}
+          ref={modalRef}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: 'easeOut', duration: 0.5 }}
+        >
           <ModalVideo handelClick={handelClick} />
         </VideoContainer>
       ) : (

@@ -166,7 +166,10 @@ export default function Skillset() {
           >
             {showHtml ? (
               <span>
-                <HtmlPng src="html5-logo-31813.png"></HtmlPng>
+                <HtmlPng
+                  src="html5-logo-31813.png"
+                  style={{ scale: '0.9' }}
+                ></HtmlPng>
               </span>
             ) : (
               <a href="#skillset">
@@ -185,7 +188,10 @@ export default function Skillset() {
           >
             {showNode ? (
               <span>
-                <NodeJs src="nodejs-icon-890222153.png"></NodeJs>
+                <NodeJs
+                  src="nodejs-icon-890222153.png"
+                  style={{ scale: '0.9' }}
+                ></NodeJs>
               </span>
             ) : (
               <a href="#skillset">
@@ -204,7 +210,10 @@ export default function Skillset() {
           >
             {showJs ? (
               <span>
-                <JsPng src="javascript-39415.png"></JsPng>
+                <JsPng
+                  src="javascript-39415.png"
+                  style={{ scale: '0.9' }}
+                ></JsPng>
               </span>
             ) : (
               <a href="#skillset">
@@ -224,7 +233,7 @@ export default function Skillset() {
           >
             {showCss ? (
               <span>
-                <CssPng src="CSS_3.png"></CssPng>
+                <CssPng src="CSS_3.png" style={{ scale: '0.9' }}></CssPng>
               </span>
             ) : (
               <a href="#textBox">
@@ -243,7 +252,10 @@ export default function Skillset() {
           >
             {showNext ? (
               <span>
-                <NextJs src="next-js-logo.png"></NextJs>
+                <NextJs
+                  src="next-js-logo.png"
+                  style={{ scale: '0.9' }}
+                ></NextJs>
               </span>
             ) : (
               <a href="#skillset">
@@ -263,7 +275,7 @@ export default function Skillset() {
           >
             {showReact ? (
               <span>
-                <ReactPng src="reactLogo.png" />
+                <ReactPng src="reactLogo.png" style={{ scale: '0.9' }} />
               </span>
             ) : (
               <a href="#textBox">
