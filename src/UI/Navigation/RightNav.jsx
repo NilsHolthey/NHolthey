@@ -17,7 +17,8 @@ const Ul = styled.ul`
   transition: all 0.3s ease-in-out;
   li {
     transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(50%)')};
-    transition: transform 0.6s ease-in;
+    transition: all 0.5s ease-in-out;
+    opacity: ${({ open }) => (open ? '1' : '0')};
     padding: 18px 10px;
     color: #f8f8f8;
     font-weight: 700;
