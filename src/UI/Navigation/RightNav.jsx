@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const Ul = styled.ul`
   list-style: none;
+  opacity: ${({ open }) => (open ? '1' : '0')};
 
   display: flex;
   flex-flow: column nowrap;
@@ -13,8 +14,10 @@ const Ul = styled.ul`
   height: 100vh;
   width: 20%;
   padding-top: 3.5rem;
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   li {
+    transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(50%)')};
+    transition: transform 0.6s ease-in;
     padding: 18px 10px;
     color: #f8f8f8;
     font-weight: 700;
