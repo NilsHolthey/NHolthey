@@ -18,7 +18,7 @@ export default function ShadowBox() {
       />
       <Shadow2
         as={motion.div}
-        initial={{ opacity: 0.5, scale: 0.5 }}
+        initial={{ opacity: 0.5, scale: 1 }}
         animate={{ opacity: 1, scale: 1.5 }}
         transition={{
           type: 'spring',

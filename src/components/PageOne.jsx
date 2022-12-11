@@ -11,6 +11,8 @@ import { DevImg } from '../UI/DevImg';
 import ProfileImg from './ProfileImg';
 import ShadowBox from './ShadowBox';
 import { Imagebox } from '../UI/Imagebox';
+import { useState } from 'react';
+import DevImage from './DevImage';
 
 export default function MainBg() {
   const changeColor = () => {
@@ -47,8 +49,10 @@ export default function MainBg() {
     <ProfileWrapper id="home">
       <ShadowBox />
       <Navbar />
-      <Imagebox>
+      <DevImage />
+      {/* <Imagebox>
         <DevImg
+          style={{ transform: `translateY(${offsetY * 1.25}px)` }}
           id="devImg"
           src="DEVELOPER.png"
           as={motion.img}
@@ -60,7 +64,7 @@ export default function MainBg() {
             duration: 2,
           }}
         />
-      </Imagebox>
+      </Imagebox> */}
       <ProfileContainer>
         <TextContainer>
           <TexBoxHook />
