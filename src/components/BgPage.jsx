@@ -6,7 +6,7 @@ export const BgPage = styled.section`
   position: fixed;
 
   top: 0;
-  z-index: -1;
+  z-index: -2;
   background: rgb(220, 220, 220);
   background: conic-gradient(
     from 15deg,

@@ -4,14 +4,13 @@ import { ProfileContainer } from '../UI/ProfileContainer';
 import { ProfileWrapper } from '../UI/Profilewrapper';
 import { TextContainer } from '../UI/TextContainer';
 import Navbar from './Navbar';
-import { motion } from 'framer-motion';
+
 import { useEffect } from 'react';
 import TexBoxHook from './TextBoxhook';
-import { DevImg } from '../UI/DevImg';
+
 import ProfileImg from './ProfileImg';
 import ShadowBox from './ShadowBox';
-import { Imagebox } from '../UI/Imagebox';
-import { useState } from 'react';
+
 import DevImage from './DevImage';
 
 export default function MainBg() {

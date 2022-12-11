@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
-import LogoForm from '../UI/Contact/LogoForm';
+
 import { BgPage } from './BgPage';
 
 export default function BackgroundPage() {
@@ -23,7 +23,7 @@ export default function BackgroundPage() {
         }deg,rgba(220, 220, 220, 1) 51%,rgba(167, 167, 167, 1) 100%`,
       }}
     >
-      <LogoForm />
+      {' '}
     </BgPage>
   );
 }

@@ -6,7 +6,7 @@ export const ContainerShadow = styled.div`
   position: fixed;
   bottom: 0;
   overflow: hidden;
-  z-index: 10;
+  z-index: -1;
   display: flex;
   align-items: flex-end;
 `;
