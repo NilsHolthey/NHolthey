@@ -5,7 +5,7 @@ export const InfoLeft = styled.div`
   cursor: pointer;
   z-index: 1000;
   align-items: center;
-  gap: 1rem;
+
   left: 1rem;
   bottom: 0;
   display: flex;

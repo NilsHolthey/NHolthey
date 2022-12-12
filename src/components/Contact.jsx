@@ -224,7 +224,7 @@ export default function Contact() {
               </a>
             </SocialLink>
             <SocialLink className={`${addClass ? 'contacts' : ''}`}>
-              <a hreff="#">
+              <a href="mailto:nils.holthey@gmx.de">
                 <MailSvg />
               </a>
             </SocialLink>

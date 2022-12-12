@@ -9,12 +9,13 @@ export default function ProfileImg() {
       as={motion.img}
       src="ProfilImage.png"
       alt="profile"
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 55 }}
       animate={{ opacity: 0.75, y: 0 }}
       transition={{
         type: 'spring',
         bounce: 0.2,
-        duration: 1.5,
+        duration: 2.8,
+        delay: 0.5,
       }}
     />
   );

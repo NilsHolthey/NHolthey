@@ -7,7 +7,7 @@ export const Shadow2 = styled.div`
   background: radial-gradient(
     circle,
     rgba(220, 220, 220, 0) 30%,
-    rgba(39, 44, 57, 0.9329306722689075) 100%
+    rgba(39, 44, 57, 0.9329306722689075) 35%
   );
   scale: 1.8;
 `;

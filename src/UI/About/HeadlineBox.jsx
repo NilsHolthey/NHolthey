@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HeadlineBox = styled.div`
+export const HeadlineBox = styled.section`
   color: #f8f8f8;
   font-weight: 900;
   position: absolute;
