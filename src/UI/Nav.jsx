@@ -11,5 +11,8 @@ export const Nav = styled.nav`
   height: 5rem;
   opacity: 0.8;
   background-color: transparent;
-  z-index: 1113;
+  z-index: 1000005;
+  @media (orientation: portrait) {
+    top: 0.5rem;
+  }
 `;

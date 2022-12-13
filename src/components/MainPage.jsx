@@ -1,17 +1,26 @@
 import GlobalStyle from '../UI/GlobalStyles';
+
 import About from './About';
+import BackgroundPage from './BackgroudPage';
+
 import Contact from './Contact';
-import MainBg from './mainBG';
-import PageTwo from './PageTwo';
+
+import MainBg from './PageOne';
+// import PageTwo from './PageTwo';
+
+import Skillset from './SkillSet';
+import Work from './Work';
 
 export default function MainPage() {
   return (
-    <div>
+    <>
       <GlobalStyle />
+      <BackgroundPage />
       <MainBg />
       <About />
-      <PageTwo />
+      <Skillset />
+      <Work />
       <Contact />
-    </div>
+    </>
   );
 }

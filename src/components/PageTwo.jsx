@@ -8,6 +8,10 @@ import { Headline } from '../UI/PaigeTwo/Headline';
 import { HeadlineBox } from '../UI/PaigeTwo/HeadlineBox';
 import HtmlSvg from '../UI/PaigeTwo/SVGs/HtmlSvg';
 import CssSvg from '../UI/PaigeTwo/SVGs/CssSvg';
+import { InfoBox } from '../UI/PaigeTwo/InfoBox';
+
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const item = {
   hidden: { opacity: 0, y: 70 },
@@ -47,8 +51,18 @@ const text = {
 };
 
 export default function PageTwo() {
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
-    <Container id="skillset">
+    <Container
+      style={{ backgroundColor: `rgba(39, 44, 57, ${offsetY * 0.00022})` }}
+    >
       <HeadlineBox>
         <Headline
           viewport={{ once: true }}
@@ -61,6 +75,7 @@ export default function PageTwo() {
         </Headline>
       </HeadlineBox>
       <BoxContainer>
+        <Frame />
         <Box
           viewport={{ once: true }}
           as={motion.div}
@@ -68,7 +83,6 @@ export default function PageTwo() {
           initial="hidden"
           whileInView="show"
         >
-          <Frame />
           <motion.section
             viewport={{ once: true }}
             variants={text}
@@ -78,6 +92,17 @@ export default function PageTwo() {
             <HtmlSvg />
             <CssSvg />
           </motion.section>
+          <InfoBox>
+            <motion.section>
+              <h3>HTML & CSS</h3>
+              <ul type="list">
+                <motion.li>Accessibility (a11y)</motion.li>
+                <motion.li>Clean Code</motion.li>
+                <motion.li>Responsive Design</motion.li>
+                <motion.li>Semantic HTML</motion.li>
+              </ul>
+            </motion.section>
+          </InfoBox>
         </Box>
         <Box
           viewport={{ once: true }}
@@ -91,6 +116,7 @@ export default function PageTwo() {
           }}
         >
           <motion.p
+            className="BoxTwoText"
             viewport={{ once: true }}
             variants={text}
             initial="hidden"
@@ -99,6 +125,9 @@ export default function PageTwo() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
             excepturi?
           </motion.p>
+          <InfoBox>
+            <p> lorem10</p>
+          </InfoBox>
         </Box>
         <Box
           viewport={{ once: true }}
@@ -116,6 +145,9 @@ export default function PageTwo() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
             excepturi?
           </motion.p>
+          <InfoBox>
+            <p> lorem10</p>
+          </InfoBox>
         </Box>
         <Box
           viewport={{ once: true }}
@@ -134,7 +166,11 @@ export default function PageTwo() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
             excepturi?
           </motion.p>
+          <InfoBox>
+            <p> lorem10</p>
+          </InfoBox>
         </Box>
+        <FrameBottom />
       </BoxContainer>
     </Container>
   );

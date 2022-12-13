@@ -9,8 +9,9 @@ export const Container = styled.section`
 
   height: 100vh;
   width: 100vw;
-  background-color: #1c2028;
-  @media (max-width: 665px) {
+  /* background: rgba(28, 32, 40, 1); */
+
+  @media (max-width: 765px) {
     height: 180vh;
   }
 `;

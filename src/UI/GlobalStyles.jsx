@@ -7,16 +7,33 @@ const GlobalStyle = createGlobalStyle`
 		box-sizing: border-box;
 	}
 	:root {
-		--primary-color: crimson;
+		--primary-color:  #dcdcdc;
 		--secondary-color: navy;
+		--primary-light: #8abdff;
+  		--primary: #6d5dfc;
+  		--primary-dark: #5b0eeb;
+  
+  		--white: #FFFFFF;
+  		--greyLight-1: #f8f8f8;
+  		--greyLight-2: #c8d0e7;
+  		--greyLight-3: #bec8e4;
+  		--greyDark: #9baacf;
+		
 	}
-	html{scroll-behavior: smooth;}
+	html{
+		scroll-behavior: smooth;
+	}
 	body  {
+		overflow-x:hidden;
+		background: #dcdcdc;
+		scroll-behavior: smooth;
+		
 		a {
-      text-decoration: none;
-      &:visited {
-        color: inherit;
-      }}
+      		text-decoration: none;
+      		&:visited {
+       		 color: inherit;
+      }
+	}
 		
 		
 		margin: 0;

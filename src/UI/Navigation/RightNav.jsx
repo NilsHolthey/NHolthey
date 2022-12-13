@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 const Ul = styled.ul`
   list-style: none;
-  display: flex;
+  opacity: ${({ open }) => (open ? '1' : '0')};
 
+  display: flex;
   flex-flow: column nowrap;
   background-color: #272c39;
   position: fixed;
@@ -13,8 +14,11 @@ const Ul = styled.ul`
   height: 100vh;
   width: 20%;
   padding-top: 3.5rem;
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   li {
+    transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(50%)')};
+    transition: all 0.5s ease-in-out;
+    opacity: ${({ open }) => (open ? '1' : '0')};
     padding: 18px 10px;
     color: #f8f8f8;
     font-weight: 700;
@@ -31,6 +35,8 @@ const Ul = styled.ul`
     width: 100%;
     align-items: center;
     padding-top: 6rem;
+    margin-left: 0;
+    padding-left: 0;
     li {
       padding: unset;
       font-size: 1.6rem;
@@ -41,22 +47,31 @@ const Ul = styled.ul`
   }
 `;
 
-const RightNav = ({ open, setOpen }) => {
+const RightNav = ({ open, handelClick }) => {
   return (
     <Ul open={open}>
-      <li>Home</li>
       <li>
-        <a href="#about" onClick={() => setOpen(!open)}>
+        <a href="#home" onClick={handelClick}>
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="#about" onClick={handelClick}>
           AboutMe
         </a>
       </li>
       <li>
-        <a href="#skillset" onClick={() => setOpen(!open)}>
+        <a href="#skillset" onClick={handelClick}>
           Skillset
         </a>
       </li>
       <li>
-        <a href="#contacts" onClick={() => setOpen(!open)}>
+        <a href="#work" onClick={handelClick}>
+          Work
+        </a>
+      </li>
+      <li>
+        <a href="#contacts" onClick={handelClick}>
           Contacts
         </a>
       </li>

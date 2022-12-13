@@ -6,5 +6,17 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #272c39;
+  transition: background-color 0.9s ease;
+  /* background: #dcdcdc; */
+
+  position: relative;
+
+  z-index: 2;
+
+  @media (max-width: 765px) {
+    height: 200vh;
+  }
+  @media (orientation: portrait) {
+    height: 150vh;
+  }
 `;

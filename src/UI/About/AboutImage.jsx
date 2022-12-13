@@ -1,15 +1,27 @@
 import styled from 'styled-components';
 
 export const AboutImage = styled.img`
-  position: absolute;
-  z-index: 10;
-  max-height: 30%;
-  bottom: -2.5rem;
-  right: 0;
-  border-bottom: solid 2px #d9d9d9;
-  @media (max-width: 768px) {
+  filter: grayscale(85%);
+  /* position: absolute; */
+  transition: filter 1.2s ease-in-out;
+  height: auto;
+  width: 70%;
+  z-index: 2;
+  &:hover {
+    filter: grayscale(1%);
+  }
+
+  /* @media (max-width: 768px) {
     max-height: 20%;
     bottom: -1.5rem;
     right: -1rem;
+    display: none;
+  } */
+  @media (max-width: 765px) {
+    /* width: 40%; */
+  }
+  @media (orientation: portrait) {
+    width: 80%;
+    top: 10%;
   }
 `;

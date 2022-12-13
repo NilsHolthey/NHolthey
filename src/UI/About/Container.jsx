@@ -1,21 +1,27 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  width: 60vw;
-  height: 70vh;
-
-  color: #f8f8f8;
-  background-color: #1c2028;
-
+  width: 70vw;
+  height: 80vh;
+  display: flex;
+  /* color: #f8f8f8; */
+  border-radius: 8px;
+  z-index: 0;
   padding: 1rem;
   position: relative;
-  @media (max-width: 665px) {
-    width: 80vw;
+  background: rgba(25, 29, 36);
+  height: 80vh;
+  @media (max-width: 765px) {
+    width: 90vw;
     display: flex;
+    height: 160vh;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: 0;
-    background-color: rgb(102, 103, 171, 0.3);
-    opacity: 0.3;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (orientation: portrait) {
+    height: fit-content;
+    flex-direction: column-reverse;
   }
 `;

@@ -59,7 +59,10 @@ export default function Navbar() {
           <NavLink href="#skillset">Skillset</NavLink>
         </li>
         <li>
-          <NavLink href="#contacts">Contacts</NavLink>
+          <NavLink href="#work">Work</NavLink>
+        </li>
+        <li>
+          <NavLink href="#contacts">Contact</NavLink>
         </li>
       </NavList>
     </Nav>

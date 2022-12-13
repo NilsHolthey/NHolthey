@@ -8,7 +8,7 @@ export default function LoadingSvg() {
         width="5rem"
         height="10rem"
         viewBox="0 0 330 366"
-        fill="#dcdcdc"
+        fill="none"
         xmlns="http://www.w3.org/2000/svg"
         stroke="#272C39"
       >

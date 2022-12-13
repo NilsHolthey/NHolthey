@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 
 export const StyledSvg = styled.svg`
+  opacity: 0.005;
+  left: -60%;
+  top: -60%;
   position: absolute;
-  opacity: 0.02;
-  left: 50%;
-  top: 50%;
-  transform: translate(-40%, -50%);
-  @media (max-width: 768px) {
+
+  @media (max-width: 765px) {
+    display: none;
+  }
+  @media (orientation: portrait) {
+    display: none;
   }
 `;
