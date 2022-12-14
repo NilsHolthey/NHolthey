@@ -4,6 +4,7 @@ import About from './About';
 import BackgroundPage from './BackgroudPage';
 
 import Contact from './Contact';
+import LandingPageNew from './LandingPageNew';
 
 import MainBg from './PageOne';
 // import PageTwo from './PageTwo';
@@ -16,6 +17,7 @@ export default function MainPage() {
     <>
       <GlobalStyle />
       <BackgroundPage />
+      <LandingPageNew />
       <MainBg />
       <About />
       <Skillset />

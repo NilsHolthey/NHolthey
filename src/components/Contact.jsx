@@ -65,7 +65,7 @@ export default function Contact() {
   function changeToHidden() {
     let MylinkList = document.getElementById('linkList');
 
-    MylinkList.style.scale = '0.8';
+    MylinkList.style.scale = '0.7';
   }
   function resetDisply() {
     let MylinkList = document.getElementById('linkList');

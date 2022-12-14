@@ -1,20 +1,10 @@
 import { motion } from 'framer-motion';
-import { useEffect } from 'react';
-import { useState } from 'react';
 import { DevImg } from '../UI/DevImg';
 import { Imagebox } from '../UI/Imagebox';
 
 export default function DevImage() {
-  const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
   return (
-    <Imagebox style={{ transform: `translateY(${offsetY * 0.35}px)` }}>
+    <Imagebox>
       <DevImg
         id="devImg"
         src="DEVELOPER.png"

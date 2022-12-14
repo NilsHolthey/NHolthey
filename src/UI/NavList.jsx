@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const NavList = styled.ul`
   display: flex;
   justify-content: space-around;
+  padding-left: 10rem;
+
   width: 40vw;
   list-style: none;
   padding: none;

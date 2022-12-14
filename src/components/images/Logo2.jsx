@@ -37,7 +37,7 @@ export default function Logo2() {
         width="5rem"
         height="4rem"
         viewBox="0 0 330 366"
-        fill="#a7a7a7"
+        fill="#CBCBCD"
         xmlns="http://www.w3.org/2000/svg"
         stroke="#272C39"
       >
