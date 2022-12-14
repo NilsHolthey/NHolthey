@@ -12,7 +12,7 @@ export const Container = styled.section`
   background: rgba(25, 29, 36);
   height: 80vh;
   @media (max-width: 765px) {
-    width: 90vw;
+    width: 95vw;
     display: flex;
     height: 160vh;
     flex-direction: column;

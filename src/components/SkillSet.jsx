@@ -22,6 +22,8 @@ import { TextBox } from '../UI/SkillSet/TextBox';
 import { Wrapper } from '../UI/SkillSet/Wrapper';
 import { NodeJs } from '../UI/SkillSet/PNG/NodeJs';
 import { NextJs } from '../UI/SkillSet/PNG/NextJs';
+import { ZustandPng } from '../UI/SkillSet/PNG/Zustand';
+import { StyledComponentsPng } from '../UI/SkillSet/PNG/StyledComponents';
 
 const item = {
   hidden: { opacity: 0, y: 90 },
@@ -70,6 +72,10 @@ export default function Skillset() {
   const handleShowCss = () => setShowCss(!showCss);
   const [showReact, setShowReact] = useState(false);
   const handleShowReact = () => setShowReact(!showReact);
+  const [showZustand, setShowZustand] = useState(false);
+  const handleShowZustand = () => setShowZustand(!showZustand);
+  const [showSytledC, setShowStyledC] = useState(false);
+  const handleShowStyledC = () => setShowStyledC(!showSytledC);
 
   return (
     <Wrapper id="skillset">
@@ -82,6 +88,7 @@ export default function Skillset() {
       >
         <HeadlineBox>
           <span>02</span>
+          <div></div>
           <Headline>Skill Set</Headline>
         </HeadlineBox>
         <TextBox
@@ -138,13 +145,30 @@ export default function Skillset() {
             ) : (
               <BinarySpan>01001110 01000101 01011000 01010100&nbsp;</BinarySpan>
             )}
-            <span>Zustand</span>&nbsp;|&nbsp;
-            <span>styled-components</span>&nbsp;|&nbsp;<span>MongoDB</span>
+            {showZustand ? (
+              <span>Zustand&nbsp;|&nbsp;</span>
+            ) : (
+              <BinarySpan>
+                01011010 01110101 01110011 01110100 01100001 01101110
+                01100100&nbsp;
+              </BinarySpan>
+            )}
+            {showSytledC ? (
+              <span>styled-components&nbsp;|&nbsp;</span>
+            ) : (
+              <BinarySpan>
+                01110011 01110100 01111001 01101100 01100101 01100100 00101101
+                01100011 01101111 01101101 01110000 01101111 01101110 01100101
+                01101110 01110100 01110011&nbsp;
+              </BinarySpan>
+            )}
+            <span>MongoDB</span>
             &nbsp;|&nbsp;
             <span>Git</span>&nbsp; |&nbsp;<span>GitHub</span>&nbsp;|&nbsp;
             <span>Figma</span>&nbsp;|&nbsp;
             <span>AdobeXD</span>&nbsp;|&nbsp;
-            <span>ReactDnD</span>&nbsp;|&nbsp;<span>Rest</span>.
+            <span>ReactDnD</span>&nbsp;|&nbsp;<span>Rest</span>&nbsp;|&nbsp;
+            <span>npm</span>.
           </Text>
           <BreakLine2 />
         </TextBox>
@@ -283,8 +307,49 @@ export default function Skillset() {
               </a>
             )}
           </div>
-          <div id="item-8">&nbsp;</div>
-          <div id="item-9">&nbsp;</div>
+          <div
+            id="item-8"
+            onClick={handleShowStyledC}
+            style={{
+              boxShadow: showSytledC
+                ? 'inset -6px -6px 10px rgba(12, 12, 12, 0.557), inset 6px 6px 10px rgba(92, 92, 92, 0.2)'
+                : '',
+            }}
+          >
+            {showSytledC ? (
+              <span>
+                <StyledComponentsPng
+                  src="logoStyledC.png"
+                  style={{ scale: '0.9' }}
+                />
+              </span>
+            ) : (
+              <a href="#textBox">
+                <StyledComponentsPng src="logoStyledC.png" />
+              </a>
+            )}
+            &nbsp;
+          </div>
+          <div
+            id="item-9"
+            onClick={handleShowZustand}
+            style={{
+              boxShadow: showZustand
+                ? 'inset -6px -6px 10px rgba(12, 12, 12, 0.557), inset 6px 6px 10px rgba(92, 92, 92, 0.2)'
+                : '',
+            }}
+          >
+            {showZustand ? (
+              <span>
+                <ZustandPng src="ZustandBear.png" style={{ scale: '0.9' }} />
+              </span>
+            ) : (
+              <a href="#textBox">
+                <ZustandPng src="ZustandBear.png" />
+              </a>
+            )}
+            &nbsp;
+          </div>
           <div id="item-10">&nbsp;</div>
           <div id="item-11">&nbsp;</div>
           <div id="item-12">&nbsp;</div>

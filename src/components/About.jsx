@@ -77,7 +77,7 @@ export default function About() {
         <HeadlineBox>
           <span>01</span>
           {/* <TopLine /> */}
-
+          <div></div>
           <Headline>About Me</Headline>
         </HeadlineBox>
 

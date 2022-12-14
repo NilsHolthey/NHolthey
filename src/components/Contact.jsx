@@ -241,6 +241,7 @@ export default function Contact() {
         >
           <HeadlineBox>
             <span>04</span>
+            <div></div>
             <Headline>Contact Me</Headline>
           </HeadlineBox>
           <TextBox>

@@ -17,6 +17,8 @@ export const Wrapper = styled.div`
     height: 200vh;
   }
   @media (orientation: portrait) {
-    height: 150vh;
+    height: fit-content;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 `;

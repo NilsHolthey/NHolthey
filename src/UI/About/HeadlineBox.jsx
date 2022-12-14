@@ -19,9 +19,25 @@ export const HeadlineBox = styled.section`
     position: absolute;
     color: rgba(25, 29, 36, 0.238);
   }
+  div {
+  }
 
   @media (max-width: 765px) {
-    top: -5rem;
+    top: -8rem;
     left: 0;
+    width: 75%;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+      width: 5rem;
+      height: 2px;
+      background-color: #f8f8f8;
+    }
+    span {
+      font-size: 4rem;
+      position: relative;
+      color: rgba(25, 29, 36, 0.238);
+    }
   }
 `;

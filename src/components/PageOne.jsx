@@ -47,7 +47,7 @@ export default function MainBg() {
   return (
     <ProfileWrapper id="home">
       <ShadowBox />
-      <Navbar />
+      {/* <Navbar /> */}
       <DevImage />
       {/* <Imagebox>
         <DevImg

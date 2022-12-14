@@ -7,7 +7,7 @@ export const Nav = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 5rem;
   opacity: 0.8;
   background-color: transparent;

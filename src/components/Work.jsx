@@ -106,7 +106,7 @@ export default function Work() {
       >
         <HeadlineBox>
           <span>03</span>
-
+          <div></div>
           <Headline>My Work</Headline>
         </HeadlineBox>
         <TextBox>
