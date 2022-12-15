@@ -9,7 +9,7 @@ export const Nav = styled.nav`
   left: 0;
   width: 100vw;
   height: 5rem;
-  opacity: 0.8;
+  opacity: 1;
   background-color: transparent;
   z-index: 1000005;
   @media (orientation: portrait) {

@@ -24,4 +24,8 @@ export const Container = styled.section`
     height: fit-content;
     flex-direction: column-reverse;
   }
+
+  @media (max-width: 765px) and (orientation: landscape) {
+    width: 90vw;
+  }
 `;

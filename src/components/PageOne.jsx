@@ -47,23 +47,8 @@ export default function MainBg() {
   return (
     <ProfileWrapper id="home">
       <ShadowBox />
-      {/* <Navbar /> */}
+      <Navbar />
       <DevImage />
-      {/* <Imagebox>
-        <DevImg
-          style={{ transform: `translateY(${offsetY * 1.25}px)` }}
-          id="devImg"
-          src="DEVELOPER.png"
-          as={motion.img}
-          initial={{ opacity: 0.1, scale: 0.6 }}
-          animate={{ opacity: 0.04, scale: 1 }}
-          transition={{
-            type: 'spring',
-            bounce: 0.2,
-            duration: 2,
-          }}
-        />
-      </Imagebox> */}
       <ProfileContainer>
         <TextContainer>
           <TexBoxHook />

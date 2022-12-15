@@ -20,4 +20,8 @@ export const TextBox = styled.section`
     width: 100%;
     height: 50%;
   }
+
+  @media (max-width: 765px) and (orientation: landscape) {
+    padding: 2rem;
+  }
 `;

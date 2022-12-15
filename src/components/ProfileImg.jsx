@@ -14,7 +14,7 @@ export default function ProfileImg() {
       transition={{
         type: 'spring',
         bounce: 0.2,
-        duration: 2.8,
+        duration: 2.3,
         delay: 0.5,
       }}
     />

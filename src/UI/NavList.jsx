@@ -16,6 +16,7 @@ export const NavList = styled.ul`
   transition: all 0.9s linear;
   z-index: 5;
   li {
+    opacity: 0.8;
     &:hover {
       -webkit-box-reflect: below 0
         linear-gradient(to bottom, transparent, #88888854);

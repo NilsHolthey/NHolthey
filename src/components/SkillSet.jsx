@@ -38,14 +38,36 @@ const item = {
 };
 
 const text = {
-  hidden: { opacity: 0, y: 15 },
+  hidden: { opacity: 0, y: 25 },
   show: {
     opacity: 1,
     y: 0,
     transition: {
       type: 'spring',
-      duration: 1,
-      delay: 0.8,
+      duration: 1.2,
+      delay: 0.6,
+    },
+  },
+};
+const grid = {
+  hidden: { opacity: 0, y: 25 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.2,
+      type: 'spring',
+    },
+  },
+};
+const variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+
+    transition: {
+      staggerChildren: 0.1,
+      type: 'spring',
     },
   },
 };
@@ -175,12 +197,13 @@ export default function Skillset() {
         <ImageGrid
           as={motion.section}
           viewport={{ once: true }}
-          variants={text}
+          variants={variants}
           initial="hidden"
           whileInView="show"
         >
-          <div
+          <motion.div
             id="item-0"
+            variants={grid}
             onClick={handleShowHtml}
             style={{
               boxShadow: showHtml
@@ -200,9 +223,10 @@ export default function Skillset() {
                 <HtmlPng src="html5-logo-31813.png"></HtmlPng>
               </a>
             )}
-          </div>
-          <div
+          </motion.div>
+          <motion.div
             id="item-1"
+            variants={grid}
             onClick={handleShowNode}
             style={{
               boxShadow: showNode
@@ -222,9 +246,10 @@ export default function Skillset() {
                 <NodeJs src="nodejs-icon-890222153.png"></NodeJs>
               </a>
             )}
-          </div>
-          <div
+          </motion.div>
+          <motion.div
             id="item-2"
+            variants={grid}
             onClick={handleShowJs}
             style={{
               boxShadow: showJs
@@ -244,10 +269,13 @@ export default function Skillset() {
                 <JsPng src="javascript-39415.png"></JsPng>
               </a>
             )}
-          </div>
-          <div id="item-3">&nbsp;</div>
-          <div
+          </motion.div>
+          <motion.div id="item-3" variants={grid}>
+            &nbsp;
+          </motion.div>
+          <motion.div
             id="item-4"
+            variants={grid}
             onClick={handleShowCss}
             style={{
               boxShadow: showCss
@@ -264,9 +292,10 @@ export default function Skillset() {
                 <CssPng src="CSS_3.png"></CssPng>
               </a>
             )}
-          </div>
-          <div
+          </motion.div>
+          <motion.div
             id="item-5"
+            variants={grid}
             onClick={handleShowNext}
             style={{
               boxShadow: showNext
@@ -286,10 +315,13 @@ export default function Skillset() {
                 <NextJs src="next-js-logo.png"></NextJs>
               </a>
             )}
-          </div>
-          <div id="item-6">&nbsp;</div>
-          <div
+          </motion.div>
+          <motion.div id="item-6" variants={grid}>
+            &nbsp;
+          </motion.div>
+          <motion.div
             id="item-7"
+            variants={grid}
             onClick={handleShowReact}
             style={{
               boxShadow: showReact
@@ -306,9 +338,10 @@ export default function Skillset() {
                 <ReactPng src="reactLogo.png" />
               </a>
             )}
-          </div>
-          <div
+          </motion.div>
+          <motion.div
             id="item-8"
+            variants={grid}
             onClick={handleShowStyledC}
             style={{
               boxShadow: showSytledC
@@ -329,9 +362,10 @@ export default function Skillset() {
               </a>
             )}
             &nbsp;
-          </div>
-          <div
+          </motion.div>
+          <motion.div
             id="item-9"
+            variants={grid}
             onClick={handleShowZustand}
             style={{
               boxShadow: showZustand
@@ -349,12 +383,22 @@ export default function Skillset() {
               </a>
             )}
             &nbsp;
-          </div>
-          <div id="item-10">&nbsp;</div>
-          <div id="item-11">&nbsp;</div>
-          <div id="item-12">&nbsp;</div>
-          <div id="item-13">&nbsp;</div>
-          <div id="item-14">&nbsp;</div>
+          </motion.div>
+          <motion.div id="item-10" variants={grid}>
+            &nbsp;
+          </motion.div>
+          <motion.div id="item-11" variants={grid}>
+            &nbsp;
+          </motion.div>
+          <motion.div id="item-12" variants={grid}>
+            &nbsp;
+          </motion.div>
+          <motion.div id="item-13" variants={grid}>
+            &nbsp;
+          </motion.div>
+          <motion.div id="item-14" variants={grid}>
+            &nbsp;
+          </motion.div>
         </ImageGrid>
         <BreakLine />
       </Container>

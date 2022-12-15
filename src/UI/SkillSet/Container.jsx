@@ -33,8 +33,12 @@ export const Container = styled.section`
   }
   @media (max-width: 765px) and (orientation: landscape) {
     width: 90vw;
-    height: 220vh;
+    height: fit-content;
     flex-direction: column;
     justify-content: center;
+  }
+  @media (max-width: 965px) and (orientation: landscape) {
+    height: fit-content;
+    padding: 2rem;
   }
 `;

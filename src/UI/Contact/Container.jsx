@@ -33,4 +33,7 @@ export const Container = styled.article`
     flex-direction: column;
     display: flex;
   }
+  @media (max-width: 765px) and (orientation: landscape) {
+    width: 90vw;
+  }
 `;
