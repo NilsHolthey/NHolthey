@@ -12,6 +12,7 @@ import ProfileImg from './ProfileImg';
 import ShadowBox from './ShadowBox';
 
 import DevImage from './DevImage';
+import { ArrowDown } from '../UI/ArrowDown';
 
 export default function MainBg() {
   const changeColor = () => {
@@ -49,6 +50,9 @@ export default function MainBg() {
       <ShadowBox />
       <Navbar />
       <DevImage />
+      <ArrowDown href="#about">
+        <span class="material-symbols-outlined">arrow_downward</span>
+      </ArrowDown>
       <ProfileContainer>
         <TextContainer>
           <TexBoxHook />

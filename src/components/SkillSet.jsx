@@ -24,6 +24,8 @@ import { NodeJs } from '../UI/SkillSet/PNG/NodeJs';
 import { NextJs } from '../UI/SkillSet/PNG/NextJs';
 import { ZustandPng } from '../UI/SkillSet/PNG/Zustand';
 import { StyledComponentsPng } from '../UI/SkillSet/PNG/StyledComponents';
+import { EsLintPng } from '../UI/SkillSet/PNG/EsLint';
+import { MongoDBPng } from '../UI/SkillSet/PNG/MongoDB';
 
 const item = {
   hidden: { opacity: 0, y: 90 },
@@ -98,6 +100,10 @@ export default function Skillset() {
   const handleShowZustand = () => setShowZustand(!showZustand);
   const [showSytledC, setShowStyledC] = useState(false);
   const handleShowStyledC = () => setShowStyledC(!showSytledC);
+  const [showESLint, setShowESLint] = useState(false);
+  const handleShowESLint = () => setShowESLint(!showESLint);
+  const [showMongoDB, setShowMongoDB] = useState(false);
+  const handleShowMongoDB = () => setShowMongoDB(!showMongoDB);
 
   return (
     <Wrapper id="skillset">
@@ -184,11 +190,23 @@ export default function Skillset() {
                 01101110 01110100 01110011&nbsp;
               </BinarySpan>
             )}
-            <span>MongoDB</span>
-            &nbsp;|&nbsp;
+            {showMongoDB ? (
+              <span>MongoDB&nbsp;|&nbsp;</span>
+            ) : (
+              <BinarySpan>
+                01001101 01101111 01101110 01100111 01101111 01000100
+                01000010&nbsp;
+              </BinarySpan>
+            )}
             <span>Git</span>&nbsp; |&nbsp;<span>GitHub</span>&nbsp;|&nbsp;
             <span>Figma</span>&nbsp;|&nbsp;
-            <span>AdobeXD</span>&nbsp;|&nbsp;
+            {showESLint ? (
+              <span>ESLint&nbsp;|&nbsp;</span>
+            ) : (
+              <BinarySpan>
+                01000101 01010011 01001100 01101001 01101110 01110100&nbsp;
+              </BinarySpan>
+            )}
             <span>ReactDnD</span>&nbsp;|&nbsp;<span>Rest</span>&nbsp;|&nbsp;
             <span>npm</span>.
           </Text>
@@ -270,8 +288,25 @@ export default function Skillset() {
               </a>
             )}
           </motion.div>
-          <motion.div id="item-3" variants={grid}>
-            &nbsp;
+          <motion.div
+            id="item-3"
+            variants={grid}
+            onClick={handleShowMongoDB}
+            style={{
+              boxShadow: showMongoDB
+                ? 'inset -6px -6px 10px rgba(12, 12, 12, 0.557), inset 6px 6px 10px rgba(92, 92, 92, 0.2)'
+                : '',
+            }}
+          >
+            {showMongoDB ? (
+              <span>
+                <MongoDBPng src="MondoDBLogo.png" style={{ scale: '0.9' }} />
+              </span>
+            ) : (
+              <a href="#skillset">
+                <MongoDBPng src="MondoDBLogo.png" />
+              </a>
+            )}
           </motion.div>
           <motion.div
             id="item-4"
@@ -288,7 +323,7 @@ export default function Skillset() {
                 <CssPng src="CSS_3.png" style={{ scale: '0.9' }}></CssPng>
               </span>
             ) : (
-              <a href="#textBox">
+              <a href="#skillset">
                 <CssPng src="CSS_3.png"></CssPng>
               </a>
             )}
@@ -334,7 +369,7 @@ export default function Skillset() {
                 <ReactPng src="reactLogo.png" style={{ scale: '0.9' }} />
               </span>
             ) : (
-              <a href="#textBox">
+              <a href="#skillset">
                 <ReactPng src="reactLogo.png" />
               </a>
             )}
@@ -357,7 +392,7 @@ export default function Skillset() {
                 />
               </span>
             ) : (
-              <a href="#textBox">
+              <a href="#skillset">
                 <StyledComponentsPng src="logoStyledC.png" />
               </a>
             )}
@@ -378,13 +413,31 @@ export default function Skillset() {
                 <ZustandPng src="ZustandBear.png" style={{ scale: '0.9' }} />
               </span>
             ) : (
-              <a href="#textBox">
+              <a href="#skillset">
                 <ZustandPng src="ZustandBear.png" />
               </a>
             )}
             &nbsp;
           </motion.div>
-          <motion.div id="item-10" variants={grid}>
+          <motion.div
+            id="item-10"
+            variants={grid}
+            onClick={handleShowESLint}
+            style={{
+              boxShadow: showESLint
+                ? 'inset -6px -6px 10px rgba(12, 12, 12, 0.557), inset 6px 6px 10px rgba(92, 92, 92, 0.2)'
+                : '',
+            }}
+          >
+            {showESLint ? (
+              <span>
+                <EsLintPng src="ESLint.png" style={{ scale: '0.9' }} />
+              </span>
+            ) : (
+              <a href="#skillset">
+                <EsLintPng src="ESLint.png" />
+              </a>
+            )}
             &nbsp;
           </motion.div>
           <motion.div id="item-11" variants={grid}>
