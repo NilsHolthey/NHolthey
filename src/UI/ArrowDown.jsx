@@ -5,7 +5,8 @@ export const ArrowDown = styled.a`
     color: #f8f8f8;
     outline: 3px solid ${({ OutlineColor = '#dcdcdc' }) => OutlineColor};
     border: 2px solid ${({ BorderColor = '#dcdcdc' }) => BorderColor};
-    background: rgb(220, 220, 220);
+    background: ${({ Background = '#dcdcdc' }) => Background};
+
     outline-offset: 4px;
     border-radius: 100%;
     &.material-symbols-outlined {

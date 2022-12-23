@@ -70,6 +70,7 @@ export default function MainBg() {
         right="50%"
         BorderColor="#f8f8f8"
         OutlineColor="#f8f8f8"
+        Background="transparent"
       >
         <motion.span
           className="material-symbols-outlined"
