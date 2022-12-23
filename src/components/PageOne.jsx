@@ -1,6 +1,6 @@
 import { ImageContainer } from '../UI/ImageContainer';
 import { ProfileContainer } from '../UI/ProfileContainer';
-
+import { motion } from 'framer-motion';
 import { ProfileWrapper } from '../UI/Profilewrapper';
 import { TextContainer } from '../UI/TextContainer';
 import Navbar from './Navbar';
@@ -13,6 +13,20 @@ import ShadowBox from './ShadowBox';
 
 import DevImage from './DevImage';
 import { ArrowDown } from '../UI/ArrowDown';
+
+const icon = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      type: 'spring',
+      duration: 2.3,
+      delay: 1.2,
+    },
+  },
+};
 
 export default function MainBg() {
   const changeColor = () => {
@@ -50,8 +64,22 @@ export default function MainBg() {
       <ShadowBox />
       <Navbar />
       <DevImage />
-      <ArrowDown href="#about">
-        <span class="material-symbols-outlined">arrow_downward</span>
+      <ArrowDown
+        href="#about"
+        bottom="1%"
+        right="50%"
+        BorderColor="#f8f8f8"
+        OutlineColor="#f8f8f8"
+      >
+        <motion.span
+          className="material-symbols-outlined"
+          viewport={{ once: true }}
+          variants={icon}
+          initial="hidden"
+          whileInView="show"
+        >
+          arrow_downward
+        </motion.span>
       </ArrowDown>
       <ProfileContainer>
         <TextContainer>

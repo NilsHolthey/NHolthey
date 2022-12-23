@@ -26,6 +26,7 @@ import { SubmitButton } from '../UI/Contact/SubmitButton';
 import { FormModal } from '../UI/Contact/FormModal';
 import { TextBox } from '../UI/Contact/TextBox';
 import { Form } from '../UI/Contact/Form';
+import { ArrowDown } from '../UI/ArrowDown';
 
 const item = {
   hidden: { opacity: 0, y: 70 },
@@ -35,6 +36,20 @@ const item = {
     transition: {
       type: 'spring',
       duration: 1.6,
+    },
+  },
+};
+
+const icon = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      type: 'spring',
+      duration: 2.3,
+      delay: 1.2,
     },
   },
 };
@@ -129,6 +144,17 @@ export default function Contact() {
   return (
     <>
       <Wrapper id="contacts">
+        <ArrowDown href="#home" bottom="5%" right="50%">
+          <motion.span
+            className="material-symbols-outlined"
+            viewport={{ once: true }}
+            variants={icon}
+            initial="hidden"
+            whileInView="show"
+          >
+            arrow_upward
+          </motion.span>
+        </ArrowDown>
         <InfoRight>
           <Mail href="mailto:nils.holthey@gmx.de">nils.holthey@gmx.de</Mail>
           <LineRight></LineRight>

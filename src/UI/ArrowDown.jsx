@@ -3,8 +3,9 @@ import styled from 'styled-components';
 export const ArrowDown = styled.a`
   span {
     color: #f8f8f8;
-    outline: 3px solid #f8f8f8;
-    border: 2px solid #f8f8f8;
+    outline: 3px solid ${({ OutlineColor = '#dcdcdc' }) => OutlineColor};
+    border: 2px solid ${({ BorderColor = '#dcdcdc' }) => BorderColor};
+    background: rgb(220, 220, 220);
     outline-offset: 4px;
     border-radius: 100%;
     &.material-symbols-outlined {
@@ -33,9 +34,11 @@ export const ArrowDown = styled.a`
     }
   }
   position: absolute;
-  left: 50%;
-  bottom: 2%;
-  transform: translate(-50%, -50%);
+  right: ${({ right = '' }) => right};
+  bottom: ${({ bottom = '' }) => bottom};
+  left: ${({ left = '' }) => left};
+  transform: translate(50%, -50%);
+  z-index: 10;
 
   @media (max-width: 768px) {
     display: none;

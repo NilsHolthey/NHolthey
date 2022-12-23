@@ -13,6 +13,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import PlayButton from '../UI/Work/PlayButton';
 import SvgIcon from '../UI/icons';
 import { motion } from 'framer-motion';
+import { ArrowDown } from '../UI/ArrowDown';
 
 const text = {
   hidden: { opacity: 0, y: 10 },
@@ -46,6 +47,19 @@ const item2 = {
     transition: {
       type: 'spring',
       duration: 1.8,
+    },
+  },
+};
+const icon = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      type: 'spring',
+      duration: 2.3,
+      delay: 1.2,
     },
   },
 };
@@ -97,6 +111,17 @@ export default function Work() {
   }, [keyPress]);
   return (
     <Wrapper id="work">
+      <ArrowDown href="#contacts" bottom="5%" right="50%">
+        <motion.span
+          className="material-symbols-outlined"
+          viewport={{ once: true }}
+          variants={icon}
+          initial="hidden"
+          whileInView="show"
+        >
+          arrow_downward
+        </motion.span>
+      </ArrowDown>
       <Container
         viewport={{ once: true }}
         as={motion.section}

@@ -26,6 +26,7 @@ import { ZustandPng } from '../UI/SkillSet/PNG/Zustand';
 import { StyledComponentsPng } from '../UI/SkillSet/PNG/StyledComponents';
 import { EsLintPng } from '../UI/SkillSet/PNG/EsLint';
 import { MongoDBPng } from '../UI/SkillSet/PNG/MongoDB';
+import { ArrowDown } from '../UI/ArrowDown';
 
 const item = {
   hidden: { opacity: 0, y: 90 },
@@ -74,6 +75,20 @@ const variants = {
   },
 };
 
+const icon = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      type: 'spring',
+      duration: 2.3,
+      delay: 1.2,
+    },
+  },
+};
+
 export default function Skillset() {
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
@@ -107,6 +122,17 @@ export default function Skillset() {
 
   return (
     <Wrapper id="skillset">
+      <ArrowDown href="#work" bottom="5%" right="50%">
+        <motion.span
+          className="material-symbols-outlined"
+          viewport={{ once: true }}
+          variants={icon}
+          initial="hidden"
+          whileInView="show"
+        >
+          arrow_downward
+        </motion.span>
+      </ArrowDown>
       <Container
         viewport={{ once: true }}
         as={motion.section}

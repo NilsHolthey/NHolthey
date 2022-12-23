@@ -12,6 +12,7 @@ import { Headline } from '../UI/About/Headline';
 import { HeadlineBox } from '../UI/About/HeadlineBox';
 
 import { Wrapper } from '../UI/About/Wrapper';
+import { ArrowDown } from '../UI/ArrowDown';
 
 const item = {
   hidden: { opacity: 0, y: 100 },
@@ -39,6 +40,19 @@ const text = {
     },
   },
 };
+const icon = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+
+    transition: {
+      type: 'spring',
+      duration: 2.3,
+      delay: 1.2,
+    },
+  },
+};
 
 export default function About() {
   const [offsetY, setOffsetY] = useState(0);
@@ -54,18 +68,18 @@ export default function About() {
   console.log(offsetY, window.innerHeight, windowRatio);
 
   return (
-    <Wrapper
-      id="about"
-      // style={
-      //   offsetY > 700
-      //     ? { backgroundColor: `rgba(39, 44, 57, ${offsetY * 0.00022})` }
-      //     : { backgroundColor: `rgb(220, 220, 220)` }
-      // }
-    >
-      {/* <BackgroundBox
-        style={{ backgroundColor: `rgba(39, 44, 57,
-          rgb(39, 44, 57) ${offsetY * 0.0002})` }}
-      /> */}
+    <Wrapper id="about">
+      <ArrowDown href="#skillset" bottom="5%" right="50%">
+        <motion.span
+          className="material-symbols-outlined"
+          viewport={{ once: true }}
+          variants={icon}
+          initial="hidden"
+          whileInView="show"
+        >
+          arrow_downward
+        </motion.span>
+      </ArrowDown>
       <Container
         viewport={{ once: true }}
         as={motion.section}
