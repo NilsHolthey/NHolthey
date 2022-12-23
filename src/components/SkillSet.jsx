@@ -436,11 +436,11 @@ export default function Skillset() {
           >
             {showZustand ? (
               <span>
-                <ZustandPng src="ZustandBear.png" style={{ scale: '0.9' }} />
+                <ZustandPng src="zustandBear.png" style={{ scale: '0.9' }} />
               </span>
             ) : (
               <a href="#skillset">
-                <ZustandPng src="ZustandBear.png" />
+                <ZustandPng src="zustandBear.png" />
               </a>
             )}
             &nbsp;
