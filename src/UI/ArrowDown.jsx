@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const ArrowDown = styled.a`
   span {
-    color: #f8f8f8;
+    color: #f8f8f8a1;
     outline: 3px solid ${({ OutlineColor = '#dcdcdc' }) => OutlineColor};
     border: 2px solid ${({ BorderColor = '#dcdcdc' }) => BorderColor};
     background: ${({ Background = '#dcdcdc' }) => Background};
-
+    filter: drop-shadow(0 0 4px #f8f8f8cd);
     outline-offset: 4px;
     border-radius: 100%;
     &.material-symbols-outlined {

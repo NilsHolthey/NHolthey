@@ -21,6 +21,7 @@ export const ImageGrid = styled.section`
   div {
     cursor: pointer;
     z-index: 3;
+
     border-radius: 8px;
     display: flex;
     justify-content: center;

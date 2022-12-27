@@ -14,7 +14,8 @@ export const Wrapper = styled.section`
   }
   @media (orientation: portrait) {
     width: 100vw;
-    height: 160vh;
+    height: fit-content;
+    padding: 3rem 0 3rem 0;
   }
   @media (max-width: 765px) and (orientation: landscape) {
     width: 100vw;

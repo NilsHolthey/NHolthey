@@ -111,7 +111,14 @@ export default function Work() {
   }, [keyPress]);
   return (
     <Wrapper id="work">
-      <ArrowDown href="#contacts" bottom="5%" right="50%">
+      <ArrowDown
+        href="#contacts"
+        bottom="5.5%"
+        right="50%"
+        Background="  rgb(39, 44, 57)"
+        BorderColor=" rgb(39, 44, 57)"
+        OutlineColor=" rgb(39, 44, 57)"
+      >
         <motion.span
           className="material-symbols-outlined"
           viewport={{ once: true }}

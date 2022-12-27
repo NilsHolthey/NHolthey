@@ -144,7 +144,14 @@ export default function Contact() {
   return (
     <>
       <Wrapper id="contacts">
-        <ArrowDown href="#home" bottom="5%" right="50%">
+        <ArrowDown
+          href="#home"
+          bottom="5.5%"
+          right="50%"
+          Background="  rgb(39, 44, 57)"
+          BorderColor=" rgb(39, 44, 57)"
+          OutlineColor=" rgb(39, 44, 57)"
+        >
           <motion.span
             className="material-symbols-outlined"
             viewport={{ once: true }}
@@ -156,7 +163,7 @@ export default function Contact() {
           </motion.span>
         </ArrowDown>
         <InfoRight>
-          <Mail href="mailto:nils.holthey@gmx.de">nils.holthey@gmx.de</Mail>
+          <Mail href="mailto:nils.holthey@gmx.de">nils.holthey@gmail.com</Mail>
           <LineRight></LineRight>
         </InfoRight>
         <InfoLeft>
@@ -250,7 +257,7 @@ export default function Contact() {
               </a>
             </SocialLink>
             <SocialLink className={`${addClass ? 'contacts' : ''}`}>
-              <a href="mailto:nils.holthey@gmx.de">
+              <a href="mailto:nils.holthey@gmail.com">
                 <MailSvg />
               </a>
             </SocialLink>
