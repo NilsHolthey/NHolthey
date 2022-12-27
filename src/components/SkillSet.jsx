@@ -27,6 +27,8 @@ import { StyledComponentsPng } from '../UI/SkillSet/PNG/StyledComponents';
 import { EsLintPng } from '../UI/SkillSet/PNG/EsLint';
 import { MongoDBPng } from '../UI/SkillSet/PNG/MongoDB';
 import { ArrowDown } from '../UI/ArrowDown';
+import { FigmaPng } from '../UI/SkillSet/PNG/Figma';
+import { GitHubPng } from '../UI/SkillSet/PNG/GitHub';
 
 const item = {
   hidden: { opacity: 0, y: 90 },
@@ -119,6 +121,10 @@ export default function Skillset() {
   const handleShowESLint = () => setShowESLint(!showESLint);
   const [showMongoDB, setShowMongoDB] = useState(false);
   const handleShowMongoDB = () => setShowMongoDB(!showMongoDB);
+  const [showFigma, setShowFigma] = useState(false);
+  const handleShowFigma = () => setShowFigma(!showFigma);
+  const [showGithub, setShowGitHub] = useState(false);
+  const handleShowGitHub = () => setShowGitHub(!showGithub);
 
   return (
     <Wrapper id="skillset">
@@ -231,8 +237,21 @@ export default function Skillset() {
                 01000010&nbsp;
               </BinarySpan>
             )}
-            <span>Git</span>&nbsp; |&nbsp;<span>GitHub</span>&nbsp;|&nbsp;
-            <span>Figma</span>&nbsp;|&nbsp;
+            <span>Git</span>&nbsp; |&nbsp;{' '}
+            {showGithub ? (
+              <span>GitHub&nbsp;|&nbsp;</span>
+            ) : (
+              <BinarySpan>
+                01000111 01101001 01110100 01001000 01110101 01100010&nbsp;
+              </BinarySpan>
+            )}
+            {showFigma ? (
+              <span>Figma&nbsp;|&nbsp;</span>
+            ) : (
+              <BinarySpan>
+                01000110 01101001 01100111 01101101 01100001&nbsp;
+              </BinarySpan>
+            )}
             {showESLint ? (
               <span>ESLint&nbsp;|&nbsp;</span>
             ) : (
@@ -240,7 +259,7 @@ export default function Skillset() {
                 01000101 01010011 01001100 01101001 01101110 01110100&nbsp;
               </BinarySpan>
             )}
-            <span>ReactDnD</span>&nbsp;|&nbsp;<span>Rest</span>&nbsp;|&nbsp;
+            <span>Rest</span>&nbsp;|&nbsp;
             <span>npm</span>.
           </Text>
           <BreakLine2 />
@@ -384,8 +403,28 @@ export default function Skillset() {
               </a>
             )}
           </motion.div>
-          <motion.div id="item-6" variants={grid}>
-            &nbsp;
+          <motion.div
+            id="item-6"
+            variants={grid}
+            onClick={handleShowGitHub}
+            style={{
+              boxShadow: showGithub
+                ? 'inset -6px -6px 10px rgba(12, 12, 12, 0.557), inset 6px 6px 10px rgba(92, 92, 92, 0.2)'
+                : '',
+            }}
+          >
+            {showGithub ? (
+              <span>
+                <GitHubPng
+                  src="GitHub_logo.png"
+                  style={{ scale: '0.9' }}
+                ></GitHubPng>
+              </span>
+            ) : (
+              <a href="#skillset">
+                <GitHubPng src="GitHub_logo.png"></GitHubPng>
+              </a>
+            )}
           </motion.div>
           <motion.div
             id="item-7"
@@ -473,7 +512,25 @@ export default function Skillset() {
             )}
             &nbsp;
           </motion.div>
-          <motion.div id="item-11" variants={grid}>
+          <motion.div
+            id="item-11"
+            variants={grid}
+            onClick={handleShowFigma}
+            style={{
+              boxShadow: showFigma
+                ? 'inset -6px -6px 10px rgba(12, 12, 12, 0.557), inset 6px 6px 10px rgba(92, 92, 92, 0.2)'
+                : '',
+            }}
+          >
+            {showFigma ? (
+              <span>
+                <FigmaPng src="figma-logo.png" style={{ scale: '0.9' }} />
+              </span>
+            ) : (
+              <a href="#skillset">
+                <FigmaPng src="figma-logo.png" />
+              </a>
+            )}
             &nbsp;
           </motion.div>
           <motion.div id="item-12" variants={grid}>

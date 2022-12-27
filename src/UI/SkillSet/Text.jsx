@@ -2,7 +2,7 @@ import styled from 'styled-components';
 export const Text = styled.p`
   margin: 0;
   width: 80%;
-  height: 50%;
+
   font-weight: bolder;
   font-size: 3.5vh;
   font-family: 'Fjalla One', sans-serif;
@@ -29,9 +29,8 @@ export const Text = styled.p`
     transition: all 300ms ease;
   }
   @media (max-width: 765px) {
-    height: 50%;
   }
+
   @media (orientation: portrait) {
-    height: 50%;
   }
 `;

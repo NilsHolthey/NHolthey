@@ -18,13 +18,7 @@ export const BgPage = styled.section`
     /* background-image: unset;
     background-position: unset;
     background-size: unset; */
-    background: #dcdcdc;
-    background-repeat: no-repeat;
-    background: linear-gradient(
-      335deg,
-      rgba(220, 220, 220, 1) 45%,
-      rgba(167, 167, 167, 1) 100%
-    );
+    background-image: url('/blurry-gradient-haikei1.png');
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.4;
@@ -33,13 +27,8 @@ export const BgPage = styled.section`
     /* background-image: unset;
     background-position: unset;
     background-size: unset; */
-    background: rgb(220, 220, 220);
+    background-image: url('/blurry-gradient-haikei1.png');
 
-    background: linear-gradient(
-      335deg,
-      rgba(220, 220, 220, 1) 45%,
-      rgba(167, 167, 167, 1) 100%
-    );
     background-size: 100% 100%;
     background-repeat: no-repeat;
     opacity: 0.4;

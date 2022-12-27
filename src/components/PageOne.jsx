@@ -68,8 +68,8 @@ export default function MainBg() {
         href="#about"
         bottom="1%"
         right="50%"
-        BorderColor="#f8f8f8"
-        OutlineColor="#f8f8f8"
+        BorderColor="#f8f8f8a1"
+        OutlineColor="#f8f8f8a1"
         Background="transparent"
       >
         <motion.span

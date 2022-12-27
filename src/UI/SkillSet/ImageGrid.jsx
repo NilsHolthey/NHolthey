@@ -36,7 +36,7 @@ export const ImageGrid = styled.section`
       width: 92%;
       height: 92%;
       border-radius: 8px;
-      background: rgba(22, 26, 32, 0);
+
       box-shadow: inset 5px 5px 10px #20252e, inset -5px -5px 10px #2c333e;
     }
     a {
