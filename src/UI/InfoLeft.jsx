@@ -15,7 +15,7 @@ export const InfoLeft = styled.div`
     width: 100%;
     left: 0;
     background-color: #1c2028;
-    opacity: 0.7;
+    opacity: 0.8;
     height: 3.5rem;
     bottom: 0;
   }

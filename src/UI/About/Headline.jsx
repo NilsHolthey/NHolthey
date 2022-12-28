@@ -21,7 +21,7 @@ export const Headline = styled.h3`
   -o-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
 
-  z-index: 100000;
+  z-index: 100;
   font-family: 'Fjalla One', sans-serif;
   letter-spacing: 1px;
   span {

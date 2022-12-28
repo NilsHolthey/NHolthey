@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const Button = styled.div`
   position: absolute;
-  bottom: 10%;
+  bottom: 14%;
   left: 53%;
   transform: translate(-50%, -50%);
-  width: 10vh;
-  height: 10vh;
+  width: 11vh;
+  height: 11vh;
   background: var(--greyLight-1);
   transition: all 0.3s ease-in;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1),

@@ -13,8 +13,4 @@ export const AboutText = styled.p`
   color: transparent;
   opacity: 0.5;
   transition: color 500ms ease;
-  &:focus,
-  :hover {
-    color: #a7a7a7;
-  }
 `;

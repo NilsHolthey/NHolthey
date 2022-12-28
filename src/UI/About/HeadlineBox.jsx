@@ -12,7 +12,7 @@ export const HeadlineBox = styled.section`
   justify-content: center;
 
   left: -8rem;
-  z-index: 100000;
+  z-index: 100;
   font-family: 'Fjalla One', sans-serif;
   span {
     font-size: 4rem;

@@ -29,6 +29,7 @@ import { MongoDBPng } from '../UI/SkillSet/PNG/MongoDB';
 import { ArrowDown } from '../UI/ArrowDown';
 import { FigmaPng } from '../UI/SkillSet/PNG/Figma';
 import { GitHubPng } from '../UI/SkillSet/PNG/GitHub';
+import { GitPng } from '../UI/SkillSet/PNG/Git';
 
 const item = {
   hidden: { opacity: 0, y: 90 },
@@ -125,6 +126,8 @@ export default function Skillset() {
   const handleShowFigma = () => setShowFigma(!showFigma);
   const [showGithub, setShowGitHub] = useState(false);
   const handleShowGitHub = () => setShowGitHub(!showGithub);
+  const [showGit, setShowGit] = useState(false);
+  const handleShowGit = () => setShowGit(!showGit);
 
   return (
     <Wrapper id="skillset">
@@ -237,7 +240,11 @@ export default function Skillset() {
                 01000010&nbsp;
               </BinarySpan>
             )}
-            <span>Git</span>&nbsp; |&nbsp;{' '}
+            {showGit ? (
+              <span>Git&nbsp;|&nbsp;</span>
+            ) : (
+              <BinarySpan>01000111 01101001 01110100&nbsp;</BinarySpan>
+            )}
             {showGithub ? (
               <span>GitHub&nbsp;|&nbsp;</span>
             ) : (
@@ -533,8 +540,25 @@ export default function Skillset() {
             )}
             &nbsp;
           </motion.div>
-          <motion.div id="item-12" variants={grid}>
-            &nbsp;
+          <motion.div
+            id="item-12"
+            variants={grid}
+            onClick={handleShowGit}
+            style={{
+              boxShadow: showGit
+                ? 'inset -6px -6px 10px rgba(12, 12, 12, 0.557), inset 6px 6px 10px rgba(92, 92, 92, 0.2)'
+                : '',
+            }}
+          >
+            {showGit ? (
+              <span>
+                <GitPng src="gitIcon.png" style={{ scale: '0.9' }} />
+              </span>
+            ) : (
+              <a href="#skillset">
+                <GitPng src="gitIcon.png" />
+              </a>
+            )}
           </motion.div>
           <motion.div id="item-13" variants={grid}>
             &nbsp;
