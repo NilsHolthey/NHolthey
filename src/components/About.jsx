@@ -69,24 +69,6 @@ export default function About() {
 
   return (
     <Wrapper id="about">
-      <ArrowDown
-        href="#skillset"
-        bottom="5.5%"
-        right="50%"
-        Background=" rgba(25, 29, 36, 0.965)"
-        BorderColor="rgba(25, 29, 36, 0.965)"
-        OutlineColor="rgba(25, 29, 36, 0.965)"
-      >
-        <motion.span
-          className="material-symbols-outlined"
-          viewport={{ once: true }}
-          variants={icon}
-          initial="hidden"
-          whileInView="show"
-        >
-          arrow_downward
-        </motion.span>
-      </ArrowDown>
       <Container
         viewport={{ once: true }}
         as={motion.section}
@@ -94,6 +76,24 @@ export default function About() {
         initial="hidden"
         whileInView="show"
       >
+        <ArrowDown
+          href="#skillset"
+          bottom="0"
+          right="50%"
+          Background=" rgba(25, 29, 36, 0.965)"
+          BorderColor="rgba(25, 29, 36, 0.965)"
+          OutlineColor="rgba(25, 29, 36, 0.965)"
+        >
+          <motion.span
+            className="material-symbols-outlined"
+            viewport={{ once: true }}
+            variants={icon}
+            initial="hidden"
+            whileInView="show"
+          >
+            arrow_downward
+          </motion.span>
+        </ArrowDown>
         <BreakLine />
         <HeadlineBox>
           <span>01</span>

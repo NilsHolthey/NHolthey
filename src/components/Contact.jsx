@@ -144,24 +144,6 @@ export default function Contact() {
   return (
     <>
       <Wrapper id="contacts">
-        <ArrowDown
-          href="#home"
-          bottom="5.5%"
-          right="50%"
-          Background="  rgb(39, 44, 57)"
-          BorderColor=" rgb(39, 44, 57)"
-          OutlineColor=" rgb(39, 44, 57)"
-        >
-          <motion.span
-            className="material-symbols-outlined"
-            viewport={{ once: true }}
-            variants={icon}
-            initial="hidden"
-            whileInView="show"
-          >
-            arrow_upward
-          </motion.span>
-        </ArrowDown>
         <InfoRight>
           <Mail href="mailto:nils.holthey@gmx.de">nils.holthey@gmail.com</Mail>
           <LineRight></LineRight>
@@ -272,6 +254,24 @@ export default function Contact() {
           initial="hidden"
           whileInView="show"
         >
+          <ArrowDown
+            href="#home"
+            bottom="0"
+            right="50%"
+            Background="  rgb(39, 44, 57)"
+            BorderColor=" rgb(39, 44, 57)"
+            OutlineColor=" rgb(39, 44, 57)"
+          >
+            <motion.span
+              className="material-symbols-outlined"
+              viewport={{ once: true }}
+              variants={icon}
+              initial="hidden"
+              whileInView="show"
+            >
+              arrow_upward
+            </motion.span>
+          </ArrowDown>
           <HeadlineBox>
             <span>04</span>
             <div></div>

@@ -38,7 +38,7 @@ export const ArrowDown = styled.a`
   right: ${({ right = '' }) => right};
   bottom: ${({ bottom = '' }) => bottom};
   left: ${({ left = '' }) => left};
-  transform: translate(50%, -50%);
+  transform: translate(50%, 50%);
   z-index: 10;
 
   @media (max-width: 768px) {

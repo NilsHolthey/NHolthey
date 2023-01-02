@@ -111,24 +111,6 @@ export default function Work() {
   }, [keyPress]);
   return (
     <Wrapper id="work">
-      <ArrowDown
-        href="#contacts"
-        bottom="5.5%"
-        right="50%"
-        Background="  rgb(39, 44, 57)"
-        BorderColor=" rgb(39, 44, 57)"
-        OutlineColor=" rgb(39, 44, 57)"
-      >
-        <motion.span
-          className="material-symbols-outlined"
-          viewport={{ once: true }}
-          variants={icon}
-          initial="hidden"
-          whileInView="show"
-        >
-          arrow_downward
-        </motion.span>
-      </ArrowDown>
       <Container
         viewport={{ once: true }}
         as={motion.section}
@@ -136,6 +118,24 @@ export default function Work() {
         initial="hidden"
         whileInView="show"
       >
+        <ArrowDown
+          href="#contacts"
+          bottom="0"
+          right="50%"
+          Background="  rgb(39, 44, 57)"
+          BorderColor=" rgb(39, 44, 57)"
+          OutlineColor=" rgb(39, 44, 57)"
+        >
+          <motion.span
+            className="material-symbols-outlined"
+            viewport={{ once: true }}
+            variants={icon}
+            initial="hidden"
+            whileInView="show"
+          >
+            arrow_downward
+          </motion.span>
+        </ArrowDown>
         <HeadlineBox>
           <span>03</span>
           <div></div>

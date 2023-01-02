@@ -66,7 +66,7 @@ export default function MainBg() {
       <DevImage />
       <ArrowDown
         href="#about"
-        bottom="1%"
+        bottom="5%"
         right="50%"
         BorderColor="#f8f8f8a1"
         OutlineColor="#f8f8f8a1"

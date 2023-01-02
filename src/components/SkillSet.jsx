@@ -131,24 +131,6 @@ export default function Skillset() {
 
   return (
     <Wrapper id="skillset">
-      <ArrowDown
-        href="#work"
-        bottom="5.5%"
-        right="50%"
-        Background="  rgb(39, 44, 57)"
-        BorderColor=" rgb(39, 44, 57)"
-        OutlineColor=" rgb(39, 44, 57)"
-      >
-        <motion.span
-          className="material-symbols-outlined"
-          viewport={{ once: true }}
-          variants={icon}
-          initial="hidden"
-          whileInView="show"
-        >
-          arrow_downward
-        </motion.span>
-      </ArrowDown>
       <Container
         viewport={{ once: true }}
         as={motion.section}
@@ -156,6 +138,24 @@ export default function Skillset() {
         initial="hidden"
         whileInView="show"
       >
+        <ArrowDown
+          href="#work"
+          bottom="0"
+          right="50%"
+          Background="  rgb(39, 44, 57)"
+          BorderColor=" rgb(39, 44, 57)"
+          OutlineColor=" rgb(39, 44, 57)"
+        >
+          <motion.span
+            className="material-symbols-outlined"
+            viewport={{ once: true }}
+            variants={icon}
+            initial="hidden"
+            whileInView="show"
+          >
+            arrow_downward
+          </motion.span>
+        </ArrowDown>
         <HeadlineBox>
           <span>02</span>
           <div></div>

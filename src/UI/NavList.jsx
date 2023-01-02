@@ -15,6 +15,7 @@ export const NavList = styled.ul`
   right: 30%;
   transition: all 0.9s linear;
   z-index: 5;
+
   li {
     opacity: 0.8;
 
