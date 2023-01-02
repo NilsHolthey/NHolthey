@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const ContainerShadow = styled.div`
-  height: 100vh;
-  width: 100vw;
+  height: 100dvh;
+  width: 100dvw;
   position: fixed;
   bottom: 0;
   overflow: hidden;

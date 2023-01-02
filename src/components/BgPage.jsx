@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const BgPage = styled.section`
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   position: fixed;
 
   top: 0;
