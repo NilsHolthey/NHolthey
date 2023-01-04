@@ -6,9 +6,16 @@ export const LinkList = styled.ul`
   list-style: none;
   padding: 0;
   gap: 0.5rem;
-  transition: scale 500ms ease-in-out;
+  scale: 0.8;
+  li {
+    transition: scale 500ms ease-in-out;
+  }
 
+  .scale {
+  }
   .contacts {
+    scale: 1.2;
+
     :nth-child(1) {
       animation: pulse 2.5s ease-in-out 3.5s;
     }

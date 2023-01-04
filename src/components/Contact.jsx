@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
-
+import { useInView } from 'react-intersection-observer';
 import { Container } from '../UI/Contact/Container';
 import { Footer } from '../UI/Contact/Footer';
 
 import { Wrapper } from '../UI/Contact/Wrapper';
 import emailjs from '@emailjs/browser';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { Headline } from '../UI/About/Headline';
 import { HeadlineBox } from '../UI/About/HeadlineBox';
 import { InfoRight } from '../UI/InfoRight';
@@ -55,37 +55,32 @@ const icon = {
 };
 
 export default function Contact() {
-  const [addClass, setAddClass] = useState(false);
+  const { ref, inView } = useInView();
 
-  const changeColor = () => {
-    if (window.scrollY > 2800) {
-      resetDisply();
-      setAddClass(true);
-    } else if (window.scrollY > 50) {
-      changeToHidden();
-      setAddClass(false);
-    } else {
-      resetDisply();
-      setAddClass(false);
-    }
-  };
+  // const changeColor = () => {
+  //   if (inView == true) {
+  //     resetDisply();
+  //   } else if (window.scrollY > 50) {
+  //     changeToHidden();
+  //   }
+  // };
 
-  useEffect(() => {
-    window.addEventListener('scroll', changeColor);
-    return () => {
-      window.removeEventListener('scroll', changeColor);
-    };
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener('scroll', changeColor);
+  //   return () => {
+  //     window.removeEventListener('scroll', changeColor);
+  //   };
+  // }, []);
 
-  function changeToHidden() {
-    let MylinkList = document.getElementById('linkList');
+  // function changeToHidden() {
+  //   let MylinkList = document.getElementById('linkList');
 
-    MylinkList.style.scale = '0.8';
-  }
-  function resetDisply() {
-    let MylinkList = document.getElementById('linkList');
-    MylinkList.style.scale = '1';
-  }
+  //   MylinkList.style.scale = '0.8';
+  // }
+  // function resetDisply() {
+  //   let MylinkList = document.getElementById('linkList');
+  //   MylinkList.style.scale = '1';
+  // }
 
   const copyright = new Date().getFullYear();
   const form = useRef();
@@ -149,8 +144,8 @@ export default function Contact() {
           <LineRight></LineRight>
         </InfoRight>
         <InfoLeft>
-          <LinkList id="linkList">
-            <SocialLink className={`${addClass ? 'contacts' : ''}`}>
+          <LinkList id="linkList" className={`${inView ? 'scale' : ''}`}>
+            <SocialLink className={`${inView ? 'contacts' : ''}`}>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -164,7 +159,7 @@ export default function Contact() {
                 />
               </a>
             </SocialLink>
-            <SocialLink className={`${addClass ? 'contacts' : ''}`}>
+            <SocialLink className={`${inView ? 'contacts' : ''}`}>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -191,7 +186,7 @@ export default function Contact() {
                 />
               </a>
             </SocialLink>
-            <SocialLink className={`${addClass ? 'contacts' : ''}`}>
+            <SocialLink className={`${inView ? 'contacts' : ''}`}>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -224,7 +219,7 @@ export default function Contact() {
                 />
               </a>
             </SocialLink>
-            <SocialLink className={`${addClass ? 'contacts' : ''}`}>
+            <SocialLink className={`${inView ? 'contacts' : ''}`}>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -238,7 +233,7 @@ export default function Contact() {
                 />
               </a>
             </SocialLink>
-            <SocialLink className={`${addClass ? 'contacts' : ''}`}>
+            <SocialLink className={`${inView ? 'contacts' : ''}`}>
               <a href="mailto:nils.holthey@gmail.com">
                 <MailSvg />
               </a>
@@ -248,6 +243,7 @@ export default function Contact() {
         </InfoLeft>
         {isSending || isSent ? <FormModal /> : ''}
         <Container
+          ref={ref}
           viewport={{ once: true }}
           as={motion.section}
           variants={item}
