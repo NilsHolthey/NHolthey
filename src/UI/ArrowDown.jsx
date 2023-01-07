@@ -39,6 +39,7 @@ export const ArrowDown = styled.a`
   bottom: ${({ bottom = '' }) => bottom};
   left: ${({ left = '' }) => left};
   transform: translate(50%, 50%);
+  cursor: pointer;
   z-index: 10;
 
   @media (max-width: 768px) {

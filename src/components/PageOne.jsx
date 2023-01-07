@@ -1,6 +1,6 @@
 import { ImageContainer } from '../UI/ImageContainer';
 import { ProfileContainer } from '../UI/ProfileContainer';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import { ProfileWrapper } from '../UI/Profilewrapper';
 import { TextContainer } from '../UI/TextContainer';
 import Navbar from './Navbar';
@@ -13,22 +13,34 @@ import ShadowBox from './ShadowBox';
 
 import DevImage from './DevImage';
 import { ArrowDown } from '../UI/ArrowDown';
+import SpinnerSvg from './images/SpinnerSvg';
+import { useState } from 'react';
 
-const icon = {
-  hidden: { opacity: 0, y: 30 },
-  show: {
-    opacity: 1,
-    y: 0,
+// const icon = {
+//   hidden: { opacity: 0, y: 30 },
+//   show: {
+//     opacity: 1,
+//     y: 0,
 
-    transition: {
-      type: 'spring',
-      duration: 2.3,
-      delay: 1.2,
-    },
-  },
-};
+//     transition: {
+//       type: 'spring',
+//       duration: 2.3,
+//       delay: 1.2,
+//     },
+//   },
+// };
 
 export default function MainBg() {
+  const [isActive, setIsActive] = useState(false);
+
+  const handleclick = () => {
+    setIsActive(true);
+    setTimeout(function () {
+      location.href = '#about';
+      setTimeout(() => setIsActive(false), 1000);
+    }, 750);
+  };
+
   const changeColor = () => {
     if (window.scrollY > 50) {
       changeToHidden();
@@ -65,22 +77,14 @@ export default function MainBg() {
       <Navbar />
       <DevImage />
       <ArrowDown
-        href="#about"
-        bottom="5%"
+        onClick={handleclick}
+        bottom="10%"
         right="50%"
-        BorderColor="#f8f8f8a1"
-        OutlineColor="#f8f8f8a1"
+        BorderColor="none"
+        OutlineColor="#none"
         Background="transparent"
       >
-        <motion.span
-          className="material-symbols-outlined"
-          viewport={{ once: true }}
-          variants={icon}
-          initial="hidden"
-          whileInView="show"
-        >
-          arrow_downward
-        </motion.span>
+        <SpinnerSvg isActive={isActive} />
       </ArrowDown>
       <ProfileContainer>
         <TextContainer>
