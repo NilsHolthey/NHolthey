@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { useEffect } from 'react';
 import { Nav } from '../UI/Nav';
 import Burger from '../UI/Navigation/Burger';
@@ -7,13 +8,17 @@ import { NavList } from '../UI/NavList';
 import Logo2 from './images/Logo2';
 
 export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
   const changeColor = () => {
-    if (window.scrollY > 50) {
-      changeToHidden();
+    if (window.pageYOffset > 50) {
+      setIsScrolled(true);
+      console.log(isScrolled);
     } else {
-      resetDisply();
+      setIsScrolled(false);
+      console.log('scrolled down up');
     }
   };
+  console.log(isScrolled);
 
   useEffect(() => {
     window.addEventListener('scroll', changeColor);
@@ -22,17 +27,17 @@ export default function Navbar() {
     };
   }, []);
 
-  function changeToHidden() {
-    let myNav = document.getElementById('navList');
+  // function changeToHidden() {
+  //   let myNav = document.getElementById('navList');
 
-    myNav.style.transform = 'translateX(-200%)';
-    myNav.style.opacity = '0';
-  }
-  function resetDisply() {
-    let myNav = document.getElementById('navList');
-    myNav.style.transform = 'translateX(0)';
-    myNav.style.opacity = '1';
-  }
+  //   myNav.style.transform = 'translateX(-200%)';
+  //   myNav.style.opacity = '0';
+  // }
+  // function resetDisply() {
+  //   let myNav = document.getElementById('navList');
+  //   myNav.style.transform = 'translateX(0)';
+  //   myNav.style.opacity = '1';
+  // }
 
   return (
     <Nav>
@@ -41,16 +46,16 @@ export default function Navbar() {
       </a>
       <Burger />
       <NavList
-        id="navList"
-        as={motion.ul}
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1 }}
-        transition={{
-          type: 'spring',
-          duration: 0.8,
-        }}
-        animate={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        isScrolled={isScrolled}
+        // as={motion.ul}
+        // initial={{ opacity: 0, y: -20 }}
+        // whileInView={{ opacity: 1 }}
+        // transition={{
+        //   type: 'spring',
+        //   duration: 0.8,
+        // }}
+        // animate={{ opacity: 1, y: 0 }}
+        // viewport={{ once: true }}
       >
         <li>
           <NavLink href="#about">About</NavLink>

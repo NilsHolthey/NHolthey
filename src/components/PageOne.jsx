@@ -41,7 +41,7 @@ export default function MainBg() {
     }, 750);
   };
 
-  const changeColor = () => {
+  const changeOpacity = () => {
     if (window.scrollY > 50) {
       changeToHidden();
     } else {
@@ -51,11 +51,11 @@ export default function MainBg() {
 
   useEffect(() => {
     window.addEventListener('scroll', function () {
-      changeColor();
+      changeOpacity();
     });
 
     return () => {
-      window.removeEventListener('scroll', changeColor);
+      window.removeEventListener('scroll', changeOpacity);
     };
   }, []);
 
