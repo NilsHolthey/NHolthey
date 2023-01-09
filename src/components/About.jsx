@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { AboutBox } from '../UI/About/AboutBox';
 import { AboutImage } from '../UI/About/AboutImage';
 import { AboutImageBox } from '../UI/About/AboutImageBox';
@@ -55,6 +56,10 @@ const icon = {
 };
 
 export default function About() {
+  const { ref, inView: visible } = useInView({
+    threshold: 0.8,
+    triggerOnce: true,
+  });
   const [offsetY, setOffsetY] = useState(0);
   const windowRatio = window.pageYOffset / window.innerHeight;
   const handleScroll = () =>
@@ -104,7 +109,13 @@ export default function About() {
         </HeadlineBox>
 
         <AboutImageBox>
-          <AboutImage id="profileImage" src="ProfileBlub.png" alt="profile" />
+          <AboutImage
+            ref={ref}
+            id="profileImage"
+            visible={visible}
+            src="ProfileBlub.png"
+            alt="profile"
+          />
         </AboutImageBox>
         <AboutBox id="aboutBox">
           <AboutText
@@ -115,8 +126,8 @@ export default function About() {
             whileInView="show"
             style={{
               backgroundImage: `linear-gradient(350deg,
-              rgba(102, 103, 171, ${offsetY * 0.0008}) ${offsetY * 0.025}%,
-              rgba(226, 97, 190, ${offsetY * 0.0008}) ${offsetY * 0.045}%,
+              rgba(102, 103, 171, ${offsetY * 0.0008}) ${offsetY * 0.035}%,
+              rgba(226, 97, 190, ${offsetY * 0.0008}) ${offsetY * 0.055}%,
               rgba(25, 29, 36, ${offsetY * 0.0015}) ${offsetY * 0.125}%)`,
             }}
           >
