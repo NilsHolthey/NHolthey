@@ -24,8 +24,8 @@ export default function SpinnerSvg({ isActive }) {
 
 const StyledSvg = styled.svg`
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   scale: 0.8;
   transform: translate(-50%, -50%);
 

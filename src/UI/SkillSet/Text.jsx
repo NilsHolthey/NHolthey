@@ -32,5 +32,6 @@ export const Text = styled.p`
   }
 
   @media (orientation: portrait) {
+    width: 100%;
   }
 `;

@@ -19,14 +19,19 @@ const Ul = styled.ul`
   li {
     opacity: ${({ open }) => (open ? '1' : '0')};
     padding: 18px 10px;
-    color: #f8f8f8;
+
     font-weight: 700;
+
     a {
+      &:hover {
+        color: #6667ab;
+
+        transition: color ease-in 0.3s;
+      }
       text-decoration: none;
 
       color: #f8f8f8;
       &:visited {
-        color: inherit;
       }
     }
   }

@@ -4,6 +4,9 @@ export const ContainerShadow = styled.section`
   height: 100dvh;
   width: 100dvw;
   position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   animation: zIndex 2s;
   overflow: hidden;
   @keyframes zIndex {
@@ -27,7 +30,7 @@ export const ContainerShadow = styled.section`
     background-color: rgb(39, 44, 57);
 
     transform: translateX(-120%);
-    animation: moveLeft 1.5s;
+    animation: moveLeft 1.1s;
     z-index: 100000002;
     @keyframes moveLeft {
       from {
@@ -51,7 +54,7 @@ export const ContainerShadow = styled.section`
     background-color: rgb(39, 44, 57);
     z-index: 100000002;
     transform: translatey(-120%);
-    animation: moveUp 1.5s;
+    animation: moveUp 1.1s;
 
     @keyframes moveUp {
       from {
@@ -73,7 +76,7 @@ export const ContainerShadow = styled.section`
     bottom: 0;
     background-color: rgb(39, 44, 57);
     z-index: 100000002;
-    animation: moveRight 1.5s;
+    animation: moveRight 1.1s;
     transform: translateX(120%);
     @keyframes moveRight {
       from {
@@ -96,7 +99,7 @@ export const ContainerShadow = styled.section`
     background-color: rgb(39, 44, 57);
     z-index: 100000002;
     transform: translateY(120%);
-    animation: moveDown 1.5s;
+    animation: moveDown 1.1s;
 
     @keyframes moveDown {
       from {
@@ -106,6 +109,7 @@ export const ContainerShadow = styled.section`
       to {
         transform: translateY(120%);
         opacity: 0.9;
+
         display: none;
       }
     }

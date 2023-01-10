@@ -1,16 +1,18 @@
 // import { motion } from 'framer-motion';
 import { ContainerShadow } from '../UI/About/ContainerShadow';
+
+import StartSvg from './StartSvg';
 // import { Shadow } from '../UI/Shadow';
 // import { Shadow2 } from '../UI/Shadow2';
 
 export default function ShadowBox() {
   return (
     <ContainerShadow>
+      <StartSvg />
+      {/* <div></div>
       <div></div>
       <div></div>
-      <div></div>
-      <div></div>
-
+      <div></div> */}
       {/* <Shadow
         as={motion.div}
         initial={{ opacity: 0.8, scale: 0.5 }}

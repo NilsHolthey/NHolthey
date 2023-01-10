@@ -14,6 +14,8 @@ import { HeadlineBox } from '../UI/About/HeadlineBox';
 
 import { Wrapper } from '../UI/About/Wrapper';
 import { ArrowDown } from '../UI/ArrowDown';
+// import { ArrowUp } from '../UI/ArrowUp';
+// import { SpinnerWrapper } from '../UI/SpinnerWrapper';
 
 const item = {
   hidden: { opacity: 0, y: 100 },
@@ -58,7 +60,7 @@ const icon = {
 export default function About() {
   const { ref, inView: visible } = useInView({
     threshold: 0.8,
-    triggerOnce: true,
+    triggerOnce: false,
   });
   const [offsetY, setOffsetY] = useState(0);
   const windowRatio = window.pageYOffset / window.innerHeight;
@@ -100,6 +102,21 @@ export default function About() {
             arrow_downward
           </motion.span>
         </ArrowDown>
+        {/* <ArrowUp
+          href="#skillset"
+          top="0"
+          right="50%"
+          Background=" rgba(25, 29, 36, 0.965)"
+          BorderColor="rgba(25, 29, 36, 0.965)"
+          OutlineColor="rgba(25, 29, 36, 0.965)"
+        >
+          <SpinnerWrapper>
+            <div></div>
+            <motion.span className="material-symbols-outlined">
+              arrow_downward
+            </motion.span>
+          </SpinnerWrapper>
+        </ArrowUp> */}
         <BreakLine />
         <HeadlineBox>
           <span>01</span>

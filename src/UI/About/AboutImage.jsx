@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const AboutImage = styled.img`
-  filter: grayscale(85%);
+  filter: grayscale(85%) blur(3px);
   /* position: absolute; */
   transition: filter 1.2s ease-in-out;
   height: auto;
   width: 70%;
   z-index: 2;
-  filter: ${({ visible }) => (visible ? 'grayscale(15%)' : '')};
+  filter: ${({ visible }) => (visible ? 'grayscale(15%) blur(0px)' : '')};
   /* &:hover {
     filter: grayscale(1%);
   } */
