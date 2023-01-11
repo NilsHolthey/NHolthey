@@ -20,6 +20,7 @@ export const Container = styled.article`
     width: 90vw;
     padding-top: 3rem;
     padding-bottom: 5rem;
+    min-height: 80vh;
     height: fit-content;
     flex-direction: column;
   }

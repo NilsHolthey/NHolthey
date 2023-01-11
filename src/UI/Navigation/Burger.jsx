@@ -38,7 +38,7 @@ const StyledBurger = styled.div`
     }
   }
   @media (orientation: portrait) {
-    right: 10px;
+    right: 3vw;
   }
 `;
 
