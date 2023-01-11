@@ -6,7 +6,7 @@ export const Container = styled.article`
   display: flex;
   align-items: center;
   border-radius: 8px;
-  background: rgba(25, 29, 36, 0.965);
+  background: rgba(25, 29, 36);
   position: relative;
 
   @media (max-width: 765px) {

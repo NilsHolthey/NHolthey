@@ -17,7 +17,7 @@ export const AboutBox = styled.article`
   border-radius: 0 8px 8px 0;
   /* background-color: #1c2028;
   box-shadow: -5px -5px 0px 0px #272c39; */
-  background: rgba(25, 29, 36, 0.965);
+  background: rgba(25, 29, 36);
   /* box-shadow: -15px 15px 20px #15181e, 15px -15px 52px #232832;
   transition: width 1000ms ease-in-out, bottom 1000ms ease-in-out,
     right 1000ms ease-in-out; */
@@ -31,7 +31,7 @@ export const AboutBox = styled.article`
     background: rgba(25, 29, 36, 0);
   }
   @media (orientation: portrait) {
-    font-size: 1.1rem;
+    font-size: 2vh;
     position: relative;
     border-radius: 0;
     width: 100%;

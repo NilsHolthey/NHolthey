@@ -7,6 +7,7 @@ export const LinkList = styled.ul`
   padding: 0;
   gap: 0.5rem;
   scale: 0.8;
+
   li {
     transition: scale 500ms ease-in-out;
   }
@@ -68,6 +69,16 @@ export const LinkList = styled.ul`
     list-style: none;
     padding: 0;
     gap: 1.5rem;
+    z-index: 100000000;
+  }
+  @media (orientation: portrait) {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    list-style: none;
+    padding: 0;
+    gap: 9.5vw;
     z-index: 100000000;
   }
 `;

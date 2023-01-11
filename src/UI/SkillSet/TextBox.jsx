@@ -9,7 +9,7 @@ export const TextBox = styled.section`
   border-radius: 12px;
   justify-content: center;
   align-items: center;
-  background: rgb(39, 44, 57);
+  background: rgba(25, 29, 36, 0.965);
   background: radial-gradient(circle, #e261bd70 0%, rgba(39, 44, 57, 0) 63%);
   position: relative;
   @media (max-width: 765px) {

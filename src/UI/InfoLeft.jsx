@@ -19,14 +19,19 @@ export const InfoLeft = styled.div`
     height: 3.5rem;
     bottom: 0;
   }
-  @media (min-width: 769px) {
-    scale: 0.7;
-    bottom: -15%;
-    left: 0.5rem;
-  }
+
   @media (min-width: 900px) {
     scale: 1;
     bottom: 0;
     left: 1rem;
+  }
+  @media (orientation: portrait) {
+    width: 100%;
+    left: 0;
+    background-color: #1c2028;
+    opacity: 0.8;
+    height: 4.5rem;
+    bottom: 0;
+    padding-bottom: 2rem;
   }
 `;
