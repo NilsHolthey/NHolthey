@@ -23,15 +23,16 @@ const Ul = styled.ul`
     font-weight: 700;
 
     a {
+      text-decoration: none;
+      font-size: 2.2vh;
+      color: #f8f8f8;
+      &:visited {
+        color: #f8f8f8;
+      }
       &:hover {
         color: #6667ab;
 
         transition: color ease-in 0.3s;
-      }
-      text-decoration: none;
-
-      color: #f8f8f8;
-      &:visited {
       }
     }
   }
@@ -42,11 +43,30 @@ const Ul = styled.ul`
     margin-left: 0;
     padding-left: 0;
     li {
-      padding: unset;
-      font-size: 1.6rem;
-      font-weight: 700;
+      a {
+        padding: unset;
+        font-size: 3vh;
+        font-weight: 700;
 
-      padding-top: 1rem;
+        padding-top: 1rem;
+      }
+    }
+  }
+  @media (orientation: portrait) {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 10rem 0;
+    margin-left: 0;
+
+    li {
+      a {
+        padding: unset;
+        font-size: 3vh;
+        font-weight: 700;
+
+        padding-top: 1rem;
+      }
     }
   }
 `;

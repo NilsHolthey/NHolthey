@@ -30,6 +30,8 @@ import { ArrowDown } from '../UI/ArrowDown';
 import { FigmaPng } from '../UI/SkillSet/PNG/Figma';
 import { GitHubPng } from '../UI/SkillSet/PNG/GitHub';
 import { GitPng } from '../UI/SkillSet/PNG/Git';
+import { ImmerJsPng } from '../UI/SkillSet/PNG/ImmerJs';
+import { RestPng } from '../UI/SkillSet/PNG/Rest';
 
 const item = {
   hidden: { opacity: 0, y: 90 },
@@ -128,6 +130,10 @@ export default function Skillset() {
   const handleShowGitHub = () => setShowGitHub(!showGithub);
   const [showGit, setShowGit] = useState(false);
   const handleShowGit = () => setShowGit(!showGit);
+  const [showImmer, setShowImmer] = useState(false);
+  const handleImmer = () => setShowImmer(!showImmer);
+  const [showRest, setShowRest] = useState(false);
+  const handleRest = () => setShowRest(!showRest);
 
   return (
     <Wrapper id="skillset">
@@ -180,7 +186,7 @@ export default function Skillset() {
               <span>HTML&nbsp;|&nbsp;</span>
             ) : (
               <BinarySpan id="html">
-                01001000 0101010 01001101 01001100 &nbsp;
+                01001000 0101010 01001101 01001100&nbsp;
               </BinarySpan>
             )}
             {showCss ? (
@@ -197,7 +203,7 @@ export default function Skillset() {
               </BinarySpan>
             )}
             {showReact ? (
-              <span>React&nbsp;|&nbsp;</span>
+              <span>React &nbsp;|&nbsp;</span>
             ) : (
               <BinarySpan>
                 01010010 01100101 01100001 01100011 01110100&nbsp;
@@ -266,8 +272,19 @@ export default function Skillset() {
                 01000101 01010011 01001100 01101001 01101110 01110100&nbsp;
               </BinarySpan>
             )}
-            <span>Rest</span>&nbsp;|&nbsp;
-            <span>npm</span>.
+            {showImmer ? (
+              <span>immerJs&nbsp;|&nbsp;</span>
+            ) : (
+              <BinarySpan>
+                01101001 01101101 01101101 01100101 01110010 01001010
+                01110011&nbsp;
+              </BinarySpan>
+            )}
+            {showRest ? (
+              <span>Rest</span>
+            ) : (
+              <BinarySpan>01010010 01100101 01110011 01110100&nbsp;</BinarySpan>
+            )}
           </Text>
           <BreakLine2 />
         </TextBox>
@@ -560,11 +577,45 @@ export default function Skillset() {
               </a>
             )}
           </motion.div>
-          <motion.div id="item-13" variants={grid}>
-            &nbsp;
+          <motion.div
+            id="item-13"
+            variants={grid}
+            onClick={handleImmer}
+            style={{
+              boxShadow: showImmer
+                ? 'inset -6px -6px 10px rgba(12, 12, 12, 0.557), inset 6px 6px 10px rgba(92, 92, 92, 0.2)'
+                : '',
+            }}
+          >
+            {showImmer ? (
+              <span>
+                <ImmerJsPng src="ImmerJsLogo.png" style={{ scale: '0.9' }} />
+              </span>
+            ) : (
+              <a href="#skillset">
+                <ImmerJsPng src="ImmerJsLogo.png" />
+              </a>
+            )}
           </motion.div>
-          <motion.div id="item-14" variants={grid}>
-            &nbsp;
+          <motion.div
+            id="item-14"
+            variants={grid}
+            onClick={handleRest}
+            style={{
+              boxShadow: showRest
+                ? 'inset -6px -6px 10px rgba(12, 12, 12, 0.557), inset 6px 6px 10px rgba(92, 92, 92, 0.2)'
+                : '',
+            }}
+          >
+            {showRest ? (
+              <span>
+                <RestPng src="restLogo.png" style={{ scale: '0.9' }} />
+              </span>
+            ) : (
+              <a href="#skillset">
+                <RestPng src="restLogo.png" />
+              </a>
+            )}
           </motion.div>
         </ImageGrid>
         <BreakLine />

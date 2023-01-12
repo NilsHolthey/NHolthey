@@ -10,10 +10,11 @@ const StyledBurger = styled.div`
   right: 20px;
   z-index: 20;
   display: none;
-
+  cursor: pointer;
   justify-content: space-around;
   align-items: flex-end;
   flex-flow: column nowrap;
+  backdrop-filter: blur(2px);
   @media (orientation: portrait) {
     top: 1.5rem;
   }

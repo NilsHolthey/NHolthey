@@ -26,6 +26,21 @@ export const Headline = styled.h3`
   letter-spacing: 1px;
   span {
   }
+  @media (orientation: portrait) {
+    top: 0;
+    width: fit-content;
+    position: relative;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
   @media (max-width: 660px) {
     top: 0;
     width: fit-content;
