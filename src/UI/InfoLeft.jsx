@@ -5,7 +5,7 @@ export const InfoLeft = styled.div`
   cursor: pointer;
   z-index: 1000;
   align-items: center;
-
+  justify-content: center;
   left: 1rem;
   bottom: 0;
   display: flex;
@@ -32,6 +32,5 @@ export const InfoLeft = styled.div`
     opacity: 0.8;
     height: 4.5rem;
     bottom: 0;
-    padding-bottom: 2rem;
   }
 `;
