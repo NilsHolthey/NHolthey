@@ -23,5 +23,15 @@ export const Container = styled.section`
   @media (orientation: portrait) {
     height: fit-content;
     flex-direction: column-reverse;
+    width: 90vw;
+    min-height: 80vh;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 765px) and (orientation: landscape) {
+    width: 90vw;
   }
 `;

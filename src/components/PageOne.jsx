@@ -1,6 +1,6 @@
 import { ImageContainer } from '../UI/ImageContainer';
 import { ProfileContainer } from '../UI/ProfileContainer';
-
+// import { motion } from 'framer-motion';
 import { ProfileWrapper } from '../UI/Profilewrapper';
 import { TextContainer } from '../UI/TextContainer';
 import Navbar from './Navbar';
@@ -12,9 +12,36 @@ import ProfileImg from './ProfileImg';
 import ShadowBox from './ShadowBox';
 
 import DevImage from './DevImage';
+import { ArrowDown } from '../UI/ArrowDown';
+import SpinnerSvg from './images/SpinnerSvg';
+import { useState } from 'react';
+
+// const icon = {
+//   hidden: { opacity: 0, y: 30 },
+//   show: {
+//     opacity: 1,
+//     y: 0,
+
+//     transition: {
+//       type: 'spring',
+//       duration: 2.3,
+//       delay: 1.2,
+//     },
+//   },
+// };
 
 export default function MainBg() {
-  const changeColor = () => {
+  const [isActive, setIsActive] = useState(false);
+
+  const handleclick = () => {
+    setIsActive(true);
+    setTimeout(function () {
+      location.href = '#about';
+      setTimeout(() => setIsActive(false), 1000);
+    }, 750);
+  };
+
+  const changeOpacity = () => {
     if (window.scrollY > 50) {
       changeToHidden();
     } else {
@@ -24,11 +51,11 @@ export default function MainBg() {
 
   useEffect(() => {
     window.addEventListener('scroll', function () {
-      changeColor();
+      changeOpacity();
     });
 
     return () => {
-      window.removeEventListener('scroll', changeColor);
+      window.removeEventListener('scroll', changeOpacity);
     };
   }, []);
 
@@ -49,21 +76,16 @@ export default function MainBg() {
       <ShadowBox />
       <Navbar />
       <DevImage />
-      {/* <Imagebox>
-        <DevImg
-          style={{ transform: `translateY(${offsetY * 1.25}px)` }}
-          id="devImg"
-          src="DEVELOPER.png"
-          as={motion.img}
-          initial={{ opacity: 0.1, scale: 0.6 }}
-          animate={{ opacity: 0.04, scale: 1 }}
-          transition={{
-            type: 'spring',
-            bounce: 0.2,
-            duration: 2,
-          }}
-        />
-      </Imagebox> */}
+      <ArrowDown
+        onClick={handleclick}
+        bottom="10%"
+        right="50%"
+        BorderColor="none"
+        OutlineColor="#none"
+        Background="transparent"
+      >
+        <SpinnerSvg isActive={isActive} />
+      </ArrowDown>
       <ProfileContainer>
         <TextContainer>
           <TexBoxHook />

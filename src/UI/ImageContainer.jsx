@@ -8,4 +8,9 @@ export const ImageContainer = styled.div`
     width: 100vw;
     overflow: hidden;
   }
+  @media (orientation: portrait) {
+    width: 100vw;
+    overflow: hidden;
+    justify-content: center;
+  }
 `;

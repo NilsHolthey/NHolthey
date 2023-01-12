@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  width: 100vw;
+  width: 100dvw;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -17,6 +17,8 @@ export const Wrapper = styled.div`
     height: 200vh;
   }
   @media (orientation: portrait) {
-    height: 150vh;
+    height: fit-content;
+    padding-top: 10vh;
+    padding-bottom: 15vh;
   }
 `;

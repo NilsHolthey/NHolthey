@@ -5,6 +5,8 @@ const GlobalStyle = createGlobalStyle`
 	*::before,
 	*::after {
 		box-sizing: border-box;
+		
+		
 	}
 	:root {
 		--primary-color:  #dcdcdc;
@@ -22,9 +24,10 @@ const GlobalStyle = createGlobalStyle`
 	}
 	html{
 		scroll-behavior: smooth;
+		
 	}
 	body  {
-		overflow-x:hidden;
+		
 		background: #dcdcdc;
 		scroll-behavior: smooth;
 		

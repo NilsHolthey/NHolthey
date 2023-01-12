@@ -18,9 +18,14 @@ export const ImageGrid = styled.section`
     height: 50%;
     width: 100%;
   }
+
   div {
+    &:hover {
+      scale: 1.05;
+    }
     cursor: pointer;
     z-index: 3;
+    transition: box-shadow 500ms ease, scale 300ms ease;
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -35,14 +40,15 @@ export const ImageGrid = styled.section`
       width: 92%;
       height: 92%;
       border-radius: 8px;
-      background: rgba(22, 26, 32, 0);
-      box-shadow: inset 5px 5px 10px #20252e, inset -5px -5px 10px #2c333e;
+      background: rgba(25, 29, 36, 0.119);
+      box-shadow: inset 5px 5px 10px #20252e, inset -5px -5px 10px #2d333c;
     }
     a {
       display: flex;
       justify-content: center;
       align-items: center;
     }
+
     /* &:hover {
       box-shadow: inset -6px -6px 10px rgba(12, 12, 12, 0.557),
         inset 6px 6px 10px rgba(92, 92, 92, 0.2);

@@ -6,7 +6,7 @@ export const Container = styled.section`
   align-items: center;
   width: 70vw;
   height: 70vh;
-  background: rgba(25, 29, 36, 0.965);
+  background: rgba(25, 29, 36);
   border-radius: 8px;
   height: 80vh;
   /* background: #272c39;
@@ -26,15 +26,20 @@ export const Container = styled.section`
   }
   @media (orientation: portrait) {
     width: 90vw;
-    height: 140vh;
+    min-height: 100vh;
+    /* height: fit-content; */
     flex-direction: column;
     justify-content: center;
     padding-bottom: 3%;
   }
   @media (max-width: 765px) and (orientation: landscape) {
     width: 90vw;
-    height: 220vh;
+    height: fit-content;
     flex-direction: column;
     justify-content: center;
+  }
+  @media (max-width: 965px) and (orientation: landscape) {
+    height: fit-content;
+    padding: 2rem;
   }
 `;

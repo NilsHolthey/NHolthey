@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ProfileContainer = styled.div`
-  width: 100vw;
+  width: 100dvw;
   height: 100vh;
   display: flex;
   justify-content: flex-end;

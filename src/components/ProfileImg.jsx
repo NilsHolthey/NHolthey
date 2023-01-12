@@ -10,11 +10,11 @@ export default function ProfileImg() {
       src="ProfilImage.png"
       alt="profile"
       initial={{ opacity: 0, y: 55 }}
-      animate={{ opacity: 0.75, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{
         type: 'spring',
         bounce: 0.2,
-        duration: 2.8,
+        duration: 2.3,
         delay: 0.5,
       }}
     />

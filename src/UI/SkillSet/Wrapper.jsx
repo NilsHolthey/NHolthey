@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.section`
-  width: 100vw;
+  width: 100dvw;
   height: 100vh;
   position: relative;
   display: flex;
@@ -14,7 +14,9 @@ export const Wrapper = styled.section`
   }
   @media (orientation: portrait) {
     width: 100vw;
-    height: 160vh;
+    height: fit-content;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
   }
   @media (max-width: 765px) and (orientation: landscape) {
     width: 100vw;

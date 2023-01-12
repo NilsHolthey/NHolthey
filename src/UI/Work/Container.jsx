@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.section`
   width: 70vw;
   height: 80vh;
-  background: rgba(25, 29, 36, 0.965);
+  background: rgba(25, 29, 36);
   border-radius: 8px;
   display: flex;
 

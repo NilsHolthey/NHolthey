@@ -4,6 +4,6 @@ export const ProfileWrapper = styled.div`
   height: 100vh;
   position: relative;
 
-  width: 100vw;
+  width: 100dvw;
   overflow: hidden;
 `;

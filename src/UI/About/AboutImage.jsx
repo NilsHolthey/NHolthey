@@ -7,9 +7,10 @@ export const AboutImage = styled.img`
   height: auto;
   width: 70%;
   z-index: 2;
-  &:hover {
+  filter: ${({ visible }) => (visible ? 'grayscale(15%) ' : '')};
+  /* &:hover {
     filter: grayscale(1%);
-  }
+  } */
 
   /* @media (max-width: 768px) {
     max-height: 20%;

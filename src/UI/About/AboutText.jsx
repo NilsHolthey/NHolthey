@@ -12,7 +12,5 @@ export const AboutText = styled.p`
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0.5;
-  &:hover {
-    filter: grayscale(40%);
-  }
+  transition: color 500ms ease;
 `;

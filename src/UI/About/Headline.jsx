@@ -21,12 +21,54 @@ export const Headline = styled.h3`
   -o-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
 
-  z-index: 100000;
+  z-index: 100;
   font-family: 'Fjalla One', sans-serif;
   letter-spacing: 1px;
   span {
   }
+  @media (orientation: portrait) {
+    top: 0;
+    width: fit-content;
+    position: relative;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
   @media (max-width: 660px) {
     top: 0;
+    width: fit-content;
+    position: relative;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+  @media (max-width: 765px) and (orientation: landscape) {
+    top: 0;
+    width: fit-content;
+    position: relative;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
   }
 `;

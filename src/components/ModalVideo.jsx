@@ -11,7 +11,7 @@ const item2 = {
     y: 0,
     transition: {
       type: 'spring',
-      duration: 1.8,
+      duration: 2.8,
     },
   },
 };

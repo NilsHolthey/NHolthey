@@ -15,6 +15,7 @@ export const SubmitButton = styled.button`
   color: #f7f7f7;
   background: transparent;
   cursor: pointer;
+  font-size: 18px;
   box-shadow: 7px 7px 20px 2px rgba(0, 0, 0, 0.2),
     -7px -7px 20px 2px rgba(102, 103, 171, 0.4),
     -1px -1px 4px 2px rgba(102, 103, 171, 0.4);

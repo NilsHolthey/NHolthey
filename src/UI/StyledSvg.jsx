@@ -17,4 +17,7 @@ export const StyledSvg = styled.svg`
   @media (min-width: 900px) {
     scale: 1;
   }
+  @media (orientation: landscape) {
+    fill: transparent;
+  }
 `;

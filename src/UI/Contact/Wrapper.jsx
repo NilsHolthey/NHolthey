@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.section`
-  width: 100vw;
+  width: 100dvw;
   height: 100vh;
   position: relative;
   display: flex;
