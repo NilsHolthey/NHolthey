@@ -8,7 +8,7 @@ export const ImageGrid = styled.section`
 
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: repeat(3, 1fr);
-
+  position: relative;
   gap: 15px 10px;
   @media (max-width: 765px) {
     height: 50%;
@@ -17,6 +17,8 @@ export const ImageGrid = styled.section`
   @media (orientation: portrait) {
     height: 50%;
     width: 100%;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(5, 1fr);
   }
 
   div {
@@ -24,6 +26,9 @@ export const ImageGrid = styled.section`
       scale: 1.05;
     }
     cursor: pointer;
+    min-width: 50px;
+    min-height: 50px;
+
     z-index: 3;
     transition: box-shadow 500ms ease, scale 300ms ease;
     border-radius: 8px;

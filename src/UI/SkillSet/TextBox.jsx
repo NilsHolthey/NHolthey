@@ -18,7 +18,8 @@ export const TextBox = styled.section`
   }
   @media (orientation: portrait) {
     width: 100%;
-    height: 50%;
+    min-height: 50%;
+    padding: 2rem 0 0 0;
   }
 
   @media (max-width: 765px) and (orientation: landscape) {

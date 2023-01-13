@@ -286,7 +286,6 @@ export default function Skillset() {
               <BinarySpan>01010010 01100101 01110011 01110100&nbsp;</BinarySpan>
             )}
           </Text>
-          <BreakLine2 />
         </TextBox>
         <ImageGrid
           as={motion.section}
@@ -295,6 +294,7 @@ export default function Skillset() {
           initial="hidden"
           whileInView="show"
         >
+          <BreakLine2 />
           <motion.div
             id="item-0"
             variants={grid}
