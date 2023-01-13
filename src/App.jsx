@@ -10,7 +10,7 @@ function App() {
     setTimeout(() => {
       setIsLoading(false);
     }, 3500);
-  });
+  }, []);
   return <>{isLoading == true ? <LoadingPage /> : <MainPage />}</>;
 }
 
