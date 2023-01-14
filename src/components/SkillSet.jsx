@@ -186,47 +186,46 @@ export default function Skillset() {
               <span>HTML&nbsp;|&nbsp;</span>
             ) : (
               <BinarySpan id="html">
-                01001000 0101010 01001101 01001100&nbsp;
+                01001000 0101010 01001101 01001100
               </BinarySpan>
             )}
             {showCss ? (
               <span id="css">CSS &nbsp;|&nbsp;</span>
             ) : (
-              <BinarySpan>01000011 01010011 01010011&nbsp;</BinarySpan>
+              <BinarySpan>01000011 01010011 01010011</BinarySpan>
             )}
             {showJs ? (
               <span> JavaScript &nbsp;|&nbsp;</span>
             ) : (
               <BinarySpan>
                 01001010 01100001 01110110 01100001 01010011 01100011 01110010
-                01101001 01110000 01110100&nbsp;
+                01101001 01110000 01110100
               </BinarySpan>
             )}
             {showReact ? (
               <span>React &nbsp;|&nbsp;</span>
             ) : (
               <BinarySpan>
-                01010010 01100101 01100001 01100011 01110100&nbsp;
+                01010010 01100101 01100001 01100011 01110100
               </BinarySpan>
             )}
             {showNode ? (
               <span>NodeJs&nbsp;|&nbsp;</span>
             ) : (
               <BinarySpan>
-                01001110 01101111 01100100 01100101 01001010 01110011&nbsp;
+                01001110 01101111 01100100 01100101 01001010 01110011
               </BinarySpan>
             )}
             {showNext ? (
               <span>NEXT&nbsp;|&nbsp;</span>
             ) : (
-              <BinarySpan>01001110 01000101 01011000 01010100&nbsp;</BinarySpan>
+              <BinarySpan>01001110 01000101 01011000 01010100</BinarySpan>
             )}
             {showZustand ? (
               <span>Zustand&nbsp;|&nbsp;</span>
             ) : (
               <BinarySpan>
-                01011010 01110101 01110011 01110100 01100001 01101110
-                01100100&nbsp;
+                01011010 01110101 01110011 01110100 01100001 01101110 01100100
               </BinarySpan>
             )}
             {showSytledC ? (
@@ -235,55 +234,53 @@ export default function Skillset() {
               <BinarySpan>
                 01110011 01110100 01111001 01101100 01100101 01100100 00101101
                 01100011 01101111 01101101 01110000 01101111 01101110 01100101
-                01101110 01110100 01110011&nbsp;
+                01101110 01110100 01110011
               </BinarySpan>
             )}
             {showMongoDB ? (
               <span>MongoDB&nbsp;|&nbsp;</span>
             ) : (
               <BinarySpan>
-                01001101 01101111 01101110 01100111 01101111 01000100
-                01000010&nbsp;
+                01001101 01101111 01101110 01100111 01101111 01000100 01000010
               </BinarySpan>
             )}
             {showGit ? (
               <span>Git&nbsp;|&nbsp;</span>
             ) : (
-              <BinarySpan>01000111 01101001 01110100&nbsp;</BinarySpan>
+              <BinarySpan>01000111 01101001 01110100</BinarySpan>
             )}
             {showGithub ? (
               <span>GitHub&nbsp;|&nbsp;</span>
             ) : (
               <BinarySpan>
-                01000111 01101001 01110100 01001000 01110101 01100010&nbsp;
+                01000111 01101001 01110100 01001000 01110101 01100010
               </BinarySpan>
             )}
             {showFigma ? (
               <span>Figma&nbsp;|&nbsp;</span>
             ) : (
               <BinarySpan>
-                01000110 01101001 01100111 01101101 01100001&nbsp;
+                01000110 01101001 01100111 01101101 01100001
               </BinarySpan>
             )}
             {showESLint ? (
               <span>ESLint&nbsp;|&nbsp;</span>
             ) : (
               <BinarySpan>
-                01000101 01010011 01001100 01101001 01101110 01110100&nbsp;
+                01000101 01010011 01001100 01101001 01101110 01110100
               </BinarySpan>
             )}
             {showImmer ? (
               <span>immerJs&nbsp;|&nbsp;</span>
             ) : (
               <BinarySpan>
-                01101001 01101101 01101101 01100101 01110010 01001010
-                01110011&nbsp;
+                01101001 01101101 01101101 01100101 01110010 01001010 01110011
               </BinarySpan>
             )}
             {showRest ? (
               <span>Rest</span>
             ) : (
-              <BinarySpan>01010010 01100101 01110011 01110100&nbsp;</BinarySpan>
+              <BinarySpan>01010010 01100101 01110011 01110100</BinarySpan>
             )}
           </Text>
         </TextBox>
