@@ -13,4 +13,7 @@ export const AboutText = styled.p`
   color: transparent;
   opacity: 0.5;
   transition: color 500ms ease;
+  p {
+    margin-block-end: 0.5em;
+  }
 `;
