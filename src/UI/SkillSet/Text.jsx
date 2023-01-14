@@ -22,7 +22,7 @@ export const Text = styled.p`
       from {
         opacity: 0;
         color: #6667ab;
-        scale: 1.1;
+        scale: 0.9;
       }
       to {
         color: #d1d1d1;
