@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
 	}
 	body  {
 		
-		background: #dcdcdc;
+		background: #dcdcdc6d;
 		scroll-behavior: smooth;
 		
 		a {

@@ -58,6 +58,12 @@ const icon = {
 };
 
 export default function About() {
+  var dob = new Date('09/23/1984');
+  var month_diff = Date.now() - dob.getTime();
+  var age_dt = new Date(month_diff);
+  var year = age_dt.getUTCFullYear();
+  const age = Math.abs(year - 1970);
+
   const { ref, inView: visible } = useInView({
     threshold: 0.8,
     triggerOnce: false,
@@ -127,6 +133,11 @@ export default function About() {
 
         <AboutImageBox>
           <AboutImage
+            as={motion.img}
+            viewport={{ once: true }}
+            variants={icon}
+            initial="hidden"
+            whileInView="show"
             ref={ref}
             id="profileImage"
             visible={visible}
@@ -148,11 +159,11 @@ export default function About() {
               rgba(25, 29, 36, ${offsetY * 0.0015}) ${offsetY * 0.125}%)`,
             }}
           >
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga quia
-            totam veritatis itaque debitis dolores qui, accusantium quibusdam
-            amet officia explicabo et expedita sit velit veniam rem
-            necessitatibus temporibus eos! Lorem, ipsum dolor sit amet
-            consectetur adipisicing elit. Fuga quia totam veritatis itaque
+            Lorem, ipsum dolor {age} years old sit amet consectetur adipisicing
+            elit. Fuga quia totam veritatis itaque debitis dolores qui,
+            accusantium quibusdam amet officia explicabo et expedita sit velit
+            veniam rem necessitatibus temporibus eos! Lorem, ipsum dolor sit
+            amet consectetur adipisicing elit. Fuga quia totam veritatis itaque
             debitis dolores qui, accusantium quibusdam amet officia explicabo et
             expedita sit velit veniam rem necessitatibus temporibus eos!
             consectetur adipisicing elit.
