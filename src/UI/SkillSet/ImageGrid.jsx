@@ -15,9 +15,9 @@ export const ImageGrid = styled.section`
     width: 100%;
   }
   @media (orientation: portrait) {
-    height: 50%;
+    max-height: 50%;
     width: 100%;
-    grid-template-rows: auto;
+    grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(5, 1fr);
   }
 
