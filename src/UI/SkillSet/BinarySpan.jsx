@@ -13,4 +13,7 @@ export const BinarySpan = styled.span`
   @media (orientation: portrait) {
     font-size: 1.5vh;
   }
+  @media (max-width: 765px) and (orientation: landscape) {
+    font-size: 3vh;
+  }
 `;

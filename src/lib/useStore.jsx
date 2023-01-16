@@ -22,16 +22,10 @@ const useBearStore = create(
     skills: [
       {
         id: '001',
-        category: 'Flohmarkt',
-        name: 'Faust',
-        address: 'Zur Bettfedernfabrik 3, 30451 Hannover',
-        information:
-          'Mein liebster Stadtteil-Flohmarkt mit einer tollen Atmosphäre!',
-        visited: 'Ich war schon da',
-        rating: 'Mag ich!',
-        edit: false,
-        bookmark: true,
-        position: [52.3760437, 9.7104938],
+        name: 'Css',
+        binary: '',
+        clicked: false,
+        imageUrl: 'CSS_3.png',
       },
       {
         id: '002',
