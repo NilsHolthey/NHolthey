@@ -19,17 +19,18 @@ export const Container = styled.section`
   ); */
   @media (max-width: 765px) {
     width: 90vw;
-    height: 160vh;
+    min-height: 80vh;
+    height: fit-content;
     flex-direction: column;
     justify-content: center;
     padding-bottom: 3%;
   }
   @media (orientation: portrait) {
     width: 90vw;
-    min-height: 100vh;
+    min-height: 80vh;
     /* height: fit-content; */
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     padding-bottom: 3%;
   }
   @media (max-width: 765px) and (orientation: landscape) {

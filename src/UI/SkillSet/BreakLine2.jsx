@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const BreakLine2 = styled.div`
+export const BreakLine2 = styled.span`
   position: absolute;
   transform: translate(-50%, -50%);
   height: 2px;
   width: 85%;
   display: ${({ display = 'none' }) => display};
-  bottom: 0%;
+  top: 0%;
   left: 50%;
   /* box-shadow: -0.5px -0.5px 2px 2px #ffffff55; */
   background-color: #999999;

@@ -21,8 +21,11 @@ export const Text = styled.p`
     @keyframes opacity {
       from {
         opacity: 0;
+        color: #6667ab;
+        scale: 0.9;
       }
       to {
+        color: #d1d1d1;
         opacity: 1;
       }
     }
@@ -33,5 +36,7 @@ export const Text = styled.p`
 
   @media (orientation: portrait) {
     width: 95%;
+    height: fit-content;
+    padding: 2rem 0 2rem 0;
   }
 `;

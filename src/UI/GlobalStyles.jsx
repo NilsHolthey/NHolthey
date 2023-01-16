@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
 	*::before,
 	*::after {
 		box-sizing: border-box;
+		/* outline:1px solid green ; */
 		
 		
 	}
@@ -23,12 +24,14 @@ const GlobalStyle = createGlobalStyle`
 		
 	}
 	html{
+
 		scroll-behavior: smooth;
 		
 	}
 	body  {
+		overflow-x:hidden;
 		
-		background: #dcdcdc;
+		background: #dcdcdc6d;
 		scroll-behavior: smooth;
 		
 		a {
