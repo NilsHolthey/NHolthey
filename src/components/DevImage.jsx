@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+
 import { DeveloperImg } from '../UI/DeveloperImg';
 
 import { DevImg } from '../UI/DevImg';
@@ -8,7 +9,7 @@ export default function DevImage() {
   return (
     <Imagebox>
       <DeveloperImg
-        id="devImg"
+        id="developerImg"
         src="DEVELOPER.png"
         as={motion.img}
         initial={{ opacity: 0.1, scale: 0.6 }}
