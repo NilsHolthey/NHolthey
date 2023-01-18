@@ -1,99 +1,129 @@
-import { persist } from 'zustand/middleware';
+import create from 'zustand';
 
-import { create } from 'zustand';
+const useBearStore = create(set => ({
+  clickTrue: id => {
+    set(state => ({
+      skills: state.skills.map(skill =>
+        skill.id === id ? { ...skill, isClicked: true } : skill
+      ),
+    }));
+  },
+  clickFalse: id => {
+    set(state => ({
+      skills: state.skills.map(skill =>
+        skill.id === id ? { ...skill, isClicked: false } : skill
+      ),
+    }));
+  },
 
-const useBearStore = create(
-  persist(set => ({
-    clickTrue: id => {
-      set(state => ({
-        skills: state.skills.map(skill =>
-          skill.id === id ? { ...skill, bookmark: true } : skill
-        ),
-      }));
+  skills: [
+    {
+      id: '001',
+      name: 'HTML',
+      binary: '01001000 0101010 01001101 01001100 ',
+      isClicked: true,
+      imageUrl: 'html5-logo-31813.png',
     },
-    clickFalse: id => {
-      set(state => ({
-        entrskillsies: state.skills.map(skill =>
-          skill.id === id ? { ...skill, bookmark: false } : skill
-        ),
-      }));
+    {
+      id: '002',
+      name: ' NodeJ ',
+      binary: '01001110 01101111 01100100 01100101 01001010 01110011 ',
+      isClicked: true,
+      imageUrl: 'nodejs-icon-890222153.png',
     },
-
-    skills: [
-      {
-        id: '001',
-        name: 'Css',
-        binary: '',
-        clicked: false,
-        imageUrl: 'CSS_3.png',
-      },
-      {
-        id: '002',
-        category: 'Laden',
-        name: 'Humana',
-        address: 'Friedrichstraße 148, 10117 Berlin',
-        information:
-          'Humana ist meistens super. Hier muss ich unbedingt noch hin!',
-        visited: 'Ich war noch nicht da',
-        rating: '',
-        edit: false,
-        bookmark: false,
-        position: [52.5195079, 13.3881322],
-      },
-      {
-        id: '003',
-        category: 'Laden',
-        name: 'Frau Schröder',
-        address: 'Kötnerholzweg 33A, 30451 Hannover',
-        information:
-          'Tolle Beratung durch die nette Inhaberin, viele schöne Vintage-Teile zu moderaten Preisen.',
-        visited: 'Ich war schon da',
-        rating: 'Mag ich!',
-        edit: false,
-        bookmark: true,
-        position: [52.3732052, 9.7051511],
-      },
-      {
-        id: '004',
-        category: 'Laden',
-        name: 'Pick & Weight',
-        address: 'Ehrenstraße 60-64, 50672 Köln',
-        information:
-          'Schon öfter von gehört, muss ich mir mal anschauen beim nächsten Besuch in Köln.',
-        visited: 'Ich war noch nicht da',
-        rating: '',
-        edit: false,
-        bookmark: false,
-        position: [50.9384025, 6.9422052],
-      },
-      {
-        id: '005',
-        category: 'Flohmarkt',
-        name: 'Altstadt',
-        address: 'Am Hohen Ufer 3, 30159 Hannover',
-        information:
-          'Der bekannteste Flohmarkt Hannovers, von der Auswahl her aber leider nicht mein Fall.',
-        visited: 'Ich war schon da',
-        rating: 'Nicht mein Fall!',
-        edit: false,
-        bookmark: false,
-        position: [52.372612, 9.7308621],
-      },
-      {
-        id: '6',
-        category: 'Flohmarkt',
-        name: 'Flohschanze',
-        address: 'Neuer Kamp 30, 20357 Hamburg',
-        information:
-          'Ein schöner Flohmarkt mitten im Kiez. Immer wieder einen Besuch wert!',
-        visited: 'Ich war schon da',
-        rating: 'Mag ich!',
-        edit: false,
-        bookmark: true,
-        position: [53.5581388, 9.9679333],
-      },
-    ],
-  }))
-);
+    {
+      id: '003',
+      name: 'JavaScript',
+      binary:
+        '01001010 01100001 01110110 01100001 01010011 01100011 01110010 01101001 01110000 01110100 ',
+      isClicked: true,
+      imageUrl: 'javascript-39415.png',
+    },
+    {
+      id: '004',
+      name: 'MongoDB',
+      binary: '01001101 01101111 01101110 01100111 01101111 01000100 01000010 ',
+      isClicked: true,
+      imageUrl: 'MondoDBLogo.png',
+    },
+    {
+      id: '005',
+      name: 'HTML',
+      binary: '01010010 01100101 01100001 01100011 01110100 ',
+      isClicked: false,
+      imageUrl: 'reactLogo.png',
+    },
+    {
+      id: '006',
+      name: 'HTML&nbsp;|&nbsp;',
+      binary: '01010010 01100101 01100001 01100011 01110100 ',
+      isClicked: true,
+      imageUrl: 'CSS_3.png',
+    },
+    {
+      id: '007',
+      name: 'HTML&nbsp;|&nbsp;',
+      binary: '01010010 01100101 01100001 01100011 01110100 ',
+      isClicked: true,
+      imageUrl: 'CSS_3.png',
+    },
+    {
+      id: '008',
+      name: 'HTML&nbsp;|&nbsp;',
+      binary: '01010010 01100101 01100001 01100011 01110100 ',
+      isClicked: false,
+      imageUrl: 'reactLogo.png',
+    },
+    {
+      id: '009',
+      name: 'HTML&nbsp;|&nbsp;',
+      binary: '01010010 01100101 01100001 01100011 01110100 ',
+      isClicked: true,
+      imageUrl: 'reactLogo.png',
+    },
+    {
+      id: '010',
+      name: 'HTML&nbsp;|&nbsp;',
+      binary: '01010010 01100101 01100001 01100011 01110100 ',
+      isClicked: true,
+      imageUrl: 'reactLogo.png',
+    },
+    {
+      id: '011',
+      name: 'HTML&nbsp;|&nbsp;',
+      binary: '01010010 01100101 01100001 01100011 01110100 ',
+      isClicked: false,
+      imageUrl: 'reactLogo.png',
+    },
+    {
+      id: '012',
+      name: 'HTML&nbsp;|&nbsp;',
+      binary: '01010010 01100101 01100001 01100011 01110100 ',
+      isClicked: true,
+      imageUrl: 'CSS_3.png',
+    },
+    {
+      id: '013',
+      name: 'HTML&nbsp;|&nbsp;',
+      binary: '01010010 01100101 01100001 01100011 01110100 ',
+      isClicked: true,
+      imageUrl: 'reactLogo.png',
+    },
+    {
+      id: '014',
+      name: 'HTML&nbsp;|&nbsp;',
+      binary: '01010010 01100101 01100001 01100011 01110100 ',
+      isClicked: false,
+      imageUrl: 'reactLogo.png',
+    },
+    {
+      id: '015',
+      name: 'HTML&nbsp;|&nbsp;',
+      binary: '01010010 01100101 01100001 01100011 01110100 ',
+      isClicked: true,
+      imageUrl: 'CSS_3.png',
+    },
+  ],
+}));
 
 export default useBearStore;

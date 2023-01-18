@@ -4,34 +4,36 @@ import { useState } from 'react';
 // import { useEffect, useState } from 'react';
 import { Headline } from '../UI/About/Headline';
 
-import { BinarySpan } from '../UI/SkillSet/BinarySpan';
+// import { BinarySpan } from '../UI/SkillSet/BinarySpan';
 import { BreakLine } from '../UI/SkillSet/BreakLine';
-import { BreakLine2 } from '../UI/SkillSet/BreakLine2';
+// import { BreakLine2 } from '../UI/SkillSet/BreakLine2';
 // import { TopLine } from '../UI/About/TopLine';
 import { Container } from '../UI/SkillSet/Container';
 
 import { HeadlineBox } from '../UI/About/HeadlineBox';
 // import { Hexagon } from '../UI/SkillSet/Hexagone';
-import { ImageGrid } from '../UI/SkillSet/ImageGrid';
-import { CssPng } from '../UI/SkillSet/PNG/Css';
-import { HtmlPng } from '../UI/SkillSet/PNG/Html';
-import { JsPng } from '../UI/SkillSet/PNG/Js';
-import { ReactPng } from '../UI/SkillSet/PNG/React';
-import { Text } from '../UI/SkillSet/Text';
-import { TextBox } from '../UI/SkillSet/TextBox';
+// import { ImageGrid } from '../UI/SkillSet/ImageGrid';
+// import { CssPng } from '../UI/SkillSet/PNG/Css';
+// import { HtmlPng } from '../UI/SkillSet/PNG/Html';
+// import { JsPng } from '../UI/SkillSet/PNG/Js';
+// import { ReactPng } from '../UI/SkillSet/PNG/React';
+// import { Text } from '../UI/SkillSet/Text';
+// import { TextBox } from '../UI/SkillSet/TextBox';
 import { Wrapper } from '../UI/SkillSet/Wrapper';
-import { NodeJs } from '../UI/SkillSet/PNG/NodeJs';
-import { NextJs } from '../UI/SkillSet/PNG/NextJs';
-import { ZustandPng } from '../UI/SkillSet/PNG/Zustand';
-import { StyledComponentsPng } from '../UI/SkillSet/PNG/StyledComponents';
-import { EsLintPng } from '../UI/SkillSet/PNG/EsLint';
-import { MongoDBPng } from '../UI/SkillSet/PNG/MongoDB';
+// import { NodeJs } from '../UI/SkillSet/PNG/NodeJs';
+// import { NextJs } from '../UI/SkillSet/PNG/NextJs';
+// import { ZustandPng } from '../UI/SkillSet/PNG/Zustand';
+// import { StyledComponentsPng } from '../UI/SkillSet/PNG/StyledComponents';
+// import { EsLintPng } from '../UI/SkillSet/PNG/EsLint';
+// import { MongoDBPng } from '../UI/SkillSet/PNG/MongoDB';
 import { ArrowDown } from '../UI/ArrowDown';
-import { FigmaPng } from '../UI/SkillSet/PNG/Figma';
-import { GitHubPng } from '../UI/SkillSet/PNG/GitHub';
-import { GitPng } from '../UI/SkillSet/PNG/Git';
-import { ImmerJsPng } from '../UI/SkillSet/PNG/ImmerJs';
-import { RestPng } from '../UI/SkillSet/PNG/Rest';
+// import { FigmaPng } from '../UI/SkillSet/PNG/Figma';
+// import { GitHubPng } from '../UI/SkillSet/PNG/GitHub';
+// import { GitPng } from '../UI/SkillSet/PNG/Git';
+// import { ImmerJsPng } from '../UI/SkillSet/PNG/ImmerJs';
+// import { RestPng } from '../UI/SkillSet/PNG/Rest';
+import SkillGrid from './SkillGrid';
+import TextGrid from './TextGrid';
 
 const item = {
   hidden: { opacity: 0, y: 90 },
@@ -45,40 +47,40 @@ const item = {
   },
 };
 
-const text = {
-  hidden: { opacity: 0, y: 25 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: 'spring',
-      duration: 1.2,
-      delay: 0.6,
-    },
-  },
-};
-const grid = {
-  hidden: { opacity: 0, y: 25 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1.2,
-      type: 'spring',
-    },
-  },
-};
-const variants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
+// const text = {
+//   hidden: { opacity: 0, y: 25 },
+//   show: {
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       type: 'spring',
+//       duration: 1.2,
+//       delay: 0.6,
+//     },
+//   },
+// };
+// const grid = {
+//   hidden: { opacity: 0, y: 25 },
+//   show: {
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       duration: 1.2,
+//       type: 'spring',
+//     },
+//   },
+// };
+// const variants = {
+//   hidden: { opacity: 0 },
+//   show: {
+//     opacity: 1,
 
-    transition: {
-      staggerChildren: 0.1,
-      type: 'spring',
-    },
-  },
-};
+//     transition: {
+//       staggerChildren: 0.1,
+//       type: 'spring',
+//     },
+//   },
+// };
 
 const icon = {
   hidden: { opacity: 0, y: 30 },
@@ -104,36 +106,36 @@ export default function Skillset() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const [showHtml, setShowHtml] = useState(false);
-  const handleShowHtml = () => setShowHtml(!showHtml);
-  const [showJs, setShowJs] = useState(false);
-  const handleShowJs = () => setShowJs(!showJs);
-  const [showNode, setShowNode] = useState(false);
-  const handleShowNode = () => setShowNode(!showNode);
-  const [showNext, setShowNext] = useState(false);
-  const handleShowNext = () => setShowNext(!showNext);
-  const [showCss, setShowCss] = useState(false);
-  const handleShowCss = () => setShowCss(!showCss);
-  const [showReact, setShowReact] = useState(false);
-  const handleShowReact = () => setShowReact(!showReact);
-  const [showZustand, setShowZustand] = useState(false);
-  const handleShowZustand = () => setShowZustand(!showZustand);
-  const [showSytledC, setShowStyledC] = useState(false);
-  const handleShowStyledC = () => setShowStyledC(!showSytledC);
-  const [showESLint, setShowESLint] = useState(false);
-  const handleShowESLint = () => setShowESLint(!showESLint);
-  const [showMongoDB, setShowMongoDB] = useState(false);
-  const handleShowMongoDB = () => setShowMongoDB(!showMongoDB);
-  const [showFigma, setShowFigma] = useState(false);
-  const handleShowFigma = () => setShowFigma(!showFigma);
-  const [showGithub, setShowGitHub] = useState(false);
-  const handleShowGitHub = () => setShowGitHub(!showGithub);
-  const [showGit, setShowGit] = useState(false);
-  const handleShowGit = () => setShowGit(!showGit);
-  const [showImmer, setShowImmer] = useState(false);
-  const handleImmer = () => setShowImmer(!showImmer);
-  const [showRest, setShowRest] = useState(false);
-  const handleRest = () => setShowRest(!showRest);
+  // const [showHtml, setShowHtml] = useState(false);
+  // const handleShowHtml = () => setShowHtml(!showHtml);
+  // const [showJs, setShowJs] = useState(false);
+  // const handleShowJs = () => setShowJs(!showJs);
+  // const [showNode, setShowNode] = useState(false);
+  // const handleShowNode = () => setShowNode(!showNode);
+  // const [showNext, setShowNext] = useState(false);
+  // const handleShowNext = () => setShowNext(!showNext);
+  // const [showCss, setShowCss] = useState(false);
+  // const handleShowCss = () => setShowCss(!showCss);
+  // const [showReact, setShowReact] = useState(false);
+  // const handleShowReact = () => setShowReact(!showReact);
+  // const [showZustand, setShowZustand] = useState(false);
+  // const handleShowZustand = () => setShowZustand(!showZustand);
+  // const [showSytledC, setShowStyledC] = useState(false);
+  // const handleShowStyledC = () => setShowStyledC(!showSytledC);
+  // const [showESLint, setShowESLint] = useState(false);
+  // const handleShowESLint = () => setShowESLint(!showESLint);
+  // const [showMongoDB, setShowMongoDB] = useState(false);
+  // const handleShowMongoDB = () => setShowMongoDB(!showMongoDB);
+  // const [showFigma, setShowFigma] = useState(false);
+  // const handleShowFigma = () => setShowFigma(!showFigma);
+  // const [showGithub, setShowGitHub] = useState(false);
+  // const handleShowGitHub = () => setShowGitHub(!showGithub);
+  // const [showGit, setShowGit] = useState(false);
+  // const handleShowGit = () => setShowGit(!showGit);
+  // const [showImmer, setShowImmer] = useState(false);
+  // const handleImmer = () => setShowImmer(!showImmer);
+  // const [showRest, setShowRest] = useState(false);
+  // const handleRest = () => setShowRest(!showRest);
 
   return (
     <Wrapper id="skillset">
@@ -167,124 +169,9 @@ export default function Skillset() {
           <div></div>
           <Headline>Skill Set</Headline>
         </HeadlineBox>
-        <TextBox
-          id="textBox"
-          style={{
-            background: `radial-gradient(circle, #e261bd70 0%, rgba(39, 44, 57, 0)  ${
-              offsetY * 0.04
-            }%)`,
-          }}
-        >
-          <Text
-            as={motion.p}
-            viewport={{ once: true }}
-            variants={text}
-            initial="hidden"
-            whileInView="show"
-          >
-            {showHtml ? (
-              <span>HTML&nbsp;|&nbsp;</span>
-            ) : (
-              <BinarySpan id="html">
-                01001000 0101010 01001101 01001100
-              </BinarySpan>
-            )}
-            {showCss ? (
-              <span id="css">CSS &nbsp;|&nbsp;</span>
-            ) : (
-              <BinarySpan>01000011 01010011 01010011</BinarySpan>
-            )}
-            {showJs ? (
-              <span> JavaScript &nbsp;|&nbsp;</span>
-            ) : (
-              <BinarySpan>
-                01001010 01100001 01110110 01100001 01010011 01100011 01110010
-                01101001 01110000 01110100
-              </BinarySpan>
-            )}
-            {showReact ? (
-              <span>React &nbsp;|&nbsp;</span>
-            ) : (
-              <BinarySpan>
-                01010010 01100101 01100001 01100011 01110100
-              </BinarySpan>
-            )}
-            {showNode ? (
-              <span>NodeJs&nbsp;|&nbsp;</span>
-            ) : (
-              <BinarySpan>
-                01001110 01101111 01100100 01100101 01001010 01110011
-              </BinarySpan>
-            )}
-            {showNext ? (
-              <span>NEXT&nbsp;|&nbsp;</span>
-            ) : (
-              <BinarySpan>01001110 01000101 01011000 01010100</BinarySpan>
-            )}
-            {showZustand ? (
-              <span>Zustand&nbsp;|&nbsp;</span>
-            ) : (
-              <BinarySpan>
-                01011010 01110101 01110011 01110100 01100001 01101110 01100100
-              </BinarySpan>
-            )}
-            {showSytledC ? (
-              <span>styled-components&nbsp;|&nbsp;</span>
-            ) : (
-              <BinarySpan>
-                01110011 01110100 01111001 01101100 01100101 01100100 00101101
-                01100011 01101111 01101101 01110000 01101111 01101110 01100101
-                01101110 01110100 01110011
-              </BinarySpan>
-            )}
-            {showMongoDB ? (
-              <span>MongoDB&nbsp;|&nbsp;</span>
-            ) : (
-              <BinarySpan>
-                01001101 01101111 01101110 01100111 01101111 01000100 01000010
-              </BinarySpan>
-            )}
-            {showGit ? (
-              <span>Git&nbsp;|&nbsp;</span>
-            ) : (
-              <BinarySpan>01000111 01101001 01110100</BinarySpan>
-            )}
-            {showGithub ? (
-              <span>GitHub&nbsp;|&nbsp;</span>
-            ) : (
-              <BinarySpan>
-                01000111 01101001 01110100 01001000 01110101 01100010
-              </BinarySpan>
-            )}
-            {showFigma ? (
-              <span>Figma&nbsp;|&nbsp;</span>
-            ) : (
-              <BinarySpan>
-                01000110 01101001 01100111 01101101 01100001
-              </BinarySpan>
-            )}
-            {showESLint ? (
-              <span>ESLint&nbsp;|&nbsp;</span>
-            ) : (
-              <BinarySpan>
-                01000101 01010011 01001100 01101001 01101110 01110100
-              </BinarySpan>
-            )}
-            {showImmer ? (
-              <span>immerJs&nbsp;|&nbsp;</span>
-            ) : (
-              <BinarySpan>
-                01101001 01101101 01101101 01100101 01110010 01001010 01110011
-              </BinarySpan>
-            )}
-            {showRest ? (
-              <span>Rest</span>
-            ) : (
-              <BinarySpan>01010010 01100101 01110011 01110100</BinarySpan>
-            )}
-          </Text>
-        </TextBox>
-        <ImageGrid
+
+        <TextGrid offsetY={offsetY} />
+        {/* <ImageGrid
           as={motion.section}
           viewport={{ once: true }}
           variants={variants}
@@ -328,7 +215,7 @@ export default function Skillset() {
             {showNode ? (
               <span>
                 <NodeJs
-                  src="nodejs-icon-890222153.png"
+                  src="v.png"
                   style={{ scale: '0.9' }}
                 ></NodeJs>
               </span>
@@ -614,7 +501,8 @@ export default function Skillset() {
               </a>
             )}
           </motion.div>
-        </ImageGrid>
+        </ImageGrid> */}
+        <SkillGrid />
         <BreakLine />
       </Container>
     </Wrapper>
