@@ -10,6 +10,7 @@ export const BinarySpan = styled.span`
   font-weight: normal;
   font-family: 'Roboto Mono', monospace;
   color: #f8f8f8;
+
   @media (orientation: portrait) {
     font-size: 1.5vh;
   }

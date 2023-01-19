@@ -56,7 +56,7 @@ export default function SkillGrid() {
           }}
           style={{
             boxShadow: skill.isClicked
-              ? 'inset -6px -6px 10px rgba(12, 12, 12, 0.557), inset 6px 6px 10px rgba(92, 92, 92, 0.2)'
+              ? 'inset -6px -6px 10px rgba(12, 12, 12, 0.557), inset 6px 6px 10px rgba(220, 220, 220, 0.2)'
               : '',
           }}
         >
