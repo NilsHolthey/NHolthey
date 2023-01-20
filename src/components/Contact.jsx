@@ -57,31 +57,6 @@ const icon = {
 export default function Contact() {
   const { ref, inView } = useInView();
 
-  // const changeColor = () => {
-  //   if (inView == true) {
-  //     resetDisply();
-  //   } else if (window.scrollY > 50) {
-  //     changeToHidden();
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener('scroll', changeColor);
-  //   return () => {
-  //     window.removeEventListener('scroll', changeColor);
-  //   };
-  // }, []);
-
-  // function changeToHidden() {
-  //   let MylinkList = document.getElementById('linkList');
-
-  //   MylinkList.style.scale = '0.8';
-  // }
-  // function resetDisply() {
-  //   let MylinkList = document.getElementById('linkList');
-  //   MylinkList.style.scale = '1';
-  // }
-
   const copyright = new Date().getFullYear();
   const form = useRef();
 
