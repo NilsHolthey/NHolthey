@@ -32,6 +32,7 @@ export default function SkillGrid() {
   const skills = useBearStore(state => state.skills);
   const clickFalse = useBearStore(state => state.clickFalse);
   const clickTrue = useBearStore(state => state.clickTrue);
+  console.log(skills);
 
   //   const notClicked = skills.filter(skill => skill.isClicked == false);
 
@@ -49,18 +50,18 @@ export default function SkillGrid() {
           variants={grid}
           key={skill.id}
           id={skill.id}
-          isClicked={skill.isClicked}
+          clicked={skill.clicked.toString()}
           imageUrl={skill.imageUrl}
           onClick={() => {
-            skill.isClicked ? clickFalse(skill.id) : clickTrue(skill.id);
+            skill.clicked ? clickFalse(skill.id) : clickTrue(skill.id);
           }}
           style={{
-            boxShadow: skill.isClicked
+            boxShadow: skill.clicked
               ? 'inset -6px -6px 10px rgba(12, 12, 12, 0.557), inset 6px 6px 10px rgba(220, 220, 220, 0.2)'
               : '',
           }}
         >
-          {skill.isClicked ? (
+          {skill.clicked ? (
             <span>
               <GenericPng
                 src={skill.imageUrl}

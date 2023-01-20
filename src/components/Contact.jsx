@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Container } from '../UI/Contact/Container';
 import { Footer } from '../UI/Contact/Footer';
-
 import { Wrapper } from '../UI/Contact/Wrapper';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
@@ -10,14 +9,13 @@ import { Headline } from '../UI/About/Headline';
 import { HeadlineBox } from '../UI/About/HeadlineBox';
 import { InfoRight } from '../UI/InfoRight';
 import { Mail } from '../UI/Mail';
-import { LineRight } from '../UI/PaigeTwo/LineRight';
+import { LineRight } from '../UI/LineRight';
 import { InfoLeft } from '../UI/InfoLeft';
 import { LinkList } from '../UI/LinkList';
 import { SocialLink } from '../UI/SocialLinks';
 import SvgIcon from '../UI/icons';
 import { LineLeft } from '../UI/LineLeft';
 import MailSvg from '../UI/MailSvg';
-
 import { useState } from 'react';
 import { TestDiv } from '../UI/Contact/TestDiv';
 import { TestDivName } from '../UI/Contact/TestDivName';

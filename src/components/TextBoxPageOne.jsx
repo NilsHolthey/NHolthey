@@ -8,7 +8,7 @@ import { QuoteL } from '../UI/QuoteL';
 import { QuoteR } from '../UI/QuoteR';
 import { TextBox } from '../UI/TextBox';
 
-export default function TexBoxHook() {
+export default function TextBoxPageOne() {
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
 

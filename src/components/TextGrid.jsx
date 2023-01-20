@@ -30,7 +30,7 @@ export default function TextGrid({ offsetY }) {
       }}
     >
       <Text
-        as={motion.p}
+        as={motion.div}
         viewport={{ once: true }}
         variants={text}
         initial="hidden"
@@ -40,11 +40,11 @@ export default function TextGrid({ offsetY }) {
           <span
             key={skill.id}
             id={skill.id}
-            isClicked={skill.isClicked}
+            clicked={skill.clicked.toString()}
             binary={skill.binary}
             name={skill.name}
           >
-            {skill.isClicked ? (
+            {skill.clicked ? (
               <span>{skill.name}&nbsp;|&nbsp;</span>
             ) : (
               <BinarySpan>{skill.binary}</BinarySpan>

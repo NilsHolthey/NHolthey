@@ -1,13 +1,11 @@
 import { ImageContainer } from '../UI/ImageContainer';
 import { ProfileContainer } from '../UI/ProfileContainer';
-// import { motion } from 'framer-motion';
+
 import { ProfileWrapper } from '../UI/Profilewrapper';
 import { TextContainer } from '../UI/TextContainer';
 import Navbar from './Navbar';
 
 import { useEffect } from 'react';
-import TexBoxHook from './TextBoxhook';
-
 import ProfileImg from './ProfileImg';
 import ShadowBox from './ShadowBox';
 
@@ -15,20 +13,7 @@ import DevImage from './DevImage';
 import { ArrowDown } from '../UI/ArrowDown';
 import SpinnerSvg from './images/SpinnerSvg';
 import { useState } from 'react';
-
-// const icon = {
-//   hidden: { opacity: 0, y: 30 },
-//   show: {
-//     opacity: 1,
-//     y: 0,
-
-//     transition: {
-//       type: 'spring',
-//       duration: 2.3,
-//       delay: 1.2,
-//     },
-//   },
-// };
+import TextBoxPageOne from './TextBoxPageOne';
 
 export default function MainBg() {
   const [isActive, setIsActive] = useState(false);
@@ -88,7 +73,7 @@ export default function MainBg() {
       </ArrowDown>
       <ProfileContainer>
         <TextContainer>
-          <TexBoxHook />
+          <TextBoxPageOne />
         </TextContainer>
         <ImageContainer>
           <ProfileImg />

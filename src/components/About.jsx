@@ -147,7 +147,7 @@ export default function About() {
         </AboutImageBox>
         <AboutBox id="aboutBox">
           <AboutText
-            as={motion.p}
+            as={motion.div}
             viewport={{ once: true }}
             variants={text}
             initial="hidden"
