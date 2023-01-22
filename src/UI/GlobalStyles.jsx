@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
 		--secondary-color: navy;
 		--primary-light: #8abdff;
   		--primary: #6d5dfc;
+  		--primary-background: #dcdcdc6d;
   		--primary-dark: #5b0eeb;
   
   		--white: #FFFFFF;
@@ -31,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
 	body  {
 		overflow-x:hidden;
 		
-		background: #dcdcdc6d;
+		background:var(--primary-background);
 		scroll-behavior: smooth;
 		
 		a {
