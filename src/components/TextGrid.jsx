@@ -36,21 +36,23 @@ export default function TextGrid({ offsetY }) {
         initial="hidden"
         whileInView="show"
       >
-        {skills.map(skill => (
-          <span
-            key={skill.id}
-            id={skill.id}
-            clicked={skill.clicked.toString()}
-            binary={skill.binary}
-            name={skill.name}
-          >
-            {skill.clicked ? (
-              <span>{skill.name}&nbsp;|&nbsp;</span>
-            ) : (
-              <BinarySpan>{skill.binary}</BinarySpan>
-            )}
-          </span>
-        ))}
+        {skills.map(skill => {
+          return (
+            <span
+              key={skill.id}
+              id={skill.id}
+              clicked={skill.clicked.toString()}
+              binary={skill.binary}
+              name={skill.name}
+            >
+              {skill.clicked ? (
+                <span>{skill.name}&nbsp;|&nbsp;</span>
+              ) : (
+                <BinarySpan>{skill.binary}</BinarySpan>
+              )}
+            </span>
+          );
+        })}
       </Text>
     </TextBox>
   );

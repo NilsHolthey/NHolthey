@@ -8,4 +8,7 @@ export const Imagebox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 551px) {
+    align-items: flex-start;
+  }
 `;

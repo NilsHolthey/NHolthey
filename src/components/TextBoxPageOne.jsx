@@ -22,11 +22,22 @@ export default function TextBoxPageOne() {
       id="textbox"
       style={{ transform: `translateY(-${offsetY * 1.25}px)` }}
     >
-      <QuoteL>
+      <QuoteL
+        as={motion.div}
+        initial={{ opacity: 0, y: 20 }}
+        transition={{
+          type: 'spring',
+          duration: 2.8,
+          delay: 0.8,
+          bounce: 0.1,
+        }}
+        animate={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
         <SvgIcon
           variant="quoteOpen"
           size="5rem"
-          color="#a7a7a7"
+          color=" rgba(25, 29, 36, 0.238)"
           strokeWidth="0"
         />
       </QuoteL>
@@ -59,11 +70,23 @@ export default function TextBoxPageOne() {
       >
         lets create something new!
       </LineTwo>
-      <QuoteR>
+      <QuoteR
+        as={motion.div}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 0.8 }}
+        transition={{
+          type: 'spring',
+          bounce: 0.2,
+          duration: 2.5,
+          delay: 1.3,
+        }}
+        animate={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
         <SvgIcon
           variant="quoteClose"
           size="5rem"
-          color="#a7a7a7"
+          color=" rgba(25, 29, 36, 0.238)"
           strokeWidth="0"
         />
       </QuoteR>
