@@ -40,7 +40,7 @@ export const ArrowDown = styled.a`
   left: ${({ left = '' }) => left};
   transform: translate(50%, 50%);
   cursor: pointer;
-  z-index: 10;
+  z-index: 100;
 
   @media (max-width: 768px) {
     display: none;

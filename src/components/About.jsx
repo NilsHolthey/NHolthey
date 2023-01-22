@@ -147,7 +147,7 @@ export default function About() {
         </AboutImageBox>
         <AboutBox id="aboutBox">
           <AboutText
-            as={motion.p}
+            as={motion.div}
             viewport={{ once: true }}
             variants={text}
             initial="hidden"
@@ -159,14 +159,17 @@ export default function About() {
               rgba(25, 29, 36, ${offsetY * 0.0015}) ${offsetY * 0.125}%)`,
             }}
           >
-            <p>Hello World,</p>I&apos;m Nils, {age} years old sit amet
-            consectetur adipisicing elit. Fuga quia totam veritatis itaque
-            debitis dolores qui, accusantium quibusdam amet officia explicabo et
-            expedita sit velit veniam rem necessitatibus temporibus eos! Lorem,
-            ipsum dolor sit amet consectetur adipisicing elit. Fuga quia totam
-            veritatis itaque debitis dolores qui, accusantium quibusdam amet
-            officia explicabo et expedita sit velit veniam rem necessitatibus
-            temporibus eos! consectetur adipisicing elit.
+            <p>Hello World,</p>
+            <p>
+              I&apos;m Nils, {age} years old sit amet consectetur adipisicing
+              elit. Fuga quia totam veritatis itaque debitis dolores qui,
+              accusantium quibusdam amet officia explicabo et expedita sit velit
+              veniam rem necessitatibus temporibus eos! Lorem, ipsum dolor sit
+              amet consectetur adipisicing elit. Fuga quia totam veritatis
+              itaque debitis dolores qui, accusantium quibusdam amet officia
+              explicabo et expedita sit velit veniam rem necessitatibus
+              temporibus eos! consectetur adipisicing elit.
+            </p>
           </AboutText>
         </AboutBox>
       </Container>

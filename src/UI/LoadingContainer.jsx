@@ -29,6 +29,9 @@ export const LoadingContainer = styled.section`
     bottom: 0;
     left: 0;
     opacity: 0.4;
+    @media (orientation: portrait) {
+      opacity: 0.7;
+    }
   }
   svg {
     z-index: 10;

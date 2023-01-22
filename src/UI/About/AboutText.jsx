@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const AboutText = styled.p`
+export const AboutText = styled.div`
   bottom: 3rem;
   background-image: linear-gradient(
     125deg,

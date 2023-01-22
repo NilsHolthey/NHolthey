@@ -15,15 +15,19 @@ export const ImageGrid = styled.section`
     width: 100%;
   }
   @media (orientation: portrait) {
-    height: 50%;
+    max-height: 50%;
     width: 100%;
-    grid-template-rows: auto;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+  }
+  @media (max-width: 765px) and (orientation: landscape) {
+    grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(5, 1fr);
   }
 
   div {
     &:hover {
-      scale: 1.05;
+      scale: 0.95;
     }
     cursor: pointer;
     min-width: 50px;
@@ -45,7 +49,7 @@ export const ImageGrid = styled.section`
       width: 92%;
       height: 92%;
       border-radius: 8px;
-      background: rgba(25, 29, 36, 0.119);
+      background: rgba(16, 17, 17, 0.119);
       box-shadow: inset 5px 5px 10px #20252e, inset -5px -5px 10px #2d333c;
     }
     a {
@@ -54,31 +58,63 @@ export const ImageGrid = styled.section`
       align-items: center;
     }
 
-    /* &:hover {
-      box-shadow: inset -6px -6px 10px rgba(12, 12, 12, 0.557),
-        inset 6px 6px 10px rgba(92, 92, 92, 0.2);
-      span {
+    &:nth-child(1) {
+      img {
+        filter: grayscale(80%) drop-shadow(0 0 4px rgb(220, 220, 220));
       }
-    } */
-  }
-  #item-0 {
-  }
-  #item-1 {
-  }
-  #item-2 {
-  }
-  #item-3 {
-  }
-  #item-4 {
-  }
-  #item-5 {
-  }
-  #item-6 {
-  }
-  #item-7 {
-  }
-  #item-8 {
-  }
-  #item-9 {
+    }
+    &:nth-child(3) {
+      img {
+        filter: grayscale(100%) drop-shadow(-8px -8px 8px rgb(220, 220, 220));
+      }
+    }
+    &:nth-child(4) {
+      img {
+        transform: rotate(30deg);
+      }
+    }
+    &:nth-child(6) {
+      img {
+        filter: grayscale(75%) drop-shadow(0 0 8px rgb(220, 220, 220));
+      }
+    }
+    &:nth-child(7) {
+      img {
+        filter: grayscale(50%) drop-shadow(0 0 9px rgb(220, 220, 220));
+      }
+    }
+    &:nth-child(9) {
+      img {
+        width: 50%;
+        filter: grayscale(70%) drop-shadow(0 0 8px rgb(220, 220, 220));
+      }
+    }
+    &:nth-child(10) {
+      img {
+        width: 55%;
+      }
+    }
+    &:nth-child(11) {
+      img {
+        filter: grayscale(50%) drop-shadow(0 0 8px rgb(220, 220, 220));
+      }
+    }
+    &:nth-child(12) {
+      img {
+        width: 20%;
+        filter: grayscale(50%) drop-shadow(0 0 8px rgb(220, 220, 220));
+      }
+    }
+    &:nth-child(13) {
+      img {
+        filter: grayscale(50%) drop-shadow(0 0 8px rgb(220, 220, 220));
+      }
+    }
+    &:nth-child(14) {
+      img {
+        width: 50%;
+        filter: grayscale(50%) drop-shadow(0 0 8px rgb(220, 220, 220));
+      }
+    }
   }
 `;

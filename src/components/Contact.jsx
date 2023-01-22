@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Container } from '../UI/Contact/Container';
 import { Footer } from '../UI/Contact/Footer';
-
 import { Wrapper } from '../UI/Contact/Wrapper';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
@@ -10,14 +9,13 @@ import { Headline } from '../UI/About/Headline';
 import { HeadlineBox } from '../UI/About/HeadlineBox';
 import { InfoRight } from '../UI/InfoRight';
 import { Mail } from '../UI/Mail';
-import { LineRight } from '../UI/PaigeTwo/LineRight';
+import { LineRight } from '../UI/LineRight';
 import { InfoLeft } from '../UI/InfoLeft';
 import { LinkList } from '../UI/LinkList';
 import { SocialLink } from '../UI/SocialLinks';
 import SvgIcon from '../UI/icons';
 import { LineLeft } from '../UI/LineLeft';
 import MailSvg from '../UI/MailSvg';
-
 import { useState } from 'react';
 import { TestDiv } from '../UI/Contact/TestDiv';
 import { TestDivName } from '../UI/Contact/TestDivName';
@@ -56,31 +54,6 @@ const icon = {
 
 export default function Contact() {
   const { ref, inView } = useInView();
-
-  // const changeColor = () => {
-  //   if (inView == true) {
-  //     resetDisply();
-  //   } else if (window.scrollY > 50) {
-  //     changeToHidden();
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener('scroll', changeColor);
-  //   return () => {
-  //     window.removeEventListener('scroll', changeColor);
-  //   };
-  // }, []);
-
-  // function changeToHidden() {
-  //   let MylinkList = document.getElementById('linkList');
-
-  //   MylinkList.style.scale = '0.8';
-  // }
-  // function resetDisply() {
-  //   let MylinkList = document.getElementById('linkList');
-  //   MylinkList.style.scale = '1';
-  // }
 
   const copyright = new Date().getFullYear();
   const form = useRef();

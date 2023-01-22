@@ -5,7 +5,7 @@ export const DevImg = styled.img`
 
   opacity: 0.05;
   filter: drop-shadow(13px 15px 75px rgba(74, 74, 74, 0.95));
-  padding-bottom: 15rem;
+  padding-top: 30%;
   @media (min-width: 551px) {
     display: none;
   }
