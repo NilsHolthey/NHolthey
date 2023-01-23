@@ -5,7 +5,6 @@ import { ProfileWrapper } from '../UI/Profilewrapper';
 import { TextContainer } from '../UI/TextContainer';
 import Navbar from './Navbar';
 
-import { useEffect } from 'react';
 import ProfileImg from './ProfileImg';
 import ShadowBox from './ShadowBox';
 
@@ -25,36 +24,6 @@ export default function MainBg() {
       setTimeout(() => setIsActive(false), 1000);
     }, 750);
   };
-
-  const changeOpacity = () => {
-    if (window.scrollY > 50) {
-      changeToHidden();
-    } else {
-      resetDisply();
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', function () {
-      changeOpacity();
-    });
-
-    return () => {
-      window.removeEventListener('scroll', changeOpacity);
-    };
-  }, []);
-
-  function changeToHidden() {
-    let myNav = document.getElementById('profileImage');
-
-    myNav.style.opacity = '0';
-    myNav.style.transition = 'opacity 1.1s ease';
-  }
-  function resetDisply() {
-    let myNav = document.getElementById('profileImage');
-
-    myNav.style.opacity = '1';
-  }
 
   return (
     <ProfileWrapper id="home">

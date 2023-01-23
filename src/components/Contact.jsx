@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Container } from '../UI/Contact/Container';
-import { Footer } from '../UI/Contact/Footer';
 import { Wrapper } from '../UI/Contact/Wrapper';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
@@ -55,7 +54,6 @@ const icon = {
 export default function Contact() {
   const { ref, inView } = useInView();
 
-  const copyright = new Date().getFullYear();
   const form = useRef();
 
   const [valueName, setValueName] = useState();
@@ -342,9 +340,6 @@ export default function Contact() {
           </Form>
         </Container>
       </Wrapper>
-      <Footer>
-        <p> ©{copyright} Nils Holthey</p>
-      </Footer>
     </>
   );
 }

@@ -1,6 +1,7 @@
 import GlobalStyle from '../UI/GlobalStyles';
 import About from './About';
 import Contact from './Contact';
+import Footer from './Footer';
 import MainBg from './PageOne';
 import Skillset from './SkillSet';
 import SvgBackgroud from './SvgBackgroud';
@@ -16,6 +17,7 @@ export default function MainPage() {
       <Skillset />
       <Work />
       <Contact />
+      <Footer />
     </>
   );
 }

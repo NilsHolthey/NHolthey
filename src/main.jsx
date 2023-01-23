@@ -4,6 +4,7 @@ import App from './App';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Privacy from './privacy/privacy';
+import MainPage from './components/MainPage';
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: 'privacy',
     element: <Privacy />,
+  },
+  {
+    path: 'main',
+    element: <MainPage />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
