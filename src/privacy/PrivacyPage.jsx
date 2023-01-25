@@ -4,12 +4,10 @@ import { Nav } from '../UI/Privacy/Nav';
 import { Container } from '../UI/Privacy/Container';
 import { TextBox } from '../UI/Privacy/TextBox';
 import { Wrapper } from '../UI/Privacy/Wrapper';
-import GlobalStyle from '../UI/GlobalStyles';
 
 export default function PrivacyPage() {
   return (
     <>
-      <GlobalStyle />
       <Wrapper>
         <Nav>
           <NavLink to="/main">

@@ -3,10 +3,11 @@ import styled from 'styled-components';
 export const Nav = styled.nav`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   position: fixed;
   top: 0;
   padding-top: 2vh;
+  padding-bottom: 2vh;
   left: 0;
   width: 100vw;
   height: 5rem;

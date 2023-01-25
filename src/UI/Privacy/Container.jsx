@@ -8,5 +8,6 @@ export const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 5rem;
   padding: 2.5vh 1vh 2.5vh 1vh;
 `;

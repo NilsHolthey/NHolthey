@@ -5,7 +5,8 @@ import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import MainPage from './components/MainPage';
-import PrivacyPage from './privacy/PrivacyPage';
+
+import Privacy from './privacy/privacy';
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
   },
   {
     path: 'privacy',
-    element: <PrivacyPage />,
+    element: <Privacy />,
   },
   {
     path: 'main',
