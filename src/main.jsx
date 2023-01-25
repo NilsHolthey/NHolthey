@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Privacy from './privacy/Privacy.jsx';
+import Privacy from './privacy/Privacy';
 import MainPage from './components/MainPage';
 
 const router = createBrowserRouter([
