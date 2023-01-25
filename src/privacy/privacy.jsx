@@ -1,7 +1,11 @@
+import GlobalStyle from '../UI/GlobalStyles';
+import PrivacyPage from './PrivacyPage';
+
 export default function Privacy() {
   return (
-    <div>
-      <h1>privacy</h1>
-    </div>
+    <>
+      <GlobalStyle />
+      <PrivacyPage />
+    </>
   );
 }

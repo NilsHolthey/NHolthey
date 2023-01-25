@@ -40,10 +40,10 @@ const item = {
   },
 };
 const item2 = {
-  hidden: { opacity: 0, y: 90 },
+  hidden: { opacity: 0, x: 90 },
   show: {
     opacity: 1,
-    y: 0,
+    x: 0,
     transition: {
       type: 'spring',
       duration: 1.8,

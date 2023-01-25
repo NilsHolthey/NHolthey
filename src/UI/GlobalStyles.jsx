@@ -6,6 +6,8 @@ const GlobalStyle = createGlobalStyle`
 	*::after {
 		box-sizing: border-box;
 		/* outline:1px solid green ; */
+		margin: 0;
+		padding:0;
 		
 		
 	}
@@ -15,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
 		--primary-light: #8abdff;
   		--primary: #6d5dfc;
   		--primary-background: #dcdcdc6d;
-  		--primary-dark: #5b0eeb;
+  		--primary-dark:  rgba(25, 29, 36);;
   
   		--white: #FFFFFF;
   		--greyLight-1: #f8f8f8;
