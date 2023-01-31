@@ -14,7 +14,7 @@ import { LinkList } from '../UI/LinkList';
 import { SocialLink } from '../UI/SocialLinks';
 import SvgIcon from '../UI/icons';
 import { LineLeft } from '../UI/LineLeft';
-import MailSvg from '../UI/MailSvg';
+
 import { useState } from 'react';
 import { TestDiv } from '../UI/Contact/TestDiv';
 import { TestDivName } from '../UI/Contact/TestDivName';
@@ -24,6 +24,7 @@ import { FormModal } from '../UI/Contact/FormModal';
 import { TextBox } from '../UI/Contact/TextBox';
 import { Form } from '../UI/Contact/Form';
 import { ArrowDown } from '../UI/ArrowDown';
+import LinkedInSvg from '../UI/LinkedInSvg';
 
 const item = {
   hidden: { opacity: 0, y: 70 },
@@ -205,8 +206,12 @@ export default function Contact() {
               </a>
             </SocialLink>
             <SocialLink className={`${inView ? 'contacts' : ''}`}>
-              <a href="mailto:nils.holthey@gmail.com">
-                <MailSvg />
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://linkedin.com/in/nils-holthey"
+              >
+                <LinkedInSvg />
               </a>
             </SocialLink>
           </LinkList>

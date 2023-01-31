@@ -23,7 +23,7 @@ export const NavList = styled.ul`
   }
 
   &:has(li:hover) li:not(:hover) {
-    scale: 0.9;
+    scale: 0.98;
     opacity: 0.7;
   }
 

@@ -16,38 +16,40 @@ import TextBoxPageOne from './TextBoxPageOne';
 
 export default function MainBg() {
   const [isActive, setIsActive] = useState(false);
-
+  const element = document.getElementById('about');
   const handleclick = () => {
     setIsActive(true);
     setTimeout(function () {
-      location.href = '#about';
+      element.scrollIntoView();
       setTimeout(() => setIsActive(false), 1000);
     }, 750);
   };
 
   return (
-    <ProfileWrapper id="home">
+    <>
       <ShadowBox />
-      <Navbar />
-      <DevImage />
-      <ArrowDown
-        onClick={handleclick}
-        bottom="10%"
-        right="50%"
-        BorderColor="none"
-        OutlineColor="#none"
-        Background="transparent"
-      >
-        <SpinnerSvg isActive={isActive} />
-      </ArrowDown>
-      <ProfileContainer>
-        <TextContainer>
-          <TextBoxPageOne />
-        </TextContainer>
-        <ImageContainer>
-          <ProfileImg />
-        </ImageContainer>
-      </ProfileContainer>
-    </ProfileWrapper>
+      <ProfileWrapper id="home">
+        <Navbar />
+        <DevImage />
+        <ArrowDown
+          onClick={handleclick}
+          bottom="10%"
+          right="50%"
+          BorderColor="none"
+          OutlineColor="#none"
+          Background="transparent"
+        >
+          <SpinnerSvg isActive={isActive} />
+        </ArrowDown>
+        <ProfileContainer>
+          <TextContainer>
+            <TextBoxPageOne />
+          </TextContainer>
+          <ImageContainer>
+            <ProfileImg />
+          </ImageContainer>
+        </ProfileContainer>
+      </ProfileWrapper>
+    </>
   );
 }

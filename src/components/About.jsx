@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useRef } from 'react';
 import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { AboutBox } from '../UI/About/AboutBox';
@@ -14,8 +15,6 @@ import { HeadlineBox } from '../UI/About/HeadlineBox';
 
 import { Wrapper } from '../UI/About/Wrapper';
 import { ArrowDown } from '../UI/ArrowDown';
-// import { ArrowUp } from '../UI/ArrowUp';
-// import { SpinnerWrapper } from '../UI/SpinnerWrapper';
 
 const item = {
   hidden: { opacity: 0, y: 100 },
@@ -69,7 +68,7 @@ export default function About() {
     triggerOnce: false,
   });
   const [offsetY, setOffsetY] = useState(0);
-  const windowRatio = window.pageYOffset / window.innerHeight;
+
   const handleScroll = () =>
     setOffsetY((window.pageYOffset / window.innerHeight) * 1000);
 
@@ -78,10 +77,11 @@ export default function About() {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  console.log(offsetY, window.innerHeight, windowRatio);
+
+  const myRef = useRef(null);
 
   return (
-    <Wrapper id="about">
+    <Wrapper id="about" ref={myRef}>
       <Container
         viewport={{ once: true }}
         as={motion.section}
@@ -108,26 +108,11 @@ export default function About() {
             arrow_downward
           </motion.span>
         </ArrowDown>
-        {/* <ArrowUp
-          href="#skillset"
-          top="0"
-          right="50%"
-          Background=" rgba(25, 29, 36, 0.965)"
-          BorderColor="rgba(25, 29, 36, 0.965)"
-          OutlineColor="rgba(25, 29, 36, 0.965)"
-        >
-          <SpinnerWrapper>
-            <div></div>
-            <motion.span className="material-symbols-outlined">
-              arrow_downward
-            </motion.span>
-          </SpinnerWrapper>
-        </ArrowUp> */}
+
         <BreakLine />
         <HeadlineBox>
           <span>01</span>
-          {/* <TopLine /> */}
-          <div></div>
+
           <Headline>About Me</Headline>
         </HeadlineBox>
 
@@ -161,14 +146,11 @@ export default function About() {
           >
             <p>Hello World,</p>
             <p>
-              I&apos;m Nils, {age} years old sit amet consectetur adipisicing
-              elit. Fuga quia totam veritatis itaque debitis dolores qui,
-              accusantium quibusdam amet officia explicabo et expedita sit velit
-              veniam rem necessitatibus temporibus eos! Lorem, ipsum dolor sit
-              amet consectetur adipisicing elit. Fuga quia totam veritatis
-              itaque debitis dolores qui, accusantium quibusdam amet officia
-              explicabo et expedita sit velit veniam rem necessitatibus
-              temporibus eos! consectetur adipisicing elit.
+              I&apos;m Nils, {age} years old, creative front-end developer who
+              loves to bring clarity to complex concepts through design. I have
+              a genuine passion for inspiring design and innovative technology,
+              I enjoy solving problems with clean scalable solutions. As a
+              freelancer, I design and build websites...
             </p>
           </AboutText>
         </AboutBox>

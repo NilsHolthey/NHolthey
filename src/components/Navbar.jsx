@@ -12,13 +12,10 @@ export default function Navbar() {
   const changeColor = () => {
     if (window.pageYOffset > 50) {
       setIsScrolled(true);
-      console.log(isScrolled);
     } else {
       setIsScrolled(false);
-      console.log('scrolled down up');
     }
   };
-  console.log(isScrolled);
 
   useEffect(() => {
     window.addEventListener('scroll', changeColor);
@@ -27,36 +24,13 @@ export default function Navbar() {
     };
   }, []);
 
-  // function changeToHidden() {
-  //   let myNav = document.getElementById('navList');
-
-  //   myNav.style.transform = 'translateX(-200%)';
-  //   myNav.style.opacity = '0';
-  // }
-  // function resetDisply() {
-  //   let myNav = document.getElementById('navList');
-  //   myNav.style.transform = 'translateX(0)';
-  //   myNav.style.opacity = '1';
-  // }
-
   return (
     <Nav>
       <a href="#home">
         <Logo2 />
       </a>
       <Burger />
-      <NavList
-        isScrolled={isScrolled}
-        // as={motion.ul}
-        // initial={{ opacity: 0, y: -20 }}
-        // whileInView={{ opacity: 1 }}
-        // transition={{
-        //   type: 'spring',
-        //   duration: 0.8,
-        // }}
-        // animate={{ opacity: 1, y: 0 }}
-        // viewport={{ once: true }}
-      >
+      <NavList isScrolled={isScrolled}>
         <li>
           <NavLink href="#about">About</NavLink>
         </li>

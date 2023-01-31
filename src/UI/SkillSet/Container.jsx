@@ -9,6 +9,8 @@ export const Container = styled.section`
   background: rgba(25, 29, 36);
   border-radius: 8px;
   height: 80vh;
+  max-width: 1649px;
+  max-height: 876px;
   /* background: #272c39;
   background: linear-gradient(
     90deg,

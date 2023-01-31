@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Imagebox = styled.div`
   width: 100dvw;
+  max-width: 1649px;
   height: 100vh;
   position: absolute;
 

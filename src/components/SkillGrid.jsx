@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
 import useBearStore from '../lib/useStore';
-// import { BinarySpan } from '../UI/SkillSet/BinarySpan';
+
 import { ImageGrid } from '../UI/SkillSet/ImageGrid';
-import { GenericPng } from '../UI/SkillSet/PNG/GenericPng';
+
+import GridItem from './GridItem';
 
 const grid = {
   hidden: { opacity: 0, y: 25 },
@@ -30,13 +31,7 @@ const variants = {
 
 export default function SkillGrid() {
   const skills = useBearStore(state => state.skills);
-  const clickFalse = useBearStore(state => state.clickFalse);
-  const clickTrue = useBearStore(state => state.clickTrue);
-  console.log(skills);
 
-  //   const notClicked = skills.filter(skill => skill.isClicked == false);
-
-  //   const clicked = skills.filter(skill => skill.isClicked == true);
   return (
     <ImageGrid
       as={motion.section}
@@ -46,33 +41,13 @@ export default function SkillGrid() {
       whileInView="show"
     >
       {skills.map(skill => (
-        <motion.div
+        <GridItem
           variants={grid}
           key={skill.id}
           id={skill.id}
-          clicked={skill.clicked.toString()}
+          clicked={skill.clicked}
           imageUrl={skill.imageUrl}
-          onClick={() => {
-            skill.clicked ? clickFalse(skill.id) : clickTrue(skill.id);
-          }}
-          style={{
-            boxShadow: skill.clicked
-              ? 'inset -6px -6px 10px rgba(12, 12, 12, 0.557), inset 6px 6px 10px rgba(220, 220, 220, 0.2)'
-              : '',
-          }}
-        >
-          {skill.clicked ? (
-            <span>
-              <GenericPng
-                src={skill.imageUrl}
-                alt=""
-                style={{ scale: '0.9' }}
-              />
-            </span>
-          ) : (
-            <GenericPng src={skill.imageUrl} alt="" />
-          )}
-        </motion.div>
+        ></GridItem>
       ))}
     </ImageGrid>
   );
