@@ -49,6 +49,9 @@ const GlobalStyle = createGlobalStyle`
 		padding:0;
 		font-family: 'Inter', sans-serif;
 	}
+
+
+	
 `;
 
 export default GlobalStyle;

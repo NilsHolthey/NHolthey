@@ -1,28 +1,15 @@
 import styled from 'styled-components';
 
-export const Container = styled.section`
-  width: 70vw;
-  height: 80vh;
-  max-width: 1649px;
-  max-height: 876px;
+export const ContainerBorder = styled.div`
+  background: rgba(25, 29, 36);
+  border-radius: inherit;
   display: flex;
-  /* color: #f8f8f8; */
-  border-radius: 8px;
-  z-index: 0;
-  align-items: center;
   justify-content: center;
-  position: relative;
-  /* background: radial-gradient(
-    100rem circle at var(--xPos) var(--yPos),
-    rgba(255, 110, 199, 0.8),
-    transparent 25%
-  ); */
-  background: radial-gradient(
-    150rem circle at 0 0,
-    rgba(255, 110, 199, 0),
-    transparent 0%
-  );
-  /* transition: all 0.15s; */
+  align-items: center;
+  transition: all 0.25s;
+  height: calc(100% - 0.3rem);
+  width: calc(100% - 0.3rem);
+
   @media (max-width: 765px) {
     width: 90vw;
     display: flex;

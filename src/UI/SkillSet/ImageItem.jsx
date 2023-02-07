@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ImageItem = styled.div`
   &:hover {
-    scale: 0.95;
+    scale: 0.99;
   }
   cursor: pointer;
   min-width: 50px;
@@ -25,6 +25,7 @@ export const ImageItem = styled.div`
     height: 92%;
     border-radius: 8px;
     background: rgba(16, 17, 17, 0.119);
+
     box-shadow: inset 5px 5px 10px #20252e, inset -5px -5px 10px #2d333c;
   }
   a {

@@ -21,4 +21,14 @@ export const Wrapper = styled.div`
     padding-top: 10vh;
     padding-bottom: 15vh;
   }
+
+  &:hover {
+    .card {
+      background: radial-gradient(
+        120rem circle at var(--xPos) var(--yPos),
+        rgba(255, 110, 199, 0.8),
+        transparent 25%
+      );
+    }
+  }
 `;

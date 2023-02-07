@@ -25,7 +25,7 @@ export default function TextGrid({ offsetY }) {
       id="textBox"
       style={{
         background: `radial-gradient(circle, #e261bd70 0%, rgba(39, 44, 57, 0)  ${
-          offsetY * 0.04
+          offsetY * 0.03
         }%)`,
       }}
     >
