@@ -52,7 +52,7 @@ const icon = {
   },
 };
 
-export default function Contact() {
+export default function Contact({ contactRef, homeRef }) {
   const { ref, inView } = useInView();
 
   const form = useRef();
@@ -95,11 +95,11 @@ export default function Contact() {
           console.log(error.text);
         }
       );
-    handleClick();
+    handleSubmit();
     e.target.reset();
   };
 
-  const handleClick = () => {
+  const handleSubmit = () => {
     setIsSending(true);
     setTimeout(() => {
       setIsSending(false);
@@ -107,10 +107,13 @@ export default function Contact() {
       setTimeout(() => setIsSent(false), 2500);
     }, 2000);
   };
+  const handleClick = () => {
+    homeRef.current.scrollIntoView();
+  };
 
   return (
     <>
-      <Wrapper id="contacts">
+      <Wrapper id="contacts" ref={contactRef}>
         <InfoRight>
           <Mail href="mailto:nils.holthey@gmx.de">nils.holthey@gmail.com</Mail>
           <LineRight></LineRight>
@@ -228,6 +231,7 @@ export default function Contact() {
         >
           <ArrowDown
             href="#home"
+            onClick={handleClick}
             bottom="0"
             right="50%"
             Background="  rgb(39, 44, 57)"

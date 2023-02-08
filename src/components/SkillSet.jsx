@@ -36,7 +36,7 @@ const icon = {
   },
 };
 
-export default function Skillset() {
+export default function Skillset({ skillRef, workRef }) {
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
@@ -46,8 +46,12 @@ export default function Skillset() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleClick = () => {
+    workRef.current.scrollIntoView();
+  };
+
   return (
-    <Wrapper id="skillset">
+    <Wrapper id="skillset" ref={skillRef}>
       <Container
         viewport={{ once: true }}
         as={motion.section}
@@ -57,6 +61,7 @@ export default function Skillset() {
       >
         <ArrowDown
           href="#work"
+          onClick={handleClick}
           bottom="0"
           right="50%"
           Background="  rgb(39, 44, 57)"

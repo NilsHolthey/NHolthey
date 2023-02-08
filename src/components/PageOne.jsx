@@ -14,13 +14,13 @@ import SpinnerSvg from './images/SpinnerSvg';
 import { useState } from 'react';
 import TextBoxPageOne from './TextBoxPageOne';
 
-export default function MainBg() {
+export default function MainBg({ scrollRef, homeRef }) {
   const [isActive, setIsActive] = useState(false);
-  const element = document.getElementById('about');
+  // const element = document.getElementById('about');
   const handleclick = () => {
     setIsActive(true);
     setTimeout(function () {
-      element.scrollIntoView();
+      scrollRef.current.scrollIntoView();
       setTimeout(() => setIsActive(false), 1000);
     }, 750);
   };
@@ -28,8 +28,8 @@ export default function MainBg() {
   return (
     <>
       <ShadowBox />
-      <ProfileWrapper id="home">
-        <Navbar />
+      <ProfileWrapper id="home" ref={homeRef}>
+        <Navbar homeRef={homeRef} />
         <DevImage />
         <ArrowDown
           onClick={handleclick}

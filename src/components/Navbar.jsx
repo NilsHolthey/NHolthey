@@ -1,13 +1,14 @@
 // import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { HomeButton } from '../UI/HomeButton';
 import { Nav } from '../UI/Nav';
 import Burger from '../UI/Navigation/Burger';
 import { NavLink } from '../UI/NavLink';
 import { NavList } from '../UI/NavList';
 import Logo2 from './images/Logo2';
 
-export default function Navbar() {
+export default function Navbar({ homeRef }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const changeColor = () => {
     if (window.pageYOffset > 50) {
@@ -24,11 +25,15 @@ export default function Navbar() {
     };
   }, []);
 
+  const handleClick = () => {
+    homeRef.current.scrollIntoView();
+  };
+
   return (
     <Nav>
-      <a href="#home">
+      <HomeButton onClick={handleClick}>
         <Logo2 />
-      </a>
+      </HomeButton>
       <Burger />
       <NavList isScrolled={isScrolled}>
         <li>

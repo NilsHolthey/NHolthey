@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useRef } from 'react';
+// import { useRef } from 'react';
 import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { AboutBox } from '../UI/About/AboutBox';
@@ -57,7 +57,7 @@ const icon = {
   },
 };
 
-export default function About() {
+export default function About({ aboutRef, skillRef }) {
   // const cards = document.querySelectorAll('.card');
   // const wrapper = document.querySelector('.cards');
 
@@ -108,10 +108,13 @@ export default function About() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const myRef = useRef(null);
+  // const myRef = useRef(null);
+  const handleClick = () => {
+    skillRef.current.scrollIntoView();
+  };
 
   return (
-    <Wrapper id="about" ref={myRef} className="cards">
+    <Wrapper id="about" ref={aboutRef} className="cards">
       <Container
         className="card"
         viewport={{ once: true }}
@@ -123,6 +126,7 @@ export default function About() {
         <ContainerBorder>
           <ArrowDown
             href="#skillset"
+            onClick={handleClick}
             bottom="0"
             right="50%"
             Background=" rgba(25, 29, 36, 0.965)"
