@@ -13,26 +13,40 @@ const Ul = styled.ul`
   top: 0;
   right: 0;
   height: 100vh;
-  width: 20%;
-  padding-top: 3.5rem;
-  transition: all 0.3s ease-out;
+  width: 100%;
+
+  transition: all 0.45s ease-out;
+  align-items: center;
+  justify-content: center;
   li {
     opacity: ${({ open }) => (open ? '1' : '0')};
+    transform: ${({ open }) => (open ? 'translatey(0)' : 'translatey(200%)')};
+
     padding: 18px 10px;
+    transition: all 1.8s ease-out;
 
     font-weight: 700;
+    &:hover {
+      a {
+        color: #6667ab;
+      }
+
+      scale: 1.1;
+      -webkit-box-reflect: below -5.2vh linear-gradient(to bottom, transparent
+            30%, #8888882e);
+      transition: all ease-in 0.3s;
+    }
 
     a {
       text-decoration: none;
-      font-size: 2.2vh;
+      font-size: 5.2vh;
       color: #f8f8f8;
       &:visited {
         color: #f8f8f8;
       }
       &:hover {
         color: #6667ab;
-
-        transition: color ease-in 0.3s;
+        transition: all ease-in 0.3s;
       }
     }
   }
