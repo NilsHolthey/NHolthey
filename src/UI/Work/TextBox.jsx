@@ -12,7 +12,7 @@ export const TextBox = styled.section`
 
   p {
     font-weight: bolder;
-    font-size: 3.5vh;
+    font-size: 3vh;
     font-family: 'Fjalla One', sans-serif;
     display: flex;
     flex-wrap: wrap;
@@ -54,5 +54,8 @@ export const TextBox = styled.section`
     width: 50%;
     height: 100%;
     left: 0;
+    p {
+      font-size: 2.5vh;
+    }
   }
 `;
