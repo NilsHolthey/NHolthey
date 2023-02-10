@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const DeveloperImg = styled.img`
   width: 90vw;
+  max-width: 1449px;
 
   opacity: 0.05;
 

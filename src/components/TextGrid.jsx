@@ -3,6 +3,7 @@ import useBearStore from '../lib/useStore';
 import { Text } from '../UI/SkillSet/Text';
 import { TextBox } from '../UI/SkillSet/TextBox';
 import { BinarySpan } from '../UI/SkillSet/BinarySpan';
+import { TextSpan } from '../UI/SkillSet/TextSpan';
 
 const text = {
   hidden: { opacity: 0, y: 25 },
@@ -46,7 +47,7 @@ export default function TextGrid({ offsetY }) {
               name={skill.name}
             >
               {skill.clicked ? (
-                <span>{skill.name}&nbsp;|&nbsp;</span>
+                <TextSpan>{skill.name}&nbsp;|&nbsp;</TextSpan>
               ) : (
                 <BinarySpan>{skill.binary}</BinarySpan>
               )}

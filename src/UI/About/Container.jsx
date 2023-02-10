@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.section`
   width: 70vw;
   height: 80vh;
-  max-width: 1649px;
+  max-width: 1449px;
   max-height: 876px;
   display: flex;
   /* color: #f8f8f8; */

@@ -24,9 +24,9 @@ export const ImageItem = styled.div`
     width: 92%;
     height: 92%;
     border-radius: 8px;
-    background: rgba(16, 17, 17, 0.119);
+    /* background: rgba(22, 25, 31, 0.708); */
 
-    box-shadow: inset 5px 5px 10px #20252e, inset -5px -5px 10px #2d333c;
+    box-shadow: inset 10px 10px 10px #20252e, inset -10px -10px 10px #2d333c;
   }
   a {
     display: flex;

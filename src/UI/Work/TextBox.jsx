@@ -18,6 +18,7 @@ export const TextBox = styled.section`
     flex-wrap: wrap;
     width: 80%;
     color: #d1d1d1;
+
     a {
       font-family: 'Inter', sans-serif;
       color: #b5b5b5b5;

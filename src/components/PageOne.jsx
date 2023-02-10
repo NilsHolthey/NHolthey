@@ -6,7 +6,7 @@ import { TextContainer } from '../UI/TextContainer';
 import Navbar from './Navbar';
 
 import ProfileImg from './ProfileImg';
-import ShadowBox from './ShadowBox';
+// import ShadowBox from './ShadowBox';
 
 import DevImage from './DevImage';
 import { ArrowDown } from '../UI/ArrowDown';
@@ -27,7 +27,7 @@ export default function MainBg({ scrollRef, homeRef }) {
 
   return (
     <>
-      <ShadowBox />
+      {/* <ShadowBox /> */}
       <ProfileWrapper id="home" ref={homeRef}>
         <Navbar homeRef={homeRef} />
         <DevImage />

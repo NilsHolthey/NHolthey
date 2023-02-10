@@ -151,9 +151,9 @@ export default function Work({ workRef, contactRef }) {
             initial="hidden"
             whileInView="show"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa porro
-            perspiciatis amet dignissimos! In, facere repellendus cum est sit
-            eius.{' '}
+            Learn to love agile working. My App Didit is a personal task
+            manager, with drag and drop functionality. This is the final project
+            of an intensive full-time coding bootcamp.
             <a
               target="_blank"
               rel="noopener noreferrer"

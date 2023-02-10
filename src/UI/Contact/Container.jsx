@@ -8,7 +8,7 @@ export const Container = styled.article`
   border-radius: 8px;
   background: rgba(25, 29, 36);
   position: relative;
-  max-width: 1649px;
+  max-width: 1449px;
   max-height: 876px;
   @media (max-width: 765px) {
     width: 90vw;
