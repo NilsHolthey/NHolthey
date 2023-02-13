@@ -4,13 +4,14 @@ export const Text = styled.div`
   width: 80%;
 
   font-weight: bolder;
-  font-size: 3.5vh;
+  font-size: 3vh;
   font-family: 'Fjalla One', sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   color: #d1d1d1;
+  padding: 2rem 0 2rem 0;
   span {
   }
   @media (max-width: 765px) {

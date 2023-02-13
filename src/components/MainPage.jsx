@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+// import { BgTest } from '../UI/BgTest';
 import GlobalStyle from '../UI/GlobalStyles';
 import About from './About';
 import Contact from './Contact';
@@ -19,6 +20,11 @@ export default function MainPage() {
     <>
       <GlobalStyle />
       <SvgBackgroud />
+      {/* <BgTest>
+        <section>
+          <div></div>
+        </section>
+      </BgTest> */}
       <MainBg scrollRef={scrollRef} homeRef={homeRef} />
       <About aboutRef={scrollRef} skillRef={skillRef} />
       <Skillset skillRef={skillRef} workRef={workRef} />
