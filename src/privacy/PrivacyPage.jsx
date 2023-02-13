@@ -56,7 +56,63 @@ export default function PrivacyPage() {
             angeforderter Werbung und Informationsmaterialien wird hiermit
             ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich
             ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung
-            von Werbeinformationen, etwa durch Spam-Mails, vor.
+            von Werbeinformationen, etwa durch Spam-Mails, vor.<br></br>
+            <br></br>Wir nutzen auf unserer Website Vercel, eine
+            Cloud-Deployment-Plattform. Dienstanbieter ist das amerikanische
+            Unternehmen Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789.
+            Vercel verarbeitet Daten von Ihnen u.a. auch in den USA. Wir weisen
+            darauf hin, dass nach Meinung des Europäischen Gerichtshofs derzeit
+            kein angemessenes Schutzniveau für den Datentransfer in die USA
+            besteht. Dies kann mit verschiedenen Risiken für die Rechtmäßigkeit
+            und Sicherheit der Datenverarbeitung einhergehen.Als Grundlage der
+            Datenverarbeitung bei Empfängern mit Sitz in Drittstaaten (außerhalb
+            der Europäischen Union, Island, Liechtenstein, Norwegen, also
+            insbesondere in den USA) oder einer Datenweitergabe dorthin
+            verwendet Vercel sogenannte Standardvertragsklauseln (= Art. 46.
+            Abs. 2 und 3 DSGVO). Standardvertragsklauseln (Standard Contractual
+            Clauses – SCC) sind von der EU-Kommission bereitgestellte
+            Mustervorlagen und sollen sicherstellen, dass Ihre Daten auch dann
+            den europäischen Datenschutzstandards entsprechen, wenn diese in
+            Drittländer (wie beispielsweise in die USA) überliefert und dort
+            gespeichert werden. Durch diese Klauseln verpflichtet sich Vercel ,
+            bei der Verarbeitung Ihrer relevanten Daten, das europäische
+            Datenschutzniveau einzuhalten, selbst wenn die Daten in den USA
+            gespeichert, verarbeitet und verwaltet werden. Diese Klauseln
+            basieren auf einem Durchführungsbeschluss der EU-Kommission. Sie
+            finden den Beschluss und die entsprechenden Standardvertragsklauseln
+            u.a. hier:{' '}
+            <a
+              href="https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj?locale=de"
+              target="_blank"
+              rel="noopener nofollow noreferrer"
+            >
+              https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj?locale=de
+            </a>
+            <br></br>
+            <br></br>
+            <p>
+              Die Datenverarbeitungsbedingung (Data Processing Addendum), welche
+              den Standardvertragsklauseln entspricht, finden Sie unter{' '}
+              <a
+                href="https://vercel.com/legal/Vercel_Inc_-_Data_Processing_Addendum.pdf"
+                target="_blank"
+                rel="follow noopener noreferrer"
+              >
+                https://vercel.com/legal/Vercel_Inc_-_Data_Processing_Addendum.pdf
+              </a>
+              . <br></br>
+              <br></br>
+              Mehr über die Daten, die durch die Verwendung von Vercel
+              verarbeitet werden, erfahren Sie in der Privacy Policy auf{' '}
+              <a
+                href="https://vercel.com/legal/privacy-policy"
+                target="_blank"
+                rel="noopener nofollow noreferrer"
+              >
+                https://vercel.com/legal/privacy-policy
+              </a>
+              .
+            </p>
           </TextBox>
         </Container>
       </Wrapper>
