@@ -182,11 +182,22 @@ export default function About({ aboutRef, skillRef }) {
             >
               <p>Hello World,</p>
               <p>
-                I&apos;m Nils, {age} years old, creative front-end developer who
-                loves to bring clarity to complex concepts through design. I
-                have a genuine passion for inspiring design and innovative
-                technology, I enjoy solving problems with clean scalable
-                solutions.
+                I&apos;m Nils, {age} years old, creative front-end developer
+                with a passion for design and technology. I have always been
+                fascinated with the intersection of aesthetics and
+                functionality, which is why I was driven to pursue a career in
+                web development. Through my 570-hour bootcamp, I honed the base
+                of my skills in coding and the ability to turn complex concepts
+                into clean, visually appealing designs. <br></br>
+                <br></br>I believe that great design can be achieved through a
+                combination of analytic thinking and creative expression, and I
+                am always seeking new challenges to push my skills further.{' '}
+                <br></br>
+                <br></br>In my work, I strive to bring clarity and simplicity to
+                complex ideas, and I am dedicated to finding the right balance
+                between form and function. Whether working on a website or an
+                application, my goal is to create user-friendly experiences that
+                leave a lasting impression.
               </p>
             </AboutText>
           </AboutBox>

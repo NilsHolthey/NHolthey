@@ -12,7 +12,7 @@ export const AboutBox = styled.article`
   justify-content: center;
   align-items: center;
 
-  font-size: 2.5vh;
+  font-size: 1.5vh;
   z-index: 5;
 
   /* background-color: #1c2028;

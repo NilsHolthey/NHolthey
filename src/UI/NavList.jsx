@@ -2,14 +2,15 @@ import styled from 'styled-components';
 
 export const NavList = styled.ul`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 3vw;
   width: 40vw;
   list-style: none;
-  padding: none;
+  padding: 0 0 0.5rem 0;
 
   animation: slideIn 1.5s ease-in-out;
   font-weight: 900;
-  gap: 1rem;
+
   font-size: 1.1rem;
   position: fixed;
   right: 30%;
@@ -24,7 +25,7 @@ export const NavList = styled.ul`
 
   &:has(li:hover) li:not(:hover) {
     scale: 0.98;
-    opacity: 0.7;
+    opacity: 0.2;
   }
 
   @keyframes slideIn {
