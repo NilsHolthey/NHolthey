@@ -8,6 +8,16 @@ export const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   /* background: #dcdcdc; */
+
+  &:hover {
+    .container {
+      background: radial-gradient(
+        120rem circle at var(--xPos) var(--yPos),
+        #773364,
+        transparent 25%
+      );
+    }
+  }
   @media (max-width: 765px) {
     width: 100vw;
     height: 180vh;

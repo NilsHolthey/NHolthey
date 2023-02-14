@@ -15,11 +15,22 @@ export const TextBox = styled.section`
   font-family: 'Fjalla One', sans-serif;
   @media (max-width: 550px) {
     font-size: 1.4rem;
-    width: 80vw;
-    bottom: 15%;
-    left: 10%;
+    width: 100vw;
+    bottom: 25%;
+    left: 15%;
+    margin: 0;
+    right: unset;
   }
   @media (max-width: 750px) {
     font-size: 1.4rem;
+  }
+
+  @media (orientation: portrait) {
+    font-size: 1.4rem;
+    width: 100vw;
+    bottom: 25%;
+    left: 15%;
+    margin: 0;
+    right: unset;
   }
 `;

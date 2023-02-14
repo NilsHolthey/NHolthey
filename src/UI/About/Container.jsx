@@ -33,14 +33,14 @@ export const Container = styled.section`
   }
 
   @media (orientation: portrait) {
-    height: fit-content;
     flex-direction: column-reverse;
     width: 90vw;
     min-height: 80vh;
     display: flex;
-
+    height: fit-content;
     align-items: center;
     justify-content: center;
+    max-height: unset;
   }
 
   @media (max-width: 765px) and (orientation: landscape) {

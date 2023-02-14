@@ -1,28 +1,15 @@
 import styled from 'styled-components';
 
-export const Container = styled.section`
+export const ContainerBorder = styled.div`
+  border-radius: inherit;
+  background: rgba(25, 29, 36);
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 70vw;
-  background: radial-gradient(
-    150rem circle at 0 0,
-    rgba(255, 110, 199, 0),
-    transparent 0%
-  );
-  border-radius: 8px;
-  height: 80vh;
-  max-width: 1449px;
-  max-height: 876px;
-  /* background: #272c39;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 10%,
-    rgba(39, 44, 57, 0.393) 30%,
-    rgba(255, 255, 255, 0) 60%
+  transition: all 0.25s;
+  height: calc(100% - 0.3rem);
+  width: calc(100% - 0.3rem);
 
-  ); */
   @media (max-width: 765px) {
     width: 90vw;
     min-height: 80vh;

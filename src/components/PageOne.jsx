@@ -13,6 +13,7 @@ import { ArrowDown } from '../UI/ArrowDown';
 import SpinnerSvg from './images/SpinnerSvg';
 import { useState } from 'react';
 import TextBoxPageOne from './TextBoxPageOne';
+import { motion } from 'framer-motion';
 
 export default function MainBg({ scrollRef, homeRef }) {
   const [isActive, setIsActive] = useState(false);
@@ -45,7 +46,17 @@ export default function MainBg({ scrollRef, homeRef }) {
           <TextContainer>
             <TextBoxPageOne />
           </TextContainer>
-          <ImageContainer>
+          <ImageContainer
+            as={motion.div}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              type: 'spring',
+              bounce: 0.2,
+              duration: 1.8,
+              delay: 0.5,
+            }}
+          >
             <ProfileImg />
           </ImageContainer>
         </ProfileContainer>

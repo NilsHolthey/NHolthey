@@ -33,12 +33,12 @@ export default function ProfileImg() {
       src="ProfileImgFullOpacity.png"
       alt="profile"
       isScrolled={isScrolled}
-      initial={{ y: 55 }}
+      initial={{ y: 255 }}
       animate={{ y: 0 }}
       transition={{
         type: 'spring',
         bounce: 0.2,
-        duration: 2.3,
+        duration: 1.8,
         delay: 0.5,
       }}
     />
