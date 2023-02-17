@@ -16,7 +16,7 @@ export const AboutImageBox = styled.article`
   /* background-color: #1c2028;
   box-shadow: -5px -5px 0px 0px #272c39; */
   border-radius: 8px 0 0 8px;
-  background: rgba(25, 29, 36, 0);
+  /* background: rgba(25, 29, 36, 1); */
   /* box-shadow: 6px 6px 24px #1b1e27;
   transition: width 1000ms ease-in-out, bottom 1000ms ease-in-out,
     right 1000ms ease-in-out; */

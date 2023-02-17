@@ -64,7 +64,7 @@ const icon = {
   },
 };
 
-export default function Work() {
+export default function Work({ workRef, contactRef }) {
   const [isActive, setIsActive] = useState(false);
 
   function handelClick() {
@@ -94,7 +94,9 @@ export default function Work() {
       handelClick();
     }
   };
-
+  const handleScrollClick = () => {
+    contactRef.current.scrollIntoView();
+  };
   const keyPress = useCallback(
     e => {
       if (e.key === 'Escape' && isActive) {
@@ -110,7 +112,7 @@ export default function Work() {
     return () => document.removeEventListener('keydown', keyPress);
   }, [keyPress]);
   return (
-    <Wrapper id="work">
+    <Wrapper id="work" ref={workRef}>
       <Container
         viewport={{ once: true }}
         as={motion.section}
@@ -120,6 +122,7 @@ export default function Work() {
       >
         <ArrowDown
           href="#contacts"
+          onClick={handleScrollClick}
           bottom="0"
           right="50%"
           Background="  rgb(39, 44, 57)"
@@ -138,8 +141,8 @@ export default function Work() {
         </ArrowDown>
         <HeadlineBox>
           <span>03</span>
-          <div></div>
-          <Headline>My Work</Headline>
+
+          <Headline>Work</Headline>
         </HeadlineBox>
         <TextBox>
           <motion.p
@@ -148,9 +151,9 @@ export default function Work() {
             initial="hidden"
             whileInView="show"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa porro
-            perspiciatis amet dignissimos! In, facere repellendus cum est sit
-            eius.{' '}
+            Learn to love agile working. My App Didit is a personal task
+            manager, with drag and drop functionality. This is the final project
+            of an intensive full-time coding bootcamp.
             <a
               target="_blank"
               rel="noopener noreferrer"

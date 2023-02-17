@@ -6,6 +6,8 @@ const GlobalStyle = createGlobalStyle`
 	*::after {
 		box-sizing: border-box;
 		/* outline:1px solid green ; */
+		margin: 0;
+		padding:0;
 		
 		
 	}
@@ -15,13 +17,18 @@ const GlobalStyle = createGlobalStyle`
 		--primary-light: #8abdff;
   		--primary: #6d5dfc;
   		--primary-background: #dcdcdc6d;
-  		--primary-dark: #5b0eeb;
+  		--primary-dark:  rgba(25, 29, 36);
+		--font-white: #d1d1d1;
   
   		--white: #FFFFFF;
   		--greyLight-1: #f8f8f8;
   		--greyLight-2: #c8d0e7;
   		--greyLight-3: #bec8e4;
   		--greyDark: #9baacf;
+
+		--purple: rgb(123, 31, 162);
+ 		--violet: #6667ab;
+  		--pink: rgb(244, 143, 177);
 		
 	}
 	html{
@@ -47,6 +54,9 @@ const GlobalStyle = createGlobalStyle`
 		padding:0;
 		font-family: 'Inter', sans-serif;
 	}
+
+
+	
 `;
 
 export default GlobalStyle;

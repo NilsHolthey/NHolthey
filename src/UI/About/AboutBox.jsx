@@ -12,12 +12,12 @@ export const AboutBox = styled.article`
   justify-content: center;
   align-items: center;
 
-  font-size: 2.5vh;
+  font-size: 1.8vh;
   z-index: 5;
-  border-radius: 0 8px 8px 0;
+
   /* background-color: #1c2028;
   box-shadow: -5px -5px 0px 0px #272c39; */
-  background: rgba(25, 29, 36);
+
   /* box-shadow: -15px 15px 20px #15181e, 15px -15px 52px #232832;
   transition: width 1000ms ease-in-out, bottom 1000ms ease-in-out,
     right 1000ms ease-in-out; */
@@ -32,6 +32,7 @@ export const AboutBox = styled.article`
   }
   @media (orientation: portrait) {
     font-size: 2vh;
+    padding: 2.5rem;
     position: relative;
     border-radius: 0;
     width: 100%;

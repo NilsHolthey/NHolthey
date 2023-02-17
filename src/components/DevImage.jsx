@@ -12,8 +12,8 @@ export default function DevImage() {
         id="developerImg"
         src="DEVELOPER.png"
         as={motion.img}
-        initial={{ opacity: 0.1, scale: 0.2 }}
-        animate={{ opacity: 0.06, scale: 1 }}
+        initial={{ opacity: 0.2, scale: 0.2 }}
+        animate={{ opacity: 0.13, scale: 1 }}
         transition={{
           type: 'spring',
           bounce: 0.2,

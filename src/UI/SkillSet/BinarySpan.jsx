@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const BinarySpan = styled.span`
-  font-size: 1.7vh;
+  font-size: 1.4vh;
   display: flex;
   align-items: center;
   justify-content: center;

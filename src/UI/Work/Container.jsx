@@ -6,20 +6,21 @@ export const Container = styled.section`
   background: rgba(25, 29, 36);
   border-radius: 8px;
   display: flex;
-
+  max-width: 1449px;
+  max-height: 876px;
   position: relative;
 
   @media (max-width: 765px) {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    width: 90vw;
+    width: 97vw;
   }
   @media (orientation: portrait) {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    width: 90vw;
+    width: 97vw;
   }
 
   @media (max-width: 765px) and (orientation: landscape) {
@@ -27,6 +28,6 @@ export const Container = styled.section`
     align-items: center;
     display: flex;
     justify-content: flex-end;
-    width: 90;
+    width: 90vw;
   }
 `;

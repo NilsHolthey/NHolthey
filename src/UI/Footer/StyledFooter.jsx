@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Footer = styled.footer`
+export const StyledFooter = styled.footer`
   width: 100dvw;
   height: 15vh;
 
@@ -10,4 +10,8 @@ export const Footer = styled.footer`
   justify-content: center;
   align-items: center;
   opacity: 0.8;
+
+  @media (orientation: portrait) {
+    height: 30vh;
+  }
 `;

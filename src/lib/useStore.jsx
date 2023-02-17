@@ -21,7 +21,7 @@ const useBearStore = create(set => ({
       id: '001',
       name: 'HTML',
       binary: '01001000 0101010 01001101 01001100 ',
-      clicked: false,
+      clicked: true,
       imageUrl: 'html5-logo-31813.png',
     },
     {

@@ -1,8 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import GlobalStyle from '../UI/GlobalStyles';
+import PrivacyPage from './PrivacyPage';
 
-ReactDOM.createRoot(document.getElementById('rootprivacy')).render(
-  <React.StrictMode>
-    <h1>PrivacyPolicy</h1>
-  </React.StrictMode>
-);
+export default function Privacy() {
+  return (
+    <>
+      <GlobalStyle />
+      <PrivacyPage />
+    </>
+  );
+}

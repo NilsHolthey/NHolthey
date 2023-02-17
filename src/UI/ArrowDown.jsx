@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ArrowDown = styled.a`
+export const ArrowDown = styled.button`
   span {
     color: #f8f8f8a1;
     outline: 3px solid ${({ OutlineColor = '#dcdcdc' }) => OutlineColor};
@@ -41,7 +41,8 @@ export const ArrowDown = styled.a`
   transform: translate(50%, 50%);
   cursor: pointer;
   z-index: 100;
-
+  border: none;
+  background-color: unset;
   @media (max-width: 768px) {
     display: none;
   }

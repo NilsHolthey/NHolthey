@@ -9,6 +9,7 @@ import { Wrapper } from '../UI/SkillSet/Wrapper';
 import { ArrowDown } from '../UI/ArrowDown';
 import SkillGrid from './SkillGrid';
 import TextGrid from './TextGrid';
+import { ContainerBorder } from '../UI/SkillSet/ContainerBorder';
 
 const item = {
   hidden: { opacity: 0, y: 90 },
@@ -36,7 +37,7 @@ const icon = {
   },
 };
 
-export default function Skillset() {
+export default function Skillset({ skillRef, workRef }) {
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
@@ -46,41 +47,76 @@ export default function Skillset() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const cards = document.querySelectorAll('.container');
+    const wrapper = document.querySelector('.wrapper');
+    wrapper.addEventListener('mousemove', function ($event) {
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const x = $event.clientX - rect.left;
+        const y = $event.clientY - rect.top;
+
+        card.style.setProperty('--xPos', `${x}px`);
+        card.style.setProperty('--yPos', `${y}px`);
+      });
+    });
+
+    return () =>
+      wrapper.removeEventListener('mousemove', function ($event) {
+        cards.forEach(card => {
+          const rect = card.getBoundingClientRect();
+          const x = $event.clientX - rect.left;
+          const y = $event.clientY - rect.top;
+
+          card.style.setProperty('--xPos', `${x}px`);
+          card.style.setProperty('--yPos', `${y}px`);
+        });
+      });
+  }, []);
+
+  const handleClick = () => {
+    workRef.current.scrollIntoView();
+  };
+
   return (
-    <Wrapper id="skillset">
+    <Wrapper id="skillset" ref={skillRef} className="wrapper">
       <Container
+        className="container"
         viewport={{ once: true }}
         as={motion.section}
         variants={item}
         initial="hidden"
         whileInView="show"
       >
-        <ArrowDown
-          href="#work"
-          bottom="0"
-          right="50%"
-          Background="  rgb(39, 44, 57)"
-          BorderColor=" rgb(39, 44, 57)"
-          OutlineColor=" rgb(39, 44, 57)"
-        >
-          <motion.span
-            className="material-symbols-outlined"
-            viewport={{ once: true }}
-            variants={icon}
-            initial="hidden"
-            whileInView="show"
+        <ContainerBorder>
+          <ArrowDown
+            href="#work"
+            onClick={handleClick}
+            bottom="0"
+            right="50%"
+            Background="  rgb(39, 44, 57)"
+            BorderColor=" rgb(39, 44, 57)"
+            OutlineColor=" rgb(39, 44, 57)"
           >
-            arrow_downward
-          </motion.span>
-        </ArrowDown>
-        <HeadlineBox>
-          <span>02</span>
-          <div></div>
-          <Headline>Skill Set</Headline>
-        </HeadlineBox>
-        <TextGrid offsetY={offsetY} />
-        <SkillGrid />
-        <BreakLine />
+            <motion.span
+              className="material-symbols-outlined"
+              viewport={{ once: true }}
+              variants={icon}
+              initial="hidden"
+              whileInView="show"
+            >
+              arrow_downward
+            </motion.span>
+          </ArrowDown>
+          <HeadlineBox>
+            <span>02</span>
+
+            <Headline>Skill Set</Headline>
+          </HeadlineBox>
+          <TextGrid offsetY={offsetY} />
+          <SkillGrid />
+          <BreakLine />
+        </ContainerBorder>
       </Container>
     </Wrapper>
   );

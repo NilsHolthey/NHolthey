@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Container } from '../UI/Contact/Container';
-import { Footer } from '../UI/Contact/Footer';
 import { Wrapper } from '../UI/Contact/Wrapper';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
@@ -15,7 +14,7 @@ import { LinkList } from '../UI/LinkList';
 import { SocialLink } from '../UI/SocialLinks';
 import SvgIcon from '../UI/icons';
 import { LineLeft } from '../UI/LineLeft';
-import MailSvg from '../UI/MailSvg';
+
 import { useState } from 'react';
 import { TestDiv } from '../UI/Contact/TestDiv';
 import { TestDivName } from '../UI/Contact/TestDivName';
@@ -25,6 +24,7 @@ import { FormModal } from '../UI/Contact/FormModal';
 import { TextBox } from '../UI/Contact/TextBox';
 import { Form } from '../UI/Contact/Form';
 import { ArrowDown } from '../UI/ArrowDown';
+import LinkedInSvg from '../UI/LinkedInSvg';
 
 const item = {
   hidden: { opacity: 0, y: 70 },
@@ -52,10 +52,9 @@ const icon = {
   },
 };
 
-export default function Contact() {
+export default function Contact({ contactRef, homeRef }) {
   const { ref, inView } = useInView();
 
-  const copyright = new Date().getFullYear();
   const form = useRef();
 
   const [valueName, setValueName] = useState();
@@ -96,11 +95,11 @@ export default function Contact() {
           console.log(error.text);
         }
       );
-    handleClick();
+    handleSubmit();
     e.target.reset();
   };
 
-  const handleClick = () => {
+  const handleSubmit = () => {
     setIsSending(true);
     setTimeout(() => {
       setIsSending(false);
@@ -108,10 +107,13 @@ export default function Contact() {
       setTimeout(() => setIsSent(false), 2500);
     }, 2000);
   };
+  const handleClick = () => {
+    homeRef.current.scrollIntoView();
+  };
 
   return (
     <>
-      <Wrapper id="contacts">
+      <Wrapper id="contacts" ref={contactRef}>
         <InfoRight>
           <Mail href="mailto:nils.holthey@gmx.de">nils.holthey@gmail.com</Mail>
           <LineRight></LineRight>
@@ -207,8 +209,12 @@ export default function Contact() {
               </a>
             </SocialLink>
             <SocialLink className={`${inView ? 'contacts' : ''}`}>
-              <a href="mailto:nils.holthey@gmail.com">
-                <MailSvg />
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://linkedin.com/in/nils-holthey"
+              >
+                <LinkedInSvg />
               </a>
             </SocialLink>
           </LinkList>
@@ -225,6 +231,7 @@ export default function Contact() {
         >
           <ArrowDown
             href="#home"
+            onClick={handleClick}
             bottom="0"
             right="50%"
             Background="  rgb(39, 44, 57)"
@@ -243,7 +250,7 @@ export default function Contact() {
           </ArrowDown>
           <HeadlineBox>
             <span>04</span>
-            <div></div>
+
             <Headline>Contact Me</Headline>
           </HeadlineBox>
           <TextBox>
@@ -342,9 +349,6 @@ export default function Contact() {
           </Form>
         </Container>
       </Wrapper>
-      <Footer>
-        <p> ©{copyright} Nils Holthey</p>
-      </Footer>
     </>
   );
 }

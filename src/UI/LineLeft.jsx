@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const LineLeft = styled.div`
   margin-right: 0.2rem;
-  height: 7rem;
+  height: 14vh;
   width: 0.12rem;
   background-color: #f8f8f8;
 

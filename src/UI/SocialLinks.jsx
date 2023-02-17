@@ -6,8 +6,8 @@ export const SocialLink = styled.li`
   justify-content: center;
   padding-top: 4px;
   border-radius: 100%;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
 
   &:hover {
     background-color: #6667ab;
