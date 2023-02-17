@@ -11,14 +11,14 @@ export const Container = styled.article`
   max-width: 1449px;
   max-height: 876px;
   @media (max-width: 765px) {
-    width: 90vw;
+    width: 97vw;
     height: fit-content;
     padding-top: 3rem;
     padding-bottom: 5rem;
     flex-direction: column;
   }
   @media (orientation: portrait) {
-    width: 90vw;
+    width: 97vw;
     padding-top: 3rem;
     padding-bottom: 5rem;
     min-height: 80vh;

@@ -133,7 +133,6 @@ export default function About({ aboutRef, skillRef }) {
             BorderColor="rgba(25, 29, 36, 0.965)"
             OutlineColor="rgba(25, 29, 36, 0.965)"
           >
-            <div></div>
             <motion.span
               className="material-symbols-outlined"
               viewport={{ once: true }}

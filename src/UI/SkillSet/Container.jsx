@@ -46,7 +46,7 @@ export const Container = styled.section`
     transition: all 0.15s ease-in-out;
   }
   @media (max-width: 765px) {
-    width: 90vw;
+    width: 97vw;
     min-height: 80vh;
     height: fit-content;
     flex-direction: column;
@@ -54,7 +54,7 @@ export const Container = styled.section`
     padding-bottom: 3%;
   }
   @media (orientation: portrait) {
-    width: 90vw;
+    width: 97vw;
     min-height: 80vh;
     /* height: fit-content; */
     flex-direction: column;

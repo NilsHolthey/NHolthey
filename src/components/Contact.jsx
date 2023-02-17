@@ -250,7 +250,7 @@ export default function Contact({ contactRef, homeRef }) {
           </ArrowDown>
           <HeadlineBox>
             <span>04</span>
-            <div></div>
+
             <Headline>Contact Me</Headline>
           </HeadlineBox>
           <TextBox>

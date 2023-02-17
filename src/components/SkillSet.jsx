@@ -110,7 +110,7 @@ export default function Skillset({ skillRef, workRef }) {
           </ArrowDown>
           <HeadlineBox>
             <span>02</span>
-            <div></div>
+
             <Headline>Skill Set</Headline>
           </HeadlineBox>
           <TextGrid offsetY={offsetY} />

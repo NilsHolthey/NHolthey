@@ -32,6 +32,7 @@ export const AboutBox = styled.article`
   }
   @media (orientation: portrait) {
     font-size: 2vh;
+    padding: 2.5rem;
     position: relative;
     border-radius: 0;
     width: 100%;

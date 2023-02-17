@@ -11,7 +11,7 @@ export const ContainerBorder = styled.div`
   width: calc(100% - 0.3rem);
 
   @media (max-width: 765px) {
-    width: 90vw;
+    width: 97vw;
     display: flex;
     height: 160vh;
     flex-direction: column;
@@ -22,7 +22,7 @@ export const ContainerBorder = styled.div`
   @media (orientation: portrait) {
     height: fit-content;
     flex-direction: column-reverse;
-    width: 90vw;
+    width: 97vw;
     min-height: 80vh;
     display: flex;
 

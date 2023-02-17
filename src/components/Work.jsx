@@ -141,8 +141,8 @@ export default function Work({ workRef, contactRef }) {
         </ArrowDown>
         <HeadlineBox>
           <span>03</span>
-          <div></div>
-          <Headline>My Work</Headline>
+
+          <Headline>Work</Headline>
         </HeadlineBox>
         <TextBox>
           <motion.p

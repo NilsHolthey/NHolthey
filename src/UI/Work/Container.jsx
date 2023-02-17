@@ -14,13 +14,13 @@ export const Container = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    width: 90vw;
+    width: 97vw;
   }
   @media (orientation: portrait) {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    width: 90vw;
+    width: 97vw;
   }
 
   @media (max-width: 765px) and (orientation: landscape) {
@@ -28,6 +28,6 @@ export const Container = styled.section`
     align-items: center;
     display: flex;
     justify-content: flex-end;
-    width: 90;
+    width: 90vw;
   }
 `;

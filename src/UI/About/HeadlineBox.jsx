@@ -42,10 +42,12 @@ export const HeadlineBox = styled.section`
   }
   @media (orientation: portrait) {
     top: -8rem;
-    left: 0;
-    width: 75%;
+    left: -1rem;
+    width: 100%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    padding-left: 2rem;
+    gap: 1rem;
 
     div {
       width: 5rem;

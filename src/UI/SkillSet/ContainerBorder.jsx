@@ -19,7 +19,7 @@ export const ContainerBorder = styled.div`
     padding-bottom: 3%;
   }
   @media (orientation: portrait) {
-    width: 90vw;
+    width: 97vw;
     min-height: 80vh;
     /* height: fit-content; */
     flex-direction: column;
@@ -27,7 +27,7 @@ export const ContainerBorder = styled.div`
     padding-bottom: 3%;
   }
   @media (max-width: 765px) and (orientation: landscape) {
-    width: 90vw;
+    width: 97vw;
     height: fit-content;
     flex-direction: column;
     justify-content: center;
