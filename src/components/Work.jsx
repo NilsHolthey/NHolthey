@@ -184,7 +184,7 @@ export default function Work({ workRef, contactRef }) {
             opacity="0.6"
             zIndex="0"
           />
-          <ScreenShot src="/ScreenShot.png" />
+          <ScreenShot src="/ScreenShot.webp" />
           <PlayButton handelClick={handelClick} />
         </ImageBox>
       </Container>
