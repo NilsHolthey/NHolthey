@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const NavLink = styled.a`
+export const NavLink = styled.span`
   text-decoration: none;
   color: #272c39;
   font-family: 'Fjalla One', sans-serif;

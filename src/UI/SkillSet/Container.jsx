@@ -23,6 +23,28 @@ export const Container = styled.section`
     rgba(255, 255, 255, 0) 60%
 
   ); */
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+  &::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      30rem circle at var(--xPos) var(--yPos),
+      rgba(233, 110, 255, 0.1),
+      transparent 35%
+    );
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.15s ease-in-out;
+  }
   @media (max-width: 765px) {
     width: 90vw;
     min-height: 80vh;

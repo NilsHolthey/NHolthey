@@ -3,7 +3,7 @@ import { ProfileContainer } from '../UI/ProfileContainer';
 
 import { ProfileWrapper } from '../UI/Profilewrapper';
 import { TextContainer } from '../UI/TextContainer';
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
 
 import ProfileImg from './ProfileImg';
 // import ShadowBox from './ShadowBox';
@@ -15,13 +15,13 @@ import { useState } from 'react';
 import TextBoxPageOne from './TextBoxPageOne';
 import { motion } from 'framer-motion';
 
-export default function MainBg({ scrollRef, homeRef }) {
+export default function MainBg({ aboutRef, homeRef }) {
   const [isActive, setIsActive] = useState(false);
   // const element = document.getElementById('about');
   const handleclick = () => {
     setIsActive(true);
     setTimeout(function () {
-      scrollRef.current.scrollIntoView();
+      aboutRef.current.scrollIntoView();
       setTimeout(() => setIsActive(false), 1000);
     }, 750);
   };
@@ -30,7 +30,7 @@ export default function MainBg({ scrollRef, homeRef }) {
     <>
       {/* <ShadowBox /> */}
       <ProfileWrapper id="home" ref={homeRef}>
-        <Navbar homeRef={homeRef} />
+        {/* <Navbar homeRef={homeRef} /> */}
         <DevImage />
         <ArrowDown
           onClick={handleclick}

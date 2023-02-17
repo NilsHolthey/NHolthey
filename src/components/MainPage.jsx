@@ -9,8 +9,10 @@ import Skillset from './SkillSet';
 import SvgBackgroud from './SvgBackgroud';
 import Work from './Work';
 
+import Navbar from './Navbar';
+
 export default function MainPage() {
-  const scrollRef = useRef(null);
+  const aboutRef = useRef(null);
   const homeRef = useRef(null);
   const skillRef = useRef(null);
   const workRef = useRef(null);
@@ -25,8 +27,15 @@ export default function MainPage() {
           <div></div>
         </section>
       </BgTest> */}
-      <MainBg scrollRef={scrollRef} homeRef={homeRef} />
-      <About aboutRef={scrollRef} skillRef={skillRef} />
+      <Navbar
+        homeRef={homeRef}
+        aboutRef={aboutRef}
+        skillRef={skillRef}
+        workRef={workRef}
+        contactRef={contactRef}
+      />
+      <MainBg aboutRef={aboutRef} homeRef={homeRef} />
+      <About aboutRef={aboutRef} skillRef={skillRef} />
       <Skillset skillRef={skillRef} workRef={workRef} />
       <Work workRef={workRef} contactRef={contactRef} />
       <Contact contactRef={contactRef} homeRef={homeRef} />

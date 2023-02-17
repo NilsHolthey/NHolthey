@@ -20,6 +20,7 @@ export const TextBox = styled.section`
     color: #d1d1d1;
 
     a {
+      padding-top: 1rem;
       font-family: 'Inter', sans-serif;
       color: #b5b5b5b5;
       width: 100%;

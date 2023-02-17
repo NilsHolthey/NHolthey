@@ -13,7 +13,7 @@ export const Wrapper = styled.section`
     .container {
       background: radial-gradient(
         120rem circle at var(--xPos) var(--yPos),
-        #773364,
+        rgba(233, 110, 255, 0.8),
         transparent 25%
       );
     }

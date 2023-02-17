@@ -7,7 +7,7 @@ export const NavList = styled.ul`
   width: 40vw;
   list-style: none;
   padding: 0 0 0.5rem 0;
-
+  cursor: pointer;
   animation: slideIn 1.5s ease-in-out;
   font-weight: 900;
 

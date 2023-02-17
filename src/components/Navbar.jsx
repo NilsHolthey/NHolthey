@@ -8,7 +8,13 @@ import { NavLink } from '../UI/NavLink';
 import { NavList } from '../UI/NavList';
 import Logo2 from './images/Logo2';
 
-export default function Navbar({ homeRef }) {
+export default function Navbar({
+  homeRef,
+  skillRef,
+  aboutRef,
+  workRef,
+  contactRef,
+}) {
   const [isScrolled, setIsScrolled] = useState(false);
   const changeColor = () => {
     if (window.pageYOffset > 50) {
@@ -25,28 +31,47 @@ export default function Navbar({ homeRef }) {
     };
   }, []);
 
-  const handleClick = () => {
+  const scrollToHome = () => {
     homeRef.current.scrollIntoView();
+  };
+
+  const scrollToSkill = () => {
+    skillRef.current.scrollIntoView();
+  };
+  const scrollToAbout = () => {
+    aboutRef.current.scrollIntoView();
+  };
+  const scrollToWork = () => {
+    workRef.current.scrollIntoView();
+  };
+  const scrollToContact = () => {
+    contactRef.current.scrollIntoView();
   };
 
   return (
     <Nav>
-      <HomeButton onClick={handleClick}>
+      <HomeButton onClick={scrollToHome}>
         <Logo2 />
       </HomeButton>
-      <Burger />
+      <Burger
+        scrollToSkill={scrollToSkill}
+        scrollToHome={scrollToHome}
+        scrollToAbout={scrollToAbout}
+        scrollToWork={scrollToWork}
+        scrollToContact={scrollToContact}
+      />
       <NavList isScrolled={isScrolled}>
         <li>
-          <NavLink href="#about">About</NavLink>
+          <NavLink onClick={scrollToAbout}>About</NavLink>
         </li>
         <li>
-          <NavLink href="#skillset">Skillset</NavLink>
+          <NavLink onClick={scrollToSkill}>Skillset</NavLink>
         </li>
         <li>
-          <NavLink href="#work">Work</NavLink>
+          <NavLink onClick={scrollToWork}>Work</NavLink>
         </li>
         <li>
-          <NavLink href="#contacts">Contact</NavLink>
+          <NavLink onClick={scrollToContact}>Contact</NavLink>
         </li>
       </NavList>
     </Nav>

@@ -43,7 +43,13 @@ const StyledBurger = styled.div`
   }
 `;
 
-const Burger = () => {
+const Burger = ({
+  scrollToHome,
+  scrollToAbout,
+  scrollToSkill,
+  scrollToWork,
+  scrollToContact,
+}) => {
   const [open, setOpen] = useState(false);
 
   const changeDisplay = () => {
@@ -98,7 +104,16 @@ const Burger = () => {
         <div />
         <div />
       </StyledBurger>
-      <RightNav open={open} setOpen={setOpen} handelClick={handelClick} />
+      <RightNav
+        open={open}
+        setOpen={setOpen}
+        handelClick={handelClick}
+        scrollToSkill={scrollToSkill}
+        scrollToHome={scrollToHome}
+        scrollToAbout={scrollToAbout}
+        scrollToWork={scrollToWork}
+        scrollToContact={scrollToContact}
+      />
     </>
   );
 };
