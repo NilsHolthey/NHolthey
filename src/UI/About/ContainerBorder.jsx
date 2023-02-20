@@ -6,7 +6,7 @@ export const ContainerBorder = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.25s;
+
   height: calc(100% - 0.3rem);
   width: calc(100% - 0.3rem);
 

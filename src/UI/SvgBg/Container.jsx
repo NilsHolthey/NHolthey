@@ -12,11 +12,16 @@ export const Container = styled.section`
   position: fixed;
   width: 100vw;
   height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   justify-content: center;
   align-items: center;
   padding: 15rem 15rem 0 0;
-  transition: all 0.25s ease-out;
 
   div {
     --speed: 23s;

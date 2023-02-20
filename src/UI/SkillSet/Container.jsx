@@ -6,15 +6,16 @@ export const Container = styled.section`
   align-items: center;
   justify-content: center;
   width: 70vw;
-  background: radial-gradient(
+  /* background: radial-gradient(
     150rem circle at 0 0,
     rgba(255, 110, 199, 0),
     transparent 0%
-  );
+  ); */
   border-radius: 8px;
   height: 80vh;
   max-width: 1449px;
   max-height: 876px;
+
   /* background: #272c39;
   background: linear-gradient(
     90deg,
