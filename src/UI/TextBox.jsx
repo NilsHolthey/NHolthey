@@ -33,4 +33,7 @@ export const TextBox = styled.section`
     margin: 0;
     right: unset;
   }
+  @media (max-width: 965px) and (orientation: landscape) {
+    font-size: 1.4rem;
+  }
 `;

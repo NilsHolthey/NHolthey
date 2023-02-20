@@ -8,6 +8,10 @@ export const ImageItem = styled.div`
   min-width: 50px;
   min-height: 50px;
 
+  @media (max-width: 765px) and (orientation: landscape) {
+    min-width: 40px;
+    min-height: 40px;
+  }
   z-index: 3;
   transition: box-shadow 500ms ease, scale 300ms ease;
   border-radius: 8px;

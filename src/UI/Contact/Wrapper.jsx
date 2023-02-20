@@ -24,4 +24,9 @@ export const Wrapper = styled.section`
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+
+  @media (max-width: 965px) and (orientation: landscape) {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
 `;

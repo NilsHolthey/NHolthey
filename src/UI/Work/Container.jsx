@@ -30,4 +30,8 @@ export const Container = styled.section`
     justify-content: flex-end;
     width: 90vw;
   }
+  @media (max-width: 965px) and (orientation: landscape) {
+    width: 90vw;
+    min-height: 90vh;
+  }
 `;

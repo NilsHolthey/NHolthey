@@ -23,29 +23,8 @@ export const Container = styled.section`
     rgba(255, 255, 255, 0) 60%
 
   ); */
-  &:hover {
-    &::before {
-      opacity: 1;
-    }
-  }
-  &::before {
-    content: '';
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: inherit;
-    background: radial-gradient(
-      30rem circle at var(--xPos) var(--yPos),
-      rgba(233, 110, 255, 0.1),
-      transparent 35%
-    );
-    opacity: 0;
-    z-index: 1;
-    transition: all 0.15s ease-in-out;
-  }
-  @media (max-width: 765px) {
+
+  @media (max-width: 765px) and (orientation: portrait) {
     width: 97vw;
     min-height: 80vh;
     height: fit-content;
@@ -62,13 +41,15 @@ export const Container = styled.section`
     padding-bottom: 3%;
   }
   @media (max-width: 765px) and (orientation: landscape) {
-    width: 90vw;
     height: fit-content;
-    flex-direction: column;
-    justify-content: center;
+    padding-bottom: unset;
+    width: 70vw;
+    min-height: unset;
   }
   @media (max-width: 965px) and (orientation: landscape) {
     height: fit-content;
-    padding: 2rem;
+    padding-bottom: unset;
+    width: 90vw;
+    min-height: 400px;
   }
 `;

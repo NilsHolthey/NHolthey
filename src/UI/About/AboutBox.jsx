@@ -39,4 +39,8 @@ export const AboutBox = styled.article`
     height: fit-content;
     background: rgba(25, 29, 36, 0);
   }
+
+  @media (max-width: 765px) and (orientation: landscape) {
+    font-size: 1rem;
+  }
 `;

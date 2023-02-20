@@ -22,4 +22,13 @@ export const Text = styled.div`
     height: fit-content;
     padding: 2rem 0 2rem 0;
   }
+  @media (max-width: 965px) and (orientation: landscape) {
+    width: 80%;
+    height: fit-content;
+    padding: 2rem 0 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 `;

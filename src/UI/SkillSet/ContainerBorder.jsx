@@ -10,7 +10,7 @@ export const ContainerBorder = styled.div`
   height: calc(100% - 0.3rem);
   width: calc(100% - 0.3rem);
 
-  @media (max-width: 765px) {
+  @media (max-width: 765px) and (orientation: portrait) {
     width: 90vw;
     min-height: 80vh;
     height: fit-content;
@@ -26,14 +26,20 @@ export const ContainerBorder = styled.div`
     justify-content: space-between;
     padding-bottom: 3%;
   }
-  @media (max-width: 765px) and (orientation: landscape) {
-    width: 97vw;
+  /* @media (max-width: 765px) and (orientation: landscape) {
+    width: 90vw;
     height: fit-content;
     flex-direction: column;
     justify-content: center;
-  }
+  } */
   @media (max-width: 965px) and (orientation: landscape) {
-    height: fit-content;
-    padding: 2rem;
+    height: calc(100% - 0.3rem);
+    width: calc(100% - 0.3rem);
+    padding: unset;
+    min-height: unset;
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
   }
 `;
