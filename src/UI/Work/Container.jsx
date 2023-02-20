@@ -21,6 +21,7 @@ export const Container = styled.section`
     align-items: center;
     justify-content: flex-end;
     width: 97vw;
+    padding-top: 3rem;
   }
 
   @media (max-width: 765px) and (orientation: landscape) {

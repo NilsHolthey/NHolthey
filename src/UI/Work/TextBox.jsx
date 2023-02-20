@@ -43,7 +43,7 @@ export const TextBox = styled.section`
     }
   }
   @media (orientation: portrait) {
-    top: 0;
+    top: 1.5rem;
     height: 35%;
     position: absolute;
     width: 100%;
