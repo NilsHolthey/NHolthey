@@ -1,8 +1,16 @@
 import styled from 'styled-components';
 
 export const LoadingContainer = styled.section`
+  width: 100vw;
+  height: 100vh;
   width: 100dvw;
   height: 100dvh;
+  background: rgba(102, 103, 171, 1);
+  background: radial-gradient(
+    circle,
+    rgba(167, 167, 198, 0) 0%,
+    rgba(102, 103, 171, 0.4) 100%
+  );
   /* background: rgb(220, 220, 220);
   background: linear-gradient(
     0deg,
@@ -18,22 +26,8 @@ export const LoadingContainer = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
-  &::before {
-    content: '';
-    background-image: url('/blurry-gradient-haikei1.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.4;
-    @media (orientation: portrait) {
-      opacity: 0.7;
-    }
-  }
+
   svg {
-    z-index: 10;
+    z-index: 1;
   }
 `;
