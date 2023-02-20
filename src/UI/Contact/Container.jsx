@@ -35,7 +35,8 @@ export const Container = styled.article`
     flex-direction: column;
     display: flex;
   }
-  @media (max-width: 765px) and (orientation: landscape) {
+  @media (max-width: 965px) and (orientation: landscape) {
     width: 90vw;
+    min-height: 90vh;
   }
 `;

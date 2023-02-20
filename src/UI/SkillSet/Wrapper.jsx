@@ -28,9 +28,12 @@ export const Wrapper = styled.section`
     padding-top: 5vh;
     padding-bottom: 10vh;
   }
-  @media (max-width: 765px) and (orientation: landscape) {
+  @media (max-width: 965px) and (orientation: landscape) {
     width: 100vw;
-    height: 250vh;
+    height: fit-content;
     padding-bottom: 2rem;
+    padding-top: 2rem;
+    margin-top: 15vh;
+    margin-bottom: 10vh;
   }
 `;

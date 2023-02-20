@@ -9,9 +9,9 @@ export const StyledFooter = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.8;
 
   @media (orientation: portrait) {
     height: 30vh;
+    background-color: unset;
   }
 `;

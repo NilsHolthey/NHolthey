@@ -6,4 +6,7 @@ export const LineOne = styled.p`
   font-weight: 700;
   display: flex;
   z-index: 15;
+  @media (max-width: 765px) and (orientation: landscape) {
+    font-size: 2.5rem;
+  }
 `;

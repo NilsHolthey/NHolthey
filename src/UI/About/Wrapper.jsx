@@ -22,6 +22,11 @@ export const Wrapper = styled.div`
     padding-bottom: 15vh;
   }
 
+  @media (max-width: 965px) and (orientation: landscape) {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+
   &:hover {
     .card {
       background: radial-gradient(

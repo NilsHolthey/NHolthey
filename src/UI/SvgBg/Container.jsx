@@ -1,24 +1,34 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  background-image: url('/blurry-gradient-haikei1.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.5;
+  background: rgba(102, 103, 171, 1);
+  background: radial-gradient(
+    circle,
+    rgba(167, 167, 198, 0) 0%,
+    rgba(102, 103, 171, 0.4) 100%
+  );
+
   z-index: -2;
   position: fixed;
   width: 100vw;
   height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   justify-content: center;
   align-items: center;
   padding: 15rem 15rem 0 0;
-  transition: all 0.25s ease-out;
+
   div {
     --speed: 23s;
     --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
-
-    background: rgb(149, 149, 190);
+    opacity: 0.7;
+    filter: blur(70px);
+    background: #9595be;
     background: linear-gradient(
       90deg,
       rgba(149, 149, 190, 0.8062359943977591) 19%,
@@ -27,7 +37,7 @@ export const Container = styled.section`
     );
     width: 50vw;
     height: 60vh;
-    filter: blur(70px);
+    /* filter: blur(70px); */
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     animation: rotate var(--speed) var(--easing) alternate infinite;
 
@@ -43,7 +53,7 @@ export const Container = styled.section`
   }
   @media (orientation: portrait) {
     padding: unset;
-    opacity: 0.7;
+
     div {
       width: 90vw;
       height: 90vw;

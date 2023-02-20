@@ -21,8 +21,10 @@ export const ImageGrid = styled.section`
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(5, 1fr);
   }
-  @media (max-width: 765px) and (orientation: landscape) {
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(5, 1fr);
+  @media (max-width: 965px) and (orientation: landscape) {
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    width: 50%;
+    padding: 0 2rem 0 2rem;
   }
 `;
