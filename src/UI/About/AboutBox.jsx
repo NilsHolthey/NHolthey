@@ -12,7 +12,7 @@ export const AboutBox = styled.article`
   justify-content: center;
   align-items: center;
 
-  font-size: 1.8vh;
+  font-size: 1rem;
   z-index: 5;
 
   /* background-color: #1c2028;
@@ -31,7 +31,7 @@ export const AboutBox = styled.article`
     background: rgba(25, 29, 36, 0);
   }
   @media (orientation: portrait) {
-    font-size: 2vh;
+    font-size: 1.1rem;
     padding: 2.5rem;
     position: relative;
     border-radius: 0;
@@ -40,7 +40,7 @@ export const AboutBox = styled.article`
     background: rgba(25, 29, 36, 0);
   }
 
-  @media (max-width: 765px) and (orientation: landscape) {
+  @media (max-width: 965px) and (orientation: landscape) {
     font-size: 1rem;
   }
 `;

@@ -56,6 +56,18 @@ const icon = {
     },
   },
 };
+const button = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+
+    transition: {
+      type: 'spring',
+      duration: 2.8,
+      delay: 1.7,
+    },
+  },
+};
 
 export default function About({ aboutRef, skillRef }) {
   // const cards = document.querySelectorAll('.card');
@@ -74,7 +86,7 @@ export default function About({ aboutRef, skillRef }) {
   const [offsetY, setOffsetY] = useState(0);
 
   const handleScroll = () =>
-    setOffsetY((window.pageYOffset / window.innerHeight) * 1000);
+    setOffsetY((window.scrollY / window.innerHeight) * 1000);
 
   useEffect(() => {
     const cards = document.querySelectorAll('.card');
@@ -132,6 +144,11 @@ export default function About({ aboutRef, skillRef }) {
             Background=" rgba(25, 29, 36, 0.965)"
             BorderColor="rgba(25, 29, 36, 0.965)"
             OutlineColor="rgba(25, 29, 36, 0.965)"
+            as={motion.button}
+            viewport={{ once: true }}
+            variants={button}
+            initial="hidden"
+            whileInView="show"
           >
             <motion.span
               className="material-symbols-outlined"

@@ -2,13 +2,20 @@ import styled from 'styled-components';
 
 export const ArrowDown = styled.button`
   span {
+    width: 40px;
+    height: 40px;
     color: #f8f8f8a1;
-    outline: 3px solid ${({ OutlineColor = '#dcdcdc' }) => OutlineColor};
+    /* outline: 3px solid ${({ OutlineColor = '#dcdcdc' }) => OutlineColor};
+    -webkit-outline: 3px solid ${({ OutlineColor = '#dcdcdc' }) =>
+      OutlineColor}; */
     border: 2px solid ${({ BorderColor = '#dcdcdc' }) => BorderColor};
     background: ${({ Background = '#dcdcdc' }) => Background};
     filter: drop-shadow(0 0 4px rgba(102, 103, 171, 0.5));
     outline-offset: 4px;
     border-radius: 100%;
+    -moz-outline-radius: 100%;
+    -webkit-outline-radius: 100%;
+
     &.material-symbols-outlined {
       font-family: 'Material Icons';
       font-weight: normal;
@@ -42,7 +49,13 @@ export const ArrowDown = styled.button`
   cursor: pointer;
   z-index: 100;
   border: none;
-  background-color: unset;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border: 3px solid ${({ BorderColor = '#dcdcdc' }) => BorderColor};
+  border-radius: 100%;
+  filter: drop-shadow(0 0 4px rgba(102, 103, 171, 0.5));
+
   @media (max-width: 768px) {
     display: none;
   }

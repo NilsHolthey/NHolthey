@@ -36,6 +36,18 @@ const icon = {
     },
   },
 };
+const button = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+
+    transition: {
+      type: 'spring',
+      duration: 2.8,
+      delay: 1.7,
+    },
+  },
+};
 
 export default function Skillset({ skillRef, workRef }) {
   const [offsetY, setOffsetY] = useState(0);
@@ -97,6 +109,11 @@ export default function Skillset({ skillRef, workRef }) {
             Background="  rgb(39, 44, 57)"
             BorderColor=" rgb(39, 44, 57)"
             OutlineColor=" rgb(39, 44, 57)"
+            as={motion.button}
+            viewport={{ once: true }}
+            variants={button}
+            initial="hidden"
+            whileInView="show"
           >
             <motion.span
               className="material-symbols-outlined"
