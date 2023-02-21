@@ -40,7 +40,7 @@ export const AboutBox = styled.article`
     background: rgba(25, 29, 36, 0);
   }
 
-  @media (max-width: 965px) and (orientation: landscape) {
-    font-size: 1rem;
+  @media (max-height: 685px) and (orientation: landscape) {
+    font-size: 0.8rem;
   }
 `;
