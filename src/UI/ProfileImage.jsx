@@ -4,7 +4,7 @@ export const ProfileImage = styled.img`
   z-index: 10;
   max-height: 100vh;
   transition: opacity 300ms;
-  height: 85%;
+  height: 75vh;
   width: auto;
   filter: grayscale(30%) drop-shadow(10px 15px 20px rgb(114, 113, 113));
   opacity: ${({ isScrolled }) => (isScrolled ? '0 ' : '1')};
@@ -16,9 +16,10 @@ export const ProfileImage = styled.img`
   }
 
   @media (max-height: 785px) and (orientation: landscape) {
-    height: 90%;
+    height: 80vh;
   }
 
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    height: 80vh;
   }
 `;
