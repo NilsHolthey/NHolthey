@@ -18,4 +18,7 @@ export const ProfileImage = styled.img`
   @media (max-height: 785px) and (orientation: landscape) {
     height: 90%;
   }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  }
 `;
