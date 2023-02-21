@@ -86,7 +86,7 @@ export default function About({ aboutRef, skillRef }) {
   const [offsetY, setOffsetY] = useState(0);
 
   const handleScroll = () =>
-    setOffsetY((window.pageYOffset / window.innerHeight) * 1000);
+    setOffsetY((window.scrollY / window.innerHeight) * 1000);
 
   useEffect(() => {
     const cards = document.querySelectorAll('.card');
