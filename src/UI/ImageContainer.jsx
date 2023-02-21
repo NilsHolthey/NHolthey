@@ -5,6 +5,7 @@ export const ImageContainer = styled.div`
   right: 10%;
   display: flex;
   align-items: center;
+  justify-content: center;
   top: 50%;
   height: 90%;
   transform: translatey(-50%);
