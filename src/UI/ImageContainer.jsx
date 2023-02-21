@@ -8,6 +8,7 @@ export const ImageContainer = styled.div`
   justify-content: center;
   top: 50%;
   height: 90%;
+  width: fit-content;
   transform: translatey(-50%);
   @media (max-width: 550px) {
     width: 100vw;
