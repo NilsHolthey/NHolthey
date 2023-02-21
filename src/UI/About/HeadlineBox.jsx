@@ -11,7 +11,7 @@ export const HeadlineBox = styled.section`
   display: flex;
   justify-content: center;
 
-  left: -8rem;
+  left: -7rem;
   z-index: 100;
   font-family: 'Fjalla One', sans-serif;
   span {

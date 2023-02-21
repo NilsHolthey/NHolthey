@@ -5,7 +5,7 @@ export const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 70vw;
+  width: 80vw;
   /* background: radial-gradient(
     150rem circle at 0 0,
     rgba(255, 110, 199, 0),

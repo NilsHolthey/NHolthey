@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.article`
-  width: 70vw;
+  width: 80vw;
   height: 80vh;
   display: flex;
   align-items: center;
