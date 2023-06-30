@@ -97,7 +97,7 @@ export default function Contact({ contactRef, homeRef }) {
         'service_qi1lc4r',
         'template_nzntalt',
         form.current,
-        'K8UPqxtkHCh1EeJSp'
+        import.meta.env.VITE_API_KEY
       )
       .then(
         result => {
