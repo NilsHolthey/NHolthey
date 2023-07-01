@@ -113,7 +113,6 @@ export default function Work({ workRef, contactRef }) {
     e => {
       if (e.key === 'Escape' && isActive) {
         handelClick();
-        console.log('I pressed');
       }
     },
     [handelClick, isActive]
