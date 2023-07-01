@@ -94,8 +94,8 @@ export default function Contact({ contactRef, homeRef }) {
 
     emailjs
       .sendForm(
-        'service_qi1lc4r',
-        'template_nzntalt',
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
         form.current,
         import.meta.env.VITE_API_KEY
       )

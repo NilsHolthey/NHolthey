@@ -34,7 +34,7 @@ const RightNav = ({
       <li id="homeLink" onMouseOver={scrollToHome}>
         <span onClick={homeClick}>Home</span>
       </li>
-      <li on onMouseOver={scrollToAbout}>
+      <li onMouseOver={scrollToAbout}>
         <span onClick={aboutClick}>AboutMe</span>
       </li>
       <li onMouseOver={scrollToSkill}>
