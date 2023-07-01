@@ -78,15 +78,12 @@ export default function Contact({ contactRef, homeRef }) {
 
   const handleChangeName = e => {
     setValueName(e.target.value);
-    console.log(valueName);
   };
   const handleChangeMail = e => {
     setValue(e.target.value);
-    console.log(value);
   };
   const handleChangeMessage = e => {
     setValueMessage(e.target.value);
-    console.log(value);
   };
 
   const sendEmail = e => {
